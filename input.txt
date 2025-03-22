@@ -1,4 +1,4 @@
--(1 + 2)/3;
-1;
-2+3;
-8*9
+StormEvents
+| where StartTime between (datetime(2007-11-01) .. datetime(2007-12-01))
+| where State == "FLORIDA"
+| count
