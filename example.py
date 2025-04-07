@@ -8,4 +8,10 @@ if __name__ == '__main__':
     parser.print_tree(tree)
     listener = parser.traverse(tree)
     json_tree = parser.get_json_tree(listener)
+    
+    functions = parser.find_functions(tree)
+    function = parser.find(tree, "namedFunctionCallExpression")
+    
     print(json_tree)
+    print(functions)
+    print(function)
