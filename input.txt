@@ -1,4 +1,4 @@
-StormEvents
+_GetWatchlist('test', 2)
 | where StartTime between (datetime(2007-11-01) .. datetime(2007-12-01))
 | where State == "FLORIDA"
 | count

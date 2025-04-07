@@ -6,3 +6,6 @@ if __name__ == '__main__':
     parser = KqlTraverse()
     tree = parser.parse(input_stream)
     parser.print_tree(tree)
+    listener = parser.traverse(tree)
+    json_tree = parser.get_json_tree(listener)
+    print(json_tree)
