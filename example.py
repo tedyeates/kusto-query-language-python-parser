@@ -10,7 +10,7 @@ if __name__ == '__main__':
     json_tree = parser.get_json_tree(listener)
     
     functions = parser.find_functions(tree)
-    function = parser.find(tree, "namedFunctionCallExpression")
+    function = parser.find(tree, "nameReferenceWithDataScope")
     
     print(json_tree)
     print(functions)

@@ -1,4 +1,4 @@
-# Generated from ../grammar/Kql.g4 by ANTLR 4.8
+# Generated from ../grammar/Kql.g4 by ANTLR 4.13.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -8,1606 +8,1171 @@ if sys.version_info[1] > 5:
 else:
 	from typing.io import TextIO
 
-
 def serializedATN():
-    with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\u0140")
-        buf.write("\u0b09\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
-        buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
-        buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
-        buf.write("\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31")
-        buf.write("\t\31\4\32\t\32\4\33\t\33\4\34\t\34\4\35\t\35\4\36\t\36")
-        buf.write("\4\37\t\37\4 \t \4!\t!\4\"\t\"\4#\t#\4$\t$\4%\t%\4&\t")
-        buf.write("&\4\'\t\'\4(\t(\4)\t)\4*\t*\4+\t+\4,\t,\4-\t-\4.\t.\4")
-        buf.write("/\t/\4\60\t\60\4\61\t\61\4\62\t\62\4\63\t\63\4\64\t\64")
-        buf.write("\4\65\t\65\4\66\t\66\4\67\t\67\48\t8\49\t9\4:\t:\4;\t")
-        buf.write(";\4<\t<\4=\t=\4>\t>\4?\t?\4@\t@\4A\tA\4B\tB\4C\tC\4D\t")
-        buf.write("D\4E\tE\4F\tF\4G\tG\4H\tH\4I\tI\4J\tJ\4K\tK\4L\tL\4M\t")
-        buf.write("M\4N\tN\4O\tO\4P\tP\4Q\tQ\4R\tR\4S\tS\4T\tT\4U\tU\4V\t")
-        buf.write("V\4W\tW\4X\tX\4Y\tY\4Z\tZ\4[\t[\4\\\t\\\4]\t]\4^\t^\4")
-        buf.write("_\t_\4`\t`\4a\ta\4b\tb\4c\tc\4d\td\4e\te\4f\tf\4g\tg\4")
-        buf.write("h\th\4i\ti\4j\tj\4k\tk\4l\tl\4m\tm\4n\tn\4o\to\4p\tp\4")
-        buf.write("q\tq\4r\tr\4s\ts\4t\tt\4u\tu\4v\tv\4w\tw\4x\tx\4y\ty\4")
-        buf.write("z\tz\4{\t{\4|\t|\4}\t}\4~\t~\4\177\t\177\4\u0080\t\u0080")
-        buf.write("\4\u0081\t\u0081\4\u0082\t\u0082\4\u0083\t\u0083\4\u0084")
-        buf.write("\t\u0084\4\u0085\t\u0085\4\u0086\t\u0086\4\u0087\t\u0087")
-        buf.write("\4\u0088\t\u0088\4\u0089\t\u0089\4\u008a\t\u008a\4\u008b")
-        buf.write("\t\u008b\4\u008c\t\u008c\4\u008d\t\u008d\4\u008e\t\u008e")
-        buf.write("\4\u008f\t\u008f\4\u0090\t\u0090\4\u0091\t\u0091\4\u0092")
-        buf.write("\t\u0092\4\u0093\t\u0093\4\u0094\t\u0094\4\u0095\t\u0095")
-        buf.write("\4\u0096\t\u0096\4\u0097\t\u0097\4\u0098\t\u0098\4\u0099")
-        buf.write("\t\u0099\4\u009a\t\u009a\4\u009b\t\u009b\4\u009c\t\u009c")
-        buf.write("\4\u009d\t\u009d\4\u009e\t\u009e\4\u009f\t\u009f\4\u00a0")
-        buf.write("\t\u00a0\4\u00a1\t\u00a1\4\u00a2\t\u00a2\4\u00a3\t\u00a3")
-        buf.write("\4\u00a4\t\u00a4\4\u00a5\t\u00a5\4\u00a6\t\u00a6\4\u00a7")
-        buf.write("\t\u00a7\4\u00a8\t\u00a8\4\u00a9\t\u00a9\4\u00aa\t\u00aa")
-        buf.write("\4\u00ab\t\u00ab\4\u00ac\t\u00ac\4\u00ad\t\u00ad\4\u00ae")
-        buf.write("\t\u00ae\4\u00af\t\u00af\4\u00b0\t\u00b0\4\u00b1\t\u00b1")
-        buf.write("\4\u00b2\t\u00b2\4\u00b3\t\u00b3\4\u00b4\t\u00b4\4\u00b5")
-        buf.write("\t\u00b5\4\u00b6\t\u00b6\4\u00b7\t\u00b7\4\u00b8\t\u00b8")
-        buf.write("\4\u00b9\t\u00b9\4\u00ba\t\u00ba\4\u00bb\t\u00bb\4\u00bc")
-        buf.write("\t\u00bc\4\u00bd\t\u00bd\4\u00be\t\u00be\4\u00bf\t\u00bf")
-        buf.write("\4\u00c0\t\u00c0\4\u00c1\t\u00c1\4\u00c2\t\u00c2\4\u00c3")
-        buf.write("\t\u00c3\4\u00c4\t\u00c4\4\u00c5\t\u00c5\4\u00c6\t\u00c6")
-        buf.write("\4\u00c7\t\u00c7\4\u00c8\t\u00c8\4\u00c9\t\u00c9\4\u00ca")
-        buf.write("\t\u00ca\4\u00cb\t\u00cb\4\u00cc\t\u00cc\4\u00cd\t\u00cd")
-        buf.write("\4\u00ce\t\u00ce\4\u00cf\t\u00cf\4\u00d0\t\u00d0\4\u00d1")
-        buf.write("\t\u00d1\4\u00d2\t\u00d2\4\u00d3\t\u00d3\4\u00d4\t\u00d4")
-        buf.write("\4\u00d5\t\u00d5\4\u00d6\t\u00d6\4\u00d7\t\u00d7\4\u00d8")
-        buf.write("\t\u00d8\4\u00d9\t\u00d9\4\u00da\t\u00da\4\u00db\t\u00db")
-        buf.write("\4\u00dc\t\u00dc\4\u00dd\t\u00dd\4\u00de\t\u00de\4\u00df")
-        buf.write("\t\u00df\4\u00e0\t\u00e0\4\u00e1\t\u00e1\4\u00e2\t\u00e2")
-        buf.write("\4\u00e3\t\u00e3\4\u00e4\t\u00e4\4\u00e5\t\u00e5\4\u00e6")
-        buf.write("\t\u00e6\4\u00e7\t\u00e7\4\u00e8\t\u00e8\4\u00e9\t\u00e9")
-        buf.write("\4\u00ea\t\u00ea\4\u00eb\t\u00eb\4\u00ec\t\u00ec\4\u00ed")
-        buf.write("\t\u00ed\4\u00ee\t\u00ee\4\u00ef\t\u00ef\4\u00f0\t\u00f0")
-        buf.write("\4\u00f1\t\u00f1\4\u00f2\t\u00f2\4\u00f3\t\u00f3\4\u00f4")
-        buf.write("\t\u00f4\4\u00f5\t\u00f5\4\u00f6\t\u00f6\4\u00f7\t\u00f7")
-        buf.write("\4\u00f8\t\u00f8\4\u00f9\t\u00f9\4\u00fa\t\u00fa\4\u00fb")
-        buf.write("\t\u00fb\4\u00fc\t\u00fc\4\u00fd\t\u00fd\4\u00fe\t\u00fe")
-        buf.write("\4\u00ff\t\u00ff\4\u0100\t\u0100\4\u0101\t\u0101\4\u0102")
-        buf.write("\t\u0102\4\u0103\t\u0103\4\u0104\t\u0104\4\u0105\t\u0105")
-        buf.write("\4\u0106\t\u0106\4\u0107\t\u0107\4\u0108\t\u0108\4\u0109")
-        buf.write("\t\u0109\4\u010a\t\u010a\4\u010b\t\u010b\4\u010c\t\u010c")
-        buf.write("\4\u010d\t\u010d\4\u010e\t\u010e\4\u010f\t\u010f\4\u0110")
-        buf.write("\t\u0110\4\u0111\t\u0111\4\u0112\t\u0112\4\u0113\t\u0113")
-        buf.write("\4\u0114\t\u0114\4\u0115\t\u0115\4\u0116\t\u0116\4\u0117")
-        buf.write("\t\u0117\4\u0118\t\u0118\4\u0119\t\u0119\4\u011a\t\u011a")
-        buf.write("\4\u011b\t\u011b\4\u011c\t\u011c\4\u011d\t\u011d\4\u011e")
-        buf.write("\t\u011e\4\u011f\t\u011f\4\u0120\t\u0120\4\u0121\t\u0121")
-        buf.write("\4\u0122\t\u0122\4\u0123\t\u0123\4\u0124\t\u0124\4\u0125")
-        buf.write("\t\u0125\4\u0126\t\u0126\4\u0127\t\u0127\4\u0128\t\u0128")
-        buf.write("\4\u0129\t\u0129\4\u012a\t\u012a\4\u012b\t\u012b\4\u012c")
-        buf.write("\t\u012c\4\u012d\t\u012d\4\u012e\t\u012e\4\u012f\t\u012f")
-        buf.write("\4\u0130\t\u0130\4\u0131\t\u0131\4\u0132\t\u0132\3\2\3")
-        buf.write("\2\3\3\3\3\3\3\7\3\u026a\n\3\f\3\16\3\u026d\13\3\3\3\5")
-        buf.write("\3\u0270\n\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4\u027b")
-        buf.write("\n\4\3\5\3\5\3\5\3\5\3\5\3\5\3\6\3\6\3\6\3\6\3\6\5\6\u0288")
-        buf.write("\n\6\3\7\3\7\3\7\3\7\3\7\3\b\3\b\3\b\3\b\3\b\5\b\u0294")
-        buf.write("\n\b\3\b\3\b\3\b\3\t\3\t\3\t\3\t\3\t\3\t\5\t\u029f\n\t")
-        buf.write("\3\t\3\t\3\t\3\n\3\n\3\n\7\n\u02a7\n\n\f\n\16\n\u02aa")
-        buf.write("\13\n\3\13\3\13\3\13\3\13\3\13\3\13\3\13\3\13\3\f\3\f")
-        buf.write("\3\f\3\f\3\f\3\r\3\r\3\r\3\r\3\r\3\r\3\r\3\r\3\r\3\r\3")
-        buf.write("\r\5\r\u02c4\n\r\3\16\3\16\3\16\3\16\5\16\u02ca\n\16\3")
-        buf.write("\17\3\17\3\17\3\20\3\20\3\20\3\20\5\20\u02d3\n\20\3\21")
-        buf.write("\3\21\3\21\3\21\3\22\3\22\3\22\3\22\7\22\u02dd\n\22\f")
-        buf.write("\22\16\22\u02e0\13\22\3\22\3\22\3\23\3\23\3\23\3\23\3")
-        buf.write("\24\3\24\3\24\3\24\7\24\u02ec\n\24\f\24\16\24\u02ef\13")
-        buf.write("\24\3\24\5\24\u02f2\n\24\3\24\5\24\u02f5\n\24\3\24\3\24")
-        buf.write("\3\25\3\25\5\25\u02fb\n\25\3\26\3\26\3\26\3\26\5\26\u0301")
-        buf.write("\n\26\3\27\3\27\3\27\5\27\u0306\n\27\3\27\3\27\6\27\u030a")
-        buf.write("\n\27\r\27\16\27\u030b\3\27\3\27\3\30\3\30\3\30\3\30\7")
-        buf.write("\30\u0314\n\30\f\30\16\30\u0317\13\30\3\30\3\30\3\31\3")
-        buf.write("\31\3\31\3\31\3\32\3\32\3\32\3\32\3\33\3\33\5\33\u0325")
-        buf.write("\n\33\3\33\3\33\3\33\5\33\u032a\n\33\3\34\3\34\3\34\3")
-        buf.write("\34\7\34\u0330\n\34\f\34\16\34\u0333\13\34\3\34\3\34\3")
-        buf.write("\35\3\35\3\35\3\35\3\35\3\36\3\36\3\37\3\37\3\37\3\37")
-        buf.write("\7\37\u0342\n\37\f\37\16\37\u0345\13\37\3\37\3\37\3\37")
-        buf.write("\3 \3 \3 \3 \3 \3 \3 \7 \u0351\n \f \16 \u0354\13 \3 ")
-        buf.write("\3 \3!\3!\5!\u035a\n!\3\"\3\"\3\"\3\"\5\"\u0360\n\"\3")
-        buf.write("#\3#\5#\u0364\n#\3$\3$\3$\3$\3$\3$\7$\u036c\n$\f$\16$")
-        buf.write("\u036f\13$\3$\3$\3%\3%\3%\3%\5%\u0377\n%\3&\3&\3\'\3\'")
-        buf.write("\3(\3(\7(\u037f\n(\f(\16(\u0382\13(\3)\3)\3)\3*\3*\7*")
-        buf.write("\u0389\n*\f*\16*\u038c\13*\3+\3+\3+\3+\3+\3+\5+\u0394")
-        buf.write("\n+\3,\3,\3,\3,\3,\3,\3,\3,\3,\3,\3,\3,\3,\3,\3,\3,\3")
-        buf.write(",\3,\3,\3,\3,\3,\3,\3,\3,\3,\3,\3,\3,\3,\3,\3,\3,\3,\3")
-        buf.write(",\3,\3,\3,\3,\3,\3,\3,\3,\3,\3,\3,\3,\3,\3,\5,\u03c7\n")
-        buf.write(",\3-\3-\3-\3-\5-\u03cd\n-\3.\3.\3.\3.\3.\3.\3.\3.\3.\3")
-        buf.write(".\3.\3.\3.\3.\3.\3.\3.\3.\3.\3.\3.\3.\3.\3.\3.\5.\u03e8")
-        buf.write("\n.\3/\3/\7/\u03ec\n/\f/\16/\u03ef\13/\3/\3/\3\60\3\60")
-        buf.write("\3\60\3\61\3\61\7\61\u03f8\n\61\f\61\16\61\u03fb\13\61")
-        buf.write("\3\62\3\62\7\62\u03ff\n\62\f\62\16\62\u0402\13\62\3\63")
-        buf.write("\3\63\3\63\3\64\3\64\7\64\u0409\n\64\f\64\16\64\u040c")
-        buf.write("\13\64\3\64\3\64\5\64\u0410\n\64\3\65\3\65\3\66\3\66\3")
-        buf.write("\66\7\66\u0417\n\66\f\66\16\66\u041a\13\66\3\67\3\67\7")
-        buf.write("\67\u041e\n\67\f\67\16\67\u0421\13\67\3\67\3\67\5\67\u0425")
-        buf.write("\n\67\38\38\38\39\39\39\39\79\u042e\n9\f9\169\u0431\13")
-        buf.write("9\3:\3:\3;\3;\3;\3;\3;\7;\u043a\n;\f;\16;\u043d\13;\3")
-        buf.write(";\3;\5;\u0441\n;\3<\3<\3<\3=\3=\3=\3=\3=\3>\3>\5>\u044d")
-        buf.write("\n>\3>\5>\u0450\n>\3>\3>\3>\5>\u0455\n>\3>\5>\u0458\n")
-        buf.write(">\3?\7?\u045b\n?\f?\16?\u045e\13?\3?\5?\u0461\n?\3?\3")
-        buf.write("?\3@\3@\3@\3@\3@\7@\u046a\n@\f@\16@\u046d\13@\3@\3@\3")
-        buf.write("A\3A\3A\3A\7A\u0475\nA\fA\16A\u0478\13A\3B\3B\5B\u047c")
-        buf.write("\nB\3C\3C\5C\u0480\nC\3D\3D\3D\3E\3E\3E\3E\3E\3F\3F\3")
-        buf.write("G\3G\3G\5G\u048f\nG\3H\3H\3I\3I\3I\7I\u0496\nI\fI\16I")
-        buf.write("\u0499\13I\3J\3J\5J\u049d\nJ\3K\3K\3K\7K\u04a2\nK\fK\16")
-        buf.write("K\u04a5\13K\3L\3L\6L\u04a9\nL\rL\16L\u04aa\3M\5M\u04ae")
-        buf.write("\nM\3M\3M\3M\3M\3N\3N\3N\3O\3O\7O\u04b9\nO\fO\16O\u04bc")
-        buf.write("\13O\3P\3P\3P\3Q\3Q\3R\3R\7R\u04c5\nR\fR\16R\u04c8\13")
-        buf.write("R\3S\3S\7S\u04cc\nS\fS\16S\u04cf\13S\3S\3S\3S\3S\3S\5")
-        buf.write("S\u04d6\nS\3S\5S\u04d9\nS\3T\3T\3T\5T\u04de\nT\3U\3U\3")
-        buf.write("U\3U\3V\3V\3W\3W\3W\5W\u04e9\nW\3W\3W\3X\3X\3X\3X\3X\3")
-        buf.write("Y\3Y\3Y\3Z\3Z\3Z\3Z\7Z\u04f9\nZ\fZ\16Z\u04fc\13Z\3[\3")
-        buf.write("[\3[\5[\u0501\n[\3\\\3\\\3\\\3\\\3\\\3]\3]\5]\u050a\n")
-        buf.write("]\3]\7]\u050d\n]\f]\16]\u0510\13]\3^\3^\3^\3_\3_\7_\u0517")
-        buf.write("\n_\f_\16_\u051a\13_\3_\3_\3_\3_\3_\5_\u0521\n_\3_\5_")
-        buf.write("\u0524\n_\3`\3`\3`\3a\3a\7a\u052b\na\fa\16a\u052e\13a")
-        buf.write("\3a\3a\3a\5a\u0533\na\3b\3b\3b\3b\7b\u0539\nb\fb\16b\u053c")
-        buf.write("\13b\5b\u053e\nb\3c\3c\3c\3d\3d\7d\u0545\nd\fd\16d\u0548")
-        buf.write("\13d\3d\3d\3d\3e\3e\7e\u054f\ne\fe\16e\u0552\13e\3e\3")
-        buf.write("e\3e\3e\3e\3e\3e\7e\u055b\ne\fe\16e\u055e\13e\3e\5e\u0561")
-        buf.write("\ne\3e\3e\3f\3f\3f\5f\u0568\nf\3g\3g\3g\3g\3g\7g\u056f")
-        buf.write("\ng\fg\16g\u0572\13g\3g\3g\3h\3h\7h\u0578\nh\fh\16h\u057b")
-        buf.write("\13h\3h\3h\3h\3h\3h\5h\u0582\nh\3h\5h\u0585\nh\3i\3i\3")
-        buf.write("i\3i\3j\3j\3j\3j\3j\3k\3k\3k\3k\3k\3k\3l\3l\7l\u0598\n")
-        buf.write("l\fl\16l\u059b\13l\3l\3l\3l\7l\u05a0\nl\fl\16l\u05a3\13")
-        buf.write("l\3l\3l\3l\5l\u05a8\nl\3l\5l\u05ab\nl\3m\3m\3m\3n\3n\5")
-        buf.write("n\u05b2\nn\3o\3o\3o\3o\3p\3p\3p\3p\3p\3p\3p\3p\3p\3p\3")
-        buf.write("q\3q\5q\u05c4\nq\3q\3q\5q\u05c8\nq\3q\3q\3q\3r\3r\3r\3")
-        buf.write("r\7r\u05d1\nr\fr\16r\u05d4\13r\3s\3s\7s\u05d8\ns\fs\16")
-        buf.write("s\u05db\13s\3s\3s\3s\7s\u05e0\ns\fs\16s\u05e3\13s\3s\5")
-        buf.write("s\u05e6\ns\3s\5s\u05e9\ns\3s\3s\3s\3s\3s\3t\3t\3t\3u\3")
-        buf.write("u\3u\3v\3v\5v\u05f8\nv\3w\3w\3w\3x\3x\7x\u05ff\nx\fx\16")
-        buf.write("x\u0602\13x\3x\3x\3x\7x\u0607\nx\fx\16x\u060a\13x\3x\5")
-        buf.write("x\u060d\nx\3y\3y\5y\u0611\ny\3z\3z\5z\u0615\nz\3z\3z\3")
-        buf.write("z\3z\3{\3{\3{\3{\5{\u061f\n{\3|\3|\3|\3|\3}\3}\3}\5}\u0628")
-        buf.write("\n}\3~\5~\u062b\n~\3~\7~\u062e\n~\f~\16~\u0631\13~\3~")
-        buf.write("\5~\u0634\n~\3\177\5\177\u0637\n\177\3\177\3\177\5\177")
-        buf.write("\u063b\n\177\3\u0080\3\u0080\5\u0080\u063f\n\u0080\3\u0080")
-        buf.write("\3\u0080\3\u0080\3\u0080\3\u0081\3\u0081\3\u0081\3\u0081")
-        buf.write("\5\u0081\u0649\n\u0081\3\u0082\3\u0082\3\u0082\3\u0082")
-        buf.write("\3\u0082\7\u0082\u0650\n\u0082\f\u0082\16\u0082\u0653")
-        buf.write("\13\u0082\3\u0082\3\u0082\3\u0083\3\u0083\7\u0083\u0659")
-        buf.write("\n\u0083\f\u0083\16\u0083\u065c\13\u0083\3\u0083\3\u0083")
-        buf.write("\3\u0083\5\u0083\u0661\n\u0083\3\u0083\3\u0083\5\u0083")
-        buf.write("\u0665\n\u0083\3\u0084\3\u0084\3\u0084\5\u0084\u066a\n")
-        buf.write("\u0084\3\u0085\3\u0085\3\u0085\3\u0085\3\u0086\3\u0086")
-        buf.write("\3\u0086\3\u0086\3\u0087\3\u0087\7\u0087\u0676\n\u0087")
-        buf.write("\f\u0087\16\u0087\u0679\13\u0087\3\u0087\3\u0087\5\u0087")
-        buf.write("\u067d\n\u0087\3\u0087\3\u0087\3\u0087\3\u0087\3\u0088")
-        buf.write("\3\u0088\3\u0088\3\u0089\3\u0089\3\u0089\3\u0089\7\u0089")
-        buf.write("\u068a\n\u0089\f\u0089\16\u0089\u068d\13\u0089\3\u008a")
-        buf.write("\3\u008a\3\u008a\3\u008a\7\u008a\u0693\n\u008a\f\u008a")
-        buf.write("\16\u008a\u0696\13\u008a\5\u008a\u0698\n\u008a\3\u008b")
-        buf.write("\3\u008b\3\u008b\3\u008b\7\u008b\u069e\n\u008b\f\u008b")
-        buf.write("\16\u008b\u06a1\13\u008b\3\u008c\3\u008c\3\u008c\3\u008c")
-        buf.write("\7\u008c\u06a7\n\u008c\f\u008c\16\u008c\u06aa\13\u008c")
-        buf.write("\5\u008c\u06ac\n\u008c\3\u008d\3\u008d\3\u008d\3\u008d")
-        buf.write("\7\u008d\u06b2\n\u008d\f\u008d\16\u008d\u06b5\13\u008d")
-        buf.write("\5\u008d\u06b7\n\u008d\3\u008e\3\u008e\3\u008e\3\u008e")
-        buf.write("\7\u008e\u06bd\n\u008e\f\u008e\16\u008e\u06c0\13\u008e")
-        buf.write("\5\u008e\u06c2\n\u008e\3\u008f\3\u008f\5\u008f\u06c6\n")
-        buf.write("\u008f\3\u0090\3\u0090\7\u0090\u06ca\n\u0090\f\u0090\16")
-        buf.write("\u0090\u06cd\13\u0090\3\u0090\3\u0090\3\u0090\5\u0090")
-        buf.write("\u06d2\n\u0090\3\u0091\3\u0091\3\u0091\3\u0091\7\u0091")
-        buf.write("\u06d8\n\u0091\f\u0091\16\u0091\u06db\13\u0091\3\u0092")
-        buf.write("\3\u0092\3\u0092\3\u0092\5\u0092\u06e1\n\u0092\3\u0093")
-        buf.write("\3\u0093\3\u0093\3\u0093\3\u0093\7\u0093\u06e8\n\u0093")
-        buf.write("\f\u0093\16\u0093\u06eb\13\u0093\5\u0093\u06ed\n\u0093")
-        buf.write("\3\u0093\3\u0093\3\u0094\6\u0094\u06f2\n\u0094\r\u0094")
-        buf.write("\16\u0094\u06f3\3\u0095\3\u0095\3\u0095\3\u0095\3\u0095")
-        buf.write("\3\u0095\3\u0095\3\u0095\3\u0095\3\u0095\3\u0095\3\u0095")
-        buf.write("\3\u0095\3\u0095\3\u0095\3\u0095\3\u0095\3\u0095\3\u0095")
-        buf.write("\3\u0095\3\u0095\3\u0095\3\u0095\3\u0095\3\u0095\3\u0095")
-        buf.write("\3\u0095\3\u0095\3\u0095\3\u0095\3\u0095\3\u0095\3\u0095")
-        buf.write("\3\u0095\3\u0095\3\u0095\3\u0095\3\u0095\3\u0095\3\u0095")
-        buf.write("\3\u0095\3\u0095\3\u0095\3\u0095\3\u0095\3\u0095\3\u0095")
-        buf.write("\3\u0095\3\u0095\3\u0095\3\u0095\5\u0095\u0729\n\u0095")
-        buf.write("\3\u0096\3\u0096\3\u0096\7\u0096\u072e\n\u0096\f\u0096")
-        buf.write("\16\u0096\u0731\13\u0096\3\u0097\3\u0097\3\u0097\3\u0097")
-        buf.write("\3\u0097\3\u0097\3\u0097\3\u0097\3\u0097\3\u0097\3\u0097")
-        buf.write("\3\u0097\3\u0097\5\u0097\u0740\n\u0097\3\u0098\3\u0098")
-        buf.write("\7\u0098\u0744\n\u0098\f\u0098\16\u0098\u0747\13\u0098")
-        buf.write("\3\u0098\3\u0098\3\u0098\3\u0098\3\u0099\3\u0099\7\u0099")
-        buf.write("\u074f\n\u0099\f\u0099\16\u0099\u0752\13\u0099\3\u0099")
-        buf.write("\3\u0099\3\u009a\3\u009a\7\u009a\u0758\n\u009a\f\u009a")
-        buf.write("\16\u009a\u075b\13\u009a\3\u009a\5\u009a\u075e\n\u009a")
-        buf.write("\3\u009a\5\u009a\u0761\n\u009a\3\u009a\5\u009a\u0764\n")
-        buf.write("\u009a\3\u009a\3\u009a\3\u009a\6\u009a\u0769\n\u009a\r")
-        buf.write("\u009a\16\u009a\u076a\3\u009a\3\u009a\3\u009b\3\u009b")
-        buf.write("\3\u009b\3\u009b\3\u009b\3\u009b\3\u009c\3\u009c\3\u009c")
-        buf.write("\3\u009c\3\u009c\7\u009c\u077a\n\u009c\f\u009c\16\u009c")
-        buf.write("\u077d\13\u009c\3\u009d\3\u009d\3\u009d\3\u009d\3\u009d")
-        buf.write("\7\u009d\u0784\n\u009d\f\u009d\16\u009d\u0787\13\u009d")
-        buf.write("\3\u009d\3\u009d\3\u009e\3\u009e\3\u009e\5\u009e\u078e")
-        buf.write("\n\u009e\3\u009e\5\u009e\u0791\n\u009e\3\u009e\3\u009e")
-        buf.write("\3\u009e\5\u009e\u0796\n\u009e\3\u009e\3\u009e\3\u009f")
-        buf.write("\3\u009f\3\u009f\3\u009f\3\u00a0\3\u00a0\3\u00a0\3\u00a0")
-        buf.write("\7\u00a0\u07a2\n\u00a0\f\u00a0\16\u00a0\u07a5\13\u00a0")
-        buf.write("\3\u00a1\3\u00a1\3\u00a1\3\u00a1\3\u00a2\3\u00a2\7\u00a2")
-        buf.write("\u07ad\n\u00a2\f\u00a2\16\u00a2\u07b0\13\u00a2\3\u00a2")
-        buf.write("\5\u00a2\u07b3\n\u00a2\3\u00a2\5\u00a2\u07b6\n\u00a2\3")
-        buf.write("\u00a2\3\u00a2\3\u00a2\5\u00a2\u07bb\n\u00a2\3\u00a3\3")
-        buf.write("\u00a3\3\u00a3\3\u00a3\3\u00a4\3\u00a4\3\u00a4\3\u00a4")
-        buf.write("\3\u00a4\7\u00a4\u07c6\n\u00a4\f\u00a4\16\u00a4\u07c9")
-        buf.write("\13\u00a4\3\u00a4\3\u00a4\3\u00a5\3\u00a5\7\u00a5\u07cf")
-        buf.write("\n\u00a5\f\u00a5\16\u00a5\u07d2\13\u00a5\3\u00a5\3\u00a5")
-        buf.write("\3\u00a5\7\u00a5\u07d7\n\u00a5\f\u00a5\16\u00a5\u07da")
-        buf.write("\13\u00a5\3\u00a6\3\u00a6\7\u00a6\u07de\n\u00a6\f\u00a6")
-        buf.write("\16\u00a6\u07e1\13\u00a6\3\u00a6\3\u00a6\3\u00a6\3\u00a6")
-        buf.write("\7\u00a6\u07e7\n\u00a6\f\u00a6\16\u00a6\u07ea\13\u00a6")
-        buf.write("\3\u00a7\3\u00a7\3\u00a7\3\u00a8\5\u00a8\u07f0\n\u00a8")
-        buf.write("\3\u00a8\3\u00a8\5\u00a8\u07f4\n\u00a8\3\u00a9\3\u00a9")
-        buf.write("\7\u00a9\u07f8\n\u00a9\f\u00a9\16\u00a9\u07fb\13\u00a9")
-        buf.write("\3\u00a9\3\u00a9\3\u00a9\7\u00a9\u0800\n\u00a9\f\u00a9")
-        buf.write("\16\u00a9\u0803\13\u00a9\5\u00a9\u0805\n\u00a9\3\u00a9")
-        buf.write("\5\u00a9\u0808\n\u00a9\3\u00aa\3\u00aa\3\u00aa\3\u00aa")
-        buf.write("\3\u00aa\3\u00aa\5\u00aa\u0810\n\u00aa\3\u00ab\3\u00ab")
-        buf.write("\3\u00ab\3\u00ab\3\u00ac\3\u00ac\7\u00ac\u0818\n\u00ac")
-        buf.write("\f\u00ac\16\u00ac\u081b\13\u00ac\3\u00ac\3\u00ac\3\u00ad")
-        buf.write("\3\u00ad\7\u00ad\u0821\n\u00ad\f\u00ad\16\u00ad\u0824")
-        buf.write("\13\u00ad\3\u00ad\3\u00ad\3\u00ad\3\u00ad\3\u00ae\3\u00ae")
-        buf.write("\3\u00ae\3\u00ae\3\u00ae\5\u00ae\u082f\n\u00ae\3\u00af")
-        buf.write("\3\u00af\3\u00af\3\u00b0\3\u00b0\3\u00b0\7\u00b0\u0837")
-        buf.write("\n\u00b0\f\u00b0\16\u00b0\u083a\13\u00b0\3\u00b1\3\u00b1")
-        buf.write("\5\u00b1\u083e\n\u00b1\3\u00b1\3\u00b1\3\u00b1\5\u00b1")
-        buf.write("\u0843\n\u00b1\3\u00b1\3\u00b1\3\u00b1\3\u00b2\3\u00b2")
-        buf.write("\3\u00b2\3\u00b2\3\u00b2\3\u00b3\3\u00b3\7\u00b3\u084f")
-        buf.write("\n\u00b3\f\u00b3\16\u00b3\u0852\13\u00b3\3\u00b3\3\u00b3")
-        buf.write("\3\u00b3\7\u00b3\u0857\n\u00b3\f\u00b3\16\u00b3\u085a")
-        buf.write("\13\u00b3\3\u00b4\3\u00b4\3\u00b4\5\u00b4\u085f\n\u00b4")
-        buf.write("\3\u00b5\3\u00b5\7\u00b5\u0863\n\u00b5\f\u00b5\16\u00b5")
-        buf.write("\u0866\13\u00b5\3\u00b5\3\u00b5\3\u00b6\3\u00b6\5\u00b6")
-        buf.write("\u086c\n\u00b6\3\u00b7\3\u00b7\7\u00b7\u0870\n\u00b7\f")
-        buf.write("\u00b7\16\u00b7\u0873\13\u00b7\3\u00b8\3\u00b8\3\u00b8")
-        buf.write("\3\u00b9\3\u00b9\3\u00b9\3\u00b9\5\u00b9\u087c\n\u00b9")
-        buf.write("\3\u00ba\3\u00ba\3\u00ba\3\u00ba\5\u00ba\u0882\n\u00ba")
-        buf.write("\3\u00bb\3\u00bb\3\u00bb\3\u00bb\5\u00bb\u0888\n\u00bb")
-        buf.write("\3\u00bc\5\u00bc\u088b\n\u00bc\3\u00bc\3\u00bc\3\u00bd")
-        buf.write("\3\u00bd\5\u00bd\u0891\n\u00bd\3\u00bd\3\u00bd\3\u00be")
-        buf.write("\3\u00be\3\u00be\3\u00be\7\u00be\u0899\n\u00be\f\u00be")
-        buf.write("\16\u00be\u089c\13\u00be\3\u00be\3\u00be\3\u00bf\3\u00bf")
-        buf.write("\3\u00bf\3\u00bf\3\u00c0\3\u00c0\3\u00c1\3\u00c1\7\u00c1")
-        buf.write("\u08a8\n\u00c1\f\u00c1\16\u00c1\u08ab\13\u00c1\3\u00c2")
-        buf.write("\3\u00c2\3\u00c2\3\u00c3\3\u00c3\7\u00c3\u08b2\n\u00c3")
-        buf.write("\f\u00c3\16\u00c3\u08b5\13\u00c3\3\u00c4\3\u00c4\3\u00c4")
-        buf.write("\3\u00c5\3\u00c5\3\u00c5\3\u00c5\3\u00c5\5\u00c5\u08bf")
-        buf.write("\n\u00c5\3\u00c6\3\u00c6\3\u00c6\3\u00c6\3\u00c7\3\u00c7")
-        buf.write("\3\u00c7\3\u00c7\3\u00c7\3\u00c7\7\u00c7\u08cb\n\u00c7")
-        buf.write("\f\u00c7\16\u00c7\u08ce\13\u00c7\3\u00c7\3\u00c7\3\u00c8")
-        buf.write("\3\u00c8\3\u00c8\3\u00c8\3\u00c8\3\u00c8\3\u00c8\3\u00c8")
-        buf.write("\3\u00c9\3\u00c9\3\u00c9\3\u00c9\3\u00ca\3\u00ca\3\u00ca")
-        buf.write("\5\u00ca\u08e1\n\u00ca\3\u00cb\3\u00cb\7\u00cb\u08e5\n")
-        buf.write("\u00cb\f\u00cb\16\u00cb\u08e8\13\u00cb\3\u00cc\3\u00cc")
-        buf.write("\3\u00cc\3\u00cd\3\u00cd\7\u00cd\u08ef\n\u00cd\f\u00cd")
-        buf.write("\16\u00cd\u08f2\13\u00cd\3\u00ce\3\u00ce\3\u00ce\3\u00cf")
-        buf.write("\3\u00cf\5\u00cf\u08f9\n\u00cf\3\u00d0\3\u00d0\7\u00d0")
-        buf.write("\u08fd\n\u00d0\f\u00d0\16\u00d0\u0900\13\u00d0\3\u00d1")
-        buf.write("\3\u00d1\5\u00d1\u0904\n\u00d1\3\u00d1\3\u00d1\3\u00d2")
-        buf.write("\3\u00d2\3\u00d3\3\u00d3\3\u00d3\3\u00d3\3\u00d4\5\u00d4")
-        buf.write("\u090f\n\u00d4\3\u00d4\3\u00d4\3\u00d5\3\u00d5\3\u00d5")
-        buf.write("\5\u00d5\u0916\n\u00d5\3\u00d6\3\u00d6\3\u00d6\5\u00d6")
-        buf.write("\u091b\n\u00d6\3\u00d7\3\u00d7\6\u00d7\u091f\n\u00d7\r")
-        buf.write("\u00d7\16\u00d7\u0920\3\u00d8\3\u00d8\3\u00d8\5\u00d8")
-        buf.write("\u0926\n\u00d8\3\u00d9\3\u00d9\3\u00d9\3\u00da\3\u00da")
-        buf.write("\3\u00da\3\u00da\3\u00db\3\u00db\3\u00db\3\u00db\3\u00db")
-        buf.write("\3\u00dc\3\u00dc\5\u00dc\u0936\n\u00dc\3\u00dc\3\u00dc")
-        buf.write("\3\u00dc\3\u00dc\3\u00dd\3\u00dd\5\u00dd\u093e\n\u00dd")
-        buf.write("\3\u00dd\3\u00dd\3\u00dd\3\u00dd\3\u00de\3\u00de\3\u00de")
-        buf.write("\3\u00de\3\u00df\3\u00df\7\u00df\u094a\n\u00df\f\u00df")
-        buf.write("\16\u00df\u094d\13\u00df\3\u00e0\3\u00e0\3\u00e0\3\u00e1")
-        buf.write("\3\u00e1\5\u00e1\u0954\n\u00e1\3\u00e2\3\u00e2\3\u00e2")
-        buf.write("\3\u00e2\3\u00e2\7\u00e2\u095b\n\u00e2\f\u00e2\16\u00e2")
-        buf.write("\u095e\13\u00e2\5\u00e2\u0960\n\u00e2\3\u00e2\3\u00e2")
-        buf.write("\3\u00e3\3\u00e3\5\u00e3\u0966\n\u00e3\3\u00e4\3\u00e4")
-        buf.write("\3\u00e4\5\u00e4\u096b\n\u00e4\3\u00e4\3\u00e4\3\u00e5")
-        buf.write("\3\u00e5\3\u00e6\3\u00e6\3\u00e6\3\u00e6\3\u00e6\3\u00e6")
-        buf.write("\3\u00e6\5\u00e6\u0978\n\u00e6\3\u00e7\3\u00e7\5\u00e7")
-        buf.write("\u097c\n\u00e7\3\u00e8\3\u00e8\3\u00e8\3\u00e8\3\u00e9")
-        buf.write("\3\u00e9\3\u00e9\3\u00e9\3\u00ea\3\u00ea\3\u00ea\3\u00ea")
-        buf.write("\3\u00ea\3\u00ea\3\u00ea\3\u00ea\3\u00ea\3\u00eb\3\u00eb")
-        buf.write("\5\u00eb\u0991\n\u00eb\3\u00ec\3\u00ec\6\u00ec\u0995\n")
-        buf.write("\u00ec\r\u00ec\16\u00ec\u0996\3\u00ed\3\u00ed\3\u00ed")
-        buf.write("\5\u00ed\u099c\n\u00ed\3\u00ee\3\u00ee\3\u00ee\3\u00ef")
-        buf.write("\3\u00ef\3\u00ef\3\u00ef\3\u00f0\3\u00f0\3\u00f0\3\u00f0")
-        buf.write("\3\u00f0\3\u00f1\3\u00f1\3\u00f1\5\u00f1\u09ad\n\u00f1")
-        buf.write("\3\u00f2\3\u00f2\3\u00f3\3\u00f3\3\u00f4\3\u00f4\3\u00f5")
-        buf.write("\3\u00f5\3\u00f5\5\u00f5\u09b8\n\u00f5\3\u00f6\3\u00f6")
-        buf.write("\3\u00f6\3\u00f6\3\u00f7\3\u00f7\5\u00f7\u09c0\n\u00f7")
-        buf.write("\3\u00f8\3\u00f8\3\u00f8\3\u00f8\3\u00f9\3\u00f9\7\u00f9")
-        buf.write("\u09c8\n\u00f9\f\u00f9\16\u00f9\u09cb\13\u00f9\3\u00f9")
-        buf.write("\3\u00f9\3\u00f9\5\u00f9\u09d0\n\u00f9\3\u00f9\3\u00f9")
-        buf.write("\7\u00f9\u09d4\n\u00f9\f\u00f9\16\u00f9\u09d7\13\u00f9")
-        buf.write("\3\u00f9\5\u00f9\u09da\n\u00f9\3\u00f9\3\u00f9\3\u00fa")
-        buf.write("\3\u00fa\5\u00fa\u09e0\n\u00fa\3\u00fa\3\u00fa\7\u00fa")
-        buf.write("\u09e4\n\u00fa\f\u00fa\16\u00fa\u09e7\13\u00fa\3\u00fa")
-        buf.write("\5\u00fa\u09ea\n\u00fa\3\u00fa\3\u00fa\3\u00fb\3\u00fb")
-        buf.write("\3\u00fb\3\u00fb\3\u00fc\3\u00fc\7\u00fc\u09f4\n\u00fc")
-        buf.write("\f\u00fc\16\u00fc\u09f7\13\u00fc\3\u00fc\3\u00fc\3\u00fc")
-        buf.write("\3\u00fc\3\u00fc\7\u00fc\u09fe\n\u00fc\f\u00fc\16\u00fc")
-        buf.write("\u0a01\13\u00fc\3\u00fc\3\u00fc\5\u00fc\u0a05\n\u00fc")
-        buf.write("\3\u00fd\3\u00fd\3\u00fd\3\u00fd\3\u00fd\7\u00fd\u0a0c")
-        buf.write("\n\u00fd\f\u00fd\16\u00fd\u0a0f\13\u00fd\3\u00fd\5\u00fd")
-        buf.write("\u0a12\n\u00fd\5\u00fd\u0a14\n\u00fd\3\u00fd\3\u00fd\3")
-        buf.write("\u00fe\3\u00fe\3\u00fe\3\u00fe\3\u00fe\5\u00fe\u0a1d\n")
-        buf.write("\u00fe\3\u00ff\3\u00ff\3\u00ff\3\u00ff\3\u00ff\3\u00ff")
-        buf.write("\3\u00ff\3\u00ff\3\u0100\3\u0100\3\u0100\3\u0100\3\u0100")
-        buf.write("\3\u0101\3\u0101\3\u0101\3\u0101\3\u0101\3\u0102\3\u0102")
-        buf.write("\3\u0102\3\u0102\3\u0102\3\u0103\3\u0103\3\u0104\3\u0104")
-        buf.write("\3\u0105\3\u0105\3\u0106\3\u0106\3\u0107\3\u0107\3\u0108")
-        buf.write("\3\u0108\3\u0109\3\u0109\5\u0109\u0a44\n\u0109\3\u010a")
-        buf.write("\3\u010a\3\u010b\3\u010b\3\u010c\3\u010c\3\u010d\3\u010d")
-        buf.write("\3\u010d\3\u010d\3\u010e\3\u010e\5\u010e\u0a52\n\u010e")
-        buf.write("\3\u010f\3\u010f\3\u010f\5\u010f\u0a57\n\u010f\3\u0110")
-        buf.write("\3\u0110\3\u0110\3\u0110\5\u0110\u0a5d\n\u0110\3\u0111")
-        buf.write("\3\u0111\3\u0111\5\u0111\u0a62\n\u0111\3\u0112\5\u0112")
-        buf.write("\u0a65\n\u0112\3\u0112\3\u0112\7\u0112\u0a69\n\u0112\f")
-        buf.write("\u0112\16\u0112\u0a6c\13\u0112\3\u0113\3\u0113\3\u0113")
-        buf.write("\5\u0113\u0a71\n\u0113\3\u0114\3\u0114\3\u0114\3\u0114")
-        buf.write("\3\u0114\5\u0114\u0a78\n\u0114\3\u0115\3\u0115\5\u0115")
-        buf.write("\u0a7c\n\u0115\3\u0116\3\u0116\3\u0116\3\u0116\3\u0116")
-        buf.write("\3\u0116\3\u0116\3\u0116\3\u0116\3\u0116\3\u0116\5\u0116")
-        buf.write("\u0a89\n\u0116\3\u0117\3\u0117\3\u0117\3\u0117\3\u0117")
-        buf.write("\3\u0117\3\u0117\5\u0117\u0a92\n\u0117\3\u0118\3\u0118")
-        buf.write("\3\u0118\3\u0118\3\u0118\5\u0118\u0a99\n\u0118\3\u0119")
-        buf.write("\3\u0119\5\u0119\u0a9d\n\u0119\3\u011a\3\u011a\3\u011b")
-        buf.write("\3\u011b\3\u011c\3\u011c\3\u011d\3\u011d\3\u011e\3\u011e")
-        buf.write("\3\u011f\3\u011f\3\u0120\3\u0120\3\u0121\3\u0121\3\u0122")
-        buf.write("\3\u0122\3\u0123\3\u0123\3\u0123\3\u0124\3\u0124\3\u0124")
-        buf.write("\3\u0125\3\u0125\7\u0125\u0ab9\n\u0125\f\u0125\16\u0125")
-        buf.write("\u0abc\13\u0125\3\u0126\3\u0126\3\u0126\3\u0126\3\u0126")
-        buf.write("\3\u0127\3\u0127\3\u0127\3\u0127\3\u0127\3\u0127\3\u0127")
-        buf.write("\3\u0127\3\u0127\3\u0127\3\u0127\5\u0127\u0ace\n\u0127")
-        buf.write("\3\u0128\3\u0128\3\u0128\3\u0128\7\u0128\u0ad4\n\u0128")
-        buf.write("\f\u0128\16\u0128\u0ad7\13\u0128\5\u0128\u0ad9\n\u0128")
-        buf.write("\3\u0128\3\u0128\3\u0129\3\u0129\3\u0129\3\u0129\3\u012a")
-        buf.write("\3\u012a\3\u012a\3\u012a\7\u012a\u0ae5\n\u012a\f\u012a")
-        buf.write("\16\u012a\u0ae8\13\u012a\5\u012a\u0aea\n\u012a\3\u012a")
-        buf.write("\3\u012a\3\u012b\3\u012b\3\u012c\3\u012c\3\u012d\3\u012d")
-        buf.write("\3\u012e\3\u012e\3\u012f\3\u012f\7\u012f\u0af8\n\u012f")
-        buf.write("\f\u012f\16\u012f\u0afb\13\u012f\3\u0130\3\u0130\3\u0131")
-        buf.write("\5\u0131\u0b00\n\u0131\3\u0131\3\u0131\3\u0132\5\u0132")
-        buf.write("\u0b05\n\u0132\3\u0132\3\u0132\3\u0132\2\2\u0133\2\4\6")
-        buf.write("\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\60\62\64\66")
-        buf.write("8:<>@BDFHJLNPRTVXZ\\^`bdfhjlnprtvxz|~\u0080\u0082\u0084")
-        buf.write("\u0086\u0088\u008a\u008c\u008e\u0090\u0092\u0094\u0096")
-        buf.write("\u0098\u009a\u009c\u009e\u00a0\u00a2\u00a4\u00a6\u00a8")
-        buf.write("\u00aa\u00ac\u00ae\u00b0\u00b2\u00b4\u00b6\u00b8\u00ba")
-        buf.write("\u00bc\u00be\u00c0\u00c2\u00c4\u00c6\u00c8\u00ca\u00cc")
-        buf.write("\u00ce\u00d0\u00d2\u00d4\u00d6\u00d8\u00da\u00dc\u00de")
-        buf.write("\u00e0\u00e2\u00e4\u00e6\u00e8\u00ea\u00ec\u00ee\u00f0")
-        buf.write("\u00f2\u00f4\u00f6\u00f8\u00fa\u00fc\u00fe\u0100\u0102")
-        buf.write("\u0104\u0106\u0108\u010a\u010c\u010e\u0110\u0112\u0114")
-        buf.write("\u0116\u0118\u011a\u011c\u011e\u0120\u0122\u0124\u0126")
-        buf.write("\u0128\u012a\u012c\u012e\u0130\u0132\u0134\u0136\u0138")
-        buf.write("\u013a\u013c\u013e\u0140\u0142\u0144\u0146\u0148\u014a")
-        buf.write("\u014c\u014e\u0150\u0152\u0154\u0156\u0158\u015a\u015c")
-        buf.write("\u015e\u0160\u0162\u0164\u0166\u0168\u016a\u016c\u016e")
-        buf.write("\u0170\u0172\u0174\u0176\u0178\u017a\u017c\u017e\u0180")
-        buf.write("\u0182\u0184\u0186\u0188\u018a\u018c\u018e\u0190\u0192")
-        buf.write("\u0194\u0196\u0198\u019a\u019c\u019e\u01a0\u01a2\u01a4")
-        buf.write("\u01a6\u01a8\u01aa\u01ac\u01ae\u01b0\u01b2\u01b4\u01b6")
-        buf.write("\u01b8\u01ba\u01bc\u01be\u01c0\u01c2\u01c4\u01c6\u01c8")
-        buf.write("\u01ca\u01cc\u01ce\u01d0\u01d2\u01d4\u01d6\u01d8\u01da")
-        buf.write("\u01dc\u01de\u01e0\u01e2\u01e4\u01e6\u01e8\u01ea\u01ec")
-        buf.write("\u01ee\u01f0\u01f2\u01f4\u01f6\u01f8\u01fa\u01fc\u01fe")
-        buf.write("\u0200\u0202\u0204\u0206\u0208\u020a\u020c\u020e\u0210")
-        buf.write("\u0212\u0214\u0216\u0218\u021a\u021c\u021e\u0220\u0222")
-        buf.write("\u0224\u0226\u0228\u022a\u022c\u022e\u0230\u0232\u0234")
-        buf.write("\u0236\u0238\u023a\u023c\u023e\u0240\u0242\u0244\u0246")
-        buf.write("\u0248\u024a\u024c\u024e\u0250\u0252\u0254\u0256\u0258")
-        buf.write("\u025a\u025c\u025e\u0260\u0262\2\'\4\2\16\17\33\33\4\2")
-        buf.write("\20\20\34\34\3\2\b\t\4\2PP\u00a3\u00a3\3\2\16\17\4\2\u009f")
-        buf.write("\u009f\u00a1\u00a1\4\2\u00a0\u00a0\u00a2\u00a2\4\2\u00da")
-        buf.write("\u00db\u00e7\u00e7\5\2\62\62NNcd\21\2\'\'..\60\60\66\66")
-        buf.write("<<>>\u008c\u008c\u0094\u0095\u00cc\u00cd\u00e2\u00e2\u00ec")
-        buf.write("\u00ec\u00f1\u00f1\u00f4\u00f6\u00fe\u00fe\u013e\u013e")
-        buf.write("\6\2LL\u009b\u009b\u00ea\u00eb\u0101\u0101\4\2\u0093\u0093")
-        buf.write("\u0097\u0097\4\2rr\u0104\u0104\5\2\64\64\u00a4\u00a4\u00c3")
-        buf.write("\u00c3\5\2,,\u008d\u008d\u00a4\u00a4\4\2\u00bf\u00bf\u00e8")
-        buf.write("\u00e8\4\2\62\62NN\4\2^^\u008d\u008d\4\2\u0092\u0092\u00f2")
-        buf.write("\u00f2\4\2\\\\\u0105\u0105\17\2\65\65::EFKKWWs}\u0083")
-        buf.write("\u0083\u0088\u0089\u008b\u008b\u00cb\u00cb\u00e9\u00e9")
-        buf.write("\u0107\u010a\u010c\u010d\20\2\65\65::EFKKWWs}\u0083\u0083")
-        buf.write("\u0088\u0089\u008b\u008b\u00cb\u00cb\u00e9\u00e9\u0107")
-        buf.write("\u010a\u010c\u010d\u013e\u013e\5\2\24\24\26\26\36\36\5")
-        buf.write("\2kl\u0084\u0085\u00b1\u00b2\4\288\u00a6\u00a6\4\2\30")
-        buf.write("\32\35\35\4\2\r\r##\5\2\3\3\"\"%%\r\2\25\25\27\27@BQR")
-        buf.write("jjmq\u0090\u0091\u009c\u009c\u00a7\u00b0\u00b3\u00b8\u00ed")
-        buf.write("\u00ee\4\2,,\177\177\5\2\u008b\u008b\u0108\u0108\u010c")
-        buf.write("\u010c\3\2YZ\6\2\u0133\u0133\u0135\u0135\u0138\u0139\u013b")
-        buf.write("\u013d\6\2\u0119\u011f\u0121\u0123\u0126\u012b\u0132\u0132")
-        buf.write("\3\2\u0119\u0132)\2((*,\64\64\67\6799==GGJJLMPPTU[[`a")
-        buf.write("rr~~\u0080\u0082\u0086\u0086\u008e\u008f\u0093\u0093\u0095")
-        buf.write("\u0097\u009b\u009b\u00a3\u00a4\u00b9\u00ba\u00bc\u00bd")
-        buf.write("\u00c1\u00c2\u00c7\u00c8\u00ca\u00ca\u00ce\u00ce\u00d7")
-        buf.write("\u00d9\u00dc\u00de\u00e5\u00e5\u00ea\u00eb\u00ef\u00ef")
-        buf.write("\u00f3\u00f3\u00ff\u00ff\u0101\u0104\u0106\u0106\u010e")
-        buf.write("\u0119\u0121\u0121\33\2))\61\61;;?@DDIIOOXY\\]jj\u0084")
-        buf.write("\u0084\u0087\u0087\u0092\u0092\u009d\u009d\u00bb\u00bb")
-        buf.write("\u00c4\u00c4\u00cf\u00cf\u00df\u00e1\u00e3\u00e4\u00e6")
-        buf.write("\u00e6\u00e8\u00e8\u00f0\u00f0\u00f2\u00f2\u00f7\u00fd")
-        buf.write("\u0105\u0105\2\u0b7a\2\u0264\3\2\2\2\4\u0266\3\2\2\2\6")
-        buf.write("\u027a\3\2\2\2\b\u027c\3\2\2\2\n\u0287\3\2\2\2\f\u0289")
-        buf.write("\3\2\2\2\16\u028e\3\2\2\2\20\u0298\3\2\2\2\22\u02a3\3")
-        buf.write("\2\2\2\24\u02ab\3\2\2\2\26\u02b3\3\2\2\2\30\u02c3\3\2")
-        buf.write("\2\2\32\u02c5\3\2\2\2\34\u02cb\3\2\2\2\36\u02ce\3\2\2")
-        buf.write("\2 \u02d4\3\2\2\2\"\u02d8\3\2\2\2$\u02e3\3\2\2\2&\u02e7")
-        buf.write("\3\2\2\2(\u02fa\3\2\2\2*\u02fc\3\2\2\2,\u0302\3\2\2\2")
-        buf.write(".\u030f\3\2\2\2\60\u031a\3\2\2\2\62\u031e\3\2\2\2\64\u0322")
-        buf.write("\3\2\2\2\66\u032b\3\2\2\28\u0336\3\2\2\2:\u033b\3\2\2")
-        buf.write("\2<\u033d\3\2\2\2>\u0349\3\2\2\2@\u0359\3\2\2\2B\u035b")
-        buf.write("\3\2\2\2D\u0363\3\2\2\2F\u0365\3\2\2\2H\u0372\3\2\2\2")
-        buf.write("J\u0378\3\2\2\2L\u037a\3\2\2\2N\u037c\3\2\2\2P\u0383\3")
-        buf.write("\2\2\2R\u0386\3\2\2\2T\u0393\3\2\2\2V\u03c6\3\2\2\2X\u03cc")
-        buf.write("\3\2\2\2Z\u03e7\3\2\2\2\\\u03e9\3\2\2\2^\u03f2\3\2\2\2")
-        buf.write("`\u03f5\3\2\2\2b\u03fc\3\2\2\2d\u0403\3\2\2\2f\u0406\3")
-        buf.write("\2\2\2h\u0411\3\2\2\2j\u0413\3\2\2\2l\u041b\3\2\2\2n\u0426")
-        buf.write("\3\2\2\2p\u0429\3\2\2\2r\u0432\3\2\2\2t\u0434\3\2\2\2")
-        buf.write("v\u0442\3\2\2\2x\u0445\3\2\2\2z\u044a\3\2\2\2|\u045c\3")
-        buf.write("\2\2\2~\u0464\3\2\2\2\u0080\u0470\3\2\2\2\u0082\u047b")
-        buf.write("\3\2\2\2\u0084\u047d\3\2\2\2\u0086\u0481\3\2\2\2\u0088")
-        buf.write("\u0484\3\2\2\2\u008a\u0489\3\2\2\2\u008c\u048b\3\2\2\2")
-        buf.write("\u008e\u0490\3\2\2\2\u0090\u0492\3\2\2\2\u0092\u049c\3")
-        buf.write("\2\2\2\u0094\u049e\3\2\2\2\u0096\u04a6\3\2\2\2\u0098\u04ad")
-        buf.write("\3\2\2\2\u009a\u04b3\3\2\2\2\u009c\u04b6\3\2\2\2\u009e")
-        buf.write("\u04bd\3\2\2\2\u00a0\u04c0\3\2\2\2\u00a2\u04c2\3\2\2\2")
-        buf.write("\u00a4\u04c9\3\2\2\2\u00a6\u04dd\3\2\2\2\u00a8\u04df\3")
-        buf.write("\2\2\2\u00aa\u04e3\3\2\2\2\u00ac\u04e5\3\2\2\2\u00ae\u04ec")
-        buf.write("\3\2\2\2\u00b0\u04f1\3\2\2\2\u00b2\u04f4\3\2\2\2\u00b4")
-        buf.write("\u04fd\3\2\2\2\u00b6\u0502\3\2\2\2\u00b8\u0507\3\2\2\2")
-        buf.write("\u00ba\u0511\3\2\2\2\u00bc\u0514\3\2\2\2\u00be\u0525\3")
-        buf.write("\2\2\2\u00c0\u0528\3\2\2\2\u00c2\u0534\3\2\2\2\u00c4\u053f")
-        buf.write("\3\2\2\2\u00c6\u0542\3\2\2\2\u00c8\u054c\3\2\2\2\u00ca")
-        buf.write("\u0567\3\2\2\2\u00cc\u0569\3\2\2\2\u00ce\u0575\3\2\2\2")
-        buf.write("\u00d0\u0586\3\2\2\2\u00d2\u058a\3\2\2\2\u00d4\u058f\3")
-        buf.write("\2\2\2\u00d6\u0595\3\2\2\2\u00d8\u05ac\3\2\2\2\u00da\u05af")
-        buf.write("\3\2\2\2\u00dc\u05b3\3\2\2\2\u00de\u05b7\3\2\2\2\u00e0")
-        buf.write("\u05c3\3\2\2\2\u00e2\u05cc\3\2\2\2\u00e4\u05d5\3\2\2\2")
-        buf.write("\u00e6\u05ef\3\2\2\2\u00e8\u05f2\3\2\2\2\u00ea\u05f5\3")
-        buf.write("\2\2\2\u00ec\u05f9\3\2\2\2\u00ee\u05fc\3\2\2\2\u00f0\u060e")
-        buf.write("\3\2\2\2\u00f2\u0612\3\2\2\2\u00f4\u061a\3\2\2\2\u00f6")
-        buf.write("\u0620\3\2\2\2\u00f8\u0624\3\2\2\2\u00fa\u062a\3\2\2\2")
-        buf.write("\u00fc\u0636\3\2\2\2\u00fe\u063c\3\2\2\2\u0100\u0644\3")
-        buf.write("\2\2\2\u0102\u064a\3\2\2\2\u0104\u0656\3\2\2\2\u0106\u0666")
-        buf.write("\3\2\2\2\u0108\u066b\3\2\2\2\u010a\u066f\3\2\2\2\u010c")
-        buf.write("\u0673\3\2\2\2\u010e\u0682\3\2\2\2\u0110\u0685\3\2\2\2")
-        buf.write("\u0112\u068e\3\2\2\2\u0114\u0699\3\2\2\2\u0116\u06a2\3")
-        buf.write("\2\2\2\u0118\u06ad\3\2\2\2\u011a\u06b8\3\2\2\2\u011c\u06c3")
-        buf.write("\3\2\2\2\u011e\u06c7\3\2\2\2\u0120\u06d3\3\2\2\2\u0122")
-        buf.write("\u06dc\3\2\2\2\u0124\u06e2\3\2\2\2\u0126\u06f1\3\2\2\2")
-        buf.write("\u0128\u0728\3\2\2\2\u012a\u072a\3\2\2\2\u012c\u073f\3")
-        buf.write("\2\2\2\u012e\u0741\3\2\2\2\u0130\u074c\3\2\2\2\u0132\u0755")
-        buf.write("\3\2\2\2\u0134\u076e\3\2\2\2\u0136\u0774\3\2\2\2\u0138")
-        buf.write("\u077e\3\2\2\2\u013a\u078a\3\2\2\2\u013c\u0799\3\2\2\2")
-        buf.write("\u013e\u079d\3\2\2\2\u0140\u07a6\3\2\2\2\u0142\u07aa\3")
-        buf.write("\2\2\2\u0144\u07bc\3\2\2\2\u0146\u07c0\3\2\2\2\u0148\u07cc")
-        buf.write("\3\2\2\2\u014a\u07db\3\2\2\2\u014c\u07eb\3\2\2\2\u014e")
-        buf.write("\u07ef\3\2\2\2\u0150\u07f5\3\2\2\2\u0152\u0809\3\2\2\2")
-        buf.write("\u0154\u0811\3\2\2\2\u0156\u0815\3\2\2\2\u0158\u081e\3")
-        buf.write("\2\2\2\u015a\u0829\3\2\2\2\u015c\u0830\3\2\2\2\u015e\u0833")
-        buf.write("\3\2\2\2\u0160\u083b\3\2\2\2\u0162\u0847\3\2\2\2\u0164")
-        buf.write("\u084c\3\2\2\2\u0166\u085e\3\2\2\2\u0168\u0860\3\2\2\2")
-        buf.write("\u016a\u086b\3\2\2\2\u016c\u086d\3\2\2\2\u016e\u0874\3")
-        buf.write("\2\2\2\u0170\u0877\3\2\2\2\u0172\u087d\3\2\2\2\u0174\u0883")
-        buf.write("\3\2\2\2\u0176\u088a\3\2\2\2\u0178\u0890\3\2\2\2\u017a")
-        buf.write("\u0894\3\2\2\2\u017c\u089f\3\2\2\2\u017e\u08a3\3\2\2\2")
-        buf.write("\u0180\u08a5\3\2\2\2\u0182\u08ac\3\2\2\2\u0184\u08af\3")
-        buf.write("\2\2\2\u0186\u08b6\3\2\2\2\u0188\u08be\3\2\2\2\u018a\u08c0")
-        buf.write("\3\2\2\2\u018c\u08c4\3\2\2\2\u018e\u08d1\3\2\2\2\u0190")
-        buf.write("\u08d9\3\2\2\2\u0192\u08dd\3\2\2\2\u0194\u08e2\3\2\2\2")
-        buf.write("\u0196\u08e9\3\2\2\2\u0198\u08ec\3\2\2\2\u019a\u08f3\3")
-        buf.write("\2\2\2\u019c\u08f8\3\2\2\2\u019e\u08fa\3\2\2\2\u01a0\u0903")
-        buf.write("\3\2\2\2\u01a2\u0907\3\2\2\2\u01a4\u0909\3\2\2\2\u01a6")
-        buf.write("\u090e\3\2\2\2\u01a8\u0915\3\2\2\2\u01aa\u091a\3\2\2\2")
-        buf.write("\u01ac\u091c\3\2\2\2\u01ae\u0925\3\2\2\2\u01b0\u0927\3")
-        buf.write("\2\2\2\u01b2\u092a\3\2\2\2\u01b4\u092e\3\2\2\2\u01b6\u0933")
-        buf.write("\3\2\2\2\u01b8\u093b\3\2\2\2\u01ba\u0943\3\2\2\2\u01bc")
-        buf.write("\u0947\3\2\2\2\u01be\u094e\3\2\2\2\u01c0\u0953\3\2\2\2")
-        buf.write("\u01c2\u0955\3\2\2\2\u01c4\u0965\3\2\2\2\u01c6\u0967\3")
-        buf.write("\2\2\2\u01c8\u096e\3\2\2\2\u01ca\u0977\3\2\2\2\u01cc\u0979")
-        buf.write("\3\2\2\2\u01ce\u097d\3\2\2\2\u01d0\u0981\3\2\2\2\u01d2")
-        buf.write("\u0985\3\2\2\2\u01d4\u0990\3\2\2\2\u01d6\u0992\3\2\2\2")
-        buf.write("\u01d8\u099b\3\2\2\2\u01da\u099d\3\2\2\2\u01dc\u09a0\3")
-        buf.write("\2\2\2\u01de\u09a4\3\2\2\2\u01e0\u09ac\3\2\2\2\u01e2\u09ae")
-        buf.write("\3\2\2\2\u01e4\u09b0\3\2\2\2\u01e6\u09b2\3\2\2\2\u01e8")
-        buf.write("\u09b7\3\2\2\2\u01ea\u09b9\3\2\2\2\u01ec\u09bf\3\2\2\2")
-        buf.write("\u01ee\u09c1\3\2\2\2\u01f0\u09c5\3\2\2\2\u01f2\u09dd\3")
-        buf.write("\2\2\2\u01f4\u09ed\3\2\2\2\u01f6\u09f1\3\2\2\2\u01f8\u0a06")
-        buf.write("\3\2\2\2\u01fa\u0a17\3\2\2\2\u01fc\u0a1e\3\2\2\2\u01fe")
-        buf.write("\u0a26\3\2\2\2\u0200\u0a2b\3\2\2\2\u0202\u0a30\3\2\2\2")
-        buf.write("\u0204\u0a35\3\2\2\2\u0206\u0a37\3\2\2\2\u0208\u0a39\3")
-        buf.write("\2\2\2\u020a\u0a3b\3\2\2\2\u020c\u0a3d\3\2\2\2\u020e\u0a3f")
-        buf.write("\3\2\2\2\u0210\u0a43\3\2\2\2\u0212\u0a45\3\2\2\2\u0214")
-        buf.write("\u0a47\3\2\2\2\u0216\u0a49\3\2\2\2\u0218\u0a4b\3\2\2\2")
-        buf.write("\u021a\u0a51\3\2\2\2\u021c\u0a56\3\2\2\2\u021e\u0a5c\3")
-        buf.write("\2\2\2\u0220\u0a61\3\2\2\2\u0222\u0a64\3\2\2\2\u0224\u0a70")
-        buf.write("\3\2\2\2\u0226\u0a77\3\2\2\2\u0228\u0a7b\3\2\2\2\u022a")
-        buf.write("\u0a88\3\2\2\2\u022c\u0a91\3\2\2\2\u022e\u0a98\3\2\2\2")
-        buf.write("\u0230\u0a9c\3\2\2\2\u0232\u0a9e\3\2\2\2\u0234\u0aa0\3")
-        buf.write("\2\2\2\u0236\u0aa2\3\2\2\2\u0238\u0aa4\3\2\2\2\u023a\u0aa6")
-        buf.write("\3\2\2\2\u023c\u0aa8\3\2\2\2\u023e\u0aaa\3\2\2\2\u0240")
-        buf.write("\u0aac\3\2\2\2\u0242\u0aae\3\2\2\2\u0244\u0ab0\3\2\2\2")
-        buf.write("\u0246\u0ab3\3\2\2\2\u0248\u0ab6\3\2\2\2\u024a\u0abd\3")
-        buf.write("\2\2\2\u024c\u0acd\3\2\2\2\u024e\u0acf\3\2\2\2\u0250\u0adc")
-        buf.write("\3\2\2\2\u0252\u0ae0\3\2\2\2\u0254\u0aed\3\2\2\2\u0256")
-        buf.write("\u0aef\3\2\2\2\u0258\u0af1\3\2\2\2\u025a\u0af3\3\2\2\2")
-        buf.write("\u025c\u0af5\3\2\2\2\u025e\u0afc\3\2\2\2\u0260\u0aff\3")
-        buf.write("\2\2\2\u0262\u0b04\3\2\2\2\u0264\u0265\5\4\3\2\u0265\3")
-        buf.write("\3\2\2\2\u0266\u026b\5\6\4\2\u0267\u0268\7$\2\2\u0268")
-        buf.write("\u026a\5\6\4\2\u0269\u0267\3\2\2\2\u026a\u026d\3\2\2\2")
-        buf.write("\u026b\u0269\3\2\2\2\u026b\u026c\3\2\2\2\u026c\u026f\3")
-        buf.write("\2\2\2\u026d\u026b\3\2\2\2\u026e\u0270\7$\2\2\u026f\u026e")
-        buf.write("\3\2\2\2\u026f\u0270\3\2\2\2\u0270\u0271\3\2\2\2\u0271")
-        buf.write("\u0272\7\2\2\3\u0272\5\3\2\2\2\u0273\u027b\5\b\5\2\u0274")
-        buf.write("\u027b\5*\26\2\u0275\u027b\5F$\2\u0276\u027b\5\n\6\2\u0277")
-        buf.write("\u027b\5J&\2\u0278\u027b\5> \2\u0279\u027b\5B\"\2\u027a")
-        buf.write("\u0273\3\2\2\2\u027a\u0274\3\2\2\2\u027a\u0275\3\2\2\2")
-        buf.write("\u027a\u0276\3\2\2\2\u027a\u0277\3\2\2\2\u027a\u0278\3")
-        buf.write("\2\2\2\u027a\u0279\3\2\2\2\u027b\7\3\2\2\2\u027c\u027d")
-        buf.write("\7+\2\2\u027d\u027e\7G\2\2\u027e\u027f\5\u021c\u010f\2")
-        buf.write("\u027f\u0280\7\23\2\2\u0280\u0281\5\u017e\u00c0\2\u0281")
-        buf.write("\t\3\2\2\2\u0282\u0288\5\16\b\2\u0283\u0288\5\20\t\2\u0284")
-        buf.write("\u0288\5\f\7\2\u0285\u0288\5\24\13\2\u0286\u0288\5\26")
-        buf.write("\f\2\u0287\u0282\3\2\2\2\u0287\u0283\3\2\2\2\u0287\u0284")
-        buf.write("\3\2\2\2\u0287\u0285\3\2\2\2\u0287\u0286\3\2\2\2\u0288")
-        buf.write("\13\3\2\2\2\u0289\u028a\7\u008f\2\2\u028a\u028b\5\u021c")
-        buf.write("\u010f\2\u028b\u028c\7\23\2\2\u028c\u028d\5L\'\2\u028d")
-        buf.write("\r\3\2\2\2\u028e\u028f\7\u008f\2\2\u028f\u0290\5\u021c")
-        buf.write("\u010f\2\u0290\u0291\7\23\2\2\u0291\u0293\7!\2\2\u0292")
-        buf.write("\u0294\5\30\r\2\u0293\u0292\3\2\2\2\u0293\u0294\3\2\2")
-        buf.write("\2\u0294\u0295\3\2\2\2\u0295\u0296\7\n\2\2\u0296\u0297")
-        buf.write("\5&\24\2\u0297\17\3\2\2\2\u0298\u0299\7\u008f\2\2\u0299")
-        buf.write("\u029a\5\u021c\u010f\2\u029a\u029b\7\23\2\2\u029b\u029c")
-        buf.write("\7\u0103\2\2\u029c\u029e\7!\2\2\u029d\u029f\5\22\n\2\u029e")
-        buf.write("\u029d\3\2\2\2\u029e\u029f\3\2\2\2\u029f\u02a0\3\2\2\2")
-        buf.write("\u02a0\u02a1\7\n\2\2\u02a1\u02a2\5&\24\2\u02a2\21\3\2")
-        buf.write("\2\2\u02a3\u02a8\5\32\16\2\u02a4\u02a5\7\13\2\2\u02a5")
-        buf.write("\u02a7\5\32\16\2\u02a6\u02a4\3\2\2\2\u02a7\u02aa\3\2\2")
-        buf.write("\2\u02a8\u02a6\3\2\2\2\u02a8\u02a9\3\2\2\2\u02a9\23\3")
-        buf.write("\2\2\2\u02aa\u02a8\3\2\2\2\u02ab\u02ac\7\u008f\2\2\u02ac")
-        buf.write("\u02ad\5\u021c\u010f\2\u02ad\u02ae\7\23\2\2\u02ae\u02af")
-        buf.write("\7\u009d\2\2\u02af\u02b0\7!\2\2\u02b0\u02b1\5N(\2\u02b1")
-        buf.write("\u02b2\7\n\2\2\u02b2\25\3\2\2\2\u02b3\u02b4\7\u008f\2")
-        buf.write("\2\u02b4\u02b5\5\u021c\u010f\2\u02b5\u02b6\7\23\2\2\u02b6")
-        buf.write("\u02b7\5\u00ccg\2\u02b7\27\3\2\2\2\u02b8\u02b9\5\36\20")
-        buf.write("\2\u02b9\u02ba\7\13\2\2\u02ba\u02bb\5\36\20\2\u02bb\u02bc")
-        buf.write("\3\2\2\2\u02bc\u02bd\7\13\2\2\u02bd\u02be\5\32\16\2\u02be")
-        buf.write("\u02c4\3\2\2\2\u02bf\u02c0\5\32\16\2\u02c0\u02c1\7\13")
-        buf.write("\2\2\u02c1\u02c2\5\32\16\2\u02c2\u02c4\3\2\2\2\u02c3\u02b8")
-        buf.write("\3\2\2\2\u02c3\u02bf\3\2\2\2\u02c4\31\3\2\2\2\u02c5\u02c6")
-        buf.write("\5\u0208\u0105\2\u02c6\u02c7\7\f\2\2\u02c7\u02c9\5\u0204")
-        buf.write("\u0103\2\u02c8\u02ca\5\34\17\2\u02c9\u02c8\3\2\2\2\u02c9")
-        buf.write("\u02ca\3\2\2\2\u02ca\33\3\2\2\2\u02cb\u02cc\7\23\2\2\u02cc")
-        buf.write("\u02cd\5\u0228\u0115\2\u02cd\35\3\2\2\2\u02ce\u02cf\5")
-        buf.write("\u0208\u0105\2\u02cf\u02d2\7\f\2\2\u02d0\u02d3\5 \21\2")
-        buf.write("\u02d1\u02d3\5\"\22\2\u02d2\u02d0\3\2\2\2\u02d2\u02d1")
-        buf.write("\3\2\2\2\u02d3\37\3\2\2\2\u02d4\u02d5\7!\2\2\u02d5\u02d6")
-        buf.write("\7\3\2\2\u02d6\u02d7\7\n\2\2\u02d7!\3\2\2\2\u02d8\u02d9")
-        buf.write("\7!\2\2\u02d9\u02de\5$\23\2\u02da\u02db\7\13\2\2\u02db")
-        buf.write("\u02dd\5$\23\2\u02dc\u02da\3\2\2\2\u02dd\u02e0\3\2\2\2")
-        buf.write("\u02de\u02dc\3\2\2\2\u02de\u02df\3\2\2\2\u02df\u02e1\3")
-        buf.write("\2\2\2\u02e0\u02de\3\2\2\2\u02e1\u02e2\7\n\2\2\u02e2#")
-        buf.write("\3\2\2\2\u02e3\u02e4\5\u0208\u0105\2\u02e4\u02e5\7\f\2")
-        buf.write("\2\u02e5\u02e6\5\u0204\u0103\2\u02e6%\3\2\2\2\u02e7\u02ed")
-        buf.write("\7\37\2\2\u02e8\u02e9\5(\25\2\u02e9\u02ea\7$\2\2\u02ea")
-        buf.write("\u02ec\3\2\2\2\u02eb\u02e8\3\2\2\2\u02ec\u02ef\3\2\2\2")
-        buf.write("\u02ed\u02eb\3\2\2\2\u02ed\u02ee\3\2\2\2\u02ee\u02f1\3")
-        buf.write("\2\2\2\u02ef\u02ed\3\2\2\2\u02f0\u02f2\5L\'\2\u02f1\u02f0")
-        buf.write("\3\2\2\2\u02f1\u02f2\3\2\2\2\u02f2\u02f4\3\2\2\2\u02f3")
-        buf.write("\u02f5\7$\2\2\u02f4\u02f3\3\2\2\2\u02f4\u02f5\3\2\2\2")
-        buf.write("\u02f5\u02f6\3\2\2\2\u02f6\u02f7\7\6\2\2\u02f7\'\3\2\2")
-        buf.write("\2\u02f8\u02fb\5\n\6\2\u02f9\u02fb\5F$\2\u02fa\u02f8\3")
-        buf.write("\2\2\2\u02fa\u02f9\3\2\2\2\u02fb)\3\2\2\2\u02fc\u02fd")
-        buf.write("\7J\2\2\u02fd\u02fe\7\u00ca\2\2\u02fe\u0300\5\u020a\u0106")
-        buf.write("\2\u02ff\u0301\5,\27\2\u0300\u02ff\3\2\2\2\u0300\u0301")
-        buf.write("\3\2\2\2\u0301+\3\2\2\2\u0302\u0303\7\23\2\2\u0303\u0305")
-        buf.write("\5.\30\2\u0304\u0306\5\62\32\2\u0305\u0304\3\2\2\2\u0305")
-        buf.write("\u0306\3\2\2\2\u0306\u0307\3\2\2\2\u0307\u0309\7\37\2")
-        buf.write("\2\u0308\u030a\5\64\33\2\u0309\u0308\3\2\2\2\u030a\u030b")
-        buf.write("\3\2\2\2\u030b\u0309\3\2\2\2\u030b\u030c\3\2\2\2\u030c")
-        buf.write("\u030d\3\2\2\2\u030d\u030e\7\6\2\2\u030e-\3\2\2\2\u030f")
-        buf.write("\u0310\7!\2\2\u0310\u0315\5\60\31\2\u0311\u0312\7\13\2")
-        buf.write("\2\u0312\u0314\5\60\31\2\u0313\u0311\3\2\2\2\u0314\u0317")
-        buf.write("\3\2\2\2\u0315\u0313\3\2\2\2\u0315\u0316\3\2\2\2\u0316")
-        buf.write("\u0318\3\2\2\2\u0317\u0315\3\2\2\2\u0318\u0319\7\n\2\2")
-        buf.write("\u0319/\3\2\2\2\u031a\u031b\5\u0208\u0105\2\u031b\u031c")
-        buf.write("\7\f\2\2\u031c\u031d\5\u0204\u0103\2\u031d\61\3\2\2\2")
-        buf.write("\u031e\u031f\7 \2\2\u031f\u0320\5\60\31\2\u0320\u0321")
-        buf.write("\7\7\2\2\u0321\63\3\2\2\2\u0322\u0324\5\66\34\2\u0323")
-        buf.write("\u0325\58\35\2\u0324\u0323\3\2\2\2\u0324\u0325\3\2\2\2")
-        buf.write("\u0325\u0326\3\2\2\2\u0326\u0327\7\23\2\2\u0327\u0329")
-        buf.write("\5<\37\2\u0328\u032a\7$\2\2\u0329\u0328\3\2\2\2\u0329")
-        buf.write("\u032a\3\2\2\2\u032a\65\3\2\2\2\u032b\u032c\7!\2\2\u032c")
-        buf.write("\u0331\5:\36\2\u032d\u032e\7\13\2\2\u032e\u0330\5:\36")
-        buf.write("\2\u032f\u032d\3\2\2\2\u0330\u0333\3\2\2\2\u0331\u032f")
-        buf.write("\3\2\2\2\u0331\u0332\3\2\2\2\u0332\u0334\3\2\2\2\u0333")
-        buf.write("\u0331\3\2\2\2\u0334\u0335\7\n\2\2\u0335\67\3\2\2\2\u0336")
-        buf.write("\u0337\7\21\2\2\u0337\u0338\7 \2\2\u0338\u0339\5:\36\2")
-        buf.write("\u0339\u033a\7\7\2\2\u033a9\3\2\2\2\u033b\u033c\5\u0248")
-        buf.write("\u0125\2\u033c;\3\2\2\2\u033d\u0343\7\37\2\2\u033e\u033f")
-        buf.write("\5(\25\2\u033f\u0340\7$\2\2\u0340\u0342\3\2\2\2\u0341")
-        buf.write("\u033e\3\2\2\2\u0342\u0345\3\2\2\2\u0343\u0341\3\2\2\2")
-        buf.write("\u0343\u0344\3\2\2\2\u0344\u0346\3\2\2\2\u0345\u0343\3")
-        buf.write("\2\2\2\u0346\u0347\5L\'\2\u0347\u0348\7\6\2\2\u0348=\3")
-        buf.write("\2\2\2\u0349\u034a\7\u00de\2\2\u034a\u034b\7(\2\2\u034b")
-        buf.write("\u034c\7\u00f8\2\2\u034c\u034d\7!\2\2\u034d\u0352\5@!")
-        buf.write("\2\u034e\u034f\7\13\2\2\u034f\u0351\5@!\2\u0350\u034e")
-        buf.write("\3\2\2\2\u0351\u0354\3\2\2\2\u0352\u0350\3\2\2\2\u0352")
-        buf.write("\u0353\3\2\2\2\u0353\u0355\3\2\2\2\u0354\u0352\3\2\2\2")
-        buf.write("\u0355\u0356\7\n\2\2\u0356?\3\2\2\2\u0357\u035a\5\u020a")
-        buf.write("\u0106\2\u0358\u035a\5\u01e8\u00f5\2\u0359\u0357\3\2\2")
-        buf.write("\2\u0359\u0358\3\2\2\2\u035aA\3\2\2\2\u035b\u035c\7\u00e6")
-        buf.write("\2\2\u035c\u035f\5\u021a\u010e\2\u035d\u035e\7\23\2\2")
-        buf.write("\u035e\u0360\5D#\2\u035f\u035d\3\2\2\2\u035f\u0360\3\2")
-        buf.write("\2\2\u0360C\3\2\2\2\u0361\u0364\5\u021a\u010e\2\u0362")
-        buf.write("\u0364\5\u0228\u0115\2\u0363\u0361\3\2\2\2\u0363\u0362")
-        buf.write("\3\2\2\2\u0364E\3\2\2\2\u0365\u0366\7J\2\2\u0366\u0367")
-        buf.write("\7\u00d7\2\2\u0367\u0368\7!\2\2\u0368\u036d\5H%\2\u0369")
-        buf.write("\u036a\7\13\2\2\u036a\u036c\5H%\2\u036b\u0369\3\2\2\2")
-        buf.write("\u036c\u036f\3\2\2\2\u036d\u036b\3\2\2\2\u036d\u036e\3")
-        buf.write("\2\2\2\u036e\u0370\3\2\2\2\u036f\u036d\3\2\2\2\u0370\u0371")
-        buf.write("\7\n\2\2\u0371G\3\2\2\2\u0372\u0373\5\u0208\u0105\2\u0373")
-        buf.write("\u0374\7\f\2\2\u0374\u0376\5\u0204\u0103\2\u0375\u0377")
-        buf.write("\5\34\17\2\u0376\u0375\3\2\2\2\u0376\u0377\3\2\2\2\u0377")
-        buf.write("I\3\2\2\2\u0378\u0379\5L\'\2\u0379K\3\2\2\2\u037a\u037b")
-        buf.write("\5N(\2\u037bM\3\2\2\2\u037c\u0380\5T+\2\u037d\u037f\5")
-        buf.write("P)\2\u037e\u037d\3\2\2\2\u037f\u0382\3\2\2\2\u0380\u037e")
-        buf.write("\3\2\2\2\u0380\u0381\3\2\2\2\u0381O\3\2\2\2\u0382\u0380")
-        buf.write("\3\2\2\2\u0383\u0384\7\5\2\2\u0384\u0385\5V,\2\u0385Q")
-        buf.write("\3\2\2\2\u0386\u038a\5V,\2\u0387\u0389\5P)\2\u0388\u0387")
-        buf.write("\3\2\2\2\u0389\u038c\3\2\2\2\u038a\u0388\3\2\2\2\u038a")
-        buf.write("\u038b\3\2\2\2\u038bS\3\2\2\2\u038c\u038a\3\2\2\2\u038d")
-        buf.write("\u0394\5X-\2\u038e\u0394\5\u0110\u0089\2\u038f\u0394\5")
-        buf.write("\u00c8e\2\u0390\u0394\5\u01d2\u00ea\2\u0391\u0394\5\u017c")
-        buf.write("\u00bf\2\u0392\u0394\5\u017e\u00c0\2\u0393\u038d\3\2\2")
-        buf.write("\2\u0393\u038e\3\2\2\2\u0393\u038f\3\2\2\2\u0393\u0390")
-        buf.write("\3\2\2\2\u0393\u0391\3\2\2\2\u0393\u0392\3\2\2\2\u0394")
-        buf.write("U\3\2\2\2\u0395\u03c7\5\\/\2\u0396\u03c7\5^\60\2\u0397")
-        buf.write("\u03c7\5`\61\2\u0398\u03c7\5b\62\2\u0399\u03c7\5f\64\2")
-        buf.write("\u039a\u03c7\5r:\2\u039b\u03c7\5p9\2\u039c\u03c7\5t;\2")
-        buf.write("\u039d\u03c7\5z>\2\u039e\u03c7\5\u0096L\2\u039f\u03c7")
-        buf.write("\5\u00a0Q\2\u03a0\u03c7\5\u00a2R\2\u03a1\u03c7\5\u00a4")
-        buf.write("S\2\u03a2\u03c7\5\u00b4[\2\u03a3\u03c7\5\u00bc_\2\u03a4")
-        buf.write("\u03c7\5\u00b6\\\2\u03a5\u03c7\5\u00be`\2\u03a6\u03c7")
-        buf.write("\5\u00c0a\2\u03a7\u03c7\5\u00c6d\2\u03a8\u03c7\5\u00ce")
-        buf.write("h\2\u03a9\u03c7\5\u00d6l\2\u03aa\u03c7\5\u00eex\2\u03ab")
-        buf.write("\u03c7\5\u00e4s\2\u03ac\u03c7\5l\67\2\u03ad\u03c7\5\u00f2")
-        buf.write("z\2\u03ae\u03c7\5\u0100\u0081\2\u03af\u03c7\5\u00fe\u0080")
-        buf.write("\2\u03b0\u03c7\5\u0104\u0083\2\u03b1\u03c7\5\u010c\u0087")
-        buf.write("\2\u03b2\u03c7\5\u0116\u008c\2\u03b3\u03c7\5\u0112\u008a")
-        buf.write("\2\u03b4\u03c7\5\u0118\u008d\2\u03b5\u03c7\5\u011a\u008e")
-        buf.write("\2\u03b6\u03c7\5\u0114\u008b\2\u03b7\u03c7\5\u011e\u0090")
-        buf.write("\2\u03b8\u03c7\5\u0122\u0092\2\u03b9\u03c7\5\u0130\u0099")
-        buf.write("\2\u03ba\u03c7\5\u012e\u0098\2\u03bb\u03c7\5\u0132\u009a")
-        buf.write("\2\u03bc\u03c7\5\u0142\u00a2\2\u03bd\u03c7\5\u0148\u00a5")
-        buf.write("\2\u03be\u03c7\5\u014a\u00a6\2\u03bf\u03c7\5\u0150\u00a9")
-        buf.write("\2\u03c0\u03c7\5\u0156\u00ac\2\u03c1\u03c7\5\u015a\u00ae")
-        buf.write("\2\u03c2\u03c7\5\u0158\u00ad\2\u03c3\u03c7\5\u015e\u00b0")
-        buf.write("\2\u03c4\u03c7\5\u0164\u00b3\2\u03c5\u03c7\5\u0168\u00b5")
-        buf.write("\2\u03c6\u0395\3\2\2\2\u03c6\u0396\3\2\2\2\u03c6\u0397")
-        buf.write("\3\2\2\2\u03c6\u0398\3\2\2\2\u03c6\u0399\3\2\2\2\u03c6")
-        buf.write("\u039a\3\2\2\2\u03c6\u039b\3\2\2\2\u03c6\u039c\3\2\2\2")
-        buf.write("\u03c6\u039d\3\2\2\2\u03c6\u039e\3\2\2\2\u03c6\u039f\3")
-        buf.write("\2\2\2\u03c6\u03a0\3\2\2\2\u03c6\u03a1\3\2\2\2\u03c6\u03a2")
-        buf.write("\3\2\2\2\u03c6\u03a3\3\2\2\2\u03c6\u03a4\3\2\2\2\u03c6")
-        buf.write("\u03a5\3\2\2\2\u03c6\u03a6\3\2\2\2\u03c6\u03a7\3\2\2\2")
-        buf.write("\u03c6\u03a8\3\2\2\2\u03c6\u03a9\3\2\2\2\u03c6\u03aa\3")
-        buf.write("\2\2\2\u03c6\u03ab\3\2\2\2\u03c6\u03ac\3\2\2\2\u03c6\u03ad")
-        buf.write("\3\2\2\2\u03c6\u03ae\3\2\2\2\u03c6\u03af\3\2\2\2\u03c6")
-        buf.write("\u03b0\3\2\2\2\u03c6\u03b1\3\2\2\2\u03c6\u03b2\3\2\2\2")
-        buf.write("\u03c6\u03b3\3\2\2\2\u03c6\u03b4\3\2\2\2\u03c6\u03b5\3")
-        buf.write("\2\2\2\u03c6\u03b6\3\2\2\2\u03c6\u03b7\3\2\2\2\u03c6\u03b8")
-        buf.write("\3\2\2\2\u03c6\u03b9\3\2\2\2\u03c6\u03ba\3\2\2\2\u03c6")
-        buf.write("\u03bb\3\2\2\2\u03c6\u03bc\3\2\2\2\u03c6\u03bd\3\2\2\2")
-        buf.write("\u03c6\u03be\3\2\2\2\u03c6\u03bf\3\2\2\2\u03c6\u03c0\3")
-        buf.write("\2\2\2\u03c6\u03c1\3\2\2\2\u03c6\u03c2\3\2\2\2\u03c6\u03c3")
-        buf.write("\3\2\2\2\u03c6\u03c4\3\2\2\2\u03c6\u03c5\3\2\2\2\u03c7")
-        buf.write("W\3\2\2\2\u03c8\u03cd\5z>\2\u03c9\u03cd\5\u0142\u00a2")
-        buf.write("\2\u03ca\u03cd\5\u0164\u00b3\2\u03cb\u03cd\5l\67\2\u03cc")
-        buf.write("\u03c8\3\2\2\2\u03cc\u03c9\3\2\2\2\u03cc\u03ca\3\2\2\2")
-        buf.write("\u03cc\u03cb\3\2\2\2\u03cdY\3\2\2\2\u03ce\u03e8\5b\62")
-        buf.write("\2\u03cf\u03e8\5p9\2\u03d0\u03e8\5\u0168\u00b5\2\u03d1")
-        buf.write("\u03e8\5\u00f2z\2\u03d2\u03e8\5\u00fe\u0080\2\u03d3\u03e8")
-        buf.write("\5\u0156\u00ac\2\u03d4\u03e8\5\u015e\u00b0\2\u03d5\u03e8")
-        buf.write("\5\u0116\u008c\2\u03d6\u03e8\5\u0112\u008a\2\u03d7\u03e8")
-        buf.write("\5\u0118\u008d\2\u03d8\u03e8\5\u011a\u008e\2\u03d9\u03e8")
-        buf.write("\5\u0114\u008b\2\u03da\u03e8\5\u0150\u00a9\2\u03db\u03e8")
-        buf.write("\5f\64\2\u03dc\u03e8\5\u015a\u00ae\2\u03dd\u03e8\5\u0158")
-        buf.write("\u00ad\2\u03de\u03e8\5\u014a\u00a6\2\u03df\u03e8\5\u00ee")
-        buf.write("x\2\u03e0\u03e8\5\u011e\u0090\2\u03e1\u03e8\5\u0130\u0099")
-        buf.write("\2\u03e2\u03e8\5\u012e\u0098\2\u03e3\u03e8\5\\/\2\u03e4")
-        buf.write("\u03e8\5\u00be`\2\u03e5\u03e8\5r:\2\u03e6\u03e8\5\u0132")
-        buf.write("\u009a\2\u03e7\u03ce\3\2\2\2\u03e7\u03cf\3\2\2\2\u03e7")
-        buf.write("\u03d0\3\2\2\2\u03e7\u03d1\3\2\2\2\u03e7\u03d2\3\2\2\2")
-        buf.write("\u03e7\u03d3\3\2\2\2\u03e7\u03d4\3\2\2\2\u03e7\u03d5\3")
-        buf.write("\2\2\2\u03e7\u03d6\3\2\2\2\u03e7\u03d7\3\2\2\2\u03e7\u03d8")
-        buf.write("\3\2\2\2\u03e7\u03d9\3\2\2\2\u03e7\u03da\3\2\2\2\u03e7")
-        buf.write("\u03db\3\2\2\2\u03e7\u03dc\3\2\2\2\u03e7\u03dd\3\2\2\2")
-        buf.write("\u03e7\u03de\3\2\2\2\u03e7\u03df\3\2\2\2\u03e7\u03e0\3")
-        buf.write("\2\2\2\u03e7\u03e1\3\2\2\2\u03e7\u03e2\3\2\2\2\u03e7\u03e3")
-        buf.write("\3\2\2\2\u03e7\u03e4\3\2\2\2\u03e7\u03e5\3\2\2\2\u03e7")
-        buf.write("\u03e6\3\2\2\2\u03e8[\3\2\2\2\u03e9\u03ed\7\61\2\2\u03ea")
-        buf.write("\u03ec\5\u0172\u00ba\2\u03eb\u03ea\3\2\2\2\u03ec\u03ef")
-        buf.write("\3\2\2\2\u03ed\u03eb\3\2\2\2\u03ed\u03ee\3\2\2\2\u03ee")
-        buf.write("\u03f0\3\2\2\2\u03ef\u03ed\3\2\2\2\u03f0\u03f1\5\u021c")
-        buf.write("\u010f\2\u03f1]\3\2\2\2\u03f2\u03f3\7\63\2\2\u03f3\u03f4")
-        buf.write("\5\u01f2\u00fa\2\u03f4_\3\2\2\2\u03f5\u03f9\7?\2\2\u03f6")
-        buf.write("\u03f8\5\u0172\u00ba\2\u03f7\u03f6\3\2\2\2\u03f8\u03fb")
-        buf.write("\3\2\2\2\u03f9\u03f7\3\2\2\2\u03f9\u03fa\3\2\2\2\u03fa")
-        buf.write("a\3\2\2\2\u03fb\u03f9\3\2\2\2\u03fc\u0400\7D\2\2\u03fd")
-        buf.write("\u03ff\5\u0172\u00ba\2\u03fe\u03fd\3\2\2\2\u03ff\u0402")
-        buf.write("\3\2\2\2\u0400\u03fe\3\2\2\2\u0400\u0401\3\2\2\2\u0401")
-        buf.write("c\3\2\2\2\u0402\u0400\3\2\2\2\u0403\u0404\7\61\2\2\u0404")
-        buf.write("\u0405\5\u0212\u010a\2\u0405e\3\2\2\2\u0406\u040a\7O\2")
-        buf.write("\2\u0407\u0409\5\u0172\u00ba\2\u0408\u0407\3\2\2\2\u0409")
-        buf.write("\u040c\3\2\2\2\u040a\u0408\3\2\2\2\u040a\u040b\3\2\2\2")
-        buf.write("\u040b\u040f\3\2\2\2\u040c\u040a\3\2\2\2\u040d\u0410\5")
-        buf.write("h\65\2\u040e\u0410\5j\66\2\u040f\u040d\3\2\2\2\u040f\u040e")
-        buf.write("\3\2\2\2\u0410g\3\2\2\2\u0411\u0412\7\3\2\2\u0412i\3\2")
-        buf.write("\2\2\u0413\u0418\5\u017e\u00c0\2\u0414\u0415\7\13\2\2")
-        buf.write("\u0415\u0417\5\u017e\u00c0\2\u0416\u0414\3\2\2\2\u0417")
-        buf.write("\u041a\3\2\2\2\u0418\u0416\3\2\2\2\u0418\u0419\3\2\2\2")
-        buf.write("\u0419k\3\2\2\2\u041a\u0418\3\2\2\2\u041b\u041f\7T\2\2")
-        buf.write("\u041c\u041e\5\u0172\u00ba\2\u041d\u041c\3\2\2\2\u041e")
-        buf.write("\u0421\3\2\2\2\u041f\u041d\3\2\2\2\u041f\u0420\3\2\2\2")
-        buf.write("\u0420\u0422\3\2\2\2\u0421\u041f\3\2\2\2\u0422\u0424\5")
-        buf.write("\u01c0\u00e1\2\u0423\u0425\5n8\2\u0424\u0423\3\2\2\2\u0424")
-        buf.write("\u0425\3\2\2\2\u0425m\3\2\2\2\u0426\u0427\7\f\2\2\u0427")
-        buf.write("\u0428\5\u01f2\u00fa\2\u0428o\3\2\2\2\u0429\u042a\7X\2")
-        buf.write("\2\u042a\u042f\5\u0176\u00bc\2\u042b\u042c\7\13\2\2\u042c")
-        buf.write("\u042e\5\u0176\u00bc\2\u042d\u042b\3\2\2\2\u042e\u0431")
-        buf.write("\3\2\2\2\u042f\u042d\3\2\2\2\u042f\u0430\3\2\2\2\u0430")
-        buf.write("q\3\2\2\2\u0431\u042f\3\2\2\2\u0432\u0433\7V\2\2\u0433")
-        buf.write("s\3\2\2\2\u0434\u0435\7[\2\2\u0435\u0436\7;\2\2\u0436")
-        buf.write("\u043b\5\u01d4\u00eb\2\u0437\u0438\7\13\2\2\u0438\u043a")
-        buf.write("\5\u01d4\u00eb\2\u0439\u0437\3\2\2\2\u043a\u043d\3\2\2")
-        buf.write("\2\u043b\u0439\3\2\2\2\u043b\u043c\3\2\2\2\u043c\u0440")
-        buf.write("\3\2\2\2\u043d\u043b\3\2\2\2\u043e\u0441\5v<\2\u043f\u0441")
-        buf.write("\5x=\2\u0440\u043e\3\2\2\2\u0440\u043f\3\2\2\2\u0440\u0441")
-        buf.write("\3\2\2\2\u0441u\3\2\2\2\u0442\u0443\7\u0106\2\2\u0443")
-        buf.write("\u0444\5Z.\2\u0444w\3\2\2\2\u0445\u0446\7\u0106\2\2\u0446")
-        buf.write("\u0447\7!\2\2\u0447\u0448\5\u009cO\2\u0448\u0449\7\n\2")
-        buf.write("\2\u0449y\3\2\2\2\u044a\u044c\7]\2\2\u044b\u044d\5\u01ce")
-        buf.write("\u00e8\2\u044c\u044b\3\2\2\2\u044c\u044d\3\2\2\2\u044d")
-        buf.write("\u044f\3\2\2\2\u044e\u0450\5|?\2\u044f\u044e\3\2\2\2\u044f")
-        buf.write("\u0450\3\2\2\2\u0450\u0451\3\2\2\2\u0451\u0454\5\u017e")
-        buf.write("\u00c0\2\u0452\u0455\5\u0080A\2\u0453\u0455\5\u008aF\2")
-        buf.write("\u0454\u0452\3\2\2\2\u0454\u0453\3\2\2\2\u0454\u0455\3")
-        buf.write("\2\2\2\u0455\u0457\3\2\2\2\u0456\u0458\5\u008cG\2\u0457")
-        buf.write("\u0456\3\2\2\2\u0457\u0458\3\2\2\2\u0458{\3\2\2\2\u0459")
-        buf.write("\u045b\5\u0172\u00ba\2\u045a\u0459\3\2\2\2\u045b\u045e")
-        buf.write("\3\2\2\2\u045c\u045a\3\2\2\2\u045c\u045d\3\2\2\2\u045d")
-        buf.write("\u0460\3\2\2\2\u045e\u045c\3\2\2\2\u045f\u0461\5~@\2\u0460")
-        buf.write("\u045f\3\2\2\2\u0460\u0461\3\2\2\2\u0461\u0462\3\2\2\2")
-        buf.write("\u0462\u0463\7\u0105\2\2\u0463}\3\2\2\2\u0464\u0465\7")
-        buf.write("\u0084\2\2\u0465\u0466\7!\2\2\u0466\u046b\5\u0092J\2\u0467")
-        buf.write("\u0468\7\13\2\2\u0468\u046a\5\u0092J\2\u0469\u0467\3\2")
-        buf.write("\2\2\u046a\u046d\3\2\2\2\u046b\u0469\3\2\2\2\u046b\u046c")
-        buf.write("\3\2\2\2\u046c\u046e\3\2\2\2\u046d\u046b\3\2\2\2\u046e")
-        buf.write("\u046f\7\n\2\2\u046f\177\3\2\2\2\u0470\u0471\7\u00d0\2")
-        buf.write("\2\u0471\u0476\5\u0082B\2\u0472\u0473\7\13\2\2\u0473\u0475")
-        buf.write("\5\u0082B\2\u0474\u0472\3\2\2\2\u0475\u0478\3\2\2\2\u0476")
-        buf.write("\u0474\3\2\2\2\u0476\u0477\3\2\2\2\u0477\u0081\3\2\2\2")
-        buf.write("\u0478\u0476\3\2\2\2\u0479\u047c\5\u0084C\2\u047a\u047c")
-        buf.write("\5\u0088E\2\u047b\u0479\3\2\2\2\u047b\u047a\3\2\2\2\u047c")
-        buf.write("\u0083\3\2\2\2\u047d\u047f\5\u0208\u0105\2\u047e\u0480")
-        buf.write("\5\u0086D\2\u047f\u047e\3\2\2\2\u047f\u0480\3\2\2\2\u0480")
-        buf.write("\u0085\3\2\2\2\u0481\u0482\7\f\2\2\u0482\u0483\5\u0206")
-        buf.write("\u0104\2\u0483\u0087\3\2\2\2\u0484\u0485\7\u00c2\2\2\u0485")
-        buf.write("\u0486\7!\2\2\u0486\u0487\7\3\2\2\u0487\u0488\7\n\2\2")
-        buf.write("\u0488\u0089\3\2\2\2\u0489\u048a\7\u00d6\2\2\u048a\u008b")
-        buf.write("\3\2\2\2\u048b\u048e\7\u00d2\2\2\u048c\u048f\5\u008eH")
-        buf.write("\2\u048d\u048f\5\u0090I\2\u048e\u048c\3\2\2\2\u048e\u048d")
-        buf.write("\3\2\2\2\u048f\u008d\3\2\2\2\u0490\u0491\7\3\2\2\u0491")
-        buf.write("\u008f\3\2\2\2\u0492\u0497\5\u0084C\2\u0493\u0494\7\13")
-        buf.write("\2\2\u0494\u0496\5\u0084C\2\u0495\u0493\3\2\2\2\u0496")
-        buf.write("\u0499\3\2\2\2\u0497\u0495\3\2\2\2\u0497\u0498\3\2\2\2")
-        buf.write("\u0498\u0091\3\2\2\2\u0499\u0497\3\2\2\2\u049a\u049d\5")
-        buf.write("\u0094K\2\u049b\u049d\5\u01e8\u00f5\2\u049c\u049a\3\2")
-        buf.write("\2\2\u049c\u049b\3\2\2\2\u049d\u0093\3\2\2\2\u049e\u04a3")
-        buf.write("\5\u01e2\u00f2\2\u049f\u04a0\7\5\2\2\u04a0\u04a2\5\\/")
-        buf.write("\2\u04a1\u049f\3\2\2\2\u04a2\u04a5\3\2\2\2\u04a3\u04a1")
-        buf.write("\3\2\2\2\u04a3\u04a4\3\2\2\2\u04a4\u0095\3\2\2\2\u04a5")
-        buf.write("\u04a3\3\2\2\2\u04a6\u04a8\7`\2\2\u04a7\u04a9\5\u0098")
-        buf.write("M\2\u04a8\u04a7\3\2\2\2\u04a9\u04aa\3\2\2\2\u04aa\u04a8")
-        buf.write("\3\2\2\2\u04aa\u04ab\3\2\2\2\u04ab\u0097\3\2\2\2\u04ac")
-        buf.write("\u04ae\5\u009aN\2\u04ad\u04ac\3\2\2\2\u04ad\u04ae\3\2")
-        buf.write("\2\2\u04ae\u04af\3\2\2\2\u04af\u04b0\7!\2\2\u04b0\u04b1")
-        buf.write("\5\u009cO\2\u04b1\u04b2\7\n\2\2\u04b2\u0099\3\2\2\2\u04b3")
-        buf.write("\u04b4\5\u021c\u010f\2\u04b4\u04b5\7\23\2\2\u04b5\u009b")
-        buf.write("\3\2\2\2\u04b6\u04ba\5Z.\2\u04b7\u04b9\5\u009eP\2\u04b8")
-        buf.write("\u04b7\3\2\2\2\u04b9\u04bc\3\2\2\2\u04ba\u04b8\3\2\2\2")
-        buf.write("\u04ba\u04bb\3\2\2\2\u04bb\u009d\3\2\2\2\u04bc\u04ba\3")
-        buf.write("\2\2\2\u04bd\u04be\7\5\2\2\u04be\u04bf\5Z.\2\u04bf\u009f")
-        buf.write("\3\2\2\2\u04c0\u04c1\7b\2\2\u04c1\u00a1\3\2\2\2\u04c2")
-        buf.write("\u04c6\7e\2\2\u04c3\u04c5\5\u0172\u00ba\2\u04c4\u04c3")
-        buf.write("\3\2\2\2\u04c5\u04c8\3\2\2\2\u04c6\u04c4\3\2\2\2\u04c6")
-        buf.write("\u04c7\3\2\2\2\u04c7\u00a3\3\2\2\2\u04c8\u04c6\3\2\2\2")
-        buf.write("\u04c9\u04cd\7f\2\2\u04ca\u04cc\5\u0172\u00ba\2\u04cb")
-        buf.write("\u04ca\3\2\2\2\u04cc\u04cf\3\2\2\2\u04cd\u04cb\3\2\2\2")
-        buf.write("\u04cd\u04ce\3\2\2\2\u04ce\u04d0\3\2\2\2\u04cf\u04cd\3")
-        buf.write("\2\2\2\u04d0\u04d1\5\u00a6T\2\u04d1\u04d2\7\13\2\2\u04d2")
-        buf.write("\u04d3\5\u00a6T\2\u04d3\u04d5\3\2\2\2\u04d4\u04d6\5\u00b0")
-        buf.write("Y\2\u04d5\u04d4\3\2\2\2\u04d5\u04d6\3\2\2\2\u04d6\u04d8")
-        buf.write("\3\2\2\2\u04d7\u04d9\5\u00b2Z\2\u04d8\u04d7\3\2\2\2\u04d8")
-        buf.write("\u04d9\3\2\2\2\u04d9\u00a5\3\2\2\2\u04da\u04de\5\u00a8")
-        buf.write("U\2\u04db\u04de\5\u00aaV\2\u04dc\u04de\5\u00acW\2\u04dd")
-        buf.write("\u04da\3\2\2\2\u04dd\u04db\3\2\2\2\u04dd\u04dc\3\2\2\2")
-        buf.write("\u04de\u00a7\3\2\2\2\u04df\u04e0\7!\2\2\u04e0\u04e1\5")
-        buf.write("\u021c\u010f\2\u04e1\u04e2\7\n\2\2\u04e2\u00a9\3\2\2\2")
-        buf.write("\u04e3\u04e4\t\2\2\2\u04e4\u00ab\3\2\2\2\u04e5\u04e6\t")
-        buf.write("\3\2\2\u04e6\u04e8\5\u021c\u010f\2\u04e7\u04e9\5\u00ae")
-        buf.write("X\2\u04e8\u04e7\3\2\2\2\u04e8\u04e9\3\2\2\2\u04e9\u04ea")
-        buf.write("\3\2\2\2\u04ea\u04eb\t\4\2\2\u04eb\u00ad\3\2\2\2\u04ec")
-        buf.write("\u04ed\7\3\2\2\u04ed\u04ee\5\u01a6\u00d4\2\u04ee\u04ef")
-        buf.write("\7\22\2\2\u04ef\u04f0\5\u01a6\u00d4\2\u04f0\u00af\3\2")
-        buf.write("\2\2\u04f1\u04f2\7\u0105\2\2\u04f2\u04f3\5L\'\2\u04f3")
-        buf.write("\u00b1\3\2\2\2\u04f4\u04f5\7\u00d0\2\2\u04f5\u04fa\5\u0176")
-        buf.write("\u00bc\2\u04f6\u04f7\7\13\2\2\u04f7\u04f9\5\u0176\u00bc")
-        buf.write("\2\u04f8\u04f6\3\2\2\2\u04f9\u04fc\3\2\2\2\u04fa\u04f8")
-        buf.write("\3\2\2\2\u04fa\u04fb\3\2\2\2\u04fb\u00b3\3\2\2\2\u04fc")
-        buf.write("\u04fa\3\2\2\2\u04fd\u04fe\7g\2\2\u04fe\u0500\5\u01a6")
-        buf.write("\u00d4\2\u04ff\u0501\5\u00c2b\2\u0500\u04ff\3\2\2\2\u0500")
-        buf.write("\u0501\3\2\2\2\u0501\u00b5\3\2\2\2\u0502\u0503\7i\2\2")
-        buf.write("\u0503\u0504\5\u00b8]\2\u0504\u0505\7\13\2\2\u0505\u0506")
-        buf.write("\5\u00b8]\2\u0506\u00b7\3\2\2\2\u0507\u0509\t\5\2\2\u0508")
-        buf.write("\u050a\5\u00ba^\2\u0509\u0508\3\2\2\2\u0509\u050a\3\2")
-        buf.write("\2\2\u050a\u050e\3\2\2\2\u050b\u050d\5\u0172\u00ba\2\u050c")
-        buf.write("\u050b\3\2\2\2\u050d\u0510\3\2\2\2\u050e\u050c\3\2\2\2")
-        buf.write("\u050e\u050f\3\2\2\2\u050f\u00b9\3\2\2\2\u0510\u050e\3")
-        buf.write("\2\2\2\u0511\u0512\7\61\2\2\u0512\u0513\5\u021c\u010f")
-        buf.write("\2\u0513\u00bb\3\2\2\2\u0514\u0518\7h\2\2\u0515\u0517")
-        buf.write("\5\u0172\u00ba\2\u0516\u0515\3\2\2\2\u0517\u051a\3\2\2")
-        buf.write("\2\u0518\u0516\3\2\2\2\u0518\u0519\3\2\2\2\u0519\u051b")
-        buf.write("\3\2\2\2\u051a\u0518\3\2\2\2\u051b\u051c\5\u00a6T\2\u051c")
-        buf.write("\u051d\7\13\2\2\u051d\u051e\5\u00a6T\2\u051e\u0520\3\2")
-        buf.write("\2\2\u051f\u0521\5\u00b0Y\2\u0520\u051f\3\2\2\2\u0520")
-        buf.write("\u0521\3\2\2\2\u0521\u0523\3\2\2\2\u0522\u0524\5\u00b2")
-        buf.write("Z\2\u0523\u0522\3\2\2\2\u0523\u0524\3\2\2\2\u0524\u00bd")
-        buf.write("\3\2\2\2\u0525\u0526\7\u0087\2\2\u0526\u0527\5\u01bc\u00df")
-        buf.write("\2\u0527\u00bf\3\2\2\2\u0528\u052c\7\u008a\2\2\u0529\u052b")
-        buf.write("\5\u0172\u00ba\2\u052a\u0529\3\2\2\2\u052b\u052e\3\2\2")
-        buf.write("\2\u052c\u052a\3\2\2\2\u052c\u052d\3\2\2\2\u052d\u052f")
-        buf.write("\3\2\2\2\u052e\u052c\3\2\2\2\u052f\u0532\5\u017e\u00c0")
-        buf.write("\2\u0530\u0533\5\u00c2b\2\u0531\u0533\5\u00c4c\2\u0532")
-        buf.write("\u0530\3\2\2\2\u0532\u0531\3\2\2\2\u0532\u0533\3\2\2\2")
-        buf.write("\u0533\u00c1\3\2\2\2\u0534\u053d\7\u00bc\2\2\u0535\u053a")
-        buf.write("\5\u017e\u00c0\2\u0536\u0537\7\13\2\2\u0537\u0539\5\u017e")
-        buf.write("\u00c0\2\u0538\u0536\3\2\2\2\u0539\u053c\3\2\2\2\u053a")
-        buf.write("\u0538\3\2\2\2\u053a\u053b\3\2\2\2\u053b\u053e\3\2\2\2")
-        buf.write("\u053c\u053a\3\2\2\2\u053d\u0535\3\2\2\2\u053d\u053e\3")
-        buf.write("\2\2\2\u053e\u00c3\3\2\2\2\u053f\u0540\7\u0105\2\2\u0540")
-        buf.write("\u0541\5\u017e\u00c0\2\u0541\u00c5\3\2\2\2\u0542\u0546")
-        buf.write("\7\u0096\2\2\u0543\u0545\5\u0172\u00ba\2\u0544\u0543\3")
-        buf.write("\2\2\2\u0545\u0548\3\2\2\2\u0546\u0544\3\2\2\2\u0546\u0547")
-        buf.write("\3\2\2\2\u0547\u0549\3\2\2\2\u0548\u0546\3\2\2\2\u0549")
-        buf.write("\u054a\5\u017e\u00c0\2\u054a\u054b\5\u00c2b\2\u054b\u00c7")
-        buf.write("\3\2\2\2\u054c\u0550\7\u0098\2\2\u054d\u054f\5\u0172\u00ba")
-        buf.write("\2\u054e\u054d\3\2\2\2\u054f\u0552\3\2\2\2\u0550\u054e")
-        buf.write("\3\2\2\2\u0550\u0551\3\2\2\2\u0551\u0553\3\2\2\2\u0552")
-        buf.write("\u0550\3\2\2\2\u0553\u0554\5\u00caf\2\u0554\u0555\7\61")
-        buf.write("\2\2\u0555\u0556\5\u021c\u010f\2\u0556\u0557\7!\2\2\u0557")
-        buf.write("\u055c\5\6\4\2\u0558\u0559\7$\2\2\u0559\u055b\5\6\4\2")
-        buf.write("\u055a\u0558\3\2\2\2\u055b\u055e\3\2\2\2\u055c\u055a\3")
-        buf.write("\2\2\2\u055c\u055d\3\2\2\2\u055d\u0560\3\2\2\2\u055e\u055c")
-        buf.write("\3\2\2\2\u055f\u0561\7$\2\2\u0560\u055f\3\2\2\2\u0560")
-        buf.write("\u0561\3\2\2\2\u0561\u0562\3\2\2\2\u0562\u0563\7\n\2\2")
-        buf.write("\u0563\u00c9\3\2\2\2\u0564\u0568\5\u00ccg\2\u0565\u0568")
-        buf.write("\5\u020a\u0106\2\u0566\u0568\5\u01d4\u00eb\2\u0567\u0564")
-        buf.write("\3\2\2\2\u0567\u0565\3\2\2\2\u0567\u0566\3\2\2\2\u0568")
-        buf.write("\u00cb\3\2\2\2\u0569\u056a\7S\2\2\u056a\u056b\7 \2\2\u056b")
-        buf.write("\u0570\5\u017e\u00c0\2\u056c\u056d\7\13\2\2\u056d\u056f")
-        buf.write("\5\u017e\u00c0\2\u056e\u056c\3\2\2\2\u056f\u0572\3\2\2")
-        buf.write("\2\u0570\u056e\3\2\2\2\u0570\u0571\3\2\2\2\u0571\u0573")
-        buf.write("\3\2\2\2\u0572\u0570\3\2\2\2\u0573\u0574\7\7\2\2\u0574")
-        buf.write("\u00cd\3\2\2\2\u0575\u0579\7\u0099\2\2\u0576\u0578\5\u0172")
-        buf.write("\u00ba\2\u0577\u0576\3\2\2\2\u0578\u057b\3\2\2\2\u0579")
-        buf.write("\u0577\3\2\2\2\u0579\u057a\3\2\2\2\u057a\u057c\3\2\2\2")
-        buf.write("\u057b\u0579\3\2\2\2\u057c\u057d\5\u020a\u0106\2\u057d")
-        buf.write("\u057e\t\6\2\2\u057e\u0581\5\u020a\u0106\2\u057f\u0582")
-        buf.write("\5\u00d0i\2\u0580\u0582\5\u00d2j\2\u0581\u057f\3\2\2\2")
-        buf.write("\u0581\u0580\3\2\2\2\u0581\u0582\3\2\2\2\u0582\u0584\3")
-        buf.write("\2\2\2\u0583\u0585\5\u00d4k\2\u0584\u0583\3\2\2\2\u0584")
-        buf.write("\u0585\3\2\2\2\u0585\u00cf\3\2\2\2\u0586\u0587\7\u010b")
-        buf.write("\2\2\u0587\u0588\7\23\2\2\u0588\u0589\5\u021c\u010f\2")
-        buf.write("\u0589\u00d1\3\2\2\2\u058a\u058b\7\u0106\2\2\u058b\u058c")
-        buf.write("\5\u01a6\u00d4\2\u058c\u058d\7\u00bc\2\2\u058d\u058e\5")
-        buf.write("\u020a\u0106\2\u058e\u00d3\3\2\2\2\u058f\u0590\7\u00c9")
-        buf.write("\2\2\u0590\u0591\5\u01d6\u00ec\2\u0591\u0592\7!\2\2\u0592")
-        buf.write("\u0593\5\u016a\u00b6\2\u0593\u0594\7\n\2\2\u0594\u00d5")
-        buf.write("\3\2\2\2\u0595\u0599\7\u009a\2\2\u0596\u0598\5\u0172\u00ba")
-        buf.write("\2\u0597\u0596\3\2\2\2\u0598\u059b\3\2\2\2\u0599\u0597")
-        buf.write("\3\2\2\2\u0599\u059a\3\2\2\2\u059a\u059c\3\2\2\2\u059b")
-        buf.write("\u0599\3\2\2\2\u059c\u05a1\5\u00dan\2\u059d\u059e\7\13")
-        buf.write("\2\2\u059e\u05a0\5\u00dan\2\u059f\u059d\3\2\2\2\u05a0")
-        buf.write("\u05a3\3\2\2\2\u05a1\u059f\3\2\2\2\u05a1\u05a2\3\2\2\2")
-        buf.write("\u05a2\u05a4\3\2\2\2\u05a3\u05a1\3\2\2\2\u05a4\u05a7\5")
-        buf.write("\u00d8m\2\u05a5\u05a8\5\u00dep\2\u05a6\u05a8\5\u00e0q")
-        buf.write("\2\u05a7\u05a5\3\2\2\2\u05a7\u05a6\3\2\2\2\u05a8\u05aa")
-        buf.write("\3\2\2\2\u05a9\u05ab\5\u00e2r\2\u05aa\u05a9\3\2\2\2\u05aa")
-        buf.write("\u05ab\3\2\2\2\u05ab\u00d7\3\2\2\2\u05ac\u05ad\7\u00bc")
-        buf.write("\2\2\u05ad\u05ae\5\u0176\u00bc\2\u05ae\u00d9\3\2\2\2\u05af")
-        buf.write("\u05b1\5\u0176\u00bc\2\u05b0\u05b2\5\u00dco\2\u05b1\u05b0")
-        buf.write("\3\2\2\2\u05b1\u05b2\3\2\2\2\u05b2\u00db\3\2\2\2\u05b3")
-        buf.write("\u05b4\7L\2\2\u05b4\u05b5\7\23\2\2\u05b5\u05b6\5\u0176")
-        buf.write("\u00bc\2\u05b6\u00dd\3\2\2\2\u05b7\u05b8\7\u0084\2\2\u05b8")
-        buf.write("\u05b9\7\u00d8\2\2\u05b9\u05ba\7!\2\2\u05ba\u05bb\5\u0176")
-        buf.write("\u00bc\2\u05bb\u05bc\7\13\2\2\u05bc\u05bd\5\u0176\u00bc")
-        buf.write("\2\u05bd\u05be\7\13\2\2\u05be\u05bf\5\u0176\u00bc\2\u05bf")
-        buf.write("\u05c0\7\n\2\2\u05c0\u00df\3\2\2\2\u05c1\u05c2\7a\2\2")
-        buf.write("\u05c2\u05c4\5\u0176\u00bc\2\u05c3\u05c1\3\2\2\2\u05c3")
-        buf.write("\u05c4\3\2\2\2\u05c4\u05c7\3\2\2\2\u05c5\u05c6\7\u00f8")
-        buf.write("\2\2\u05c6\u05c8\5\u0176\u00bc\2\u05c7\u05c5\3\2\2\2\u05c7")
-        buf.write("\u05c8\3\2\2\2\u05c8\u05c9\3\2\2\2\u05c9\u05ca\7\u00ef")
-        buf.write("\2\2\u05ca\u05cb\5\u0176\u00bc\2\u05cb\u00e1\3\2\2\2\u05cc")
-        buf.write("\u05cd\7;\2\2\u05cd\u05d2\5\u0176\u00bc\2\u05ce\u05cf")
-        buf.write("\7\13\2\2\u05cf\u05d1\5\u0176\u00bc\2\u05d0\u05ce\3\2")
-        buf.write("\2\2\u05d1\u05d4\3\2\2\2\u05d2\u05d0\3\2\2\2\u05d2\u05d3")
-        buf.write("\3\2\2\2\u05d3\u00e3\3\2\2\2\u05d4\u05d2\3\2\2\2\u05d5")
-        buf.write("\u05d9\t\7\2\2\u05d6\u05d8\5\u0170\u00b9\2\u05d7\u05d6")
-        buf.write("\3\2\2\2\u05d8\u05db\3\2\2\2\u05d9\u05d7\3\2\2\2\u05d9")
-        buf.write("\u05da\3\2\2\2\u05da\u05dc\3\2\2\2\u05db\u05d9\3\2\2\2")
-        buf.write("\u05dc\u05e1\5\u00eav\2\u05dd\u05de\7\13\2\2\u05de\u05e0")
-        buf.write("\5\u00eav\2\u05df\u05dd\3\2\2\2\u05e0\u05e3\3\2\2\2\u05e1")
-        buf.write("\u05df\3\2\2\2\u05e1\u05e2\3\2\2\2\u05e2\u05e5\3\2\2\2")
-        buf.write("\u05e3\u05e1\3\2\2\2\u05e4\u05e6\5\u00e6t\2\u05e5\u05e4")
-        buf.write("\3\2\2\2\u05e5\u05e6\3\2\2\2\u05e6\u05e8\3\2\2\2\u05e7")
-        buf.write("\u05e9\5\u00e8u\2\u05e8\u05e7\3\2\2\2\u05e8\u05e9\3\2")
-        buf.write("\2\2\u05e9\u05ea\3\2\2\2\u05ea\u05eb\7\u00bc\2\2\u05eb")
-        buf.write("\u05ec\7!\2\2\u05ec\u05ed\5\u016a\u00b6\2\u05ed\u05ee")
-        buf.write("\7\n\2\2\u05ee\u00e5\3\2\2\2\u05ef\u05f0\7\u0092\2\2\u05f0")
-        buf.write("\u05f1\7\u0133\2\2\u05f1\u00e7\3\2\2\2\u05f2\u05f3\7\u0082")
-        buf.write("\2\2\u05f3\u05f4\7\u013d\2\2\u05f4\u00e9\3\2\2\2\u05f5")
-        buf.write("\u05f7\5\u0176\u00bc\2\u05f6\u05f8\5\u00ecw\2\u05f7\u05f6")
-        buf.write("\3\2\2\2\u05f7\u05f8\3\2\2\2\u05f8\u00eb\3\2\2\2\u05f9")
-        buf.write("\u05fa\7\u00f8\2\2\u05fa\u05fb\7\u013b\2\2\u05fb\u00ed")
-        buf.write("\3\2\2\2\u05fc\u0600\t\b\2\2\u05fd\u05ff\5\u0170\u00b9")
-        buf.write("\2\u05fe\u05fd\3\2\2\2\u05ff\u0602\3\2\2\2\u0600\u05fe")
-        buf.write("\3\2\2\2\u0600\u0601\3\2\2\2\u0601\u0603\3\2\2\2\u0602")
-        buf.write("\u0600\3\2\2\2\u0603\u0608\5\u00f0y\2\u0604\u0605\7\13")
-        buf.write("\2\2\u0605\u0607\5\u00f0y\2\u0606\u0604\3\2\2\2\u0607")
-        buf.write("\u060a\3\2\2\2\u0608\u0606\3\2\2\2\u0608\u0609\3\2\2\2")
-        buf.write("\u0609\u060c\3\2\2\2\u060a\u0608\3\2\2\2\u060b\u060d\5")
-        buf.write("\u00e6t\2\u060c\u060b\3\2\2\2\u060c\u060d\3\2\2\2\u060d")
-        buf.write("\u00ef\3\2\2\2\u060e\u0610\5\u0176\u00bc\2\u060f\u0611")
-        buf.write("\5\u00ecw\2\u0610\u060f\3\2\2\2\u0610\u0611\3\2\2\2\u0611")
-        buf.write("\u00f1\3\2\2\2\u0612\u0614\7\u00c4\2\2\u0613\u0615\5\u00f4")
-        buf.write("{\2\u0614\u0613\3\2\2\2\u0614\u0615\3\2\2\2\u0615\u0616")
-        buf.write("\3\2\2\2\u0616\u0617\5\u017e\u00c0\2\u0617\u0618\7\u0106")
-        buf.write("\2\2\u0618\u0619\5\u00fa~\2\u0619\u00f3\3\2\2\2\u061a")
-        buf.write("\u061b\7\u008b\2\2\u061b\u061c\7\23\2\2\u061c\u061e\t")
-        buf.write("\t\2\2\u061d\u061f\5\u00f6|\2\u061e\u061d\3\2\2\2\u061e")
-        buf.write("\u061f\3\2\2\2\u061f\u00f5\3\2\2\2\u0620\u0621\7_\2\2")
-        buf.write("\u0621\u0622\7\23\2\2\u0622\u0623\7\u013e\2\2\u0623\u00f7")
-        buf.write("\3\2\2\2\u0624\u0627\5\u020a\u0106\2\u0625\u0626\7\f\2")
-        buf.write("\2\u0626\u0628\5\u0204\u0103\2\u0627\u0625\3\2\2\2\u0627")
-        buf.write("\u0628\3\2\2\2\u0628\u00f9\3\2\2\2\u0629\u062b\5\u00f8")
-        buf.write("}\2\u062a\u0629\3\2\2\2\u062a\u062b\3\2\2\2\u062b\u062f")
-        buf.write("\3\2\2\2\u062c\u062e\5\u00fc\177\2\u062d\u062c\3\2\2\2")
-        buf.write("\u062e\u0631\3\2\2\2\u062f\u062d\3\2\2\2\u062f\u0630\3")
-        buf.write("\2\2\2\u0630\u0633\3\2\2\2\u0631\u062f\3\2\2\2\u0632\u0634")
-        buf.write("\7\3\2\2\u0633\u0632\3\2\2\2\u0633\u0634\3\2\2\2\u0634")
-        buf.write("\u00fb\3\2\2\2\u0635\u0637\7\3\2\2\u0636\u0635\3\2\2\2")
-        buf.write("\u0636\u0637\3\2\2\2\u0637\u0638\3\2\2\2\u0638\u063a\5")
-        buf.write("\u0248\u0125\2\u0639\u063b\5\u00f8}\2\u063a\u0639\3\2")
-        buf.write("\2\2\u063a\u063b\3\2\2\2\u063b\u00fd\3\2\2\2\u063c\u063e")
-        buf.write("\7\u00c6\2\2\u063d\u063f\5\u00f4{\2\u063e\u063d\3\2\2")
-        buf.write("\2\u063e\u063f\3\2\2\2\u063f\u0640\3\2\2\2\u0640\u0641")
-        buf.write("\5\u017e\u00c0\2\u0641\u0642\7\u0106\2\2\u0642\u0643\5")
-        buf.write("\u00fa~\2\u0643\u00ff\3\2\2\2\u0644\u0645\7\u00c5\2\2")
-        buf.write("\u0645\u0646\5\u017e\u00c0\2\u0646\u0648\5\u01f2\u00fa")
-        buf.write("\2\u0647\u0649\5\u0102\u0082\2\u0648\u0647\3\2\2\2\u0648")
-        buf.write("\u0649\3\2\2\2\u0649\u0101\3\2\2\2\u064a\u064b\7\u0106")
-        buf.write("\2\2\u064b\u064c\7!\2\2\u064c\u0651\5\u0174\u00bb\2\u064d")
-        buf.write("\u064e\7\13\2\2\u064e\u0650\5\u0174\u00bb\2\u064f\u064d")
-        buf.write("\3\2\2\2\u0650\u0653\3\2\2\2\u0651\u064f\3\2\2\2\u0651")
-        buf.write("\u0652\3\2\2\2\u0652\u0654\3\2\2\2\u0653\u0651\3\2\2\2")
-        buf.write("\u0654\u0655\7\n\2\2\u0655\u0103\3\2\2\2\u0656\u065a\7")
-        buf.write("\u00c7\2\2\u0657\u0659\5\u0172\u00ba\2\u0658\u0657\3\2")
-        buf.write("\2\2\u0659\u065c\3\2\2\2\u065a\u0658\3\2\2\2\u065a\u065b")
-        buf.write("\3\2\2\2\u065b\u065d\3\2\2\2\u065c\u065a\3\2\2\2\u065d")
-        buf.write("\u065e\7;\2\2\u065e\u0660\5\u01d4\u00eb\2\u065f\u0661")
-        buf.write("\5\u0106\u0084\2\u0660\u065f\3\2\2\2\u0660\u0661\3\2\2")
-        buf.write("\2\u0661\u0664\3\2\2\2\u0662\u0665\5\u0108\u0085\2\u0663")
-        buf.write("\u0665\5\u010a\u0086\2\u0664\u0662\3\2\2\2\u0664\u0663")
-        buf.write("\3\2\2\2\u0665\u0105\3\2\2\2\u0666\u0669\7\u0084\2\2\u0667")
-        buf.write("\u066a\5\u01c0\u00e1\2\u0668\u066a\5\u024a\u0126\2\u0669")
-        buf.write("\u0667\3\2\2\2\u0669\u0668\3\2\2\2\u066a\u0107\3\2\2\2")
-        buf.write("\u066b\u066c\7!\2\2\u066c\u066d\5R*\2\u066d\u066e\7\n")
-        buf.write("\2\2\u066e\u0109\3\2\2\2\u066f\u0670\7\37\2\2\u0670\u0671")
-        buf.write("\5N(\2\u0671\u0672\7\6\2\2\u0672\u010b\3\2\2\2\u0673\u0677")
-        buf.write("\7\u00c8\2\2\u0674\u0676\5\u0172\u00ba\2\u0675\u0674\3")
-        buf.write("\2\2\2\u0676\u0679\3\2\2\2\u0677\u0675\3\2\2\2\u0677\u0678")
-        buf.write("\3\2\2\2\u0678\u067a\3\2\2\2\u0679\u0677\3\2\2\2\u067a")
-        buf.write("\u067c\5\u01d4\u00eb\2\u067b\u067d\5\u010e\u0088\2\u067c")
-        buf.write("\u067b\3\2\2\2\u067c\u067d\3\2\2\2\u067d\u067e\3\2\2\2")
-        buf.write("\u067e\u067f\7!\2\2\u067f\u0680\5\u016a\u00b6\2\u0680")
-        buf.write("\u0681\7\n\2\2\u0681\u010d\3\2\2\2\u0682\u0683\7\u0082")
-        buf.write("\2\2\u0683\u0684\7\u013d\2\2\u0684\u010f\3\2\2\2\u0685")
-        buf.write("\u0686\7\u00cf\2\2\u0686\u068b\5\u0176\u00bc\2\u0687\u0688")
-        buf.write("\7\13\2\2\u0688\u068a\5\u0176\u00bc\2\u0689\u0687\3\2")
-        buf.write("\2\2\u068a\u068d\3\2\2\2\u068b\u0689\3\2\2\2\u068b\u068c")
-        buf.write("\3\2\2\2\u068c\u0111\3\2\2\2\u068d\u068b\3\2\2\2\u068e")
-        buf.write("\u0697\7\u00d1\2\2\u068f\u0694\5\u0210\u0109\2\u0690\u0691")
-        buf.write("\7\13\2\2\u0691\u0693\5\u0210\u0109\2\u0692\u0690\3\2")
-        buf.write("\2\2\u0693\u0696\3\2\2\2\u0694\u0692\3\2\2\2\u0694\u0695")
-        buf.write("\3\2\2\2\u0695\u0698\3\2\2\2\u0696\u0694\3\2\2\2\u0697")
-        buf.write("\u068f\3\2\2\2\u0697\u0698\3\2\2\2\u0698\u0113\3\2\2\2")
-        buf.write("\u0699\u069a\7\u00d3\2\2\u069a\u069f\5\u0210\u0109\2\u069b")
-        buf.write("\u069c\7\13\2\2\u069c\u069e\5\u0210\u0109\2\u069d\u069b")
-        buf.write("\3\2\2\2\u069e\u06a1\3\2\2\2\u069f\u069d\3\2\2\2\u069f")
-        buf.write("\u06a0\3\2\2\2\u06a0\u0115\3\2\2\2\u06a1\u069f\3\2\2\2")
-        buf.write("\u06a2\u06ab\7\u00d0\2\2\u06a3\u06a8\5\u0176\u00bc\2\u06a4")
-        buf.write("\u06a5\7\13\2\2\u06a5\u06a7\5\u0176\u00bc\2\u06a6\u06a4")
-        buf.write("\3\2\2\2\u06a7\u06aa\3\2\2\2\u06a8\u06a6\3\2\2\2\u06a8")
-        buf.write("\u06a9\3\2\2\2\u06a9\u06ac\3\2\2\2\u06aa\u06a8\3\2\2\2")
-        buf.write("\u06ab\u06a3\3\2\2\2\u06ab\u06ac\3\2\2\2\u06ac\u0117\3")
-        buf.write("\2\2\2\u06ad\u06b6\7\u00d4\2\2\u06ae\u06b3\5\u0176\u00bc")
-        buf.write("\2\u06af\u06b0\7\13\2\2\u06b0\u06b2\5\u0176\u00bc\2\u06b1")
-        buf.write("\u06af\3\2\2\2\u06b2\u06b5\3\2\2\2\u06b3\u06b1\3\2\2\2")
-        buf.write("\u06b3\u06b4\3\2\2\2\u06b4\u06b7\3\2\2\2\u06b5\u06b3\3")
-        buf.write("\2\2\2\u06b6\u06ae\3\2\2\2\u06b6\u06b7\3\2\2\2\u06b7\u0119")
-        buf.write("\3\2\2\2\u06b8\u06c1\7\u00d5\2\2\u06b9\u06be\5\u011c\u008f")
-        buf.write("\2\u06ba\u06bb\7\13\2\2\u06bb\u06bd\5\u011c\u008f\2\u06bc")
-        buf.write("\u06ba\3\2\2\2\u06bd\u06c0\3\2\2\2\u06be\u06bc\3\2\2\2")
-        buf.write("\u06be\u06bf\3\2\2\2\u06bf\u06c2\3\2\2\2\u06c0\u06be\3")
-        buf.write("\2\2\2\u06c1\u06b9\3\2\2\2\u06c1\u06c2\3\2\2\2\u06c2\u011b")
-        buf.write("\3\2\2\2\u06c3\u06c5\5\u0210\u0109\2\u06c4\u06c6\t\n\2")
-        buf.write("\2\u06c5\u06c4\3\2\2\2\u06c5\u06c6\3\2\2\2\u06c6\u011d")
-        buf.write("\3\2\2\2\u06c7\u06cb\7\u00d9\2\2\u06c8\u06ca\5\u0170\u00b9")
-        buf.write("\2\u06c9\u06c8\3\2\2\2\u06ca\u06cd\3\2\2\2\u06cb\u06c9")
-        buf.write("\3\2\2\2\u06cb\u06cc\3\2\2\2\u06cc\u06ce\3\2\2\2\u06cd")
-        buf.write("\u06cb\3\2\2\2\u06ce\u06cf\7;\2\2\u06cf\u06d1\5\u0176")
-        buf.write("\u00bc\2\u06d0\u06d2\5\u0120\u0091\2\u06d1\u06d0\3\2\2")
-        buf.write("\2\u06d1\u06d2\3\2\2\2\u06d2\u011f\3\2\2\2\u06d3\u06d4")
-        buf.write("\7\u0106\2\2\u06d4\u06d9\5\u0176\u00bc\2\u06d5\u06d6\7")
-        buf.write("\13\2\2\u06d6\u06d8\5\u0176\u00bc\2\u06d7\u06d5\3\2\2")
-        buf.write("\2\u06d8\u06db\3\2\2\2\u06d9\u06d7\3\2\2\2\u06d9\u06da")
-        buf.write("\3\2\2\2\u06da\u0121\3\2\2\2\u06db\u06d9\3\2\2\2\u06dc")
-        buf.write("\u06dd\7\u00dc\2\2\u06dd\u06e0\t\13\2\2\u06de\u06e1\5")
-        buf.write("\u0124\u0093\2\u06df\u06e1\5\u0126\u0094\2\u06e0\u06de")
-        buf.write("\3\2\2\2\u06e0\u06df\3\2\2\2\u06e0\u06e1\3\2\2\2\u06e1")
-        buf.write("\u0123\3\2\2\2\u06e2\u06e3\7\u0106\2\2\u06e3\u06ec\7!")
-        buf.write("\2\2\u06e4\u06e9\5\u0128\u0095\2\u06e5\u06e6\7\13\2\2")
-        buf.write("\u06e6\u06e8\5\u0128\u0095\2\u06e7\u06e5\3\2\2\2\u06e8")
-        buf.write("\u06eb\3\2\2\2\u06e9\u06e7\3\2\2\2\u06e9\u06ea\3\2\2\2")
-        buf.write("\u06ea\u06ed\3\2\2\2\u06eb\u06e9\3\2\2\2\u06ec\u06e4\3")
-        buf.write("\2\2\2\u06ec\u06ed\3\2\2\2\u06ed\u06ee\3\2\2\2\u06ee\u06ef")
-        buf.write("\7\n\2\2\u06ef\u0125\3\2\2\2\u06f0\u06f2\5\u012c\u0097")
-        buf.write("\2\u06f1\u06f0\3\2\2\2\u06f2\u06f3\3\2\2\2\u06f3\u06f1")
-        buf.write("\3\2\2\2\u06f3\u06f4\3\2\2\2\u06f4\u0127\3\2\2\2\u06f5")
-        buf.write("\u06f6\7\u00f7\2\2\u06f6\u06f7\7\23\2\2\u06f7\u0729\5")
-        buf.write("\u01a8\u00d5\2\u06f8\u06f9\7\u010f\2\2\u06f9\u06fa\7\23")
-        buf.write("\2\2\u06fa\u0729\5\u020a\u0106\2\u06fb\u06fc\7\u00e5\2")
-        buf.write("\2\u06fc\u06fd\7\23\2\2\u06fd\u0729\5\u012a\u0096\2\u06fe")
-        buf.write("\u06ff\7\u0114\2\2\u06ff\u0700\7\23\2\2\u0700\u0729\5")
-        buf.write("\u012a\u0096\2\u0701\u0702\7/\2\2\u0702\u0703\7\23\2\2")
-        buf.write("\u0703\u0729\5\u012a\u0096\2\u0704\u0705\7\u008b\2\2\u0705")
-        buf.write("\u0706\7\23\2\2\u0706\u0729\t\f\2\2\u0707\u0708\7\u0112")
-        buf.write("\2\2\u0708\u0709\7\23\2\2\u0709\u0729\5\u01a8\u00d5\2")
-        buf.write("\u070a\u070b\7\u0118\2\2\u070b\u070c\7\23\2\2\u070c\u0729")
-        buf.write("\5\u01a8\u00d5\2\u070d\u070e\7\u010e\2\2\u070e\u070f\7")
-        buf.write("\23\2\2\u070f\u0729\t\r\2\2\u0710\u0711\7\u0113\2\2\u0711")
-        buf.write("\u0712\7\23\2\2\u0712\u0729\t\r\2\2\u0713\u0714\7\u008e")
-        buf.write("\2\2\u0714\u0715\7\23\2\2\u0715\u0729\t\16\2\2\u0716\u0717")
-        buf.write("\7\u0117\2\2\u0717\u0718\7\23\2\2\u0718\u0729\t\17\2\2")
-        buf.write("\u0719\u071a\7)\2\2\u071a\u071b\7\23\2\2\u071b\u0729\7")
-        buf.write("\u0138\2\2\u071c\u071d\7\u0116\2\2\u071d\u071e\7\23\2")
-        buf.write("\2\u071e\u0729\5\u022e\u0118\2\u071f\u0720\7\u0115\2\2")
-        buf.write("\u0720\u0721\7\23\2\2\u0721\u0729\5\u022e\u0118\2\u0722")
-        buf.write("\u0723\7\u0111\2\2\u0723\u0724\7\23\2\2\u0724\u0729\5")
-        buf.write("\u0228\u0115\2\u0725\u0726\7\u0110\2\2\u0726\u0727\7\23")
-        buf.write("\2\2\u0727\u0729\5\u0228\u0115\2\u0728\u06f5\3\2\2\2\u0728")
-        buf.write("\u06f8\3\2\2\2\u0728\u06fb\3\2\2\2\u0728\u06fe\3\2\2\2")
-        buf.write("\u0728\u0701\3\2\2\2\u0728\u0704\3\2\2\2\u0728\u0707\3")
-        buf.write("\2\2\2\u0728\u070a\3\2\2\2\u0728\u070d\3\2\2\2\u0728\u0710")
-        buf.write("\3\2\2\2\u0728\u0713\3\2\2\2\u0728\u0716\3\2\2\2\u0728")
-        buf.write("\u0719\3\2\2\2\u0728\u071c\3\2\2\2\u0728\u071f\3\2\2\2")
-        buf.write("\u0728\u0722\3\2\2\2\u0728\u0725\3\2\2\2\u0729\u0129\3")
-        buf.write("\2\2\2\u072a\u072f\5\u020c\u0107\2\u072b\u072c\7\13\2")
-        buf.write("\2\u072c\u072e\5\u020c\u0107\2\u072d\u072b\3\2\2\2\u072e")
-        buf.write("\u0731\3\2\2\2\u072f\u072d\3\2\2\2\u072f\u0730\3\2\2\2")
-        buf.write("\u0730\u012b\3\2\2\2\u0731\u072f\3\2\2\2\u0732\u0733\7")
-        buf.write("\u00f7\2\2\u0733\u0734\7\23\2\2\u0734\u0740\5\u0248\u0125")
-        buf.write("\2\u0735\u0736\7\u008b\2\2\u0736\u0737\7\23\2\2\u0737")
-        buf.write("\u0740\t\f\2\2\u0738\u0739\7\u0106\2\2\u0739\u0740\5\u0248")
-        buf.write("\u0125\2\u073a\u073b\7;\2\2\u073b\u0740\5\u012a\u0096")
-        buf.write("\2\u073c\u073d\7)\2\2\u073d\u073e\7\23\2\2\u073e\u0740")
-        buf.write("\7\u0138\2\2\u073f\u0732\3\2\2\2\u073f\u0735\3\2\2\2\u073f")
-        buf.write("\u0738\3\2\2\2\u073f\u073a\3\2\2\2\u073f\u073c\3\2\2\2")
-        buf.write("\u0740\u012d\3\2\2\2\u0741\u0745\7\u00e0\2\2\u0742\u0744")
-        buf.write("\5\u0170\u00b9\2\u0743\u0742\3\2\2\2\u0744\u0747\3\2\2")
-        buf.write("\2\u0745\u0743\3\2\2\2\u0745\u0746\3\2\2\2\u0746\u0748")
-        buf.write("\3\2\2\2\u0747\u0745\3\2\2\2\u0748\u0749\5\u0176\u00bc")
-        buf.write("\2\u0749\u074a\7\u00bb\2\2\u074a\u074b\5\u0176\u00bc\2")
-        buf.write("\u074b\u012f\3\2\2\2\u074c\u0750\7\u00df\2\2\u074d\u074f")
-        buf.write("\5\u0170\u00b9\2\u074e\u074d\3\2\2\2\u074f\u0752\3\2\2")
-        buf.write("\2\u0750\u074e\3\2\2\2\u0750\u0751\3\2\2\2\u0751\u0753")
-        buf.write("\3\2\2\2\u0752\u0750\3\2\2\2\u0753\u0754\5\u0176\u00bc")
-        buf.write("\2\u0754\u0131\3\2\2\2\u0755\u0759\7\u00e1\2\2\u0756\u0758")
-        buf.write("\5\u0172\u00ba\2\u0757\u0756\3\2\2\2\u0758\u075b\3\2\2")
-        buf.write("\2\u0759\u0757\3\2\2\2\u0759\u075a\3\2\2\2\u075a\u075d")
-        buf.write("\3\2\2\2\u075b\u0759\3\2\2\2\u075c\u075e\5\u0134\u009b")
-        buf.write("\2\u075d\u075c\3\2\2\2\u075d\u075e\3\2\2\2\u075e\u0760")
-        buf.write("\3\2\2\2\u075f\u0761\5\u0136\u009c\2\u0760\u075f\3\2\2")
-        buf.write("\2\u0760\u0761\3\2\2\2\u0761\u0763\3\2\2\2\u0762\u0764")
-        buf.write("\5\u0138\u009d\2\u0763\u0762\3\2\2\2\u0763\u0764\3\2\2")
-        buf.write("\2\u0764\u0765\3\2\2\2\u0765\u0766\7\u0106\2\2\u0766\u0768")
-        buf.write("\7!\2\2\u0767\u0769\5\u013a\u009e\2\u0768\u0767\3\2\2")
-        buf.write("\2\u0769\u076a\3\2\2\2\u076a\u0768\3\2\2\2\u076a\u076b")
-        buf.write("\3\2\2\2\u076b\u076c\3\2\2\2\u076c\u076d\7\n\2\2\u076d")
-        buf.write("\u0133\3\2\2\2\u076e\u076f\7\u00bf\2\2\u076f\u0770\7;")
-        buf.write("\2\2\u0770\u0771\5\u014c\u00a7\2\u0771\u0772\7\13\2\2")
-        buf.write("\u0772\u0773\5\u014c\u00a7\2\u0773\u0135\3\2\2\2\u0774")
-        buf.write("\u0775\7\u00c7\2\2\u0775\u0776\7;\2\2\u0776\u077b\5\u017e")
-        buf.write("\u00c0\2\u0777\u0778\7\13\2\2\u0778\u077a\5\u017e\u00c0")
-        buf.write("\2\u0779\u0777\3\2\2\2\u077a\u077d\3\2\2\2\u077b\u0779")
-        buf.write("\3\2\2\2\u077b\u077c\3\2\2\2\u077c\u0137\3\2\2\2\u077d")
-        buf.write("\u077b\3\2\2\2\u077e\u077f\7J\2\2\u077f\u0780\7!\2\2\u0780")
-        buf.write("\u0785\5\32\16\2\u0781\u0782\7\13\2\2\u0782\u0784\5\32")
-        buf.write("\16\2\u0783\u0781\3\2\2\2\u0784\u0787\3\2\2\2\u0785\u0783")
-        buf.write("\3\2\2\2\u0785\u0786\3\2\2\2\u0786\u0788\3\2\2\2\u0787")
-        buf.write("\u0785\3\2\2\2\u0788\u0789\7\n\2\2\u0789\u0139\3\2\2\2")
-        buf.write("\u078a\u078b\7\u00ef\2\2\u078b\u078d\5\u0208\u0105\2\u078c")
-        buf.write("\u078e\7\u00bd\2\2\u078d\u078c\3\2\2\2\u078d\u078e\3\2")
-        buf.write("\2\2\u078e\u0790\3\2\2\2\u078f\u0791\5\u013c\u009f\2\u0790")
-        buf.write("\u078f\3\2\2\2\u0790\u0791\3\2\2\2\u0791\u0792\3\2\2\2")
-        buf.write("\u0792\u0793\7\f\2\2\u0793\u0795\5\u017e\u00c0\2\u0794")
-        buf.write("\u0796\5\u013e\u00a0\2\u0795\u0794\3\2\2\2\u0795\u0796")
-        buf.write("\3\2\2\2\u0796\u0797\3\2\2\2\u0797\u0798\7$\2\2\u0798")
-        buf.write("\u013b\3\2\2\2\u0799\u079a\7\u00c1\2\2\u079a\u079b\7\23")
-        buf.write("\2\2\u079b\u079c\t\20\2\2\u079c\u013d\3\2\2\2\u079d\u079e")
-        buf.write("\7&\2\2\u079e\u07a3\5\u0140\u00a1\2\u079f\u07a0\7\13\2")
-        buf.write("\2\u07a0\u07a2\5\u0140\u00a1\2\u07a1\u079f\3\2\2\2\u07a2")
-        buf.write("\u07a5\3\2\2\2\u07a3\u07a1\3\2\2\2\u07a3\u07a4\3\2\2\2")
-        buf.write("\u07a4\u013f\3\2\2\2\u07a5\u07a3\3\2\2\2\u07a6\u07a7\5")
-        buf.write("\u0208\u0105\2\u07a7\u07a8\7\23\2\2\u07a8\u07a9\5\u017e")
-        buf.write("\u00c0\2\u07a9\u0141\3\2\2\2\u07aa\u07ae\7\u00e3\2\2\u07ab")
-        buf.write("\u07ad\5\u0172\u00ba\2\u07ac\u07ab\3\2\2\2\u07ad\u07b0")
-        buf.write("\3\2\2\2\u07ae\u07ac\3\2\2\2\u07ae\u07af\3\2\2\2\u07af")
-        buf.write("\u07b2\3\2\2\2\u07b0\u07ae\3\2\2\2\u07b1\u07b3\5\u01ce")
-        buf.write("\u00e8\2\u07b2\u07b1\3\2\2\2\u07b2\u07b3\3\2\2\2\u07b3")
-        buf.write("\u07b5\3\2\2\2\u07b4\u07b6\5\u0146\u00a4\2\u07b5\u07b4")
-        buf.write("\3\2\2\2\u07b5\u07b6\3\2\2\2\u07b6\u07ba\3\2\2\2\u07b7")
-        buf.write("\u07bb\5\u017e\u00c0\2\u07b8\u07bb\5\u01c8\u00e5\2\u07b9")
-        buf.write("\u07bb\5\u0144\u00a3\2\u07ba\u07b7\3\2\2\2\u07ba\u07b8")
-        buf.write("\3\2\2\2\u07ba\u07b9\3\2\2\2\u07bb\u0143\3\2\2\2\u07bc")
-        buf.write("\u07bd\7\3\2\2\u07bd\u07be\7-\2\2\u07be\u07bf\5\u017e")
-        buf.write("\u00c0\2\u07bf\u0145\3\2\2\2\u07c0\u07c1\7\u0084\2\2\u07c1")
-        buf.write("\u07c2\7!\2\2\u07c2\u07c7\5\u0092J\2\u07c3\u07c4\7\13")
-        buf.write("\2\2\u07c4\u07c6\5\u0092J\2\u07c5\u07c3\3\2\2\2\u07c6")
-        buf.write("\u07c9\3\2\2\2\u07c7\u07c5\3\2\2\2\u07c7\u07c8\3\2\2\2")
-        buf.write("\u07c8\u07ca\3\2\2\2\u07c9\u07c7\3\2\2\2\u07ca\u07cb\7")
-        buf.write("\n\2\2\u07cb\u0147\3\2\2\2\u07cc\u07d0\7\u00e4\2\2\u07cd")
-        buf.write("\u07cf\5\u0170\u00b9\2\u07ce\u07cd\3\2\2\2\u07cf\u07d2")
-        buf.write("\3\2\2\2\u07d0\u07ce\3\2\2\2\u07d0\u07d1\3\2\2\2\u07d1")
-        buf.write("\u07d3\3\2\2\2\u07d2\u07d0\3\2\2\2\u07d3\u07d8\5\u0176")
-        buf.write("\u00bc\2\u07d4\u07d5\7\13\2\2\u07d5\u07d7\5\u0176\u00bc")
-        buf.write("\2\u07d6\u07d4\3\2\2\2\u07d7\u07da\3\2\2\2\u07d8\u07d6")
-        buf.write("\3\2\2\2\u07d8\u07d9\3\2\2\2\u07d9\u0149\3\2\2\2\u07da")
-        buf.write("\u07d8\3\2\2\2\u07db\u07df\t\21\2\2\u07dc\u07de\5\u0172")
-        buf.write("\u00ba\2\u07dd\u07dc\3\2\2\2\u07de\u07e1\3\2\2\2\u07df")
-        buf.write("\u07dd\3\2\2\2\u07df\u07e0\3\2\2\2\u07e0\u07e2\3\2\2\2")
-        buf.write("\u07e1\u07df\3\2\2\2\u07e2\u07e3\7;\2\2\u07e3\u07e8\5")
-        buf.write("\u014c\u00a7\2\u07e4\u07e5\7\13\2\2\u07e5\u07e7\5\u014c")
-        buf.write("\u00a7\2\u07e6\u07e4\3\2\2\2\u07e7\u07ea\3\2\2\2\u07e8")
-        buf.write("\u07e6\3\2\2\2\u07e8\u07e9\3\2\2\2\u07e9\u014b\3\2\2\2")
-        buf.write("\u07ea\u07e8\3\2\2\2\u07eb\u07ec\5\u0176\u00bc\2\u07ec")
-        buf.write("\u07ed\5\u014e\u00a8\2\u07ed\u014d\3\2\2\2\u07ee\u07f0")
-        buf.write("\t\22\2\2\u07ef\u07ee\3\2\2\2\u07ef\u07f0\3\2\2\2\u07f0")
-        buf.write("\u07f3\3\2\2\2\u07f1\u07f2\7\u00ba\2\2\u07f2\u07f4\t\23")
-        buf.write("\2\2\u07f3\u07f1\3\2\2\2\u07f3\u07f4\3\2\2\2\u07f4\u014f")
-        buf.write("\3\2\2\2\u07f5\u07f9\7\u00f0\2\2\u07f6\u07f8\5\u0170\u00b9")
-        buf.write("\2\u07f7\u07f6\3\2\2\2\u07f8\u07fb\3\2\2\2\u07f9\u07f7")
-        buf.write("\3\2\2\2\u07f9\u07fa\3\2\2\2\u07fa\u0804\3\2\2\2\u07fb")
-        buf.write("\u07f9\3\2\2\2\u07fc\u0801\5\u0176\u00bc\2\u07fd\u07fe")
-        buf.write("\7\13\2\2\u07fe\u0800\5\u0176\u00bc\2\u07ff\u07fd\3\2")
-        buf.write("\2\2\u0800\u0803\3\2\2\2\u0801\u07ff\3\2\2\2\u0801\u0802")
-        buf.write("\3\2\2\2\u0802\u0805\3\2\2\2\u0803\u0801\3\2\2\2\u0804")
-        buf.write("\u07fc\3\2\2\2\u0804\u0805\3\2\2\2\u0805\u0807\3\2\2\2")
-        buf.write("\u0806\u0808\5\u0152\u00aa\2\u0807\u0806\3\2\2\2\u0807")
-        buf.write("\u0808\3\2\2\2\u0808\u0151\3\2\2\2\u0809\u080a\7;\2\2")
-        buf.write("\u080a\u080b\5\u0176\u00bc\2\u080b\u080c\7\13\2\2\u080c")
-        buf.write("\u080d\5\u0176\u00bc\2\u080d\u080f\3\2\2\2\u080e\u0810")
-        buf.write("\5\u0154\u00ab\2\u080f\u080e\3\2\2\2\u080f\u0810\3\2\2")
-        buf.write("\2\u0810\u0153\3\2\2\2\u0811\u0812\79\2\2\u0812\u0813")
-        buf.write("\7\23\2\2\u0813\u0814\5\u022c\u0117\2\u0814\u0155\3\2")
-        buf.write("\2\2\u0815\u0819\t\24\2\2\u0816\u0818\5\u0170\u00b9\2")
-        buf.write("\u0817\u0816\3\2\2\2\u0818\u081b\3\2\2\2\u0819\u0817\3")
-        buf.write("\2\2\2\u0819\u081a\3\2\2\2\u081a\u081c\3\2\2\2\u081b\u0819")
-        buf.write("\3\2\2\2\u081c\u081d\5\u0176\u00bc\2\u081d\u0157\3\2\2")
-        buf.write("\2\u081e\u0822\7\u00f9\2\2\u081f\u0821\5\u0170\u00b9\2")
-        buf.write("\u0820\u081f\3\2\2\2\u0821\u0824\3\2\2\2\u0822\u0820\3")
-        buf.write("\2\2\2\u0822\u0823\3\2\2\2\u0823\u0825\3\2\2\2\u0824\u0822")
-        buf.write("\3\2\2\2\u0825\u0826\5\u0176\u00bc\2\u0826\u0827\7;\2")
-        buf.write("\2\u0827\u0828\5\u014c\u00a7\2\u0828\u0159\3\2\2\2\u0829")
-        buf.write("\u082a\7\u00fa\2\2\u082a\u082b\5\u0176\u00bc\2\u082b\u082c")
-        buf.write("\7\u00bb\2\2\u082c\u082e\5\u0176\u00bc\2\u082d\u082f\5")
-        buf.write("\u015c\u00af\2\u082e\u082d\3\2\2\2\u082e\u082f\3\2\2\2")
-        buf.write("\u082f\u015b\3\2\2\2\u0830\u0831\7;\2\2\u0831\u0832\5")
-        buf.write("\u014c\u00a7\2\u0832\u015d\3\2\2\2\u0833\u0838\5\u0160")
-        buf.write("\u00b1\2\u0834\u0835\7\13\2\2\u0835\u0837\5\u0160\u00b1")
-        buf.write("\2\u0836\u0834\3\2\2\2\u0837\u083a\3\2\2\2\u0838\u0836")
-        buf.write("\3\2\2\2\u0838\u0839\3\2\2\2\u0839\u015f\3\2\2\2\u083a")
-        buf.write("\u0838\3\2\2\2\u083b\u083d\7\u00fb\2\2\u083c\u083e\5\u0176")
-        buf.write("\u00bc\2\u083d\u083c\3\2\2\2\u083d\u083e\3\2\2\2\u083e")
-        buf.write("\u083f\3\2\2\2\u083f\u0840\7\u00bb\2\2\u0840\u0842\5\u0176")
-        buf.write("\u00bc\2\u0841\u0843\5\u0162\u00b2\2\u0842\u0841\3\2\2")
-        buf.write("\2\u0842\u0843\3\2\2\2\u0843\u0844\3\2\2\2\u0844\u0845")
-        buf.write("\7;\2\2\u0845\u0846\5\u014c\u00a7\2\u0846\u0161\3\2\2")
-        buf.write("\2\u0847\u0848\7\u0106\2\2\u0848\u0849\7\u00c0\2\2\u0849")
-        buf.write("\u084a\7\23\2\2\u084a\u084b\5\u0176\u00bc\2\u084b\u0163")
-        buf.write("\3\2\2\2\u084c\u0850\7\u0100\2\2\u084d\u084f\5\u0172\u00ba")
-        buf.write("\2\u084e\u084d\3\2\2\2\u084f\u0852\3\2\2\2\u0850\u084e")
-        buf.write("\3\2\2\2\u0850\u0851\3\2\2\2\u0851\u0853\3\2\2\2\u0852")
-        buf.write("\u0850\3\2\2\2\u0853\u0858\5\u0166\u00b4\2\u0854\u0855")
-        buf.write("\7\13\2\2\u0855\u0857\5\u0166\u00b4\2\u0856\u0854\3\2")
-        buf.write("\2\2\u0857\u085a\3\2\2\2\u0858\u0856\3\2\2\2\u0858\u0859")
-        buf.write("\3\2\2\2\u0859\u0165\3\2\2\2\u085a\u0858\3\2\2\2\u085b")
-        buf.write("\u085f\5\u01e8\u00f5\2\u085c\u085f\5\u01e2\u00f2\2\u085d")
-        buf.write("\u085f\5\u01d0\u00e9\2\u085e\u085b\3\2\2\2\u085e\u085c")
-        buf.write("\3\2\2\2\u085e\u085d\3\2\2\2\u085f\u0167\3\2\2\2\u0860")
-        buf.write("\u0864\t\25\2\2\u0861\u0863\5\u0170\u00b9\2\u0862\u0861")
-        buf.write("\3\2\2\2\u0863\u0866\3\2\2\2\u0864\u0862\3\2\2\2\u0864")
-        buf.write("\u0865\3\2\2\2\u0865\u0867\3\2\2\2\u0866\u0864\3\2\2\2")
-        buf.write("\u0867\u0868\5\u0176\u00bc\2\u0868\u0169\3\2\2\2\u0869")
-        buf.write("\u086c\5R*\2\u086a\u086c\5\u016c\u00b7\2\u086b\u0869\3")
-        buf.write("\2\2\2\u086b\u086a\3\2\2\2\u086c\u016b\3\2\2\2\u086d\u0871")
-        buf.write("\5\u01ee\u00f8\2\u086e\u0870\5\u016e\u00b8\2\u086f\u086e")
-        buf.write("\3\2\2\2\u0870\u0873\3\2\2\2\u0871\u086f\3\2\2\2\u0871")
-        buf.write("\u0872\3\2\2\2\u0872\u016d\3\2\2\2\u0873\u0871\3\2\2\2")
-        buf.write("\u0874\u0875\7\5\2\2\u0875\u0876\5V,\2\u0876\u016f\3\2")
-        buf.write("\2\2\u0877\u0878\t\26\2\2\u0878\u087b\7\23\2\2\u0879\u087c")
-        buf.write("\5\u021a\u010e\2\u087a\u087c\5\u0228\u0115\2\u087b\u0879")
-        buf.write("\3\2\2\2\u087b\u087a\3\2\2\2\u087c\u0171\3\2\2\2\u087d")
-        buf.write("\u087e\t\27\2\2\u087e\u0881\7\23\2\2\u087f\u0882\5\u021a")
-        buf.write("\u010e\2\u0880\u0882\5\u0228\u0115\2\u0881\u087f\3\2\2")
-        buf.write("\2\u0881\u0880\3\2\2\2\u0882\u0173\3\2\2\2\u0883\u0884")
-        buf.write("\7\u013e\2\2\u0884\u0887\7\23\2\2\u0885\u0888\5\u021a")
-        buf.write("\u010e\2\u0886\u0888\5\u0228\u0115\2\u0887\u0885\3\2\2")
-        buf.write("\2\u0887\u0886\3\2\2\2\u0888\u0175\3\2\2\2\u0889\u088b")
-        buf.write("\5\u0178\u00bd\2\u088a\u0889\3\2\2\2\u088a\u088b\3\2\2")
-        buf.write("\2\u088b\u088c\3\2\2\2\u088c\u088d\5\u017e\u00c0\2\u088d")
-        buf.write("\u0177\3\2\2\2\u088e\u0891\5\u021e\u0110\2\u088f\u0891")
-        buf.write("\5\u017a\u00be\2\u0890\u088e\3\2\2\2\u0890\u088f\3\2\2")
-        buf.write("\2\u0891\u0892\3\2\2\2\u0892\u0893\7\23\2\2\u0893\u0179")
-        buf.write("\3\2\2\2\u0894\u0895\7!\2\2\u0895\u089a\5\u021e\u0110")
-        buf.write("\2\u0896\u0897\7\13\2\2\u0897\u0899\5\u021e\u0110\2\u0898")
-        buf.write("\u0896\3\2\2\2\u0899\u089c\3\2\2\2\u089a\u0898\3\2\2\2")
-        buf.write("\u089a\u089b\3\2\2\2\u089b\u089d\3\2\2\2\u089c\u089a\3")
-        buf.write("\2\2\2\u089d\u089e\7\n\2\2\u089e\u017b\3\2\2\2\u089f\u08a0")
-        buf.write("\5\u020a\u0106\2\u08a0\u08a1\7\21\2\2\u08a1\u08a2\5\u01c0")
-        buf.write("\u00e1\2\u08a2\u017d\3\2\2\2\u08a3\u08a4\5\u0180\u00c1")
-        buf.write("\2\u08a4\u017f\3\2\2\2\u08a5\u08a9\5\u0184\u00c3\2\u08a6")
-        buf.write("\u08a8\5\u0182\u00c2\2\u08a7\u08a6\3\2\2\2\u08a8\u08ab")
-        buf.write("\3\2\2\2\u08a9\u08a7\3\2\2\2\u08a9\u08aa\3\2\2\2\u08aa")
-        buf.write("\u0181\3\2\2\2\u08ab\u08a9\3\2\2\2\u08ac\u08ad\7\u00be")
-        buf.write("\2\2\u08ad\u08ae\5\u0184\u00c3\2\u08ae\u0183\3\2\2\2\u08af")
-        buf.write("\u08b3\5\u0188\u00c5\2\u08b0\u08b2\5\u0186\u00c4\2\u08b1")
-        buf.write("\u08b0\3\2\2\2\u08b2\u08b5\3\2\2\2\u08b3\u08b1\3\2\2\2")
-        buf.write("\u08b3\u08b4\3\2\2\2\u08b4\u0185\3\2\2\2\u08b5\u08b3\3")
-        buf.write("\2\2\2\u08b6\u08b7\7-\2\2\u08b7\u08b8\5\u0188\u00c5\2")
-        buf.write("\u08b8\u0187\3\2\2\2\u08b9\u08bf\5\u0192\u00ca\2\u08ba")
-        buf.write("\u08bf\5\u018a\u00c6\2\u08bb\u08bf\5\u018c\u00c7\2\u08bc")
-        buf.write("\u08bf\5\u018e\u00c8\2\u08bd\u08bf\5\u0190\u00c9\2\u08be")
-        buf.write("\u08b9\3\2\2\2\u08be\u08ba\3\2\2\2\u08be\u08bb\3\2\2\2")
-        buf.write("\u08be\u08bc\3\2\2\2\u08be\u08bd\3\2\2\2\u08bf\u0189\3")
-        buf.write("\2\2\2\u08c0\u08c1\5\u0192\u00ca\2\u08c1\u08c2\t\30\2")
-        buf.write("\2\u08c2\u08c3\5\u0192\u00ca\2\u08c3\u018b\3\2\2\2\u08c4")
-        buf.write("\u08c5\5\u0192\u00ca\2\u08c5\u08c6\t\31\2\2\u08c6\u08c7")
-        buf.write("\7!\2\2\u08c7\u08cc\5\u01a6\u00d4\2\u08c8\u08c9\7\13\2")
-        buf.write("\2\u08c9\u08cb\5\u01a6\u00d4\2\u08ca\u08c8\3\2\2\2\u08cb")
-        buf.write("\u08ce\3\2\2\2\u08cc\u08ca\3\2\2\2\u08cc\u08cd\3\2\2\2")
-        buf.write("\u08cd\u08cf\3\2\2\2\u08ce\u08cc\3\2\2\2\u08cf\u08d0\7")
-        buf.write("\n\2\2\u08d0\u018d\3\2\2\2\u08d1\u08d2\5\u0192\u00ca\2")
-        buf.write("\u08d2\u08d3\t\32\2\2\u08d3\u08d4\7!\2\2\u08d4\u08d5\5")
-        buf.write("\u01a6\u00d4\2\u08d5\u08d6\7\22\2\2\u08d6\u08d7\5\u01a6")
-        buf.write("\u00d4\2\u08d7\u08d8\7\n\2\2\u08d8\u018f\3\2\2\2\u08d9")
-        buf.write("\u08da\7\3\2\2\u08da\u08db\7\24\2\2\u08db\u08dc\5\u0192")
-        buf.write("\u00ca\2\u08dc\u0191\3\2\2\2\u08dd\u08e0\5\u0194\u00cb")
-        buf.write("\2\u08de\u08df\t\33\2\2\u08df\u08e1\5\u0194\u00cb\2\u08e0")
-        buf.write("\u08de\3\2\2\2\u08e0\u08e1\3\2\2\2\u08e1\u0193\3\2\2\2")
-        buf.write("\u08e2\u08e6\5\u0198\u00cd\2\u08e3\u08e5\5\u0196\u00cc")
-        buf.write("\2\u08e4\u08e3\3\2\2\2\u08e5\u08e8\3\2\2\2\u08e6\u08e4")
-        buf.write("\3\2\2\2\u08e6\u08e7\3\2\2\2\u08e7\u0195\3\2\2\2\u08e8")
-        buf.write("\u08e6\3\2\2\2\u08e9\u08ea\t\34\2\2\u08ea\u08eb\5\u0198")
-        buf.write("\u00cd\2\u08eb\u0197\3\2\2\2\u08ec\u08f0\5\u019c\u00cf")
-        buf.write("\2\u08ed\u08ef\5\u019a\u00ce\2\u08ee\u08ed\3\2\2\2\u08ef")
-        buf.write("\u08f2\3\2\2\2\u08f0\u08ee\3\2\2\2\u08f0\u08f1\3\2\2\2")
-        buf.write("\u08f1\u0199\3\2\2\2\u08f2\u08f0\3\2\2\2\u08f3\u08f4\t")
-        buf.write("\35\2\2\u08f4\u08f5\5\u019c\u00cf\2\u08f5\u019b\3\2\2")
-        buf.write("\2\u08f6\u08f9\5\u019e\u00d0\2\u08f7\u08f9\5\u01a4\u00d3")
-        buf.write("\2\u08f8\u08f6\3\2\2\2\u08f8\u08f7\3\2\2\2\u08f9\u019d")
-        buf.write("\3\2\2\2\u08fa\u08fe\5\u01a6\u00d4\2\u08fb\u08fd\5\u01a0")
-        buf.write("\u00d1\2\u08fc\u08fb\3\2\2\2\u08fd\u0900\3\2\2\2\u08fe")
-        buf.write("\u08fc\3\2\2\2\u08fe\u08ff\3\2\2\2\u08ff\u019f\3\2\2\2")
-        buf.write("\u0900\u08fe\3\2\2\2\u0901\u0904\5\u01a2\u00d2\2\u0902")
-        buf.write("\u0904\7\f\2\2\u0903\u0901\3\2\2\2\u0903\u0902\3\2\2\2")
-        buf.write("\u0904\u0905\3\2\2\2\u0905\u0906\5\u01a6\u00d4\2\u0906")
-        buf.write("\u01a1\3\2\2\2\u0907\u0908\t\36\2\2\u0908\u01a3\3\2\2")
-        buf.write("\2\u0909\u090a\7\3\2\2\u090a\u090b\5\u01a2\u00d2\2\u090b")
-        buf.write("\u090c\5\u01a6\u00d4\2\u090c\u01a5\3\2\2\2\u090d\u090f")
-        buf.write("\t\34\2\2\u090e\u090d\3\2\2\2\u090e\u090f\3\2\2\2\u090f")
-        buf.write("\u0910\3\2\2\2\u0910\u0911\5\u01a8\u00d5\2\u0911\u01a7")
-        buf.write("\3\2\2\2\u0912\u0916\5\u01aa\u00d6\2\u0913\u0916\5\u01ac")
-        buf.write("\u00d7\2\u0914\u0916\5\u01b8\u00dd\2\u0915\u0912\3\2\2")
-        buf.write("\2\u0915\u0913\3\2\2\2\u0915\u0914\3\2\2\2\u0916\u01a9")
-        buf.write("\3\2\2\2\u0917\u091b\5\u01bc\u00df\2\u0918\u091b\5\u01ca")
-        buf.write("\u00e6\2\u0919\u091b\5\u01b6\u00dc\2\u091a\u0917\3\2\2")
-        buf.write("\2\u091a\u0918\3\2\2\2\u091a\u0919\3\2\2\2\u091b\u01ab")
-        buf.write("\3\2\2\2\u091c\u091e\5\u01aa\u00d6\2\u091d\u091f\5\u01ae")
-        buf.write("\u00d8\2\u091e\u091d\3\2\2\2\u091f\u0920\3\2\2\2\u0920")
-        buf.write("\u091e\3\2\2\2\u0920\u0921\3\2\2\2\u0921\u01ad\3\2\2\2")
-        buf.write("\u0922\u0926\5\u01b0\u00d9\2\u0923\u0926\5\u01b2\u00da")
-        buf.write("\2\u0924\u0926\5\u01b4\u00db\2\u0925\u0922\3\2\2\2\u0925")
-        buf.write("\u0923\3\2\2\2\u0925\u0924\3\2\2\2\u0926\u01af\3\2\2\2")
-        buf.write("\u0927\u0928\7\21\2\2\u0928\u0929\5\u021c\u010f\2\u0929")
-        buf.write("\u01b1\3\2\2\2\u092a\u092b\7 \2\2\u092b\u092c\5\u017e")
-        buf.write("\u00c0\2\u092c\u092d\7\7\2\2\u092d\u01b3\3\2\2\2\u092e")
-        buf.write("\u092f\7\21\2\2\u092f\u0930\7 \2\2\u0930\u0931\5\u017e")
-        buf.write("\u00c0\2\u0931\u0932\7\7\2\2\u0932\u01b5\3\2\2\2\u0933")
-        buf.write("\u0935\7\u00fc\2\2\u0934\u0936\5\u01ba\u00de\2\u0935\u0934")
-        buf.write("\3\2\2\2\u0935\u0936\3\2\2\2\u0936\u0937\3\2\2\2\u0937")
-        buf.write("\u0938\7!\2\2\u0938\u0939\5N(\2\u0939\u093a\7\n\2\2\u093a")
-        buf.write("\u01b7\3\2\2\2\u093b\u093d\7\u00fd\2\2\u093c\u093e\5\u01ba")
-        buf.write("\u00de\2\u093d\u093c\3\2\2\2\u093d\u093e\3\2\2\2\u093e")
-        buf.write("\u093f\3\2\2\2\u093f\u0940\7!\2\2\u0940\u0941\5N(\2\u0941")
-        buf.write("\u0942\7\n\2\2\u0942\u01b9\3\2\2\2\u0943\u0944\7\u008b")
-        buf.write("\2\2\u0944\u0945\7\23\2\2\u0945\u0946\7\u00a5\2\2\u0946")
-        buf.write("\u01bb\3\2\2\2\u0947\u094b\5\u01c0\u00e1\2\u0948\u094a")
-        buf.write("\5\u01be\u00e0\2\u0949\u0948\3\2\2\2\u094a\u094d\3\2\2")
-        buf.write("\2\u094b\u0949\3\2\2\2\u094b\u094c\3\2\2\2\u094c\u01bd")
-        buf.write("\3\2\2\2\u094d\u094b\3\2\2\2\u094e\u094f\7\21\2\2\u094f")
-        buf.write("\u0950\5\u01c0\u00e1\2\u0950\u01bf\3\2\2\2\u0951\u0954")
-        buf.write("\5\u01c2\u00e2\2\u0952\u0954\5\u01c6\u00e4\2\u0953\u0951")
-        buf.write("\3\2\2\2\u0953\u0952\3\2\2\2\u0954\u01c1\3\2\2\2\u0955")
-        buf.write("\u0956\5\u020a\u0106\2\u0956\u095f\7!\2\2\u0957\u095c")
-        buf.write("\5\u01c4\u00e3\2\u0958\u0959\7\13\2\2\u0959\u095b\5\u01c4")
-        buf.write("\u00e3\2\u095a\u0958\3\2\2\2\u095b\u095e\3\2\2\2\u095c")
-        buf.write("\u095a\3\2\2\2\u095c\u095d\3\2\2\2\u095d\u0960\3\2\2\2")
-        buf.write("\u095e\u095c\3\2\2\2\u095f\u0957\3\2\2\2\u095f\u0960\3")
-        buf.write("\2\2\2\u0960\u0961\3\2\2\2\u0961\u0962\7\n\2\2\u0962\u01c3")
-        buf.write("\3\2\2\2\u0963\u0966\5\u0176\u00bc\2\u0964\u0966\5\u01c8")
-        buf.write("\u00e5\2\u0965\u0963\3\2\2\2\u0965\u0964\3\2\2\2\u0966")
-        buf.write("\u01c5\3\2\2\2\u0967\u0968\7D\2\2\u0968\u096a\7!\2\2\u0969")
-        buf.write("\u096b\5\u0176\u00bc\2\u096a\u0969\3\2\2\2\u096a\u096b")
-        buf.write("\3\2\2\2\u096b\u096c\3\2\2\2\u096c\u096d\7\n\2\2\u096d")
-        buf.write("\u01c7\3\2\2\2\u096e\u096f\7\3\2\2\u096f\u01c9\3\2\2\2")
-        buf.write("\u0970\u0978\5\u022a\u0116\2\u0971\u0978\5\u01cc\u00e7")
-        buf.write("\2\u0972\u0978\5\u01f0\u00f9\2\u0973\u0978\5\u01f6\u00fc")
-        buf.write("\2\u0974\u0978\5\u01ee\u00f8\2\u0975\u0978\5\u01fc\u00ff")
-        buf.write("\2\u0976\u0978\5\u01d0\u00e9\2\u0977\u0970\3\2\2\2\u0977")
-        buf.write("\u0971\3\2\2\2\u0977\u0972\3\2\2\2\u0977\u0973\3\2\2\2")
-        buf.write("\u0977\u0974\3\2\2\2\u0977\u0975\3\2\2\2\u0977\u0976\3")
-        buf.write("\2\2\2\u0978\u01cb\3\2\2\2\u0979\u097b\5\u020a\u0106\2")
-        buf.write("\u097a\u097c\5\u01ce\u00e8\2\u097b\u097a\3\2\2\2\u097b")
-        buf.write("\u097c\3\2\2\2\u097c\u01cd\3\2\2\2\u097d\u097e\7H\2\2")
-        buf.write("\u097e\u097f\7\23\2\2\u097f\u0980\t\37\2\2\u0980\u01cf")
-        buf.write("\3\2\2\2\u0981\u0982\7!\2\2\u0982\u0983\5L\'\2\u0983\u0984")
-        buf.write("\7\n\2\2\u0984\u01d1\3\2\2\2\u0985\u0986\7\u00d8\2\2\u0986")
-        buf.write("\u0987\5\u020a\u0106\2\u0987\u0988\7a\2\2\u0988\u0989")
-        buf.write("\5\u017e\u00c0\2\u0989\u098a\7\u00f8\2\2\u098a\u098b\5")
-        buf.write("\u017e\u00c0\2\u098b\u098c\7\u00ef\2\2\u098c\u098d\5\u017e")
-        buf.write("\u00c0\2\u098d\u01d3\3\2\2\2\u098e\u0991\5\u01e2\u00f2")
-        buf.write("\2\u098f\u0991\5\u01d6\u00ec\2\u0990\u098e\3\2\2\2\u0990")
-        buf.write("\u098f\3\2\2\2\u0991\u01d5\3\2\2\2\u0992\u0994\5\u01e2")
-        buf.write("\u00f2\2\u0993\u0995\5\u01d8\u00ed\2\u0994\u0993\3\2\2")
-        buf.write("\2\u0995\u0996\3\2\2\2\u0996\u0994\3\2\2\2\u0996\u0997")
-        buf.write("\3\2\2\2\u0997\u01d7\3\2\2\2\u0998\u099c\5\u01da\u00ee")
-        buf.write("\2\u0999\u099c\5\u01dc\u00ef\2\u099a\u099c\5\u01de\u00f0")
-        buf.write("\2\u099b\u0998\3\2\2\2\u099b\u0999\3\2\2\2\u099b\u099a")
-        buf.write("\3\2\2\2\u099c\u01d9\3\2\2\2\u099d\u099e\7\21\2\2\u099e")
-        buf.write("\u099f\5\u01e0\u00f1\2\u099f\u01db\3\2\2\2\u09a0\u09a1")
-        buf.write("\7 \2\2\u09a1\u09a2\5\u017e\u00c0\2\u09a2\u09a3\7\7\2")
-        buf.write("\2\u09a3\u01dd\3\2\2\2\u09a4\u09a5\7\21\2\2\u09a5\u09a6")
-        buf.write("\7 \2\2\u09a6\u09a7\5\u017e\u00c0\2\u09a7\u09a8\7\7\2")
-        buf.write("\2\u09a8\u01df\3\2\2\2\u09a9\u09ad\5\u01e4\u00f3\2\u09aa")
-        buf.write("\u09ad\5\u021e\u0110\2\u09ab\u09ad\5\u01e6\u00f4\2\u09ac")
-        buf.write("\u09a9\3\2\2\2\u09ac\u09aa\3\2\2\2\u09ac\u09ab\3\2\2\2")
-        buf.write("\u09ad\u01e1\3\2\2\2\u09ae\u09af\5\u01e0\u00f1\2\u09af")
-        buf.write("\u01e3\3\2\2\2\u09b0\u09b1\7\4\2\2\u09b1\u01e5\3\2\2\2")
-        buf.write("\u09b2\u09b3\t \2\2\u09b3\u01e7\3\2\2\2\u09b4\u09b8\5")
-        buf.write("\u020e\u0108\2\u09b5\u09b8\5\u01bc\u00df\2\u09b6\u09b8")
-        buf.write("\5\u01ea\u00f6\2\u09b7\u09b4\3\2\2\2\u09b7\u09b5\3\2\2")
-        buf.write("\2\u09b7\u09b6\3\2\2\2\u09b8\u01e9\3\2\2\2\u09b9\u09ba")
-        buf.write("\5\u01bc\u00df\2\u09ba\u09bb\7\21\2\2\u09bb\u09bc\5\u01ec")
-        buf.write("\u00f7\2\u09bc\u01eb\3\2\2\2\u09bd\u09c0\5\u0222\u0112")
-        buf.write("\2\u09be\u09c0\5\u01e0\u00f1\2\u09bf\u09bd\3\2\2\2\u09bf")
-        buf.write("\u09be\3\2\2\2\u09c0\u01ed\3\2\2\2\u09c1\u09c2\7C\2\2")
-        buf.write("\u09c2\u09c3\7\u013d\2\2\u09c3\u09c4\5\u01f2\u00fa\2\u09c4")
-        buf.write("\u01ef\3\2\2\2\u09c5\u09c9\7I\2\2\u09c6\u09c8\5\u0172")
-        buf.write("\u00ba\2\u09c7\u09c6\3\2\2\2\u09c8\u09cb\3\2\2\2\u09c9")
-        buf.write("\u09c7\3\2\2\2\u09c9\u09ca\3\2\2\2\u09ca\u09cc\3\2\2\2")
-        buf.write("\u09cb\u09c9\3\2\2\2\u09cc\u09cd\5\u01f2\u00fa\2\u09cd")
-        buf.write("\u09cf\7 \2\2\u09ce\u09d0\5\u0228\u0115\2\u09cf\u09ce")
-        buf.write("\3\2\2\2\u09cf\u09d0\3\2\2\2\u09d0\u09d5\3\2\2\2\u09d1")
-        buf.write("\u09d2\7\13\2\2\u09d2\u09d4\5\u0228\u0115\2\u09d3\u09d1")
-        buf.write("\3\2\2\2\u09d4\u09d7\3\2\2\2\u09d5\u09d3\3\2\2\2\u09d5")
-        buf.write("\u09d6\3\2\2\2\u09d6\u09d9\3\2\2\2\u09d7\u09d5\3\2\2\2")
-        buf.write("\u09d8\u09da\7\13\2\2\u09d9\u09d8\3\2\2\2\u09d9\u09da")
-        buf.write("\3\2\2\2\u09da\u09db\3\2\2\2\u09db\u09dc\7\7\2\2\u09dc")
-        buf.write("\u01f1\3\2\2\2\u09dd\u09df\7!\2\2\u09de\u09e0\5\u01f4")
-        buf.write("\u00fb\2\u09df\u09de\3\2\2\2\u09df\u09e0\3\2\2\2\u09e0")
-        buf.write("\u09e5\3\2\2\2\u09e1\u09e2\7\13\2\2\u09e2\u09e4\5\u01f4")
-        buf.write("\u00fb\2\u09e3\u09e1\3\2\2\2\u09e4\u09e7\3\2\2\2\u09e5")
-        buf.write("\u09e3\3\2\2\2\u09e5\u09e6\3\2\2\2\u09e6\u09e9\3\2\2\2")
-        buf.write("\u09e7\u09e5\3\2\2\2\u09e8\u09ea\7\13\2\2\u09e9\u09e8")
-        buf.write("\3\2\2\2\u09e9\u09ea\3\2\2\2\u09ea\u09eb\3\2\2\2\u09eb")
-        buf.write("\u09ec\7\n\2\2\u09ec\u01f3\3\2\2\2\u09ed\u09ee\5\u0208")
-        buf.write("\u0105\2\u09ee\u09ef\7\f\2\2\u09ef\u09f0\5\u0204\u0103")
-        buf.write("\2\u09f0\u01f5\3\2\2\2\u09f1\u09f5\t!\2\2\u09f2\u09f4")
-        buf.write("\5\u0172\u00ba\2\u09f3\u09f2\3\2\2\2\u09f4\u09f7\3\2\2")
-        buf.write("\2\u09f5\u09f3\3\2\2\2\u09f5\u09f6\3\2\2\2\u09f6\u09f8")
-        buf.write("\3\2\2\2\u09f7\u09f5\3\2\2\2\u09f8\u09f9\5\u01f2\u00fa")
-        buf.write("\2\u09f9\u09fa\7 \2\2\u09fa\u09ff\5\u0248\u0125\2\u09fb")
-        buf.write("\u09fc\7\13\2\2\u09fc\u09fe\5\u0248\u0125\2\u09fd\u09fb")
-        buf.write("\3\2\2\2\u09fe\u0a01\3\2\2\2\u09ff\u09fd\3\2\2\2\u09ff")
-        buf.write("\u0a00\3\2\2\2\u0a00\u0a02\3\2\2\2\u0a01\u09ff\3\2\2\2")
-        buf.write("\u0a02\u0a04\7\7\2\2\u0a03\u0a05\5\u01f8\u00fd\2\u0a04")
-        buf.write("\u0a03\3\2\2\2\u0a04\u0a05\3\2\2\2\u0a05\u01f7\3\2\2\2")
-        buf.write("\u0a06\u0a07\7\u0106\2\2\u0a07\u0a13\7!\2\2\u0a08\u0a0d")
-        buf.write("\5\u01fa\u00fe\2\u0a09\u0a0a\7\13\2\2\u0a0a\u0a0c\5\u01fa")
-        buf.write("\u00fe\2\u0a0b\u0a09\3\2\2\2\u0a0c\u0a0f\3\2\2\2\u0a0d")
-        buf.write("\u0a0b\3\2\2\2\u0a0d\u0a0e\3\2\2\2\u0a0e\u0a11\3\2\2\2")
-        buf.write("\u0a0f\u0a0d\3\2\2\2\u0a10\u0a12\7\13\2\2\u0a11\u0a10")
-        buf.write("\3\2\2\2\u0a11\u0a12\3\2\2\2\u0a12\u0a14\3\2\2\2\u0a13")
-        buf.write("\u0a08\3\2\2\2\u0a13\u0a14\3\2\2\2\u0a14\u0a15\3\2\2\2")
-        buf.write("\u0a15\u0a16\7\n\2\2\u0a16\u01f9\3\2\2\2\u0a17\u0a18\5")
-        buf.write("\u0208\u0105\2\u0a18\u0a1c\7\23\2\2\u0a19\u0a1d\5\u0248")
-        buf.write("\u0125\2\u0a1a\u0a1d\t\"\2\2\u0a1b\u0a1d\5\u0208\u0105")
-        buf.write("\2\u0a1c\u0a19\3\2\2\2\u0a1c\u0a1a\3\2\2\2\u0a1c\u0a1b")
-        buf.write("\3\2\2\2\u0a1d\u01fb\3\2\2\2\u0a1e\u0a1f\7\u009e\2\2\u0a1f")
-        buf.write("\u0a20\7!\2\2\u0a20\u0a21\5\u0248\u0125\2\u0a21\u0a22")
-        buf.write("\7\n\2\2\u0a22\u0a23\5\u01fe\u0100\2\u0a23\u0a24\5\u0200")
-        buf.write("\u0101\2\u0a24\u0a25\5\u0202\u0102\2\u0a25\u01fd\3\2\2")
-        buf.write("\2\u0a26\u0a27\7\67\2\2\u0a27\u0a28\7!\2\2\u0a28\u0a29")
-        buf.write("\5L\'\2\u0a29\u0a2a\7\n\2\2\u0a2a\u01ff\3\2\2\2\u0a2b")
-        buf.write("\u0a2c\7M\2\2\u0a2c\u0a2d\7!\2\2\u0a2d\u0a2e\5L\'\2\u0a2e")
-        buf.write("\u0a2f\7\n\2\2\u0a2f\u0201\3\2\2\2\u0a30\u0a31\7*\2\2")
-        buf.write("\u0a31\u0a32\7!\2\2\u0a32\u0a33\5\u0150\u00a9\2\u0a33")
-        buf.write("\u0a34\7\n\2\2\u0a34\u0203\3\2\2\2\u0a35\u0a36\t#\2\2")
-        buf.write("\u0a36\u0205\3\2\2\2\u0a37\u0a38\t$\2\2\u0a38\u0207\3")
-        buf.write("\2\2\2\u0a39\u0a3a\5\u021e\u0110\2\u0a3a\u0209\3\2\2\2")
-        buf.write("\u0a3b\u0a3c\5\u021c\u010f\2\u0a3c\u020b\3\2\2\2\u0a3d")
-        buf.write("\u0a3e\5\u021e\u0110\2\u0a3e\u020d\3\2\2\2\u0a3f\u0a40")
-        buf.write("\5\u0222\u0112\2\u0a40\u020f\3\2\2\2\u0a41\u0a44\5\u020a")
-        buf.write("\u0106\2\u0a42\u0a44\5\u020e\u0108\2\u0a43\u0a41\3\2\2")
-        buf.write("\2\u0a43\u0a42\3\2\2\2\u0a44\u0211\3\2\2\2\u0a45\u0a46")
-        buf.write("\7\u013e\2\2\u0a46\u0213\3\2\2\2\u0a47\u0a48\t%\2\2\u0a48")
-        buf.write("\u0215\3\2\2\2\u0a49\u0a4a\t&\2\2\u0a4a\u0217\3\2\2\2")
-        buf.write("\u0a4b\u0a4c\7 \2\2\u0a4c\u0a4d\5\u0248\u0125\2\u0a4d")
-        buf.write("\u0a4e\7\7\2\2\u0a4e\u0219\3\2\2\2\u0a4f\u0a52\5\u0212")
-        buf.write("\u010a\2\u0a50\u0a52\5\u0214\u010b\2\u0a51\u0a4f\3\2\2")
-        buf.write("\2\u0a51\u0a50\3\2\2\2\u0a52\u021b\3\2\2\2\u0a53\u0a57")
-        buf.write("\5\u0212\u010a\2\u0a54\u0a57\5\u0214\u010b\2\u0a55\u0a57")
-        buf.write("\5\u0218\u010d\2\u0a56\u0a53\3\2\2\2\u0a56\u0a54\3\2\2")
-        buf.write("\2\u0a56\u0a55\3\2\2\2\u0a57\u021d\3\2\2\2\u0a58\u0a5d")
-        buf.write("\5\u0212\u010a\2\u0a59\u0a5d\5\u0214\u010b\2\u0a5a\u0a5d")
-        buf.write("\5\u0216\u010c\2\u0a5b\u0a5d\5\u0218\u010d\2\u0a5c\u0a58")
-        buf.write("\3\2\2\2\u0a5c\u0a59\3\2\2\2\u0a5c\u0a5a\3\2\2\2\u0a5c")
-        buf.write("\u0a5b\3\2\2\2\u0a5d\u021f\3\2\2\2\u0a5e\u0a62\5\u0212")
-        buf.write("\u010a\2\u0a5f\u0a62\5\u0214\u010b\2\u0a60\u0a62\5\u0216")
-        buf.write("\u010c\2\u0a61\u0a5e\3\2\2\2\u0a61\u0a5f\3\2\2\2\u0a61")
-        buf.write("\u0a60\3\2\2\2\u0a62\u0221\3\2\2\2\u0a63\u0a65\5\u0224")
-        buf.write("\u0113\2\u0a64\u0a63\3\2\2\2\u0a64\u0a65\3\2\2\2\u0a65")
-        buf.write("\u0a66\3\2\2\2\u0a66\u0a6a\7\3\2\2\u0a67\u0a69\5\u0226")
-        buf.write("\u0114\2\u0a68\u0a67\3\2\2\2\u0a69\u0a6c\3\2\2\2\u0a6a")
-        buf.write("\u0a68\3\2\2\2\u0a6a\u0a6b\3\2\2\2\u0a6b\u0223\3\2\2\2")
-        buf.write("\u0a6c\u0a6a\3\2\2\2\u0a6d\u0a71\7\u013e\2\2\u0a6e\u0a71")
-        buf.write("\5\u0214\u010b\2\u0a6f\u0a71\5\u0216\u010c\2\u0a70\u0a6d")
-        buf.write("\3\2\2\2\u0a70\u0a6e\3\2\2\2\u0a70\u0a6f\3\2\2\2\u0a71")
-        buf.write("\u0225\3\2\2\2\u0a72\u0a78\7\u013e\2\2\u0a73\u0a78\5\u0214")
-        buf.write("\u010b\2\u0a74\u0a78\5\u0216\u010c\2\u0a75\u0a78\7\u0133")
-        buf.write("\2\2\u0a76\u0a78\7\3\2\2\u0a77\u0a72\3\2\2\2\u0a77\u0a73")
-        buf.write("\3\2\2\2\u0a77\u0a74\3\2\2\2\u0a77\u0a75\3\2\2\2\u0a77")
-        buf.write("\u0a76\3\2\2\2\u0a78\u0227\3\2\2\2\u0a79\u0a7c\5\u0230")
-        buf.write("\u0119\2\u0a7a\u0a7c\5\u022a\u0116\2\u0a7b\u0a79\3\2\2")
-        buf.write("\2\u0a7b\u0a7a\3\2\2\2\u0a7c\u0229\3\2\2\2\u0a7d\u0a89")
-        buf.write("\5\u0232\u011a\2\u0a7e\u0a89\5\u0234\u011b\2\u0a7f\u0a89")
-        buf.write("\5\u0236\u011c\2\u0a80\u0a89\5\u0238\u011d\2\u0a81\u0a89")
-        buf.write("\5\u023a\u011e\2\u0a82\u0a89\5\u023c\u011f\2\u0a83\u0a89")
-        buf.write("\5\u023e\u0120\2\u0a84\u0a89\5\u0240\u0121\2\u0a85\u0a89")
-        buf.write("\5\u0242\u0122\2\u0a86\u0a89\5\u0248\u0125\2\u0a87\u0a89")
-        buf.write("\5\u024a\u0126\2\u0a88\u0a7d\3\2\2\2\u0a88\u0a7e\3\2\2")
-        buf.write("\2\u0a88\u0a7f\3\2\2\2\u0a88\u0a80\3\2\2\2\u0a88\u0a81")
-        buf.write("\3\2\2\2\u0a88\u0a82\3\2\2\2\u0a88\u0a83\3\2\2\2\u0a88")
-        buf.write("\u0a84\3\2\2\2\u0a88\u0a85\3\2\2\2\u0a88\u0a86\3\2\2\2")
-        buf.write("\u0a88\u0a87\3\2\2\2\u0a89\u022b\3\2\2\2\u0a8a\u0a92\5")
-        buf.write("\u0232\u011a\2\u0a8b\u0a92\5\u0234\u011b\2\u0a8c\u0a92")
-        buf.write("\5\u0236\u011c\2\u0a8d\u0a92\5\u0238\u011d\2\u0a8e\u0a92")
-        buf.write("\5\u0230\u0119\2\u0a8f\u0a92\5\u023a\u011e\2\u0a90\u0a92")
-        buf.write("\5\u023c\u011f\2\u0a91\u0a8a\3\2\2\2\u0a91\u0a8b\3\2\2")
-        buf.write("\2\u0a91\u0a8c\3\2\2\2\u0a91\u0a8d\3\2\2\2\u0a91\u0a8e")
-        buf.write("\3\2\2\2\u0a91\u0a8f\3\2\2\2\u0a91\u0a90\3\2\2\2\u0a92")
-        buf.write("\u022d\3\2\2\2\u0a93\u0a99\5\u0232\u011a\2\u0a94\u0a99")
-        buf.write("\5\u0234\u011b\2\u0a95\u0a99\5\u0236\u011c\2\u0a96\u0a99")
-        buf.write("\5\u0238\u011d\2\u0a97\u0a99\5\u0230\u0119\2\u0a98\u0a93")
-        buf.write("\3\2\2\2\u0a98\u0a94\3\2\2\2\u0a98\u0a95\3\2\2\2\u0a98")
-        buf.write("\u0a96\3\2\2\2\u0a98\u0a97\3\2\2\2\u0a99\u022f\3\2\2\2")
-        buf.write("\u0a9a\u0a9d\5\u0244\u0123\2\u0a9b\u0a9d\5\u0246\u0124")
-        buf.write("\2\u0a9c\u0a9a\3\2\2\2\u0a9c\u0a9b\3\2\2\2\u0a9d\u0231")
-        buf.write("\3\2\2\2\u0a9e\u0a9f\7\u0133\2\2\u0a9f\u0233\3\2\2\2\u0aa0")
-        buf.write("\u0aa1\7\u0134\2\2\u0aa1\u0235\3\2\2\2\u0aa2\u0aa3\7\u0135")
-        buf.write("\2\2\u0aa3\u0237\3\2\2\2\u0aa4\u0aa5\7\u0136\2\2\u0aa5")
-        buf.write("\u0239\3\2\2\2\u0aa6\u0aa7\7\u0139\2\2\u0aa7\u023b\3\2")
-        buf.write("\2\2\u0aa8\u0aa9\7\u013a\2\2\u0aa9\u023d\3\2\2\2\u0aaa")
-        buf.write("\u0aab\7\u0138\2\2\u0aab\u023f\3\2\2\2\u0aac\u0aad\7\u013d")
-        buf.write("\2\2\u0aad\u0241\3\2\2\2\u0aae\u0aaf\7\u013b\2\2\u0aaf")
-        buf.write("\u0243\3\2\2\2\u0ab0\u0ab1\t\34\2\2\u0ab1\u0ab2\7\u0133")
-        buf.write("\2\2\u0ab2\u0245\3\2\2\2\u0ab3\u0ab4\t\34\2\2\u0ab4\u0ab5")
-        buf.write("\7\u0135\2\2\u0ab5\u0247\3\2\2\2\u0ab6\u0aba\7\u0137\2")
-        buf.write("\2\u0ab7\u0ab9\7\u0137\2\2\u0ab8\u0ab7\3\2\2\2\u0ab9\u0abc")
-        buf.write("\3\2\2\2\u0aba\u0ab8\3\2\2\2\u0aba\u0abb\3\2\2\2\u0abb")
-        buf.write("\u0249\3\2\2\2\u0abc\u0aba\3\2\2\2\u0abd\u0abe\7\u011f")
-        buf.write("\2\2\u0abe\u0abf\7!\2\2\u0abf\u0ac0\5\u024c\u0127\2\u0ac0")
-        buf.write("\u0ac1\7\n\2\2\u0ac1\u024b\3\2\2\2\u0ac2\u0ace\5\u0252")
-        buf.write("\u012a\2\u0ac3\u0ace\5\u0254\u012b\2\u0ac4\u0ace\5\u0256")
-        buf.write("\u012c\2\u0ac5\u0ace\5\u0258\u012d\2\u0ac6\u0ace\5\u0260")
-        buf.write("\u0131\2\u0ac7\u0ace\5\u025a\u012e\2\u0ac8\u0ace\5\u024e")
-        buf.write("\u0128\2\u0ac9\u0ace\5\u0262\u0132\2\u0aca\u0ace\5\u025c")
-        buf.write("\u012f\2\u0acb\u0ace\5\u025e\u0130\2\u0acc\u0ace\5\u024a")
-        buf.write("\u0126\2\u0acd\u0ac2\3\2\2\2\u0acd\u0ac3\3\2\2\2\u0acd")
-        buf.write("\u0ac4\3\2\2\2\u0acd\u0ac5\3\2\2\2\u0acd\u0ac6\3\2\2\2")
-        buf.write("\u0acd\u0ac7\3\2\2\2\u0acd\u0ac8\3\2\2\2\u0acd\u0ac9\3")
-        buf.write("\2\2\2\u0acd\u0aca\3\2\2\2\u0acd\u0acb\3\2\2\2\u0acd\u0acc")
-        buf.write("\3\2\2\2\u0ace\u024d\3\2\2\2\u0acf\u0ad8\7\37\2\2\u0ad0")
-        buf.write("\u0ad5\5\u0250\u0129\2\u0ad1\u0ad2\7\13\2\2\u0ad2\u0ad4")
-        buf.write("\5\u0250\u0129\2\u0ad3\u0ad1\3\2\2\2\u0ad4\u0ad7\3\2\2")
-        buf.write("\2\u0ad5\u0ad3\3\2\2\2\u0ad5\u0ad6\3\2\2\2\u0ad6\u0ad9")
-        buf.write("\3\2\2\2\u0ad7\u0ad5\3\2\2\2\u0ad8\u0ad0\3\2\2\2\u0ad8")
-        buf.write("\u0ad9\3\2\2\2\u0ad9\u0ada\3\2\2\2\u0ada\u0adb\7\6\2\2")
-        buf.write("\u0adb\u024f\3\2\2\2\u0adc\u0add\7\u0137\2\2\u0add\u0ade")
-        buf.write("\7\f\2\2\u0ade\u0adf\5\u024c\u0127\2\u0adf\u0251\3\2\2")
-        buf.write("\2\u0ae0\u0ae9\7 \2\2\u0ae1\u0ae6\5\u024c\u0127\2\u0ae2")
-        buf.write("\u0ae3\7\13\2\2\u0ae3\u0ae5\5\u024c\u0127\2\u0ae4\u0ae2")
-        buf.write("\3\2\2\2\u0ae5\u0ae8\3\2\2\2\u0ae6\u0ae4\3\2\2\2\u0ae6")
-        buf.write("\u0ae7\3\2\2\2\u0ae7\u0aea\3\2\2\2\u0ae8\u0ae6\3\2\2\2")
-        buf.write("\u0ae9\u0ae1\3\2\2\2\u0ae9\u0aea\3\2\2\2\u0aea\u0aeb\3")
-        buf.write("\2\2\2\u0aeb\u0aec\7\7\2\2\u0aec\u0253\3\2\2\2\u0aed\u0aee")
-        buf.write("\7\u0138\2\2\u0aee\u0255\3\2\2\2\u0aef\u0af0\7\u0139\2")
-        buf.write("\2\u0af0\u0257\3\2\2\2\u0af1\u0af2\7\u013d\2\2\u0af2\u0259")
-        buf.write("\3\2\2\2\u0af3\u0af4\7\u00b9\2\2\u0af4\u025b\3\2\2\2\u0af5")
-        buf.write("\u0af9\7\u0137\2\2\u0af6\u0af8\7\u0137\2\2\u0af7\u0af6")
-        buf.write("\3\2\2\2\u0af8\u0afb\3\2\2\2\u0af9\u0af7\3\2\2\2\u0af9")
-        buf.write("\u0afa\3\2\2\2\u0afa\u025d\3\2\2\2\u0afb\u0af9\3\2\2\2")
-        buf.write("\u0afc\u0afd\7\u013a\2\2\u0afd\u025f\3\2\2\2\u0afe\u0b00")
-        buf.write("\7\r\2\2\u0aff\u0afe\3\2\2\2\u0aff\u0b00\3\2\2\2\u0b00")
-        buf.write("\u0b01\3\2\2\2\u0b01\u0b02\7\u0133\2\2\u0b02\u0261\3\2")
-        buf.write("\2\2\u0b03\u0b05\7\r\2\2\u0b04\u0b03\3\2\2\2\u0b04\u0b05")
-        buf.write("\3\2\2\2\u0b05\u0b06\3\2\2\2\u0b06\u0b07\7\u0135\2\2\u0b07")
-        buf.write("\u0263\3\2\2\2\u0105\u026b\u026f\u027a\u0287\u0293\u029e")
-        buf.write("\u02a8\u02c3\u02c9\u02d2\u02de\u02ed\u02f1\u02f4\u02fa")
-        buf.write("\u0300\u0305\u030b\u0315\u0324\u0329\u0331\u0343\u0352")
-        buf.write("\u0359\u035f\u0363\u036d\u0376\u0380\u038a\u0393\u03c6")
-        buf.write("\u03cc\u03e7\u03ed\u03f9\u0400\u040a\u040f\u0418\u041f")
-        buf.write("\u0424\u042f\u043b\u0440\u044c\u044f\u0454\u0457\u045c")
-        buf.write("\u0460\u046b\u0476\u047b\u047f\u048e\u0497\u049c\u04a3")
-        buf.write("\u04aa\u04ad\u04ba\u04c6\u04cd\u04d5\u04d8\u04dd\u04e8")
-        buf.write("\u04fa\u0500\u0509\u050e\u0518\u0520\u0523\u052c\u0532")
-        buf.write("\u053a\u053d\u0546\u0550\u055c\u0560\u0567\u0570\u0579")
-        buf.write("\u0581\u0584\u0599\u05a1\u05a7\u05aa\u05b1\u05c3\u05c7")
-        buf.write("\u05d2\u05d9\u05e1\u05e5\u05e8\u05f7\u0600\u0608\u060c")
-        buf.write("\u0610\u0614\u061e\u0627\u062a\u062f\u0633\u0636\u063a")
-        buf.write("\u063e\u0648\u0651\u065a\u0660\u0664\u0669\u0677\u067c")
-        buf.write("\u068b\u0694\u0697\u069f\u06a8\u06ab\u06b3\u06b6\u06be")
-        buf.write("\u06c1\u06c5\u06cb\u06d1\u06d9\u06e0\u06e9\u06ec\u06f3")
-        buf.write("\u0728\u072f\u073f\u0745\u0750\u0759\u075d\u0760\u0763")
-        buf.write("\u076a\u077b\u0785\u078d\u0790\u0795\u07a3\u07ae\u07b2")
-        buf.write("\u07b5\u07ba\u07c7\u07d0\u07d8\u07df\u07e8\u07ef\u07f3")
-        buf.write("\u07f9\u0801\u0804\u0807\u080f\u0819\u0822\u082e\u0838")
-        buf.write("\u083d\u0842\u0850\u0858\u085e\u0864\u086b\u0871\u087b")
-        buf.write("\u0881\u0887\u088a\u0890\u089a\u08a9\u08b3\u08be\u08cc")
-        buf.write("\u08e0\u08e6\u08f0\u08f8\u08fe\u0903\u090e\u0915\u091a")
-        buf.write("\u0920\u0925\u0935\u093d\u094b\u0953\u095c\u095f\u0965")
-        buf.write("\u096a\u0977\u097b\u0990\u0996\u099b\u09ac\u09b7\u09bf")
-        buf.write("\u09c9\u09cf\u09d5\u09d9\u09df\u09e5\u09e9\u09f5\u09ff")
-        buf.write("\u0a04\u0a0d\u0a11\u0a13\u0a1c\u0a43\u0a51\u0a56\u0a5c")
-        buf.write("\u0a61\u0a64\u0a6a\u0a70\u0a77\u0a7b\u0a88\u0a91\u0a98")
-        buf.write("\u0a9c\u0aba\u0acd\u0ad5\u0ad8\u0ae6\u0ae9\u0af9\u0aff")
-        buf.write("\u0b04")
-        return buf.getvalue()
-
+    return [
+        4,1,318,2823,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,
+        7,6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,
+        13,2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,
+        20,7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,
+        26,2,27,7,27,2,28,7,28,2,29,7,29,2,30,7,30,2,31,7,31,2,32,7,32,2,
+        33,7,33,2,34,7,34,2,35,7,35,2,36,7,36,2,37,7,37,2,38,7,38,2,39,7,
+        39,2,40,7,40,2,41,7,41,2,42,7,42,2,43,7,43,2,44,7,44,2,45,7,45,2,
+        46,7,46,2,47,7,47,2,48,7,48,2,49,7,49,2,50,7,50,2,51,7,51,2,52,7,
+        52,2,53,7,53,2,54,7,54,2,55,7,55,2,56,7,56,2,57,7,57,2,58,7,58,2,
+        59,7,59,2,60,7,60,2,61,7,61,2,62,7,62,2,63,7,63,2,64,7,64,2,65,7,
+        65,2,66,7,66,2,67,7,67,2,68,7,68,2,69,7,69,2,70,7,70,2,71,7,71,2,
+        72,7,72,2,73,7,73,2,74,7,74,2,75,7,75,2,76,7,76,2,77,7,77,2,78,7,
+        78,2,79,7,79,2,80,7,80,2,81,7,81,2,82,7,82,2,83,7,83,2,84,7,84,2,
+        85,7,85,2,86,7,86,2,87,7,87,2,88,7,88,2,89,7,89,2,90,7,90,2,91,7,
+        91,2,92,7,92,2,93,7,93,2,94,7,94,2,95,7,95,2,96,7,96,2,97,7,97,2,
+        98,7,98,2,99,7,99,2,100,7,100,2,101,7,101,2,102,7,102,2,103,7,103,
+        2,104,7,104,2,105,7,105,2,106,7,106,2,107,7,107,2,108,7,108,2,109,
+        7,109,2,110,7,110,2,111,7,111,2,112,7,112,2,113,7,113,2,114,7,114,
+        2,115,7,115,2,116,7,116,2,117,7,117,2,118,7,118,2,119,7,119,2,120,
+        7,120,2,121,7,121,2,122,7,122,2,123,7,123,2,124,7,124,2,125,7,125,
+        2,126,7,126,2,127,7,127,2,128,7,128,2,129,7,129,2,130,7,130,2,131,
+        7,131,2,132,7,132,2,133,7,133,2,134,7,134,2,135,7,135,2,136,7,136,
+        2,137,7,137,2,138,7,138,2,139,7,139,2,140,7,140,2,141,7,141,2,142,
+        7,142,2,143,7,143,2,144,7,144,2,145,7,145,2,146,7,146,2,147,7,147,
+        2,148,7,148,2,149,7,149,2,150,7,150,2,151,7,151,2,152,7,152,2,153,
+        7,153,2,154,7,154,2,155,7,155,2,156,7,156,2,157,7,157,2,158,7,158,
+        2,159,7,159,2,160,7,160,2,161,7,161,2,162,7,162,2,163,7,163,2,164,
+        7,164,2,165,7,165,2,166,7,166,2,167,7,167,2,168,7,168,2,169,7,169,
+        2,170,7,170,2,171,7,171,2,172,7,172,2,173,7,173,2,174,7,174,2,175,
+        7,175,2,176,7,176,2,177,7,177,2,178,7,178,2,179,7,179,2,180,7,180,
+        2,181,7,181,2,182,7,182,2,183,7,183,2,184,7,184,2,185,7,185,2,186,
+        7,186,2,187,7,187,2,188,7,188,2,189,7,189,2,190,7,190,2,191,7,191,
+        2,192,7,192,2,193,7,193,2,194,7,194,2,195,7,195,2,196,7,196,2,197,
+        7,197,2,198,7,198,2,199,7,199,2,200,7,200,2,201,7,201,2,202,7,202,
+        2,203,7,203,2,204,7,204,2,205,7,205,2,206,7,206,2,207,7,207,2,208,
+        7,208,2,209,7,209,2,210,7,210,2,211,7,211,2,212,7,212,2,213,7,213,
+        2,214,7,214,2,215,7,215,2,216,7,216,2,217,7,217,2,218,7,218,2,219,
+        7,219,2,220,7,220,2,221,7,221,2,222,7,222,2,223,7,223,2,224,7,224,
+        2,225,7,225,2,226,7,226,2,227,7,227,2,228,7,228,2,229,7,229,2,230,
+        7,230,2,231,7,231,2,232,7,232,2,233,7,233,2,234,7,234,2,235,7,235,
+        2,236,7,236,2,237,7,237,2,238,7,238,2,239,7,239,2,240,7,240,2,241,
+        7,241,2,242,7,242,2,243,7,243,2,244,7,244,2,245,7,245,2,246,7,246,
+        2,247,7,247,2,248,7,248,2,249,7,249,2,250,7,250,2,251,7,251,2,252,
+        7,252,2,253,7,253,2,254,7,254,2,255,7,255,2,256,7,256,2,257,7,257,
+        2,258,7,258,2,259,7,259,2,260,7,260,2,261,7,261,2,262,7,262,2,263,
+        7,263,2,264,7,264,2,265,7,265,2,266,7,266,2,267,7,267,2,268,7,268,
+        2,269,7,269,2,270,7,270,2,271,7,271,2,272,7,272,2,273,7,273,2,274,
+        7,274,2,275,7,275,2,276,7,276,2,277,7,277,2,278,7,278,2,279,7,279,
+        2,280,7,280,2,281,7,281,2,282,7,282,2,283,7,283,2,284,7,284,2,285,
+        7,285,2,286,7,286,2,287,7,287,2,288,7,288,2,289,7,289,2,290,7,290,
+        2,291,7,291,2,292,7,292,2,293,7,293,2,294,7,294,2,295,7,295,2,296,
+        7,296,2,297,7,297,2,298,7,298,2,299,7,299,2,300,7,300,2,301,7,301,
+        2,302,7,302,2,303,7,303,2,304,7,304,1,0,1,0,1,1,1,1,1,1,5,1,616,
+        8,1,10,1,12,1,619,9,1,1,1,3,1,622,8,1,1,1,1,1,1,2,1,2,1,2,1,2,1,
+        2,1,2,1,2,3,2,633,8,2,1,3,1,3,1,3,1,3,1,3,1,3,1,4,1,4,1,4,1,4,1,
+        4,3,4,646,8,4,1,5,1,5,1,5,1,5,1,5,1,6,1,6,1,6,1,6,1,6,3,6,658,8,
+        6,1,6,1,6,1,6,1,7,1,7,1,7,1,7,1,7,1,7,3,7,669,8,7,1,7,1,7,1,7,1,
+        8,1,8,1,8,5,8,677,8,8,10,8,12,8,680,9,8,1,9,1,9,1,9,1,9,1,9,1,9,
+        1,9,1,9,1,10,1,10,1,10,1,10,1,10,1,11,1,11,1,11,1,11,1,11,1,11,1,
+        11,1,11,1,11,1,11,1,11,3,11,706,8,11,1,12,1,12,1,12,1,12,3,12,712,
+        8,12,1,13,1,13,1,13,1,14,1,14,1,14,1,14,3,14,721,8,14,1,15,1,15,
+        1,15,1,15,1,16,1,16,1,16,1,16,5,16,731,8,16,10,16,12,16,734,9,16,
+        1,16,1,16,1,17,1,17,1,17,1,17,1,18,1,18,1,18,1,18,5,18,746,8,18,
+        10,18,12,18,749,9,18,1,18,3,18,752,8,18,1,18,3,18,755,8,18,1,18,
+        1,18,1,19,1,19,3,19,761,8,19,1,20,1,20,1,20,1,20,3,20,767,8,20,1,
+        21,1,21,1,21,3,21,772,8,21,1,21,1,21,4,21,776,8,21,11,21,12,21,777,
+        1,21,1,21,1,22,1,22,1,22,1,22,5,22,786,8,22,10,22,12,22,789,9,22,
+        1,22,1,22,1,23,1,23,1,23,1,23,1,24,1,24,1,24,1,24,1,25,1,25,3,25,
+        803,8,25,1,25,1,25,1,25,3,25,808,8,25,1,26,1,26,1,26,1,26,5,26,814,
+        8,26,10,26,12,26,817,9,26,1,26,1,26,1,27,1,27,1,27,1,27,1,27,1,28,
+        1,28,1,29,1,29,1,29,1,29,5,29,832,8,29,10,29,12,29,835,9,29,1,29,
+        1,29,1,29,1,30,1,30,1,30,1,30,1,30,1,30,1,30,5,30,847,8,30,10,30,
+        12,30,850,9,30,1,30,1,30,1,31,1,31,3,31,856,8,31,1,32,1,32,1,32,
+        1,32,3,32,862,8,32,1,33,1,33,3,33,866,8,33,1,34,1,34,1,34,1,34,1,
+        34,1,34,5,34,874,8,34,10,34,12,34,877,9,34,1,34,1,34,1,35,1,35,1,
+        35,1,35,3,35,885,8,35,1,36,1,36,1,37,1,37,1,38,1,38,5,38,893,8,38,
+        10,38,12,38,896,9,38,1,39,1,39,1,39,1,40,1,40,5,40,903,8,40,10,40,
+        12,40,906,9,40,1,41,1,41,1,41,1,41,1,41,1,41,3,41,914,8,41,1,42,
+        1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,
+        1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,
+        1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,
+        1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,3,42,965,8,42,1,43,
+        1,43,1,43,1,43,3,43,971,8,43,1,44,1,44,1,44,1,44,1,44,1,44,1,44,
+        1,44,1,44,1,44,1,44,1,44,1,44,1,44,1,44,1,44,1,44,1,44,1,44,1,44,
+        1,44,1,44,1,44,1,44,1,44,3,44,998,8,44,1,45,1,45,5,45,1002,8,45,
+        10,45,12,45,1005,9,45,1,45,1,45,1,46,1,46,1,46,1,47,1,47,5,47,1014,
+        8,47,10,47,12,47,1017,9,47,1,48,1,48,5,48,1021,8,48,10,48,12,48,
+        1024,9,48,1,49,1,49,1,49,1,50,1,50,5,50,1031,8,50,10,50,12,50,1034,
+        9,50,1,50,1,50,3,50,1038,8,50,1,51,1,51,1,52,1,52,1,52,5,52,1045,
+        8,52,10,52,12,52,1048,9,52,1,53,1,53,5,53,1052,8,53,10,53,12,53,
+        1055,9,53,1,53,1,53,3,53,1059,8,53,1,54,1,54,1,54,1,55,1,55,1,55,
+        1,55,5,55,1068,8,55,10,55,12,55,1071,9,55,1,56,1,56,1,57,1,57,1,
+        57,1,57,1,57,5,57,1080,8,57,10,57,12,57,1083,9,57,1,57,1,57,3,57,
+        1087,8,57,1,58,1,58,1,58,1,59,1,59,1,59,1,59,1,59,1,60,1,60,3,60,
+        1099,8,60,1,60,3,60,1102,8,60,1,60,1,60,1,60,3,60,1107,8,60,1,60,
+        3,60,1110,8,60,1,61,5,61,1113,8,61,10,61,12,61,1116,9,61,1,61,3,
+        61,1119,8,61,1,61,1,61,1,62,1,62,1,62,1,62,1,62,5,62,1128,8,62,10,
+        62,12,62,1131,9,62,1,62,1,62,1,63,1,63,1,63,1,63,5,63,1139,8,63,
+        10,63,12,63,1142,9,63,1,64,1,64,3,64,1146,8,64,1,65,1,65,3,65,1150,
+        8,65,1,66,1,66,1,66,1,67,1,67,1,67,1,67,1,67,1,68,1,68,1,69,1,69,
+        1,69,3,69,1165,8,69,1,70,1,70,1,71,1,71,1,71,5,71,1172,8,71,10,71,
+        12,71,1175,9,71,1,72,1,72,3,72,1179,8,72,1,73,1,73,1,73,5,73,1184,
+        8,73,10,73,12,73,1187,9,73,1,74,1,74,4,74,1191,8,74,11,74,12,74,
+        1192,1,75,3,75,1196,8,75,1,75,1,75,1,75,1,75,1,76,1,76,1,76,1,77,
+        1,77,5,77,1207,8,77,10,77,12,77,1210,9,77,1,78,1,78,1,78,1,79,1,
+        79,1,80,1,80,5,80,1219,8,80,10,80,12,80,1222,9,80,1,81,1,81,5,81,
+        1226,8,81,10,81,12,81,1229,9,81,1,81,1,81,1,81,1,81,1,81,3,81,1236,
+        8,81,1,81,3,81,1239,8,81,1,82,1,82,1,82,3,82,1244,8,82,1,83,1,83,
+        1,83,1,83,1,84,1,84,1,85,1,85,1,85,3,85,1255,8,85,1,85,1,85,1,86,
+        1,86,1,86,1,86,1,86,1,87,1,87,1,87,1,88,1,88,1,88,1,88,5,88,1271,
+        8,88,10,88,12,88,1274,9,88,1,89,1,89,1,89,3,89,1279,8,89,1,90,1,
+        90,1,90,1,90,1,90,1,91,1,91,3,91,1288,8,91,1,91,5,91,1291,8,91,10,
+        91,12,91,1294,9,91,1,92,1,92,1,92,1,93,1,93,5,93,1301,8,93,10,93,
+        12,93,1304,9,93,1,93,1,93,1,93,1,93,1,93,3,93,1311,8,93,1,93,3,93,
+        1314,8,93,1,94,1,94,1,94,1,95,1,95,5,95,1321,8,95,10,95,12,95,1324,
+        9,95,1,95,1,95,1,95,3,95,1329,8,95,1,96,1,96,1,96,1,96,5,96,1335,
+        8,96,10,96,12,96,1338,9,96,3,96,1340,8,96,1,97,1,97,1,97,1,98,1,
+        98,5,98,1347,8,98,10,98,12,98,1350,9,98,1,98,1,98,1,98,1,99,1,99,
+        5,99,1357,8,99,10,99,12,99,1360,9,99,1,99,1,99,1,99,1,99,1,99,1,
+        99,1,99,5,99,1369,8,99,10,99,12,99,1372,9,99,1,99,3,99,1375,8,99,
+        1,99,1,99,1,100,1,100,1,100,3,100,1382,8,100,1,101,1,101,1,101,1,
+        101,1,101,5,101,1389,8,101,10,101,12,101,1392,9,101,1,101,1,101,
+        1,102,1,102,5,102,1398,8,102,10,102,12,102,1401,9,102,1,102,1,102,
+        1,102,1,102,1,102,3,102,1408,8,102,1,102,3,102,1411,8,102,1,103,
+        1,103,1,103,1,103,1,104,1,104,1,104,1,104,1,104,1,105,1,105,1,105,
+        1,105,1,105,1,105,1,106,1,106,5,106,1430,8,106,10,106,12,106,1433,
+        9,106,1,106,1,106,1,106,5,106,1438,8,106,10,106,12,106,1441,9,106,
+        1,106,1,106,1,106,3,106,1446,8,106,1,106,3,106,1449,8,106,1,107,
+        1,107,1,107,1,108,1,108,3,108,1456,8,108,1,109,1,109,1,109,1,109,
+        1,110,1,110,1,110,1,110,1,110,1,110,1,110,1,110,1,110,1,110,1,111,
+        1,111,3,111,1474,8,111,1,111,1,111,3,111,1478,8,111,1,111,1,111,
+        1,111,1,112,1,112,1,112,1,112,5,112,1487,8,112,10,112,12,112,1490,
+        9,112,1,113,1,113,5,113,1494,8,113,10,113,12,113,1497,9,113,1,113,
+        1,113,1,113,5,113,1502,8,113,10,113,12,113,1505,9,113,1,113,3,113,
+        1508,8,113,1,113,3,113,1511,8,113,1,113,1,113,1,113,1,113,1,113,
+        1,114,1,114,1,114,1,115,1,115,1,115,1,116,1,116,3,116,1526,8,116,
+        1,117,1,117,1,117,1,118,1,118,5,118,1533,8,118,10,118,12,118,1536,
+        9,118,1,118,1,118,1,118,5,118,1541,8,118,10,118,12,118,1544,9,118,
+        1,118,3,118,1547,8,118,1,119,1,119,3,119,1551,8,119,1,120,1,120,
+        3,120,1555,8,120,1,120,1,120,1,120,1,120,1,121,1,121,1,121,1,121,
+        3,121,1565,8,121,1,122,1,122,1,122,1,122,1,123,1,123,1,123,3,123,
+        1574,8,123,1,124,3,124,1577,8,124,1,124,5,124,1580,8,124,10,124,
+        12,124,1583,9,124,1,124,3,124,1586,8,124,1,125,3,125,1589,8,125,
+        1,125,1,125,3,125,1593,8,125,1,126,1,126,3,126,1597,8,126,1,126,
+        1,126,1,126,1,126,1,127,1,127,1,127,1,127,3,127,1607,8,127,1,128,
+        1,128,1,128,1,128,1,128,5,128,1614,8,128,10,128,12,128,1617,9,128,
+        1,128,1,128,1,129,1,129,5,129,1623,8,129,10,129,12,129,1626,9,129,
+        1,129,1,129,1,129,3,129,1631,8,129,1,129,1,129,3,129,1635,8,129,
+        1,130,1,130,1,130,3,130,1640,8,130,1,131,1,131,1,131,1,131,1,132,
+        1,132,1,132,1,132,1,133,1,133,5,133,1652,8,133,10,133,12,133,1655,
+        9,133,1,133,1,133,3,133,1659,8,133,1,133,1,133,1,133,1,133,1,134,
+        1,134,1,134,1,135,1,135,1,135,1,135,5,135,1672,8,135,10,135,12,135,
+        1675,9,135,1,136,1,136,1,136,1,136,5,136,1681,8,136,10,136,12,136,
+        1684,9,136,3,136,1686,8,136,1,137,1,137,1,137,1,137,5,137,1692,8,
+        137,10,137,12,137,1695,9,137,1,138,1,138,1,138,1,138,5,138,1701,
+        8,138,10,138,12,138,1704,9,138,3,138,1706,8,138,1,139,1,139,1,139,
+        1,139,5,139,1712,8,139,10,139,12,139,1715,9,139,3,139,1717,8,139,
+        1,140,1,140,1,140,1,140,5,140,1723,8,140,10,140,12,140,1726,9,140,
+        3,140,1728,8,140,1,141,1,141,3,141,1732,8,141,1,142,1,142,5,142,
+        1736,8,142,10,142,12,142,1739,9,142,1,142,1,142,1,142,3,142,1744,
+        8,142,1,143,1,143,1,143,1,143,5,143,1750,8,143,10,143,12,143,1753,
+        9,143,1,144,1,144,1,144,1,144,3,144,1759,8,144,1,145,1,145,1,145,
+        1,145,1,145,5,145,1766,8,145,10,145,12,145,1769,9,145,3,145,1771,
+        8,145,1,145,1,145,1,146,4,146,1776,8,146,11,146,12,146,1777,1,147,
+        1,147,1,147,1,147,1,147,1,147,1,147,1,147,1,147,1,147,1,147,1,147,
+        1,147,1,147,1,147,1,147,1,147,1,147,1,147,1,147,1,147,1,147,1,147,
+        1,147,1,147,1,147,1,147,1,147,1,147,1,147,1,147,1,147,1,147,1,147,
+        1,147,1,147,1,147,1,147,1,147,1,147,1,147,1,147,1,147,1,147,1,147,
+        1,147,1,147,1,147,1,147,1,147,1,147,3,147,1831,8,147,1,148,1,148,
+        1,148,5,148,1836,8,148,10,148,12,148,1839,9,148,1,149,1,149,1,149,
+        1,149,1,149,1,149,1,149,1,149,1,149,1,149,1,149,1,149,1,149,3,149,
+        1854,8,149,1,150,1,150,5,150,1858,8,150,10,150,12,150,1861,9,150,
+        1,150,1,150,1,150,1,150,1,151,1,151,5,151,1869,8,151,10,151,12,151,
+        1872,9,151,1,151,1,151,1,152,1,152,5,152,1878,8,152,10,152,12,152,
+        1881,9,152,1,152,3,152,1884,8,152,1,152,3,152,1887,8,152,1,152,3,
+        152,1890,8,152,1,152,1,152,1,152,4,152,1895,8,152,11,152,12,152,
+        1896,1,152,1,152,1,153,1,153,1,153,1,153,1,153,1,153,1,154,1,154,
+        1,154,1,154,1,154,5,154,1912,8,154,10,154,12,154,1915,9,154,1,155,
+        1,155,1,155,1,155,1,155,5,155,1922,8,155,10,155,12,155,1925,9,155,
+        1,155,1,155,1,156,1,156,1,156,3,156,1932,8,156,1,156,3,156,1935,
+        8,156,1,156,1,156,1,156,3,156,1940,8,156,1,156,1,156,1,157,1,157,
+        1,157,1,157,1,158,1,158,1,158,1,158,5,158,1952,8,158,10,158,12,158,
+        1955,9,158,1,159,1,159,1,159,1,159,1,160,1,160,5,160,1963,8,160,
+        10,160,12,160,1966,9,160,1,160,3,160,1969,8,160,1,160,3,160,1972,
+        8,160,1,160,1,160,1,160,3,160,1977,8,160,1,161,1,161,1,161,1,161,
+        1,162,1,162,1,162,1,162,1,162,5,162,1988,8,162,10,162,12,162,1991,
+        9,162,1,162,1,162,1,163,1,163,5,163,1997,8,163,10,163,12,163,2000,
+        9,163,1,163,1,163,1,163,5,163,2005,8,163,10,163,12,163,2008,9,163,
+        1,164,1,164,5,164,2012,8,164,10,164,12,164,2015,9,164,1,164,1,164,
+        1,164,1,164,5,164,2021,8,164,10,164,12,164,2024,9,164,1,165,1,165,
+        1,165,1,166,3,166,2030,8,166,1,166,1,166,3,166,2034,8,166,1,167,
+        1,167,5,167,2038,8,167,10,167,12,167,2041,9,167,1,167,1,167,1,167,
+        5,167,2046,8,167,10,167,12,167,2049,9,167,3,167,2051,8,167,1,167,
+        3,167,2054,8,167,1,168,1,168,1,168,1,168,1,168,1,168,3,168,2062,
+        8,168,1,169,1,169,1,169,1,169,1,170,1,170,5,170,2070,8,170,10,170,
+        12,170,2073,9,170,1,170,1,170,1,171,1,171,5,171,2079,8,171,10,171,
+        12,171,2082,9,171,1,171,1,171,1,171,1,171,1,172,1,172,1,172,1,172,
+        1,172,3,172,2093,8,172,1,173,1,173,1,173,1,174,1,174,1,174,5,174,
+        2101,8,174,10,174,12,174,2104,9,174,1,175,1,175,3,175,2108,8,175,
+        1,175,1,175,1,175,3,175,2113,8,175,1,175,1,175,1,175,1,176,1,176,
+        1,176,1,176,1,176,1,177,1,177,5,177,2125,8,177,10,177,12,177,2128,
+        9,177,1,177,1,177,1,177,5,177,2133,8,177,10,177,12,177,2136,9,177,
+        1,178,1,178,1,178,3,178,2141,8,178,1,179,1,179,5,179,2145,8,179,
+        10,179,12,179,2148,9,179,1,179,1,179,1,180,1,180,3,180,2154,8,180,
+        1,181,1,181,5,181,2158,8,181,10,181,12,181,2161,9,181,1,182,1,182,
+        1,182,1,183,1,183,1,183,1,183,3,183,2170,8,183,1,184,1,184,1,184,
+        1,184,3,184,2176,8,184,1,185,1,185,1,185,1,185,3,185,2182,8,185,
+        1,186,3,186,2185,8,186,1,186,1,186,1,187,1,187,3,187,2191,8,187,
+        1,187,1,187,1,188,1,188,1,188,1,188,5,188,2199,8,188,10,188,12,188,
+        2202,9,188,1,188,1,188,1,189,1,189,1,189,1,189,1,190,1,190,1,191,
+        1,191,5,191,2214,8,191,10,191,12,191,2217,9,191,1,192,1,192,1,192,
+        1,193,1,193,5,193,2224,8,193,10,193,12,193,2227,9,193,1,194,1,194,
+        1,194,1,195,1,195,1,195,1,195,1,195,3,195,2237,8,195,1,196,1,196,
+        1,196,1,196,1,197,1,197,1,197,1,197,1,197,1,197,5,197,2249,8,197,
+        10,197,12,197,2252,9,197,1,197,1,197,1,198,1,198,1,198,1,198,1,198,
+        1,198,1,198,1,198,1,199,1,199,1,199,1,199,1,200,1,200,1,200,3,200,
+        2271,8,200,1,201,1,201,5,201,2275,8,201,10,201,12,201,2278,9,201,
+        1,202,1,202,1,202,1,203,1,203,5,203,2285,8,203,10,203,12,203,2288,
+        9,203,1,204,1,204,1,204,1,205,1,205,3,205,2295,8,205,1,206,1,206,
+        5,206,2299,8,206,10,206,12,206,2302,9,206,1,207,1,207,3,207,2306,
+        8,207,1,207,1,207,1,208,1,208,1,209,1,209,1,209,1,209,1,210,3,210,
+        2317,8,210,1,210,1,210,1,211,1,211,1,211,3,211,2324,8,211,1,212,
+        1,212,1,212,3,212,2329,8,212,1,213,1,213,4,213,2333,8,213,11,213,
+        12,213,2334,1,214,1,214,1,214,3,214,2340,8,214,1,215,1,215,1,215,
+        1,216,1,216,1,216,1,216,1,217,1,217,1,217,1,217,1,217,1,218,1,218,
+        3,218,2356,8,218,1,218,1,218,1,218,1,218,1,219,1,219,3,219,2364,
+        8,219,1,219,1,219,1,219,1,219,1,220,1,220,1,220,1,220,1,221,1,221,
+        5,221,2376,8,221,10,221,12,221,2379,9,221,1,222,1,222,1,222,1,223,
+        1,223,3,223,2386,8,223,1,224,1,224,1,224,1,224,1,224,5,224,2393,
+        8,224,10,224,12,224,2396,9,224,3,224,2398,8,224,1,224,1,224,1,225,
+        1,225,3,225,2404,8,225,1,226,1,226,1,226,3,226,2409,8,226,1,226,
+        1,226,1,227,1,227,1,228,1,228,1,228,1,228,1,228,1,228,1,228,3,228,
+        2422,8,228,1,229,1,229,3,229,2426,8,229,1,230,1,230,1,230,1,230,
+        1,231,1,231,1,231,1,231,1,232,1,232,1,232,1,232,1,232,1,232,1,232,
+        1,232,1,232,1,233,1,233,3,233,2447,8,233,1,234,1,234,4,234,2451,
+        8,234,11,234,12,234,2452,1,235,1,235,1,235,3,235,2458,8,235,1,236,
+        1,236,1,236,1,237,1,237,1,237,1,237,1,238,1,238,1,238,1,238,1,238,
+        1,239,1,239,1,239,3,239,2475,8,239,1,240,1,240,1,241,1,241,1,242,
+        1,242,1,243,1,243,1,243,3,243,2486,8,243,1,244,1,244,1,244,1,244,
+        1,245,1,245,3,245,2494,8,245,1,246,1,246,1,246,1,246,1,247,1,247,
+        5,247,2502,8,247,10,247,12,247,2505,9,247,1,247,1,247,1,247,3,247,
+        2510,8,247,1,247,1,247,5,247,2514,8,247,10,247,12,247,2517,9,247,
+        1,247,3,247,2520,8,247,1,247,1,247,1,248,1,248,3,248,2526,8,248,
+        1,248,1,248,5,248,2530,8,248,10,248,12,248,2533,9,248,1,248,3,248,
+        2536,8,248,1,248,1,248,1,249,1,249,1,249,1,249,1,250,1,250,5,250,
+        2546,8,250,10,250,12,250,2549,9,250,1,250,1,250,1,250,1,250,1,250,
+        5,250,2556,8,250,10,250,12,250,2559,9,250,1,250,1,250,3,250,2563,
+        8,250,1,251,1,251,1,251,1,251,1,251,5,251,2570,8,251,10,251,12,251,
+        2573,9,251,1,251,3,251,2576,8,251,3,251,2578,8,251,1,251,1,251,1,
+        252,1,252,1,252,1,252,1,252,3,252,2587,8,252,1,253,1,253,1,253,1,
+        253,1,253,1,253,1,253,1,253,1,254,1,254,1,254,1,254,1,254,1,255,
+        1,255,1,255,1,255,1,255,1,256,1,256,1,256,1,256,1,256,1,257,1,257,
+        1,258,1,258,1,259,1,259,1,260,1,260,1,261,1,261,1,262,1,262,1,263,
+        1,263,3,263,2626,8,263,1,264,1,264,1,265,1,265,1,266,1,266,1,267,
+        1,267,1,267,1,267,1,268,1,268,3,268,2640,8,268,1,269,1,269,1,269,
+        3,269,2645,8,269,1,270,1,270,1,270,1,270,3,270,2651,8,270,1,271,
+        1,271,1,271,3,271,2656,8,271,1,272,3,272,2659,8,272,1,272,1,272,
+        5,272,2663,8,272,10,272,12,272,2666,9,272,1,273,1,273,1,273,3,273,
+        2671,8,273,1,274,1,274,1,274,1,274,1,274,3,274,2678,8,274,1,275,
+        1,275,3,275,2682,8,275,1,276,1,276,1,276,1,276,1,276,1,276,1,276,
+        1,276,1,276,1,276,1,276,3,276,2695,8,276,1,277,1,277,1,277,1,277,
+        1,277,1,277,1,277,3,277,2704,8,277,1,278,1,278,1,278,1,278,1,278,
+        3,278,2711,8,278,1,279,1,279,3,279,2715,8,279,1,280,1,280,1,281,
+        1,281,1,282,1,282,1,283,1,283,1,284,1,284,1,285,1,285,1,286,1,286,
+        1,287,1,287,1,288,1,288,1,289,1,289,1,289,1,290,1,290,1,290,1,291,
+        1,291,5,291,2743,8,291,10,291,12,291,2746,9,291,1,292,1,292,1,292,
+        1,292,1,292,1,293,1,293,1,293,1,293,1,293,1,293,1,293,1,293,1,293,
+        1,293,1,293,3,293,2764,8,293,1,294,1,294,1,294,1,294,5,294,2770,
+        8,294,10,294,12,294,2773,9,294,3,294,2775,8,294,1,294,1,294,1,295,
+        1,295,1,295,1,295,1,296,1,296,1,296,1,296,5,296,2787,8,296,10,296,
+        12,296,2790,9,296,3,296,2792,8,296,1,296,1,296,1,297,1,297,1,298,
+        1,298,1,299,1,299,1,300,1,300,1,301,1,301,5,301,2806,8,301,10,301,
+        12,301,2809,9,301,1,302,1,302,1,303,3,303,2814,8,303,1,303,1,303,
+        1,304,3,304,2819,8,304,1,304,1,304,1,304,0,0,305,0,2,4,6,8,10,12,
+        14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,
+        58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,
+        102,104,106,108,110,112,114,116,118,120,122,124,126,128,130,132,
+        134,136,138,140,142,144,146,148,150,152,154,156,158,160,162,164,
+        166,168,170,172,174,176,178,180,182,184,186,188,190,192,194,196,
+        198,200,202,204,206,208,210,212,214,216,218,220,222,224,226,228,
+        230,232,234,236,238,240,242,244,246,248,250,252,254,256,258,260,
+        262,264,266,268,270,272,274,276,278,280,282,284,286,288,290,292,
+        294,296,298,300,302,304,306,308,310,312,314,316,318,320,322,324,
+        326,328,330,332,334,336,338,340,342,344,346,348,350,352,354,356,
+        358,360,362,364,366,368,370,372,374,376,378,380,382,384,386,388,
+        390,392,394,396,398,400,402,404,406,408,410,412,414,416,418,420,
+        422,424,426,428,430,432,434,436,438,440,442,444,446,448,450,452,
+        454,456,458,460,462,464,466,468,470,472,474,476,478,480,482,484,
+        486,488,490,492,494,496,498,500,502,504,506,508,510,512,514,516,
+        518,520,522,524,526,528,530,532,534,536,538,540,542,544,546,548,
+        550,552,554,556,558,560,562,564,566,568,570,572,574,576,578,580,
+        582,584,586,588,590,592,594,596,598,600,602,604,606,608,0,37,2,0,
+        12,13,25,25,2,0,14,14,26,26,1,0,6,7,2,0,78,78,161,161,1,0,12,13,
+        2,0,157,157,159,159,2,0,158,158,160,160,2,0,216,217,229,229,3,0,
+        48,48,76,76,97,98,15,0,37,37,44,44,46,46,52,52,58,58,60,60,138,138,
+        146,147,202,203,224,224,234,234,239,239,242,244,252,252,316,316,
+        4,0,74,74,153,153,232,233,255,255,2,0,145,145,149,149,2,0,112,112,
+        258,258,3,0,50,50,162,162,193,193,3,0,42,42,139,139,162,162,2,0,
+        189,189,230,230,2,0,48,48,76,76,2,0,92,92,139,139,2,0,144,144,240,
+        240,2,0,90,90,259,259,13,0,51,51,56,56,67,68,73,73,85,85,113,123,
+        129,129,134,135,137,137,201,201,231,231,261,264,266,267,14,0,51,
+        51,56,56,67,68,73,73,85,85,113,123,129,129,134,135,137,137,201,201,
+        231,231,261,264,266,267,316,316,3,0,18,18,20,20,28,28,3,0,105,106,
+        130,131,175,176,2,0,54,54,164,164,2,0,22,24,27,27,2,0,11,11,33,33,
+        3,0,1,1,32,32,35,35,11,0,19,19,21,21,62,64,79,80,104,104,107,111,
+        142,143,154,154,165,174,177,182,235,236,2,0,42,42,125,125,3,0,137,
+        137,262,262,266,266,1,0,87,88,4,0,305,305,307,307,310,311,313,315,
+        4,0,279,285,287,289,292,297,304,304,1,0,279,304,39,0,38,38,40,42,
+        50,50,53,53,55,55,59,59,69,69,72,72,74,75,78,78,82,83,89,89,94,95,
+        112,112,124,124,126,128,132,132,140,141,145,145,147,149,153,153,
+        161,162,183,184,186,187,191,192,197,198,200,200,204,204,213,215,
+        218,220,227,227,232,233,237,237,241,241,253,253,255,258,260,260,
+        268,279,287,287,25,0,39,39,47,47,57,57,61,62,66,66,71,71,77,77,86,
+        87,90,91,104,104,130,130,133,133,144,144,155,155,185,185,194,194,
+        205,205,221,223,225,226,228,228,230,230,238,238,240,240,245,251,
+        259,259,2936,0,610,1,0,0,0,2,612,1,0,0,0,4,632,1,0,0,0,6,634,1,0,
+        0,0,8,645,1,0,0,0,10,647,1,0,0,0,12,652,1,0,0,0,14,662,1,0,0,0,16,
+        673,1,0,0,0,18,681,1,0,0,0,20,689,1,0,0,0,22,705,1,0,0,0,24,707,
+        1,0,0,0,26,713,1,0,0,0,28,716,1,0,0,0,30,722,1,0,0,0,32,726,1,0,
+        0,0,34,737,1,0,0,0,36,741,1,0,0,0,38,760,1,0,0,0,40,762,1,0,0,0,
+        42,768,1,0,0,0,44,781,1,0,0,0,46,792,1,0,0,0,48,796,1,0,0,0,50,800,
+        1,0,0,0,52,809,1,0,0,0,54,820,1,0,0,0,56,825,1,0,0,0,58,827,1,0,
+        0,0,60,839,1,0,0,0,62,855,1,0,0,0,64,857,1,0,0,0,66,865,1,0,0,0,
+        68,867,1,0,0,0,70,880,1,0,0,0,72,886,1,0,0,0,74,888,1,0,0,0,76,890,
+        1,0,0,0,78,897,1,0,0,0,80,900,1,0,0,0,82,913,1,0,0,0,84,964,1,0,
+        0,0,86,970,1,0,0,0,88,997,1,0,0,0,90,999,1,0,0,0,92,1008,1,0,0,0,
+        94,1011,1,0,0,0,96,1018,1,0,0,0,98,1025,1,0,0,0,100,1028,1,0,0,0,
+        102,1039,1,0,0,0,104,1041,1,0,0,0,106,1049,1,0,0,0,108,1060,1,0,
+        0,0,110,1063,1,0,0,0,112,1072,1,0,0,0,114,1074,1,0,0,0,116,1088,
+        1,0,0,0,118,1091,1,0,0,0,120,1096,1,0,0,0,122,1114,1,0,0,0,124,1122,
+        1,0,0,0,126,1134,1,0,0,0,128,1145,1,0,0,0,130,1147,1,0,0,0,132,1151,
+        1,0,0,0,134,1154,1,0,0,0,136,1159,1,0,0,0,138,1161,1,0,0,0,140,1166,
+        1,0,0,0,142,1168,1,0,0,0,144,1178,1,0,0,0,146,1180,1,0,0,0,148,1188,
+        1,0,0,0,150,1195,1,0,0,0,152,1201,1,0,0,0,154,1204,1,0,0,0,156,1211,
+        1,0,0,0,158,1214,1,0,0,0,160,1216,1,0,0,0,162,1223,1,0,0,0,164,1243,
+        1,0,0,0,166,1245,1,0,0,0,168,1249,1,0,0,0,170,1251,1,0,0,0,172,1258,
+        1,0,0,0,174,1263,1,0,0,0,176,1266,1,0,0,0,178,1275,1,0,0,0,180,1280,
+        1,0,0,0,182,1285,1,0,0,0,184,1295,1,0,0,0,186,1298,1,0,0,0,188,1315,
+        1,0,0,0,190,1318,1,0,0,0,192,1330,1,0,0,0,194,1341,1,0,0,0,196,1344,
+        1,0,0,0,198,1354,1,0,0,0,200,1381,1,0,0,0,202,1383,1,0,0,0,204,1395,
+        1,0,0,0,206,1412,1,0,0,0,208,1416,1,0,0,0,210,1421,1,0,0,0,212,1427,
+        1,0,0,0,214,1450,1,0,0,0,216,1453,1,0,0,0,218,1457,1,0,0,0,220,1461,
+        1,0,0,0,222,1473,1,0,0,0,224,1482,1,0,0,0,226,1491,1,0,0,0,228,1517,
+        1,0,0,0,230,1520,1,0,0,0,232,1523,1,0,0,0,234,1527,1,0,0,0,236,1530,
+        1,0,0,0,238,1548,1,0,0,0,240,1552,1,0,0,0,242,1560,1,0,0,0,244,1566,
+        1,0,0,0,246,1570,1,0,0,0,248,1576,1,0,0,0,250,1588,1,0,0,0,252,1594,
+        1,0,0,0,254,1602,1,0,0,0,256,1608,1,0,0,0,258,1620,1,0,0,0,260,1636,
+        1,0,0,0,262,1641,1,0,0,0,264,1645,1,0,0,0,266,1649,1,0,0,0,268,1664,
+        1,0,0,0,270,1667,1,0,0,0,272,1676,1,0,0,0,274,1687,1,0,0,0,276,1696,
+        1,0,0,0,278,1707,1,0,0,0,280,1718,1,0,0,0,282,1729,1,0,0,0,284,1733,
+        1,0,0,0,286,1745,1,0,0,0,288,1754,1,0,0,0,290,1760,1,0,0,0,292,1775,
+        1,0,0,0,294,1830,1,0,0,0,296,1832,1,0,0,0,298,1853,1,0,0,0,300,1855,
+        1,0,0,0,302,1866,1,0,0,0,304,1875,1,0,0,0,306,1900,1,0,0,0,308,1906,
+        1,0,0,0,310,1916,1,0,0,0,312,1928,1,0,0,0,314,1943,1,0,0,0,316,1947,
+        1,0,0,0,318,1956,1,0,0,0,320,1960,1,0,0,0,322,1978,1,0,0,0,324,1982,
+        1,0,0,0,326,1994,1,0,0,0,328,2009,1,0,0,0,330,2025,1,0,0,0,332,2029,
+        1,0,0,0,334,2035,1,0,0,0,336,2055,1,0,0,0,338,2063,1,0,0,0,340,2067,
+        1,0,0,0,342,2076,1,0,0,0,344,2087,1,0,0,0,346,2094,1,0,0,0,348,2097,
+        1,0,0,0,350,2105,1,0,0,0,352,2117,1,0,0,0,354,2122,1,0,0,0,356,2140,
+        1,0,0,0,358,2142,1,0,0,0,360,2153,1,0,0,0,362,2155,1,0,0,0,364,2162,
+        1,0,0,0,366,2165,1,0,0,0,368,2171,1,0,0,0,370,2177,1,0,0,0,372,2184,
+        1,0,0,0,374,2190,1,0,0,0,376,2194,1,0,0,0,378,2205,1,0,0,0,380,2209,
+        1,0,0,0,382,2211,1,0,0,0,384,2218,1,0,0,0,386,2221,1,0,0,0,388,2228,
+        1,0,0,0,390,2236,1,0,0,0,392,2238,1,0,0,0,394,2242,1,0,0,0,396,2255,
+        1,0,0,0,398,2263,1,0,0,0,400,2267,1,0,0,0,402,2272,1,0,0,0,404,2279,
+        1,0,0,0,406,2282,1,0,0,0,408,2289,1,0,0,0,410,2294,1,0,0,0,412,2296,
+        1,0,0,0,414,2305,1,0,0,0,416,2309,1,0,0,0,418,2311,1,0,0,0,420,2316,
+        1,0,0,0,422,2323,1,0,0,0,424,2328,1,0,0,0,426,2330,1,0,0,0,428,2339,
+        1,0,0,0,430,2341,1,0,0,0,432,2344,1,0,0,0,434,2348,1,0,0,0,436,2353,
+        1,0,0,0,438,2361,1,0,0,0,440,2369,1,0,0,0,442,2373,1,0,0,0,444,2380,
+        1,0,0,0,446,2385,1,0,0,0,448,2387,1,0,0,0,450,2403,1,0,0,0,452,2405,
+        1,0,0,0,454,2412,1,0,0,0,456,2421,1,0,0,0,458,2423,1,0,0,0,460,2427,
+        1,0,0,0,462,2431,1,0,0,0,464,2435,1,0,0,0,466,2446,1,0,0,0,468,2448,
+        1,0,0,0,470,2457,1,0,0,0,472,2459,1,0,0,0,474,2462,1,0,0,0,476,2466,
+        1,0,0,0,478,2474,1,0,0,0,480,2476,1,0,0,0,482,2478,1,0,0,0,484,2480,
+        1,0,0,0,486,2485,1,0,0,0,488,2487,1,0,0,0,490,2493,1,0,0,0,492,2495,
+        1,0,0,0,494,2499,1,0,0,0,496,2523,1,0,0,0,498,2539,1,0,0,0,500,2543,
+        1,0,0,0,502,2564,1,0,0,0,504,2581,1,0,0,0,506,2588,1,0,0,0,508,2596,
+        1,0,0,0,510,2601,1,0,0,0,512,2606,1,0,0,0,514,2611,1,0,0,0,516,2613,
+        1,0,0,0,518,2615,1,0,0,0,520,2617,1,0,0,0,522,2619,1,0,0,0,524,2621,
+        1,0,0,0,526,2625,1,0,0,0,528,2627,1,0,0,0,530,2629,1,0,0,0,532,2631,
+        1,0,0,0,534,2633,1,0,0,0,536,2639,1,0,0,0,538,2644,1,0,0,0,540,2650,
+        1,0,0,0,542,2655,1,0,0,0,544,2658,1,0,0,0,546,2670,1,0,0,0,548,2677,
+        1,0,0,0,550,2681,1,0,0,0,552,2694,1,0,0,0,554,2703,1,0,0,0,556,2710,
+        1,0,0,0,558,2714,1,0,0,0,560,2716,1,0,0,0,562,2718,1,0,0,0,564,2720,
+        1,0,0,0,566,2722,1,0,0,0,568,2724,1,0,0,0,570,2726,1,0,0,0,572,2728,
+        1,0,0,0,574,2730,1,0,0,0,576,2732,1,0,0,0,578,2734,1,0,0,0,580,2737,
+        1,0,0,0,582,2740,1,0,0,0,584,2747,1,0,0,0,586,2763,1,0,0,0,588,2765,
+        1,0,0,0,590,2778,1,0,0,0,592,2782,1,0,0,0,594,2795,1,0,0,0,596,2797,
+        1,0,0,0,598,2799,1,0,0,0,600,2801,1,0,0,0,602,2803,1,0,0,0,604,2810,
+        1,0,0,0,606,2813,1,0,0,0,608,2818,1,0,0,0,610,611,3,2,1,0,611,1,
+        1,0,0,0,612,617,3,4,2,0,613,614,5,34,0,0,614,616,3,4,2,0,615,613,
+        1,0,0,0,616,619,1,0,0,0,617,615,1,0,0,0,617,618,1,0,0,0,618,621,
+        1,0,0,0,619,617,1,0,0,0,620,622,5,34,0,0,621,620,1,0,0,0,621,622,
+        1,0,0,0,622,623,1,0,0,0,623,624,5,0,0,1,624,3,1,0,0,0,625,633,3,
+        6,3,0,626,633,3,40,20,0,627,633,3,68,34,0,628,633,3,8,4,0,629,633,
+        3,72,36,0,630,633,3,60,30,0,631,633,3,64,32,0,632,625,1,0,0,0,632,
+        626,1,0,0,0,632,627,1,0,0,0,632,628,1,0,0,0,632,629,1,0,0,0,632,
+        630,1,0,0,0,632,631,1,0,0,0,633,5,1,0,0,0,634,635,5,41,0,0,635,636,
+        5,69,0,0,636,637,3,538,269,0,637,638,5,17,0,0,638,639,3,380,190,
+        0,639,7,1,0,0,0,640,646,3,12,6,0,641,646,3,14,7,0,642,646,3,10,5,
+        0,643,646,3,18,9,0,644,646,3,20,10,0,645,640,1,0,0,0,645,641,1,0,
+        0,0,645,642,1,0,0,0,645,643,1,0,0,0,645,644,1,0,0,0,646,9,1,0,0,
+        0,647,648,5,141,0,0,648,649,3,538,269,0,649,650,5,17,0,0,650,651,
+        3,74,37,0,651,11,1,0,0,0,652,653,5,141,0,0,653,654,3,538,269,0,654,
+        655,5,17,0,0,655,657,5,31,0,0,656,658,3,22,11,0,657,656,1,0,0,0,
+        657,658,1,0,0,0,658,659,1,0,0,0,659,660,5,8,0,0,660,661,3,36,18,
+        0,661,13,1,0,0,0,662,663,5,141,0,0,663,664,3,538,269,0,664,665,5,
+        17,0,0,665,666,5,257,0,0,666,668,5,31,0,0,667,669,3,16,8,0,668,667,
+        1,0,0,0,668,669,1,0,0,0,669,670,1,0,0,0,670,671,5,8,0,0,671,672,
+        3,36,18,0,672,15,1,0,0,0,673,678,3,24,12,0,674,675,5,9,0,0,675,677,
+        3,24,12,0,676,674,1,0,0,0,677,680,1,0,0,0,678,676,1,0,0,0,678,679,
+        1,0,0,0,679,17,1,0,0,0,680,678,1,0,0,0,681,682,5,141,0,0,682,683,
+        3,538,269,0,683,684,5,17,0,0,684,685,5,155,0,0,685,686,5,31,0,0,
+        686,687,3,76,38,0,687,688,5,8,0,0,688,19,1,0,0,0,689,690,5,141,0,
+        0,690,691,3,538,269,0,691,692,5,17,0,0,692,693,3,202,101,0,693,21,
+        1,0,0,0,694,695,3,28,14,0,695,696,5,9,0,0,696,697,3,28,14,0,697,
+        698,1,0,0,0,698,699,5,9,0,0,699,700,3,24,12,0,700,706,1,0,0,0,701,
+        702,3,24,12,0,702,703,5,9,0,0,703,704,3,24,12,0,704,706,1,0,0,0,
+        705,694,1,0,0,0,705,701,1,0,0,0,706,23,1,0,0,0,707,708,3,518,259,
+        0,708,709,5,10,0,0,709,711,3,514,257,0,710,712,3,26,13,0,711,710,
+        1,0,0,0,711,712,1,0,0,0,712,25,1,0,0,0,713,714,5,17,0,0,714,715,
+        3,550,275,0,715,27,1,0,0,0,716,717,3,518,259,0,717,720,5,10,0,0,
+        718,721,3,30,15,0,719,721,3,32,16,0,720,718,1,0,0,0,720,719,1,0,
+        0,0,721,29,1,0,0,0,722,723,5,31,0,0,723,724,5,1,0,0,724,725,5,8,
+        0,0,725,31,1,0,0,0,726,727,5,31,0,0,727,732,3,34,17,0,728,729,5,
+        9,0,0,729,731,3,34,17,0,730,728,1,0,0,0,731,734,1,0,0,0,732,730,
+        1,0,0,0,732,733,1,0,0,0,733,735,1,0,0,0,734,732,1,0,0,0,735,736,
+        5,8,0,0,736,33,1,0,0,0,737,738,3,518,259,0,738,739,5,10,0,0,739,
+        740,3,514,257,0,740,35,1,0,0,0,741,747,5,29,0,0,742,743,3,38,19,
+        0,743,744,5,34,0,0,744,746,1,0,0,0,745,742,1,0,0,0,746,749,1,0,0,
+        0,747,745,1,0,0,0,747,748,1,0,0,0,748,751,1,0,0,0,749,747,1,0,0,
+        0,750,752,3,74,37,0,751,750,1,0,0,0,751,752,1,0,0,0,752,754,1,0,
+        0,0,753,755,5,34,0,0,754,753,1,0,0,0,754,755,1,0,0,0,755,756,1,0,
+        0,0,756,757,5,4,0,0,757,37,1,0,0,0,758,761,3,8,4,0,759,761,3,68,
+        34,0,760,758,1,0,0,0,760,759,1,0,0,0,761,39,1,0,0,0,762,763,5,72,
+        0,0,763,764,5,200,0,0,764,766,3,520,260,0,765,767,3,42,21,0,766,
+        765,1,0,0,0,766,767,1,0,0,0,767,41,1,0,0,0,768,769,5,17,0,0,769,
+        771,3,44,22,0,770,772,3,48,24,0,771,770,1,0,0,0,771,772,1,0,0,0,
+        772,773,1,0,0,0,773,775,5,29,0,0,774,776,3,50,25,0,775,774,1,0,0,
+        0,776,777,1,0,0,0,777,775,1,0,0,0,777,778,1,0,0,0,778,779,1,0,0,
+        0,779,780,5,4,0,0,780,43,1,0,0,0,781,782,5,31,0,0,782,787,3,46,23,
+        0,783,784,5,9,0,0,784,786,3,46,23,0,785,783,1,0,0,0,786,789,1,0,
+        0,0,787,785,1,0,0,0,787,788,1,0,0,0,788,790,1,0,0,0,789,787,1,0,
+        0,0,790,791,5,8,0,0,791,45,1,0,0,0,792,793,3,518,259,0,793,794,5,
+        10,0,0,794,795,3,514,257,0,795,47,1,0,0,0,796,797,5,30,0,0,797,798,
+        3,46,23,0,798,799,5,5,0,0,799,49,1,0,0,0,800,802,3,52,26,0,801,803,
+        3,54,27,0,802,801,1,0,0,0,802,803,1,0,0,0,803,804,1,0,0,0,804,805,
+        5,17,0,0,805,807,3,58,29,0,806,808,5,34,0,0,807,806,1,0,0,0,807,
+        808,1,0,0,0,808,51,1,0,0,0,809,810,5,31,0,0,810,815,3,56,28,0,811,
+        812,5,9,0,0,812,814,3,56,28,0,813,811,1,0,0,0,814,817,1,0,0,0,815,
+        813,1,0,0,0,815,816,1,0,0,0,816,818,1,0,0,0,817,815,1,0,0,0,818,
+        819,5,8,0,0,819,53,1,0,0,0,820,821,5,15,0,0,821,822,5,30,0,0,822,
+        823,3,56,28,0,823,824,5,5,0,0,824,55,1,0,0,0,825,826,3,582,291,0,
+        826,57,1,0,0,0,827,833,5,29,0,0,828,829,3,38,19,0,829,830,5,34,0,
+        0,830,832,1,0,0,0,831,828,1,0,0,0,832,835,1,0,0,0,833,831,1,0,0,
+        0,833,834,1,0,0,0,834,836,1,0,0,0,835,833,1,0,0,0,836,837,3,74,37,
+        0,837,838,5,4,0,0,838,59,1,0,0,0,839,840,5,220,0,0,840,841,5,38,
+        0,0,841,842,5,246,0,0,842,843,5,31,0,0,843,848,3,62,31,0,844,845,
+        5,9,0,0,845,847,3,62,31,0,846,844,1,0,0,0,847,850,1,0,0,0,848,846,
+        1,0,0,0,848,849,1,0,0,0,849,851,1,0,0,0,850,848,1,0,0,0,851,852,
+        5,8,0,0,852,61,1,0,0,0,853,856,3,520,260,0,854,856,3,486,243,0,855,
+        853,1,0,0,0,855,854,1,0,0,0,856,63,1,0,0,0,857,858,5,228,0,0,858,
+        861,3,536,268,0,859,860,5,17,0,0,860,862,3,66,33,0,861,859,1,0,0,
+        0,861,862,1,0,0,0,862,65,1,0,0,0,863,866,3,536,268,0,864,866,3,550,
+        275,0,865,863,1,0,0,0,865,864,1,0,0,0,866,67,1,0,0,0,867,868,5,72,
+        0,0,868,869,5,213,0,0,869,870,5,31,0,0,870,875,3,70,35,0,871,872,
+        5,9,0,0,872,874,3,70,35,0,873,871,1,0,0,0,874,877,1,0,0,0,875,873,
+        1,0,0,0,875,876,1,0,0,0,876,878,1,0,0,0,877,875,1,0,0,0,878,879,
+        5,8,0,0,879,69,1,0,0,0,880,881,3,518,259,0,881,882,5,10,0,0,882,
+        884,3,514,257,0,883,885,3,26,13,0,884,883,1,0,0,0,884,885,1,0,0,
+        0,885,71,1,0,0,0,886,887,3,74,37,0,887,73,1,0,0,0,888,889,3,76,38,
+        0,889,75,1,0,0,0,890,894,3,82,41,0,891,893,3,78,39,0,892,891,1,0,
+        0,0,893,896,1,0,0,0,894,892,1,0,0,0,894,895,1,0,0,0,895,77,1,0,0,
+        0,896,894,1,0,0,0,897,898,5,3,0,0,898,899,3,84,42,0,899,79,1,0,0,
+        0,900,904,3,84,42,0,901,903,3,78,39,0,902,901,1,0,0,0,903,906,1,
+        0,0,0,904,902,1,0,0,0,904,905,1,0,0,0,905,81,1,0,0,0,906,904,1,0,
+        0,0,907,914,3,86,43,0,908,914,3,270,135,0,909,914,3,198,99,0,910,
+        914,3,464,232,0,911,914,3,378,189,0,912,914,3,380,190,0,913,907,
+        1,0,0,0,913,908,1,0,0,0,913,909,1,0,0,0,913,910,1,0,0,0,913,911,
+        1,0,0,0,913,912,1,0,0,0,914,83,1,0,0,0,915,965,3,90,45,0,916,965,
+        3,92,46,0,917,965,3,94,47,0,918,965,3,96,48,0,919,965,3,100,50,0,
+        920,965,3,112,56,0,921,965,3,110,55,0,922,965,3,114,57,0,923,965,
+        3,120,60,0,924,965,3,148,74,0,925,965,3,158,79,0,926,965,3,160,80,
+        0,927,965,3,162,81,0,928,965,3,178,89,0,929,965,3,186,93,0,930,965,
+        3,180,90,0,931,965,3,188,94,0,932,965,3,190,95,0,933,965,3,196,98,
+        0,934,965,3,204,102,0,935,965,3,212,106,0,936,965,3,236,118,0,937,
+        965,3,226,113,0,938,965,3,106,53,0,939,965,3,240,120,0,940,965,3,
+        254,127,0,941,965,3,252,126,0,942,965,3,258,129,0,943,965,3,266,
+        133,0,944,965,3,276,138,0,945,965,3,272,136,0,946,965,3,278,139,
+        0,947,965,3,280,140,0,948,965,3,274,137,0,949,965,3,284,142,0,950,
+        965,3,288,144,0,951,965,3,302,151,0,952,965,3,300,150,0,953,965,
+        3,304,152,0,954,965,3,320,160,0,955,965,3,326,163,0,956,965,3,328,
+        164,0,957,965,3,334,167,0,958,965,3,340,170,0,959,965,3,344,172,
+        0,960,965,3,342,171,0,961,965,3,348,174,0,962,965,3,354,177,0,963,
+        965,3,358,179,0,964,915,1,0,0,0,964,916,1,0,0,0,964,917,1,0,0,0,
+        964,918,1,0,0,0,964,919,1,0,0,0,964,920,1,0,0,0,964,921,1,0,0,0,
+        964,922,1,0,0,0,964,923,1,0,0,0,964,924,1,0,0,0,964,925,1,0,0,0,
+        964,926,1,0,0,0,964,927,1,0,0,0,964,928,1,0,0,0,964,929,1,0,0,0,
+        964,930,1,0,0,0,964,931,1,0,0,0,964,932,1,0,0,0,964,933,1,0,0,0,
+        964,934,1,0,0,0,964,935,1,0,0,0,964,936,1,0,0,0,964,937,1,0,0,0,
+        964,938,1,0,0,0,964,939,1,0,0,0,964,940,1,0,0,0,964,941,1,0,0,0,
+        964,942,1,0,0,0,964,943,1,0,0,0,964,944,1,0,0,0,964,945,1,0,0,0,
+        964,946,1,0,0,0,964,947,1,0,0,0,964,948,1,0,0,0,964,949,1,0,0,0,
+        964,950,1,0,0,0,964,951,1,0,0,0,964,952,1,0,0,0,964,953,1,0,0,0,
+        964,954,1,0,0,0,964,955,1,0,0,0,964,956,1,0,0,0,964,957,1,0,0,0,
+        964,958,1,0,0,0,964,959,1,0,0,0,964,960,1,0,0,0,964,961,1,0,0,0,
+        964,962,1,0,0,0,964,963,1,0,0,0,965,85,1,0,0,0,966,971,3,120,60,
+        0,967,971,3,320,160,0,968,971,3,354,177,0,969,971,3,106,53,0,970,
+        966,1,0,0,0,970,967,1,0,0,0,970,968,1,0,0,0,970,969,1,0,0,0,971,
+        87,1,0,0,0,972,998,3,96,48,0,973,998,3,110,55,0,974,998,3,358,179,
+        0,975,998,3,240,120,0,976,998,3,252,126,0,977,998,3,340,170,0,978,
+        998,3,348,174,0,979,998,3,276,138,0,980,998,3,272,136,0,981,998,
+        3,278,139,0,982,998,3,280,140,0,983,998,3,274,137,0,984,998,3,334,
+        167,0,985,998,3,100,50,0,986,998,3,344,172,0,987,998,3,342,171,0,
+        988,998,3,328,164,0,989,998,3,236,118,0,990,998,3,284,142,0,991,
+        998,3,302,151,0,992,998,3,300,150,0,993,998,3,90,45,0,994,998,3,
+        188,94,0,995,998,3,112,56,0,996,998,3,304,152,0,997,972,1,0,0,0,
+        997,973,1,0,0,0,997,974,1,0,0,0,997,975,1,0,0,0,997,976,1,0,0,0,
+        997,977,1,0,0,0,997,978,1,0,0,0,997,979,1,0,0,0,997,980,1,0,0,0,
+        997,981,1,0,0,0,997,982,1,0,0,0,997,983,1,0,0,0,997,984,1,0,0,0,
+        997,985,1,0,0,0,997,986,1,0,0,0,997,987,1,0,0,0,997,988,1,0,0,0,
+        997,989,1,0,0,0,997,990,1,0,0,0,997,991,1,0,0,0,997,992,1,0,0,0,
+        997,993,1,0,0,0,997,994,1,0,0,0,997,995,1,0,0,0,997,996,1,0,0,0,
+        998,89,1,0,0,0,999,1003,5,47,0,0,1000,1002,3,368,184,0,1001,1000,
+        1,0,0,0,1002,1005,1,0,0,0,1003,1001,1,0,0,0,1003,1004,1,0,0,0,1004,
+        1006,1,0,0,0,1005,1003,1,0,0,0,1006,1007,3,538,269,0,1007,91,1,0,
+        0,0,1008,1009,5,49,0,0,1009,1010,3,496,248,0,1010,93,1,0,0,0,1011,
+        1015,5,61,0,0,1012,1014,3,368,184,0,1013,1012,1,0,0,0,1014,1017,
+        1,0,0,0,1015,1013,1,0,0,0,1015,1016,1,0,0,0,1016,95,1,0,0,0,1017,
+        1015,1,0,0,0,1018,1022,5,66,0,0,1019,1021,3,368,184,0,1020,1019,
+        1,0,0,0,1021,1024,1,0,0,0,1022,1020,1,0,0,0,1022,1023,1,0,0,0,1023,
+        97,1,0,0,0,1024,1022,1,0,0,0,1025,1026,5,47,0,0,1026,1027,3,528,
+        264,0,1027,99,1,0,0,0,1028,1032,5,77,0,0,1029,1031,3,368,184,0,1030,
+        1029,1,0,0,0,1031,1034,1,0,0,0,1032,1030,1,0,0,0,1032,1033,1,0,0,
+        0,1033,1037,1,0,0,0,1034,1032,1,0,0,0,1035,1038,3,102,51,0,1036,
+        1038,3,104,52,0,1037,1035,1,0,0,0,1037,1036,1,0,0,0,1038,101,1,0,
+        0,0,1039,1040,5,1,0,0,1040,103,1,0,0,0,1041,1046,3,380,190,0,1042,
+        1043,5,9,0,0,1043,1045,3,380,190,0,1044,1042,1,0,0,0,1045,1048,1,
+        0,0,0,1046,1044,1,0,0,0,1046,1047,1,0,0,0,1047,105,1,0,0,0,1048,
+        1046,1,0,0,0,1049,1053,5,82,0,0,1050,1052,3,368,184,0,1051,1050,
+        1,0,0,0,1052,1055,1,0,0,0,1053,1051,1,0,0,0,1053,1054,1,0,0,0,1054,
+        1056,1,0,0,0,1055,1053,1,0,0,0,1056,1058,3,446,223,0,1057,1059,3,
+        108,54,0,1058,1057,1,0,0,0,1058,1059,1,0,0,0,1059,107,1,0,0,0,1060,
+        1061,5,10,0,0,1061,1062,3,496,248,0,1062,109,1,0,0,0,1063,1064,5,
+        86,0,0,1064,1069,3,372,186,0,1065,1066,5,9,0,0,1066,1068,3,372,186,
+        0,1067,1065,1,0,0,0,1068,1071,1,0,0,0,1069,1067,1,0,0,0,1069,1070,
+        1,0,0,0,1070,111,1,0,0,0,1071,1069,1,0,0,0,1072,1073,5,84,0,0,1073,
+        113,1,0,0,0,1074,1075,5,89,0,0,1075,1076,5,57,0,0,1076,1081,3,466,
+        233,0,1077,1078,5,9,0,0,1078,1080,3,466,233,0,1079,1077,1,0,0,0,
+        1080,1083,1,0,0,0,1081,1079,1,0,0,0,1081,1082,1,0,0,0,1082,1086,
+        1,0,0,0,1083,1081,1,0,0,0,1084,1087,3,116,58,0,1085,1087,3,118,59,
+        0,1086,1084,1,0,0,0,1086,1085,1,0,0,0,1086,1087,1,0,0,0,1087,115,
+        1,0,0,0,1088,1089,5,260,0,0,1089,1090,3,88,44,0,1090,117,1,0,0,0,
+        1091,1092,5,260,0,0,1092,1093,5,31,0,0,1093,1094,3,154,77,0,1094,
+        1095,5,8,0,0,1095,119,1,0,0,0,1096,1098,5,91,0,0,1097,1099,3,460,
+        230,0,1098,1097,1,0,0,0,1098,1099,1,0,0,0,1099,1101,1,0,0,0,1100,
+        1102,3,122,61,0,1101,1100,1,0,0,0,1101,1102,1,0,0,0,1102,1103,1,
+        0,0,0,1103,1106,3,380,190,0,1104,1107,3,126,63,0,1105,1107,3,136,
+        68,0,1106,1104,1,0,0,0,1106,1105,1,0,0,0,1106,1107,1,0,0,0,1107,
+        1109,1,0,0,0,1108,1110,3,138,69,0,1109,1108,1,0,0,0,1109,1110,1,
+        0,0,0,1110,121,1,0,0,0,1111,1113,3,368,184,0,1112,1111,1,0,0,0,1113,
+        1116,1,0,0,0,1114,1112,1,0,0,0,1114,1115,1,0,0,0,1115,1118,1,0,0,
+        0,1116,1114,1,0,0,0,1117,1119,3,124,62,0,1118,1117,1,0,0,0,1118,
+        1119,1,0,0,0,1119,1120,1,0,0,0,1120,1121,5,259,0,0,1121,123,1,0,
+        0,0,1122,1123,5,130,0,0,1123,1124,5,31,0,0,1124,1129,3,144,72,0,
+        1125,1126,5,9,0,0,1126,1128,3,144,72,0,1127,1125,1,0,0,0,1128,1131,
+        1,0,0,0,1129,1127,1,0,0,0,1129,1130,1,0,0,0,1130,1132,1,0,0,0,1131,
+        1129,1,0,0,0,1132,1133,5,8,0,0,1133,125,1,0,0,0,1134,1135,5,206,
+        0,0,1135,1140,3,128,64,0,1136,1137,5,9,0,0,1137,1139,3,128,64,0,
+        1138,1136,1,0,0,0,1139,1142,1,0,0,0,1140,1138,1,0,0,0,1140,1141,
+        1,0,0,0,1141,127,1,0,0,0,1142,1140,1,0,0,0,1143,1146,3,130,65,0,
+        1144,1146,3,134,67,0,1145,1143,1,0,0,0,1145,1144,1,0,0,0,1146,129,
+        1,0,0,0,1147,1149,3,518,259,0,1148,1150,3,132,66,0,1149,1148,1,0,
+        0,0,1149,1150,1,0,0,0,1150,131,1,0,0,0,1151,1152,5,10,0,0,1152,1153,
+        3,516,258,0,1153,133,1,0,0,0,1154,1155,5,192,0,0,1155,1156,5,31,
+        0,0,1156,1157,5,1,0,0,1157,1158,5,8,0,0,1158,135,1,0,0,0,1159,1160,
+        5,212,0,0,1160,137,1,0,0,0,1161,1164,5,208,0,0,1162,1165,3,140,70,
+        0,1163,1165,3,142,71,0,1164,1162,1,0,0,0,1164,1163,1,0,0,0,1165,
+        139,1,0,0,0,1166,1167,5,1,0,0,1167,141,1,0,0,0,1168,1173,3,130,65,
+        0,1169,1170,5,9,0,0,1170,1172,3,130,65,0,1171,1169,1,0,0,0,1172,
+        1175,1,0,0,0,1173,1171,1,0,0,0,1173,1174,1,0,0,0,1174,143,1,0,0,
+        0,1175,1173,1,0,0,0,1176,1179,3,146,73,0,1177,1179,3,486,243,0,1178,
+        1176,1,0,0,0,1178,1177,1,0,0,0,1179,145,1,0,0,0,1180,1185,3,480,
+        240,0,1181,1182,5,3,0,0,1182,1184,3,90,45,0,1183,1181,1,0,0,0,1184,
+        1187,1,0,0,0,1185,1183,1,0,0,0,1185,1186,1,0,0,0,1186,147,1,0,0,
+        0,1187,1185,1,0,0,0,1188,1190,5,94,0,0,1189,1191,3,150,75,0,1190,
+        1189,1,0,0,0,1191,1192,1,0,0,0,1192,1190,1,0,0,0,1192,1193,1,0,0,
+        0,1193,149,1,0,0,0,1194,1196,3,152,76,0,1195,1194,1,0,0,0,1195,1196,
+        1,0,0,0,1196,1197,1,0,0,0,1197,1198,5,31,0,0,1198,1199,3,154,77,
+        0,1199,1200,5,8,0,0,1200,151,1,0,0,0,1201,1202,3,538,269,0,1202,
+        1203,5,17,0,0,1203,153,1,0,0,0,1204,1208,3,88,44,0,1205,1207,3,156,
+        78,0,1206,1205,1,0,0,0,1207,1210,1,0,0,0,1208,1206,1,0,0,0,1208,
+        1209,1,0,0,0,1209,155,1,0,0,0,1210,1208,1,0,0,0,1211,1212,5,3,0,
+        0,1212,1213,3,88,44,0,1213,157,1,0,0,0,1214,1215,5,96,0,0,1215,159,
+        1,0,0,0,1216,1220,5,99,0,0,1217,1219,3,368,184,0,1218,1217,1,0,0,
+        0,1219,1222,1,0,0,0,1220,1218,1,0,0,0,1220,1221,1,0,0,0,1221,161,
+        1,0,0,0,1222,1220,1,0,0,0,1223,1227,5,100,0,0,1224,1226,3,368,184,
+        0,1225,1224,1,0,0,0,1226,1229,1,0,0,0,1227,1225,1,0,0,0,1227,1228,
+        1,0,0,0,1228,1230,1,0,0,0,1229,1227,1,0,0,0,1230,1231,3,164,82,0,
+        1231,1232,5,9,0,0,1232,1233,3,164,82,0,1233,1235,1,0,0,0,1234,1236,
+        3,174,87,0,1235,1234,1,0,0,0,1235,1236,1,0,0,0,1236,1238,1,0,0,0,
+        1237,1239,3,176,88,0,1238,1237,1,0,0,0,1238,1239,1,0,0,0,1239,163,
+        1,0,0,0,1240,1244,3,166,83,0,1241,1244,3,168,84,0,1242,1244,3,170,
+        85,0,1243,1240,1,0,0,0,1243,1241,1,0,0,0,1243,1242,1,0,0,0,1244,
+        165,1,0,0,0,1245,1246,5,31,0,0,1246,1247,3,538,269,0,1247,1248,5,
+        8,0,0,1248,167,1,0,0,0,1249,1250,7,0,0,0,1250,169,1,0,0,0,1251,1252,
+        7,1,0,0,1252,1254,3,538,269,0,1253,1255,3,172,86,0,1254,1253,1,0,
+        0,0,1254,1255,1,0,0,0,1255,1256,1,0,0,0,1256,1257,7,2,0,0,1257,171,
+        1,0,0,0,1258,1259,5,1,0,0,1259,1260,3,420,210,0,1260,1261,5,16,0,
+        0,1261,1262,3,420,210,0,1262,173,1,0,0,0,1263,1264,5,259,0,0,1264,
+        1265,3,74,37,0,1265,175,1,0,0,0,1266,1267,5,206,0,0,1267,1272,3,
+        372,186,0,1268,1269,5,9,0,0,1269,1271,3,372,186,0,1270,1268,1,0,
+        0,0,1271,1274,1,0,0,0,1272,1270,1,0,0,0,1272,1273,1,0,0,0,1273,177,
+        1,0,0,0,1274,1272,1,0,0,0,1275,1276,5,101,0,0,1276,1278,3,420,210,
+        0,1277,1279,3,192,96,0,1278,1277,1,0,0,0,1278,1279,1,0,0,0,1279,
+        179,1,0,0,0,1280,1281,5,103,0,0,1281,1282,3,182,91,0,1282,1283,5,
+        9,0,0,1283,1284,3,182,91,0,1284,181,1,0,0,0,1285,1287,7,3,0,0,1286,
+        1288,3,184,92,0,1287,1286,1,0,0,0,1287,1288,1,0,0,0,1288,1292,1,
+        0,0,0,1289,1291,3,368,184,0,1290,1289,1,0,0,0,1291,1294,1,0,0,0,
+        1292,1290,1,0,0,0,1292,1293,1,0,0,0,1293,183,1,0,0,0,1294,1292,1,
+        0,0,0,1295,1296,5,47,0,0,1296,1297,3,538,269,0,1297,185,1,0,0,0,
+        1298,1302,5,102,0,0,1299,1301,3,368,184,0,1300,1299,1,0,0,0,1301,
+        1304,1,0,0,0,1302,1300,1,0,0,0,1302,1303,1,0,0,0,1303,1305,1,0,0,
+        0,1304,1302,1,0,0,0,1305,1306,3,164,82,0,1306,1307,5,9,0,0,1307,
+        1308,3,164,82,0,1308,1310,1,0,0,0,1309,1311,3,174,87,0,1310,1309,
+        1,0,0,0,1310,1311,1,0,0,0,1311,1313,1,0,0,0,1312,1314,3,176,88,0,
+        1313,1312,1,0,0,0,1313,1314,1,0,0,0,1314,187,1,0,0,0,1315,1316,5,
+        133,0,0,1316,1317,3,442,221,0,1317,189,1,0,0,0,1318,1322,5,136,0,
+        0,1319,1321,3,368,184,0,1320,1319,1,0,0,0,1321,1324,1,0,0,0,1322,
+        1320,1,0,0,0,1322,1323,1,0,0,0,1323,1325,1,0,0,0,1324,1322,1,0,0,
+        0,1325,1328,3,380,190,0,1326,1329,3,192,96,0,1327,1329,3,194,97,
+        0,1328,1326,1,0,0,0,1328,1327,1,0,0,0,1328,1329,1,0,0,0,1329,191,
+        1,0,0,0,1330,1339,5,186,0,0,1331,1336,3,380,190,0,1332,1333,5,9,
+        0,0,1333,1335,3,380,190,0,1334,1332,1,0,0,0,1335,1338,1,0,0,0,1336,
+        1334,1,0,0,0,1336,1337,1,0,0,0,1337,1340,1,0,0,0,1338,1336,1,0,0,
+        0,1339,1331,1,0,0,0,1339,1340,1,0,0,0,1340,193,1,0,0,0,1341,1342,
+        5,259,0,0,1342,1343,3,380,190,0,1343,195,1,0,0,0,1344,1348,5,148,
+        0,0,1345,1347,3,368,184,0,1346,1345,1,0,0,0,1347,1350,1,0,0,0,1348,
+        1346,1,0,0,0,1348,1349,1,0,0,0,1349,1351,1,0,0,0,1350,1348,1,0,0,
+        0,1351,1352,3,380,190,0,1352,1353,3,192,96,0,1353,197,1,0,0,0,1354,
+        1358,5,150,0,0,1355,1357,3,368,184,0,1356,1355,1,0,0,0,1357,1360,
+        1,0,0,0,1358,1356,1,0,0,0,1358,1359,1,0,0,0,1359,1361,1,0,0,0,1360,
+        1358,1,0,0,0,1361,1362,3,200,100,0,1362,1363,5,47,0,0,1363,1364,
+        3,538,269,0,1364,1365,5,31,0,0,1365,1370,3,4,2,0,1366,1367,5,34,
+        0,0,1367,1369,3,4,2,0,1368,1366,1,0,0,0,1369,1372,1,0,0,0,1370,1368,
+        1,0,0,0,1370,1371,1,0,0,0,1371,1374,1,0,0,0,1372,1370,1,0,0,0,1373,
+        1375,5,34,0,0,1374,1373,1,0,0,0,1374,1375,1,0,0,0,1375,1376,1,0,
+        0,0,1376,1377,5,8,0,0,1377,199,1,0,0,0,1378,1382,3,202,101,0,1379,
+        1382,3,520,260,0,1380,1382,3,466,233,0,1381,1378,1,0,0,0,1381,1379,
+        1,0,0,0,1381,1380,1,0,0,0,1382,201,1,0,0,0,1383,1384,5,81,0,0,1384,
+        1385,5,30,0,0,1385,1390,3,380,190,0,1386,1387,5,9,0,0,1387,1389,
+        3,380,190,0,1388,1386,1,0,0,0,1389,1392,1,0,0,0,1390,1388,1,0,0,
+        0,1390,1391,1,0,0,0,1391,1393,1,0,0,0,1392,1390,1,0,0,0,1393,1394,
+        5,5,0,0,1394,203,1,0,0,0,1395,1399,5,151,0,0,1396,1398,3,368,184,
+        0,1397,1396,1,0,0,0,1398,1401,1,0,0,0,1399,1397,1,0,0,0,1399,1400,
+        1,0,0,0,1400,1402,1,0,0,0,1401,1399,1,0,0,0,1402,1403,3,520,260,
+        0,1403,1404,7,4,0,0,1404,1407,3,520,260,0,1405,1408,3,206,103,0,
+        1406,1408,3,208,104,0,1407,1405,1,0,0,0,1407,1406,1,0,0,0,1407,1408,
+        1,0,0,0,1408,1410,1,0,0,0,1409,1411,3,210,105,0,1410,1409,1,0,0,
+        0,1410,1411,1,0,0,0,1411,205,1,0,0,0,1412,1413,5,265,0,0,1413,1414,
+        5,17,0,0,1414,1415,3,538,269,0,1415,207,1,0,0,0,1416,1417,5,260,
+        0,0,1417,1418,3,420,210,0,1418,1419,5,186,0,0,1419,1420,3,520,260,
+        0,1420,209,1,0,0,0,1421,1422,5,199,0,0,1422,1423,3,468,234,0,1423,
+        1424,5,31,0,0,1424,1425,3,360,180,0,1425,1426,5,8,0,0,1426,211,1,
+        0,0,0,1427,1431,5,152,0,0,1428,1430,3,368,184,0,1429,1428,1,0,0,
+        0,1430,1433,1,0,0,0,1431,1429,1,0,0,0,1431,1432,1,0,0,0,1432,1434,
+        1,0,0,0,1433,1431,1,0,0,0,1434,1439,3,216,108,0,1435,1436,5,9,0,
+        0,1436,1438,3,216,108,0,1437,1435,1,0,0,0,1438,1441,1,0,0,0,1439,
+        1437,1,0,0,0,1439,1440,1,0,0,0,1440,1442,1,0,0,0,1441,1439,1,0,0,
+        0,1442,1445,3,214,107,0,1443,1446,3,220,110,0,1444,1446,3,222,111,
+        0,1445,1443,1,0,0,0,1445,1444,1,0,0,0,1446,1448,1,0,0,0,1447,1449,
+        3,224,112,0,1448,1447,1,0,0,0,1448,1449,1,0,0,0,1449,213,1,0,0,0,
+        1450,1451,5,186,0,0,1451,1452,3,372,186,0,1452,215,1,0,0,0,1453,
+        1455,3,372,186,0,1454,1456,3,218,109,0,1455,1454,1,0,0,0,1455,1456,
+        1,0,0,0,1456,217,1,0,0,0,1457,1458,5,74,0,0,1458,1459,5,17,0,0,1459,
+        1460,3,372,186,0,1460,219,1,0,0,0,1461,1462,5,130,0,0,1462,1463,
+        5,214,0,0,1463,1464,5,31,0,0,1464,1465,3,372,186,0,1465,1466,5,9,
+        0,0,1466,1467,3,372,186,0,1467,1468,5,9,0,0,1468,1469,3,372,186,
+        0,1469,1470,5,8,0,0,1470,221,1,0,0,0,1471,1472,5,95,0,0,1472,1474,
+        3,372,186,0,1473,1471,1,0,0,0,1473,1474,1,0,0,0,1474,1477,1,0,0,
+        0,1475,1476,5,246,0,0,1476,1478,3,372,186,0,1477,1475,1,0,0,0,1477,
+        1478,1,0,0,0,1478,1479,1,0,0,0,1479,1480,5,237,0,0,1480,1481,3,372,
+        186,0,1481,223,1,0,0,0,1482,1483,5,57,0,0,1483,1488,3,372,186,0,
+        1484,1485,5,9,0,0,1485,1487,3,372,186,0,1486,1484,1,0,0,0,1487,1490,
+        1,0,0,0,1488,1486,1,0,0,0,1488,1489,1,0,0,0,1489,225,1,0,0,0,1490,
+        1488,1,0,0,0,1491,1495,7,5,0,0,1492,1494,3,366,183,0,1493,1492,1,
+        0,0,0,1494,1497,1,0,0,0,1495,1493,1,0,0,0,1495,1496,1,0,0,0,1496,
+        1498,1,0,0,0,1497,1495,1,0,0,0,1498,1503,3,232,116,0,1499,1500,5,
+        9,0,0,1500,1502,3,232,116,0,1501,1499,1,0,0,0,1502,1505,1,0,0,0,
+        1503,1501,1,0,0,0,1503,1504,1,0,0,0,1504,1507,1,0,0,0,1505,1503,
+        1,0,0,0,1506,1508,3,228,114,0,1507,1506,1,0,0,0,1507,1508,1,0,0,
+        0,1508,1510,1,0,0,0,1509,1511,3,230,115,0,1510,1509,1,0,0,0,1510,
+        1511,1,0,0,0,1511,1512,1,0,0,0,1512,1513,5,186,0,0,1513,1514,5,31,
+        0,0,1514,1515,3,360,180,0,1515,1516,5,8,0,0,1516,227,1,0,0,0,1517,
+        1518,5,144,0,0,1518,1519,5,305,0,0,1519,229,1,0,0,0,1520,1521,5,
+        128,0,0,1521,1522,5,315,0,0,1522,231,1,0,0,0,1523,1525,3,372,186,
+        0,1524,1526,3,234,117,0,1525,1524,1,0,0,0,1525,1526,1,0,0,0,1526,
+        233,1,0,0,0,1527,1528,5,246,0,0,1528,1529,5,313,0,0,1529,235,1,0,
+        0,0,1530,1534,7,6,0,0,1531,1533,3,366,183,0,1532,1531,1,0,0,0,1533,
+        1536,1,0,0,0,1534,1532,1,0,0,0,1534,1535,1,0,0,0,1535,1537,1,0,0,
+        0,1536,1534,1,0,0,0,1537,1542,3,238,119,0,1538,1539,5,9,0,0,1539,
+        1541,3,238,119,0,1540,1538,1,0,0,0,1541,1544,1,0,0,0,1542,1540,1,
+        0,0,0,1542,1543,1,0,0,0,1543,1546,1,0,0,0,1544,1542,1,0,0,0,1545,
+        1547,3,228,114,0,1546,1545,1,0,0,0,1546,1547,1,0,0,0,1547,237,1,
+        0,0,0,1548,1550,3,372,186,0,1549,1551,3,234,117,0,1550,1549,1,0,
+        0,0,1550,1551,1,0,0,0,1551,239,1,0,0,0,1552,1554,5,194,0,0,1553,
+        1555,3,242,121,0,1554,1553,1,0,0,0,1554,1555,1,0,0,0,1555,1556,1,
+        0,0,0,1556,1557,3,380,190,0,1557,1558,5,260,0,0,1558,1559,3,248,
+        124,0,1559,241,1,0,0,0,1560,1561,5,137,0,0,1561,1562,5,17,0,0,1562,
+        1564,7,7,0,0,1563,1565,3,244,122,0,1564,1563,1,0,0,0,1564,1565,1,
+        0,0,0,1565,243,1,0,0,0,1566,1567,5,93,0,0,1567,1568,5,17,0,0,1568,
+        1569,5,316,0,0,1569,245,1,0,0,0,1570,1573,3,520,260,0,1571,1572,
+        5,10,0,0,1572,1574,3,514,257,0,1573,1571,1,0,0,0,1573,1574,1,0,0,
+        0,1574,247,1,0,0,0,1575,1577,3,246,123,0,1576,1575,1,0,0,0,1576,
+        1577,1,0,0,0,1577,1581,1,0,0,0,1578,1580,3,250,125,0,1579,1578,1,
+        0,0,0,1580,1583,1,0,0,0,1581,1579,1,0,0,0,1581,1582,1,0,0,0,1582,
+        1585,1,0,0,0,1583,1581,1,0,0,0,1584,1586,5,1,0,0,1585,1584,1,0,0,
+        0,1585,1586,1,0,0,0,1586,249,1,0,0,0,1587,1589,5,1,0,0,1588,1587,
+        1,0,0,0,1588,1589,1,0,0,0,1589,1590,1,0,0,0,1590,1592,3,582,291,
+        0,1591,1593,3,246,123,0,1592,1591,1,0,0,0,1592,1593,1,0,0,0,1593,
+        251,1,0,0,0,1594,1596,5,196,0,0,1595,1597,3,242,121,0,1596,1595,
+        1,0,0,0,1596,1597,1,0,0,0,1597,1598,1,0,0,0,1598,1599,3,380,190,
+        0,1599,1600,5,260,0,0,1600,1601,3,248,124,0,1601,253,1,0,0,0,1602,
+        1603,5,195,0,0,1603,1604,3,380,190,0,1604,1606,3,496,248,0,1605,
+        1607,3,256,128,0,1606,1605,1,0,0,0,1606,1607,1,0,0,0,1607,255,1,
+        0,0,0,1608,1609,5,260,0,0,1609,1610,5,31,0,0,1610,1615,3,370,185,
+        0,1611,1612,5,9,0,0,1612,1614,3,370,185,0,1613,1611,1,0,0,0,1614,
+        1617,1,0,0,0,1615,1613,1,0,0,0,1615,1616,1,0,0,0,1616,1618,1,0,0,
+        0,1617,1615,1,0,0,0,1618,1619,5,8,0,0,1619,257,1,0,0,0,1620,1624,
+        5,197,0,0,1621,1623,3,368,184,0,1622,1621,1,0,0,0,1623,1626,1,0,
+        0,0,1624,1622,1,0,0,0,1624,1625,1,0,0,0,1625,1627,1,0,0,0,1626,1624,
+        1,0,0,0,1627,1628,5,57,0,0,1628,1630,3,466,233,0,1629,1631,3,260,
+        130,0,1630,1629,1,0,0,0,1630,1631,1,0,0,0,1631,1634,1,0,0,0,1632,
+        1635,3,262,131,0,1633,1635,3,264,132,0,1634,1632,1,0,0,0,1634,1633,
+        1,0,0,0,1635,259,1,0,0,0,1636,1639,5,130,0,0,1637,1640,3,446,223,
+        0,1638,1640,3,584,292,0,1639,1637,1,0,0,0,1639,1638,1,0,0,0,1640,
+        261,1,0,0,0,1641,1642,5,31,0,0,1642,1643,3,80,40,0,1643,1644,5,8,
+        0,0,1644,263,1,0,0,0,1645,1646,5,29,0,0,1646,1647,3,76,38,0,1647,
+        1648,5,4,0,0,1648,265,1,0,0,0,1649,1653,5,198,0,0,1650,1652,3,368,
+        184,0,1651,1650,1,0,0,0,1652,1655,1,0,0,0,1653,1651,1,0,0,0,1653,
+        1654,1,0,0,0,1654,1656,1,0,0,0,1655,1653,1,0,0,0,1656,1658,3,466,
+        233,0,1657,1659,3,268,134,0,1658,1657,1,0,0,0,1658,1659,1,0,0,0,
+        1659,1660,1,0,0,0,1660,1661,5,31,0,0,1661,1662,3,360,180,0,1662,
+        1663,5,8,0,0,1663,267,1,0,0,0,1664,1665,5,128,0,0,1665,1666,5,315,
+        0,0,1666,269,1,0,0,0,1667,1668,5,205,0,0,1668,1673,3,372,186,0,1669,
+        1670,5,9,0,0,1670,1672,3,372,186,0,1671,1669,1,0,0,0,1672,1675,1,
+        0,0,0,1673,1671,1,0,0,0,1673,1674,1,0,0,0,1674,271,1,0,0,0,1675,
+        1673,1,0,0,0,1676,1685,5,207,0,0,1677,1682,3,526,263,0,1678,1679,
+        5,9,0,0,1679,1681,3,526,263,0,1680,1678,1,0,0,0,1681,1684,1,0,0,
+        0,1682,1680,1,0,0,0,1682,1683,1,0,0,0,1683,1686,1,0,0,0,1684,1682,
+        1,0,0,0,1685,1677,1,0,0,0,1685,1686,1,0,0,0,1686,273,1,0,0,0,1687,
+        1688,5,209,0,0,1688,1693,3,526,263,0,1689,1690,5,9,0,0,1690,1692,
+        3,526,263,0,1691,1689,1,0,0,0,1692,1695,1,0,0,0,1693,1691,1,0,0,
+        0,1693,1694,1,0,0,0,1694,275,1,0,0,0,1695,1693,1,0,0,0,1696,1705,
+        5,206,0,0,1697,1702,3,372,186,0,1698,1699,5,9,0,0,1699,1701,3,372,
+        186,0,1700,1698,1,0,0,0,1701,1704,1,0,0,0,1702,1700,1,0,0,0,1702,
+        1703,1,0,0,0,1703,1706,1,0,0,0,1704,1702,1,0,0,0,1705,1697,1,0,0,
+        0,1705,1706,1,0,0,0,1706,277,1,0,0,0,1707,1716,5,210,0,0,1708,1713,
+        3,372,186,0,1709,1710,5,9,0,0,1710,1712,3,372,186,0,1711,1709,1,
+        0,0,0,1712,1715,1,0,0,0,1713,1711,1,0,0,0,1713,1714,1,0,0,0,1714,
+        1717,1,0,0,0,1715,1713,1,0,0,0,1716,1708,1,0,0,0,1716,1717,1,0,0,
+        0,1717,279,1,0,0,0,1718,1727,5,211,0,0,1719,1724,3,282,141,0,1720,
+        1721,5,9,0,0,1721,1723,3,282,141,0,1722,1720,1,0,0,0,1723,1726,1,
+        0,0,0,1724,1722,1,0,0,0,1724,1725,1,0,0,0,1725,1728,1,0,0,0,1726,
+        1724,1,0,0,0,1727,1719,1,0,0,0,1727,1728,1,0,0,0,1728,281,1,0,0,
+        0,1729,1731,3,526,263,0,1730,1732,7,8,0,0,1731,1730,1,0,0,0,1731,
+        1732,1,0,0,0,1732,283,1,0,0,0,1733,1737,5,215,0,0,1734,1736,3,366,
+        183,0,1735,1734,1,0,0,0,1736,1739,1,0,0,0,1737,1735,1,0,0,0,1737,
+        1738,1,0,0,0,1738,1740,1,0,0,0,1739,1737,1,0,0,0,1740,1741,5,57,
+        0,0,1741,1743,3,372,186,0,1742,1744,3,286,143,0,1743,1742,1,0,0,
+        0,1743,1744,1,0,0,0,1744,285,1,0,0,0,1745,1746,5,260,0,0,1746,1751,
+        3,372,186,0,1747,1748,5,9,0,0,1748,1750,3,372,186,0,1749,1747,1,
+        0,0,0,1750,1753,1,0,0,0,1751,1749,1,0,0,0,1751,1752,1,0,0,0,1752,
+        287,1,0,0,0,1753,1751,1,0,0,0,1754,1755,5,218,0,0,1755,1758,7,9,
+        0,0,1756,1759,3,290,145,0,1757,1759,3,292,146,0,1758,1756,1,0,0,
+        0,1758,1757,1,0,0,0,1758,1759,1,0,0,0,1759,289,1,0,0,0,1760,1761,
+        5,260,0,0,1761,1770,5,31,0,0,1762,1767,3,294,147,0,1763,1764,5,9,
+        0,0,1764,1766,3,294,147,0,1765,1763,1,0,0,0,1766,1769,1,0,0,0,1767,
+        1765,1,0,0,0,1767,1768,1,0,0,0,1768,1771,1,0,0,0,1769,1767,1,0,0,
+        0,1770,1762,1,0,0,0,1770,1771,1,0,0,0,1771,1772,1,0,0,0,1772,1773,
+        5,8,0,0,1773,291,1,0,0,0,1774,1776,3,298,149,0,1775,1774,1,0,0,0,
+        1776,1777,1,0,0,0,1777,1775,1,0,0,0,1777,1778,1,0,0,0,1778,293,1,
+        0,0,0,1779,1780,5,245,0,0,1780,1781,5,17,0,0,1781,1831,3,422,211,
+        0,1782,1783,5,269,0,0,1783,1784,5,17,0,0,1784,1831,3,520,260,0,1785,
+        1786,5,227,0,0,1786,1787,5,17,0,0,1787,1831,3,296,148,0,1788,1789,
+        5,274,0,0,1789,1790,5,17,0,0,1790,1831,3,296,148,0,1791,1792,5,45,
+        0,0,1792,1793,5,17,0,0,1793,1831,3,296,148,0,1794,1795,5,137,0,0,
+        1795,1796,5,17,0,0,1796,1831,7,10,0,0,1797,1798,5,272,0,0,1798,1799,
+        5,17,0,0,1799,1831,3,422,211,0,1800,1801,5,278,0,0,1801,1802,5,17,
+        0,0,1802,1831,3,422,211,0,1803,1804,5,268,0,0,1804,1805,5,17,0,0,
+        1805,1831,7,11,0,0,1806,1807,5,273,0,0,1807,1808,5,17,0,0,1808,1831,
+        7,11,0,0,1809,1810,5,140,0,0,1810,1811,5,17,0,0,1811,1831,7,12,0,
+        0,1812,1813,5,277,0,0,1813,1814,5,17,0,0,1814,1831,7,13,0,0,1815,
+        1816,5,39,0,0,1816,1817,5,17,0,0,1817,1831,5,310,0,0,1818,1819,5,
+        276,0,0,1819,1820,5,17,0,0,1820,1831,3,556,278,0,1821,1822,5,275,
+        0,0,1822,1823,5,17,0,0,1823,1831,3,556,278,0,1824,1825,5,271,0,0,
+        1825,1826,5,17,0,0,1826,1831,3,550,275,0,1827,1828,5,270,0,0,1828,
+        1829,5,17,0,0,1829,1831,3,550,275,0,1830,1779,1,0,0,0,1830,1782,
+        1,0,0,0,1830,1785,1,0,0,0,1830,1788,1,0,0,0,1830,1791,1,0,0,0,1830,
+        1794,1,0,0,0,1830,1797,1,0,0,0,1830,1800,1,0,0,0,1830,1803,1,0,0,
+        0,1830,1806,1,0,0,0,1830,1809,1,0,0,0,1830,1812,1,0,0,0,1830,1815,
+        1,0,0,0,1830,1818,1,0,0,0,1830,1821,1,0,0,0,1830,1824,1,0,0,0,1830,
+        1827,1,0,0,0,1831,295,1,0,0,0,1832,1837,3,522,261,0,1833,1834,5,
+        9,0,0,1834,1836,3,522,261,0,1835,1833,1,0,0,0,1836,1839,1,0,0,0,
+        1837,1835,1,0,0,0,1837,1838,1,0,0,0,1838,297,1,0,0,0,1839,1837,1,
+        0,0,0,1840,1841,5,245,0,0,1841,1842,5,17,0,0,1842,1854,3,582,291,
+        0,1843,1844,5,137,0,0,1844,1845,5,17,0,0,1845,1854,7,10,0,0,1846,
+        1847,5,260,0,0,1847,1854,3,582,291,0,1848,1849,5,57,0,0,1849,1854,
+        3,296,148,0,1850,1851,5,39,0,0,1851,1852,5,17,0,0,1852,1854,5,310,
+        0,0,1853,1840,1,0,0,0,1853,1843,1,0,0,0,1853,1846,1,0,0,0,1853,1848,
+        1,0,0,0,1853,1850,1,0,0,0,1854,299,1,0,0,0,1855,1859,5,222,0,0,1856,
+        1858,3,366,183,0,1857,1856,1,0,0,0,1858,1861,1,0,0,0,1859,1857,1,
+        0,0,0,1859,1860,1,0,0,0,1860,1862,1,0,0,0,1861,1859,1,0,0,0,1862,
+        1863,3,372,186,0,1863,1864,5,185,0,0,1864,1865,3,372,186,0,1865,
+        301,1,0,0,0,1866,1870,5,221,0,0,1867,1869,3,366,183,0,1868,1867,
+        1,0,0,0,1869,1872,1,0,0,0,1870,1868,1,0,0,0,1870,1871,1,0,0,0,1871,
+        1873,1,0,0,0,1872,1870,1,0,0,0,1873,1874,3,372,186,0,1874,303,1,
+        0,0,0,1875,1879,5,223,0,0,1876,1878,3,368,184,0,1877,1876,1,0,0,
+        0,1878,1881,1,0,0,0,1879,1877,1,0,0,0,1879,1880,1,0,0,0,1880,1883,
+        1,0,0,0,1881,1879,1,0,0,0,1882,1884,3,306,153,0,1883,1882,1,0,0,
+        0,1883,1884,1,0,0,0,1884,1886,1,0,0,0,1885,1887,3,308,154,0,1886,
+        1885,1,0,0,0,1886,1887,1,0,0,0,1887,1889,1,0,0,0,1888,1890,3,310,
+        155,0,1889,1888,1,0,0,0,1889,1890,1,0,0,0,1890,1891,1,0,0,0,1891,
+        1892,5,260,0,0,1892,1894,5,31,0,0,1893,1895,3,312,156,0,1894,1893,
+        1,0,0,0,1895,1896,1,0,0,0,1896,1894,1,0,0,0,1896,1897,1,0,0,0,1897,
+        1898,1,0,0,0,1898,1899,5,8,0,0,1899,305,1,0,0,0,1900,1901,5,189,
+        0,0,1901,1902,5,57,0,0,1902,1903,3,330,165,0,1903,1904,5,9,0,0,1904,
+        1905,3,330,165,0,1905,307,1,0,0,0,1906,1907,5,197,0,0,1907,1908,
+        5,57,0,0,1908,1913,3,380,190,0,1909,1910,5,9,0,0,1910,1912,3,380,
+        190,0,1911,1909,1,0,0,0,1912,1915,1,0,0,0,1913,1911,1,0,0,0,1913,
+        1914,1,0,0,0,1914,309,1,0,0,0,1915,1913,1,0,0,0,1916,1917,5,72,0,
+        0,1917,1918,5,31,0,0,1918,1923,3,24,12,0,1919,1920,5,9,0,0,1920,
+        1922,3,24,12,0,1921,1919,1,0,0,0,1922,1925,1,0,0,0,1923,1921,1,0,
+        0,0,1923,1924,1,0,0,0,1924,1926,1,0,0,0,1925,1923,1,0,0,0,1926,1927,
+        5,8,0,0,1927,311,1,0,0,0,1928,1929,5,237,0,0,1929,1931,3,518,259,
+        0,1930,1932,5,187,0,0,1931,1930,1,0,0,0,1931,1932,1,0,0,0,1932,1934,
+        1,0,0,0,1933,1935,3,314,157,0,1934,1933,1,0,0,0,1934,1935,1,0,0,
+        0,1935,1936,1,0,0,0,1936,1937,5,10,0,0,1937,1939,3,380,190,0,1938,
+        1940,3,316,158,0,1939,1938,1,0,0,0,1939,1940,1,0,0,0,1940,1941,1,
+        0,0,0,1941,1942,5,34,0,0,1942,313,1,0,0,0,1943,1944,5,191,0,0,1944,
+        1945,5,17,0,0,1945,1946,7,14,0,0,1946,315,1,0,0,0,1947,1948,5,36,
+        0,0,1948,1953,3,318,159,0,1949,1950,5,9,0,0,1950,1952,3,318,159,
+        0,1951,1949,1,0,0,0,1952,1955,1,0,0,0,1953,1951,1,0,0,0,1953,1954,
+        1,0,0,0,1954,317,1,0,0,0,1955,1953,1,0,0,0,1956,1957,3,518,259,0,
+        1957,1958,5,17,0,0,1958,1959,3,380,190,0,1959,319,1,0,0,0,1960,1964,
+        5,225,0,0,1961,1963,3,368,184,0,1962,1961,1,0,0,0,1963,1966,1,0,
+        0,0,1964,1962,1,0,0,0,1964,1965,1,0,0,0,1965,1968,1,0,0,0,1966,1964,
+        1,0,0,0,1967,1969,3,460,230,0,1968,1967,1,0,0,0,1968,1969,1,0,0,
+        0,1969,1971,1,0,0,0,1970,1972,3,324,162,0,1971,1970,1,0,0,0,1971,
+        1972,1,0,0,0,1972,1976,1,0,0,0,1973,1977,3,380,190,0,1974,1977,3,
+        454,227,0,1975,1977,3,322,161,0,1976,1973,1,0,0,0,1976,1974,1,0,
+        0,0,1976,1975,1,0,0,0,1977,321,1,0,0,0,1978,1979,5,1,0,0,1979,1980,
+        5,43,0,0,1980,1981,3,380,190,0,1981,323,1,0,0,0,1982,1983,5,130,
+        0,0,1983,1984,5,31,0,0,1984,1989,3,144,72,0,1985,1986,5,9,0,0,1986,
+        1988,3,144,72,0,1987,1985,1,0,0,0,1988,1991,1,0,0,0,1989,1987,1,
+        0,0,0,1989,1990,1,0,0,0,1990,1992,1,0,0,0,1991,1989,1,0,0,0,1992,
+        1993,5,8,0,0,1993,325,1,0,0,0,1994,1998,5,226,0,0,1995,1997,3,366,
+        183,0,1996,1995,1,0,0,0,1997,2000,1,0,0,0,1998,1996,1,0,0,0,1998,
+        1999,1,0,0,0,1999,2001,1,0,0,0,2000,1998,1,0,0,0,2001,2006,3,372,
+        186,0,2002,2003,5,9,0,0,2003,2005,3,372,186,0,2004,2002,1,0,0,0,
+        2005,2008,1,0,0,0,2006,2004,1,0,0,0,2006,2007,1,0,0,0,2007,327,1,
+        0,0,0,2008,2006,1,0,0,0,2009,2013,7,15,0,0,2010,2012,3,368,184,0,
+        2011,2010,1,0,0,0,2012,2015,1,0,0,0,2013,2011,1,0,0,0,2013,2014,
+        1,0,0,0,2014,2016,1,0,0,0,2015,2013,1,0,0,0,2016,2017,5,57,0,0,2017,
+        2022,3,330,165,0,2018,2019,5,9,0,0,2019,2021,3,330,165,0,2020,2018,
+        1,0,0,0,2021,2024,1,0,0,0,2022,2020,1,0,0,0,2022,2023,1,0,0,0,2023,
+        329,1,0,0,0,2024,2022,1,0,0,0,2025,2026,3,372,186,0,2026,2027,3,
+        332,166,0,2027,331,1,0,0,0,2028,2030,7,16,0,0,2029,2028,1,0,0,0,
+        2029,2030,1,0,0,0,2030,2033,1,0,0,0,2031,2032,5,184,0,0,2032,2034,
+        7,17,0,0,2033,2031,1,0,0,0,2033,2034,1,0,0,0,2034,333,1,0,0,0,2035,
+        2039,5,238,0,0,2036,2038,3,366,183,0,2037,2036,1,0,0,0,2038,2041,
+        1,0,0,0,2039,2037,1,0,0,0,2039,2040,1,0,0,0,2040,2050,1,0,0,0,2041,
+        2039,1,0,0,0,2042,2047,3,372,186,0,2043,2044,5,9,0,0,2044,2046,3,
+        372,186,0,2045,2043,1,0,0,0,2046,2049,1,0,0,0,2047,2045,1,0,0,0,
+        2047,2048,1,0,0,0,2048,2051,1,0,0,0,2049,2047,1,0,0,0,2050,2042,
+        1,0,0,0,2050,2051,1,0,0,0,2051,2053,1,0,0,0,2052,2054,3,336,168,
+        0,2053,2052,1,0,0,0,2053,2054,1,0,0,0,2054,335,1,0,0,0,2055,2056,
+        5,57,0,0,2056,2057,3,372,186,0,2057,2058,5,9,0,0,2058,2059,3,372,
+        186,0,2059,2061,1,0,0,0,2060,2062,3,338,169,0,2061,2060,1,0,0,0,
+        2061,2062,1,0,0,0,2062,337,1,0,0,0,2063,2064,5,55,0,0,2064,2065,
+        5,17,0,0,2065,2066,3,554,277,0,2066,339,1,0,0,0,2067,2071,7,18,0,
+        0,2068,2070,3,366,183,0,2069,2068,1,0,0,0,2070,2073,1,0,0,0,2071,
+        2069,1,0,0,0,2071,2072,1,0,0,0,2072,2074,1,0,0,0,2073,2071,1,0,0,
+        0,2074,2075,3,372,186,0,2075,341,1,0,0,0,2076,2080,5,247,0,0,2077,
+        2079,3,366,183,0,2078,2077,1,0,0,0,2079,2082,1,0,0,0,2080,2078,1,
+        0,0,0,2080,2081,1,0,0,0,2081,2083,1,0,0,0,2082,2080,1,0,0,0,2083,
+        2084,3,372,186,0,2084,2085,5,57,0,0,2085,2086,3,330,165,0,2086,343,
+        1,0,0,0,2087,2088,5,248,0,0,2088,2089,3,372,186,0,2089,2090,5,185,
+        0,0,2090,2092,3,372,186,0,2091,2093,3,346,173,0,2092,2091,1,0,0,
+        0,2092,2093,1,0,0,0,2093,345,1,0,0,0,2094,2095,5,57,0,0,2095,2096,
+        3,330,165,0,2096,347,1,0,0,0,2097,2102,3,350,175,0,2098,2099,5,9,
+        0,0,2099,2101,3,350,175,0,2100,2098,1,0,0,0,2101,2104,1,0,0,0,2102,
+        2100,1,0,0,0,2102,2103,1,0,0,0,2103,349,1,0,0,0,2104,2102,1,0,0,
+        0,2105,2107,5,249,0,0,2106,2108,3,372,186,0,2107,2106,1,0,0,0,2107,
+        2108,1,0,0,0,2108,2109,1,0,0,0,2109,2110,5,185,0,0,2110,2112,3,372,
+        186,0,2111,2113,3,352,176,0,2112,2111,1,0,0,0,2112,2113,1,0,0,0,
+        2113,2114,1,0,0,0,2114,2115,5,57,0,0,2115,2116,3,330,165,0,2116,
+        351,1,0,0,0,2117,2118,5,260,0,0,2118,2119,5,190,0,0,2119,2120,5,
+        17,0,0,2120,2121,3,372,186,0,2121,353,1,0,0,0,2122,2126,5,254,0,
+        0,2123,2125,3,368,184,0,2124,2123,1,0,0,0,2125,2128,1,0,0,0,2126,
+        2124,1,0,0,0,2126,2127,1,0,0,0,2127,2129,1,0,0,0,2128,2126,1,0,0,
+        0,2129,2134,3,356,178,0,2130,2131,5,9,0,0,2131,2133,3,356,178,0,
+        2132,2130,1,0,0,0,2133,2136,1,0,0,0,2134,2132,1,0,0,0,2134,2135,
+        1,0,0,0,2135,355,1,0,0,0,2136,2134,1,0,0,0,2137,2141,3,486,243,0,
+        2138,2141,3,480,240,0,2139,2141,3,462,231,0,2140,2137,1,0,0,0,2140,
+        2138,1,0,0,0,2140,2139,1,0,0,0,2141,357,1,0,0,0,2142,2146,7,19,0,
+        0,2143,2145,3,366,183,0,2144,2143,1,0,0,0,2145,2148,1,0,0,0,2146,
+        2144,1,0,0,0,2146,2147,1,0,0,0,2147,2149,1,0,0,0,2148,2146,1,0,0,
+        0,2149,2150,3,372,186,0,2150,359,1,0,0,0,2151,2154,3,80,40,0,2152,
+        2154,3,362,181,0,2153,2151,1,0,0,0,2153,2152,1,0,0,0,2154,361,1,
+        0,0,0,2155,2159,3,492,246,0,2156,2158,3,364,182,0,2157,2156,1,0,
+        0,0,2158,2161,1,0,0,0,2159,2157,1,0,0,0,2159,2160,1,0,0,0,2160,363,
+        1,0,0,0,2161,2159,1,0,0,0,2162,2163,5,3,0,0,2163,2164,3,84,42,0,
+        2164,365,1,0,0,0,2165,2166,7,20,0,0,2166,2169,5,17,0,0,2167,2170,
+        3,536,268,0,2168,2170,3,550,275,0,2169,2167,1,0,0,0,2169,2168,1,
+        0,0,0,2170,367,1,0,0,0,2171,2172,7,21,0,0,2172,2175,5,17,0,0,2173,
+        2176,3,536,268,0,2174,2176,3,550,275,0,2175,2173,1,0,0,0,2175,2174,
+        1,0,0,0,2176,369,1,0,0,0,2177,2178,5,316,0,0,2178,2181,5,17,0,0,
+        2179,2182,3,536,268,0,2180,2182,3,550,275,0,2181,2179,1,0,0,0,2181,
+        2180,1,0,0,0,2182,371,1,0,0,0,2183,2185,3,374,187,0,2184,2183,1,
+        0,0,0,2184,2185,1,0,0,0,2185,2186,1,0,0,0,2186,2187,3,380,190,0,
+        2187,373,1,0,0,0,2188,2191,3,540,270,0,2189,2191,3,376,188,0,2190,
+        2188,1,0,0,0,2190,2189,1,0,0,0,2191,2192,1,0,0,0,2192,2193,5,17,
+        0,0,2193,375,1,0,0,0,2194,2195,5,31,0,0,2195,2200,3,540,270,0,2196,
+        2197,5,9,0,0,2197,2199,3,540,270,0,2198,2196,1,0,0,0,2199,2202,1,
+        0,0,0,2200,2198,1,0,0,0,2200,2201,1,0,0,0,2201,2203,1,0,0,0,2202,
+        2200,1,0,0,0,2203,2204,5,8,0,0,2204,377,1,0,0,0,2205,2206,3,520,
+        260,0,2206,2207,5,15,0,0,2207,2208,3,446,223,0,2208,379,1,0,0,0,
+        2209,2210,3,382,191,0,2210,381,1,0,0,0,2211,2215,3,386,193,0,2212,
+        2214,3,384,192,0,2213,2212,1,0,0,0,2214,2217,1,0,0,0,2215,2213,1,
+        0,0,0,2215,2216,1,0,0,0,2216,383,1,0,0,0,2217,2215,1,0,0,0,2218,
+        2219,5,188,0,0,2219,2220,3,386,193,0,2220,385,1,0,0,0,2221,2225,
+        3,390,195,0,2222,2224,3,388,194,0,2223,2222,1,0,0,0,2224,2227,1,
+        0,0,0,2225,2223,1,0,0,0,2225,2226,1,0,0,0,2226,387,1,0,0,0,2227,
+        2225,1,0,0,0,2228,2229,5,43,0,0,2229,2230,3,390,195,0,2230,389,1,
+        0,0,0,2231,2237,3,400,200,0,2232,2237,3,392,196,0,2233,2237,3,394,
+        197,0,2234,2237,3,396,198,0,2235,2237,3,398,199,0,2236,2231,1,0,
+        0,0,2236,2232,1,0,0,0,2236,2233,1,0,0,0,2236,2234,1,0,0,0,2236,2235,
+        1,0,0,0,2237,391,1,0,0,0,2238,2239,3,400,200,0,2239,2240,7,22,0,
+        0,2240,2241,3,400,200,0,2241,393,1,0,0,0,2242,2243,3,400,200,0,2243,
+        2244,7,23,0,0,2244,2245,5,31,0,0,2245,2250,3,420,210,0,2246,2247,
+        5,9,0,0,2247,2249,3,420,210,0,2248,2246,1,0,0,0,2249,2252,1,0,0,
+        0,2250,2248,1,0,0,0,2250,2251,1,0,0,0,2251,2253,1,0,0,0,2252,2250,
+        1,0,0,0,2253,2254,5,8,0,0,2254,395,1,0,0,0,2255,2256,3,400,200,0,
+        2256,2257,7,24,0,0,2257,2258,5,31,0,0,2258,2259,3,420,210,0,2259,
+        2260,5,16,0,0,2260,2261,3,420,210,0,2261,2262,5,8,0,0,2262,397,1,
+        0,0,0,2263,2264,5,1,0,0,2264,2265,5,18,0,0,2265,2266,3,400,200,0,
+        2266,399,1,0,0,0,2267,2270,3,402,201,0,2268,2269,7,25,0,0,2269,2271,
+        3,402,201,0,2270,2268,1,0,0,0,2270,2271,1,0,0,0,2271,401,1,0,0,0,
+        2272,2276,3,406,203,0,2273,2275,3,404,202,0,2274,2273,1,0,0,0,2275,
+        2278,1,0,0,0,2276,2274,1,0,0,0,2276,2277,1,0,0,0,2277,403,1,0,0,
+        0,2278,2276,1,0,0,0,2279,2280,7,26,0,0,2280,2281,3,406,203,0,2281,
+        405,1,0,0,0,2282,2286,3,410,205,0,2283,2285,3,408,204,0,2284,2283,
+        1,0,0,0,2285,2288,1,0,0,0,2286,2284,1,0,0,0,2286,2287,1,0,0,0,2287,
+        407,1,0,0,0,2288,2286,1,0,0,0,2289,2290,7,27,0,0,2290,2291,3,410,
+        205,0,2291,409,1,0,0,0,2292,2295,3,412,206,0,2293,2295,3,418,209,
+        0,2294,2292,1,0,0,0,2294,2293,1,0,0,0,2295,411,1,0,0,0,2296,2300,
+        3,420,210,0,2297,2299,3,414,207,0,2298,2297,1,0,0,0,2299,2302,1,
+        0,0,0,2300,2298,1,0,0,0,2300,2301,1,0,0,0,2301,413,1,0,0,0,2302,
+        2300,1,0,0,0,2303,2306,3,416,208,0,2304,2306,5,10,0,0,2305,2303,
+        1,0,0,0,2305,2304,1,0,0,0,2306,2307,1,0,0,0,2307,2308,3,420,210,
+        0,2308,415,1,0,0,0,2309,2310,7,28,0,0,2310,417,1,0,0,0,2311,2312,
+        5,1,0,0,2312,2313,3,416,208,0,2313,2314,3,420,210,0,2314,419,1,0,
+        0,0,2315,2317,7,26,0,0,2316,2315,1,0,0,0,2316,2317,1,0,0,0,2317,
+        2318,1,0,0,0,2318,2319,3,422,211,0,2319,421,1,0,0,0,2320,2324,3,
+        424,212,0,2321,2324,3,426,213,0,2322,2324,3,438,219,0,2323,2320,
+        1,0,0,0,2323,2321,1,0,0,0,2323,2322,1,0,0,0,2324,423,1,0,0,0,2325,
+        2329,3,442,221,0,2326,2329,3,456,228,0,2327,2329,3,436,218,0,2328,
+        2325,1,0,0,0,2328,2326,1,0,0,0,2328,2327,1,0,0,0,2329,425,1,0,0,
+        0,2330,2332,3,424,212,0,2331,2333,3,428,214,0,2332,2331,1,0,0,0,
+        2333,2334,1,0,0,0,2334,2332,1,0,0,0,2334,2335,1,0,0,0,2335,427,1,
+        0,0,0,2336,2340,3,430,215,0,2337,2340,3,432,216,0,2338,2340,3,434,
+        217,0,2339,2336,1,0,0,0,2339,2337,1,0,0,0,2339,2338,1,0,0,0,2340,
+        429,1,0,0,0,2341,2342,5,15,0,0,2342,2343,3,538,269,0,2343,431,1,
+        0,0,0,2344,2345,5,30,0,0,2345,2346,3,380,190,0,2346,2347,5,5,0,0,
+        2347,433,1,0,0,0,2348,2349,5,15,0,0,2349,2350,5,30,0,0,2350,2351,
+        3,380,190,0,2351,2352,5,5,0,0,2352,435,1,0,0,0,2353,2355,5,250,0,
+        0,2354,2356,3,440,220,0,2355,2354,1,0,0,0,2355,2356,1,0,0,0,2356,
+        2357,1,0,0,0,2357,2358,5,31,0,0,2358,2359,3,76,38,0,2359,2360,5,
+        8,0,0,2360,437,1,0,0,0,2361,2363,5,251,0,0,2362,2364,3,440,220,0,
+        2363,2362,1,0,0,0,2363,2364,1,0,0,0,2364,2365,1,0,0,0,2365,2366,
+        5,31,0,0,2366,2367,3,76,38,0,2367,2368,5,8,0,0,2368,439,1,0,0,0,
+        2369,2370,5,137,0,0,2370,2371,5,17,0,0,2371,2372,5,163,0,0,2372,
+        441,1,0,0,0,2373,2377,3,446,223,0,2374,2376,3,444,222,0,2375,2374,
+        1,0,0,0,2376,2379,1,0,0,0,2377,2375,1,0,0,0,2377,2378,1,0,0,0,2378,
+        443,1,0,0,0,2379,2377,1,0,0,0,2380,2381,5,15,0,0,2381,2382,3,446,
+        223,0,2382,445,1,0,0,0,2383,2386,3,448,224,0,2384,2386,3,452,226,
+        0,2385,2383,1,0,0,0,2385,2384,1,0,0,0,2386,447,1,0,0,0,2387,2388,
+        3,520,260,0,2388,2397,5,31,0,0,2389,2394,3,450,225,0,2390,2391,5,
+        9,0,0,2391,2393,3,450,225,0,2392,2390,1,0,0,0,2393,2396,1,0,0,0,
+        2394,2392,1,0,0,0,2394,2395,1,0,0,0,2395,2398,1,0,0,0,2396,2394,
+        1,0,0,0,2397,2389,1,0,0,0,2397,2398,1,0,0,0,2398,2399,1,0,0,0,2399,
+        2400,5,8,0,0,2400,449,1,0,0,0,2401,2404,3,372,186,0,2402,2404,3,
+        454,227,0,2403,2401,1,0,0,0,2403,2402,1,0,0,0,2404,451,1,0,0,0,2405,
+        2406,5,66,0,0,2406,2408,5,31,0,0,2407,2409,3,372,186,0,2408,2407,
+        1,0,0,0,2408,2409,1,0,0,0,2409,2410,1,0,0,0,2410,2411,5,8,0,0,2411,
+        453,1,0,0,0,2412,2413,5,1,0,0,2413,455,1,0,0,0,2414,2422,3,552,276,
+        0,2415,2422,3,458,229,0,2416,2422,3,494,247,0,2417,2422,3,500,250,
+        0,2418,2422,3,492,246,0,2419,2422,3,506,253,0,2420,2422,3,462,231,
+        0,2421,2414,1,0,0,0,2421,2415,1,0,0,0,2421,2416,1,0,0,0,2421,2417,
+        1,0,0,0,2421,2418,1,0,0,0,2421,2419,1,0,0,0,2421,2420,1,0,0,0,2422,
+        457,1,0,0,0,2423,2425,3,520,260,0,2424,2426,3,460,230,0,2425,2424,
+        1,0,0,0,2425,2426,1,0,0,0,2426,459,1,0,0,0,2427,2428,5,70,0,0,2428,
+        2429,5,17,0,0,2429,2430,7,29,0,0,2430,461,1,0,0,0,2431,2432,5,31,
+        0,0,2432,2433,3,74,37,0,2433,2434,5,8,0,0,2434,463,1,0,0,0,2435,
+        2436,5,214,0,0,2436,2437,3,520,260,0,2437,2438,5,95,0,0,2438,2439,
+        3,380,190,0,2439,2440,5,246,0,0,2440,2441,3,380,190,0,2441,2442,
+        5,237,0,0,2442,2443,3,380,190,0,2443,465,1,0,0,0,2444,2447,3,480,
+        240,0,2445,2447,3,468,234,0,2446,2444,1,0,0,0,2446,2445,1,0,0,0,
+        2447,467,1,0,0,0,2448,2450,3,480,240,0,2449,2451,3,470,235,0,2450,
+        2449,1,0,0,0,2451,2452,1,0,0,0,2452,2450,1,0,0,0,2452,2453,1,0,0,
+        0,2453,469,1,0,0,0,2454,2458,3,472,236,0,2455,2458,3,474,237,0,2456,
+        2458,3,476,238,0,2457,2454,1,0,0,0,2457,2455,1,0,0,0,2457,2456,1,
+        0,0,0,2458,471,1,0,0,0,2459,2460,5,15,0,0,2460,2461,3,478,239,0,
+        2461,473,1,0,0,0,2462,2463,5,30,0,0,2463,2464,3,380,190,0,2464,2465,
+        5,5,0,0,2465,475,1,0,0,0,2466,2467,5,15,0,0,2467,2468,5,30,0,0,2468,
+        2469,3,380,190,0,2469,2470,5,5,0,0,2470,477,1,0,0,0,2471,2475,3,
+        482,241,0,2472,2475,3,540,270,0,2473,2475,3,484,242,0,2474,2471,
+        1,0,0,0,2474,2472,1,0,0,0,2474,2473,1,0,0,0,2475,479,1,0,0,0,2476,
+        2477,3,478,239,0,2477,481,1,0,0,0,2478,2479,5,2,0,0,2479,483,1,0,
+        0,0,2480,2481,7,30,0,0,2481,485,1,0,0,0,2482,2486,3,524,262,0,2483,
+        2486,3,442,221,0,2484,2486,3,488,244,0,2485,2482,1,0,0,0,2485,2483,
+        1,0,0,0,2485,2484,1,0,0,0,2486,487,1,0,0,0,2487,2488,3,442,221,0,
+        2488,2489,5,15,0,0,2489,2490,3,490,245,0,2490,489,1,0,0,0,2491,2494,
+        3,544,272,0,2492,2494,3,478,239,0,2493,2491,1,0,0,0,2493,2492,1,
+        0,0,0,2494,491,1,0,0,0,2495,2496,5,65,0,0,2496,2497,5,315,0,0,2497,
+        2498,3,496,248,0,2498,493,1,0,0,0,2499,2503,5,71,0,0,2500,2502,3,
+        368,184,0,2501,2500,1,0,0,0,2502,2505,1,0,0,0,2503,2501,1,0,0,0,
+        2503,2504,1,0,0,0,2504,2506,1,0,0,0,2505,2503,1,0,0,0,2506,2507,
+        3,496,248,0,2507,2509,5,30,0,0,2508,2510,3,550,275,0,2509,2508,1,
+        0,0,0,2509,2510,1,0,0,0,2510,2515,1,0,0,0,2511,2512,5,9,0,0,2512,
+        2514,3,550,275,0,2513,2511,1,0,0,0,2514,2517,1,0,0,0,2515,2513,1,
+        0,0,0,2515,2516,1,0,0,0,2516,2519,1,0,0,0,2517,2515,1,0,0,0,2518,
+        2520,5,9,0,0,2519,2518,1,0,0,0,2519,2520,1,0,0,0,2520,2521,1,0,0,
+        0,2521,2522,5,5,0,0,2522,495,1,0,0,0,2523,2525,5,31,0,0,2524,2526,
+        3,498,249,0,2525,2524,1,0,0,0,2525,2526,1,0,0,0,2526,2531,1,0,0,
+        0,2527,2528,5,9,0,0,2528,2530,3,498,249,0,2529,2527,1,0,0,0,2530,
+        2533,1,0,0,0,2531,2529,1,0,0,0,2531,2532,1,0,0,0,2532,2535,1,0,0,
+        0,2533,2531,1,0,0,0,2534,2536,5,9,0,0,2535,2534,1,0,0,0,2535,2536,
+        1,0,0,0,2536,2537,1,0,0,0,2537,2538,5,8,0,0,2538,497,1,0,0,0,2539,
+        2540,3,518,259,0,2540,2541,5,10,0,0,2541,2542,3,514,257,0,2542,499,
+        1,0,0,0,2543,2547,7,31,0,0,2544,2546,3,368,184,0,2545,2544,1,0,0,
+        0,2546,2549,1,0,0,0,2547,2545,1,0,0,0,2547,2548,1,0,0,0,2548,2550,
+        1,0,0,0,2549,2547,1,0,0,0,2550,2551,3,496,248,0,2551,2552,5,30,0,
+        0,2552,2557,3,582,291,0,2553,2554,5,9,0,0,2554,2556,3,582,291,0,
+        2555,2553,1,0,0,0,2556,2559,1,0,0,0,2557,2555,1,0,0,0,2557,2558,
+        1,0,0,0,2558,2560,1,0,0,0,2559,2557,1,0,0,0,2560,2562,5,5,0,0,2561,
+        2563,3,502,251,0,2562,2561,1,0,0,0,2562,2563,1,0,0,0,2563,501,1,
+        0,0,0,2564,2565,5,260,0,0,2565,2577,5,31,0,0,2566,2571,3,504,252,
+        0,2567,2568,5,9,0,0,2568,2570,3,504,252,0,2569,2567,1,0,0,0,2570,
+        2573,1,0,0,0,2571,2569,1,0,0,0,2571,2572,1,0,0,0,2572,2575,1,0,0,
+        0,2573,2571,1,0,0,0,2574,2576,5,9,0,0,2575,2574,1,0,0,0,2575,2576,
+        1,0,0,0,2576,2578,1,0,0,0,2577,2566,1,0,0,0,2577,2578,1,0,0,0,2578,
+        2579,1,0,0,0,2579,2580,5,8,0,0,2580,503,1,0,0,0,2581,2582,3,518,
+        259,0,2582,2586,5,17,0,0,2583,2587,3,582,291,0,2584,2587,7,32,0,
+        0,2585,2587,3,518,259,0,2586,2583,1,0,0,0,2586,2584,1,0,0,0,2586,
+        2585,1,0,0,0,2587,505,1,0,0,0,2588,2589,5,156,0,0,2589,2590,5,31,
+        0,0,2590,2591,3,582,291,0,2591,2592,5,8,0,0,2592,2593,3,508,254,
+        0,2593,2594,3,510,255,0,2594,2595,3,512,256,0,2595,507,1,0,0,0,2596,
+        2597,5,53,0,0,2597,2598,5,31,0,0,2598,2599,3,74,37,0,2599,2600,5,
+        8,0,0,2600,509,1,0,0,0,2601,2602,5,75,0,0,2602,2603,5,31,0,0,2603,
+        2604,3,74,37,0,2604,2605,5,8,0,0,2605,511,1,0,0,0,2606,2607,5,40,
+        0,0,2607,2608,5,31,0,0,2608,2609,3,334,167,0,2609,2610,5,8,0,0,2610,
+        513,1,0,0,0,2611,2612,7,33,0,0,2612,515,1,0,0,0,2613,2614,7,34,0,
+        0,2614,517,1,0,0,0,2615,2616,3,540,270,0,2616,519,1,0,0,0,2617,2618,
+        3,538,269,0,2618,521,1,0,0,0,2619,2620,3,540,270,0,2620,523,1,0,
+        0,0,2621,2622,3,544,272,0,2622,525,1,0,0,0,2623,2626,3,520,260,0,
+        2624,2626,3,524,262,0,2625,2623,1,0,0,0,2625,2624,1,0,0,0,2626,527,
+        1,0,0,0,2627,2628,5,316,0,0,2628,529,1,0,0,0,2629,2630,7,35,0,0,
+        2630,531,1,0,0,0,2631,2632,7,36,0,0,2632,533,1,0,0,0,2633,2634,5,
+        30,0,0,2634,2635,3,582,291,0,2635,2636,5,5,0,0,2636,535,1,0,0,0,
+        2637,2640,3,528,264,0,2638,2640,3,530,265,0,2639,2637,1,0,0,0,2639,
+        2638,1,0,0,0,2640,537,1,0,0,0,2641,2645,3,528,264,0,2642,2645,3,
+        530,265,0,2643,2645,3,534,267,0,2644,2641,1,0,0,0,2644,2642,1,0,
+        0,0,2644,2643,1,0,0,0,2645,539,1,0,0,0,2646,2651,3,528,264,0,2647,
+        2651,3,530,265,0,2648,2651,3,532,266,0,2649,2651,3,534,267,0,2650,
+        2646,1,0,0,0,2650,2647,1,0,0,0,2650,2648,1,0,0,0,2650,2649,1,0,0,
+        0,2651,541,1,0,0,0,2652,2656,3,528,264,0,2653,2656,3,530,265,0,2654,
+        2656,3,532,266,0,2655,2652,1,0,0,0,2655,2653,1,0,0,0,2655,2654,1,
+        0,0,0,2656,543,1,0,0,0,2657,2659,3,546,273,0,2658,2657,1,0,0,0,2658,
+        2659,1,0,0,0,2659,2660,1,0,0,0,2660,2664,5,1,0,0,2661,2663,3,548,
+        274,0,2662,2661,1,0,0,0,2663,2666,1,0,0,0,2664,2662,1,0,0,0,2664,
+        2665,1,0,0,0,2665,545,1,0,0,0,2666,2664,1,0,0,0,2667,2671,5,316,
+        0,0,2668,2671,3,530,265,0,2669,2671,3,532,266,0,2670,2667,1,0,0,
+        0,2670,2668,1,0,0,0,2670,2669,1,0,0,0,2671,547,1,0,0,0,2672,2678,
+        5,316,0,0,2673,2678,3,530,265,0,2674,2678,3,532,266,0,2675,2678,
+        5,305,0,0,2676,2678,5,1,0,0,2677,2672,1,0,0,0,2677,2673,1,0,0,0,
+        2677,2674,1,0,0,0,2677,2675,1,0,0,0,2677,2676,1,0,0,0,2678,549,1,
+        0,0,0,2679,2682,3,558,279,0,2680,2682,3,552,276,0,2681,2679,1,0,
+        0,0,2681,2680,1,0,0,0,2682,551,1,0,0,0,2683,2695,3,560,280,0,2684,
+        2695,3,562,281,0,2685,2695,3,564,282,0,2686,2695,3,566,283,0,2687,
+        2695,3,568,284,0,2688,2695,3,570,285,0,2689,2695,3,572,286,0,2690,
+        2695,3,574,287,0,2691,2695,3,576,288,0,2692,2695,3,582,291,0,2693,
+        2695,3,584,292,0,2694,2683,1,0,0,0,2694,2684,1,0,0,0,2694,2685,1,
+        0,0,0,2694,2686,1,0,0,0,2694,2687,1,0,0,0,2694,2688,1,0,0,0,2694,
+        2689,1,0,0,0,2694,2690,1,0,0,0,2694,2691,1,0,0,0,2694,2692,1,0,0,
+        0,2694,2693,1,0,0,0,2695,553,1,0,0,0,2696,2704,3,560,280,0,2697,
+        2704,3,562,281,0,2698,2704,3,564,282,0,2699,2704,3,566,283,0,2700,
+        2704,3,558,279,0,2701,2704,3,568,284,0,2702,2704,3,570,285,0,2703,
+        2696,1,0,0,0,2703,2697,1,0,0,0,2703,2698,1,0,0,0,2703,2699,1,0,0,
+        0,2703,2700,1,0,0,0,2703,2701,1,0,0,0,2703,2702,1,0,0,0,2704,555,
+        1,0,0,0,2705,2711,3,560,280,0,2706,2711,3,562,281,0,2707,2711,3,
+        564,282,0,2708,2711,3,566,283,0,2709,2711,3,558,279,0,2710,2705,
+        1,0,0,0,2710,2706,1,0,0,0,2710,2707,1,0,0,0,2710,2708,1,0,0,0,2710,
+        2709,1,0,0,0,2711,557,1,0,0,0,2712,2715,3,578,289,0,2713,2715,3,
+        580,290,0,2714,2712,1,0,0,0,2714,2713,1,0,0,0,2715,559,1,0,0,0,2716,
+        2717,5,305,0,0,2717,561,1,0,0,0,2718,2719,5,306,0,0,2719,563,1,0,
+        0,0,2720,2721,5,307,0,0,2721,565,1,0,0,0,2722,2723,5,308,0,0,2723,
+        567,1,0,0,0,2724,2725,5,311,0,0,2725,569,1,0,0,0,2726,2727,5,312,
+        0,0,2727,571,1,0,0,0,2728,2729,5,310,0,0,2729,573,1,0,0,0,2730,2731,
+        5,315,0,0,2731,575,1,0,0,0,2732,2733,5,313,0,0,2733,577,1,0,0,0,
+        2734,2735,7,26,0,0,2735,2736,5,305,0,0,2736,579,1,0,0,0,2737,2738,
+        7,26,0,0,2738,2739,5,307,0,0,2739,581,1,0,0,0,2740,2744,5,309,0,
+        0,2741,2743,5,309,0,0,2742,2741,1,0,0,0,2743,2746,1,0,0,0,2744,2742,
+        1,0,0,0,2744,2745,1,0,0,0,2745,583,1,0,0,0,2746,2744,1,0,0,0,2747,
+        2748,5,285,0,0,2748,2749,5,31,0,0,2749,2750,3,586,293,0,2750,2751,
+        5,8,0,0,2751,585,1,0,0,0,2752,2764,3,592,296,0,2753,2764,3,594,297,
+        0,2754,2764,3,596,298,0,2755,2764,3,598,299,0,2756,2764,3,606,303,
+        0,2757,2764,3,600,300,0,2758,2764,3,588,294,0,2759,2764,3,608,304,
+        0,2760,2764,3,602,301,0,2761,2764,3,604,302,0,2762,2764,3,584,292,
+        0,2763,2752,1,0,0,0,2763,2753,1,0,0,0,2763,2754,1,0,0,0,2763,2755,
+        1,0,0,0,2763,2756,1,0,0,0,2763,2757,1,0,0,0,2763,2758,1,0,0,0,2763,
+        2759,1,0,0,0,2763,2760,1,0,0,0,2763,2761,1,0,0,0,2763,2762,1,0,0,
+        0,2764,587,1,0,0,0,2765,2774,5,29,0,0,2766,2771,3,590,295,0,2767,
+        2768,5,9,0,0,2768,2770,3,590,295,0,2769,2767,1,0,0,0,2770,2773,1,
+        0,0,0,2771,2769,1,0,0,0,2771,2772,1,0,0,0,2772,2775,1,0,0,0,2773,
+        2771,1,0,0,0,2774,2766,1,0,0,0,2774,2775,1,0,0,0,2775,2776,1,0,0,
+        0,2776,2777,5,4,0,0,2777,589,1,0,0,0,2778,2779,5,309,0,0,2779,2780,
+        5,10,0,0,2780,2781,3,586,293,0,2781,591,1,0,0,0,2782,2791,5,30,0,
+        0,2783,2788,3,586,293,0,2784,2785,5,9,0,0,2785,2787,3,586,293,0,
+        2786,2784,1,0,0,0,2787,2790,1,0,0,0,2788,2786,1,0,0,0,2788,2789,
+        1,0,0,0,2789,2792,1,0,0,0,2790,2788,1,0,0,0,2791,2783,1,0,0,0,2791,
+        2792,1,0,0,0,2792,2793,1,0,0,0,2793,2794,5,5,0,0,2794,593,1,0,0,
+        0,2795,2796,5,310,0,0,2796,595,1,0,0,0,2797,2798,5,311,0,0,2798,
+        597,1,0,0,0,2799,2800,5,315,0,0,2800,599,1,0,0,0,2801,2802,5,183,
+        0,0,2802,601,1,0,0,0,2803,2807,5,309,0,0,2804,2806,5,309,0,0,2805,
+        2804,1,0,0,0,2806,2809,1,0,0,0,2807,2805,1,0,0,0,2807,2808,1,0,0,
+        0,2808,603,1,0,0,0,2809,2807,1,0,0,0,2810,2811,5,312,0,0,2811,605,
+        1,0,0,0,2812,2814,5,11,0,0,2813,2812,1,0,0,0,2813,2814,1,0,0,0,2814,
+        2815,1,0,0,0,2815,2816,5,305,0,0,2816,607,1,0,0,0,2817,2819,5,11,
+        0,0,2818,2817,1,0,0,0,2818,2819,1,0,0,0,2819,2820,1,0,0,0,2820,2821,
+        5,307,0,0,2821,609,1,0,0,0,259,617,621,632,645,657,668,678,705,711,
+        720,732,747,751,754,760,766,771,777,787,802,807,815,833,848,855,
+        861,865,875,884,894,904,913,964,970,997,1003,1015,1022,1032,1037,
+        1046,1053,1058,1069,1081,1086,1098,1101,1106,1109,1114,1118,1129,
+        1140,1145,1149,1164,1173,1178,1185,1192,1195,1208,1220,1227,1235,
+        1238,1243,1254,1272,1278,1287,1292,1302,1310,1313,1322,1328,1336,
+        1339,1348,1358,1370,1374,1381,1390,1399,1407,1410,1431,1439,1445,
+        1448,1455,1473,1477,1488,1495,1503,1507,1510,1525,1534,1542,1546,
+        1550,1554,1564,1573,1576,1581,1585,1588,1592,1596,1606,1615,1624,
+        1630,1634,1639,1653,1658,1673,1682,1685,1693,1702,1705,1713,1716,
+        1724,1727,1731,1737,1743,1751,1758,1767,1770,1777,1830,1837,1853,
+        1859,1870,1879,1883,1886,1889,1896,1913,1923,1931,1934,1939,1953,
+        1964,1968,1971,1976,1989,1998,2006,2013,2022,2029,2033,2039,2047,
+        2050,2053,2061,2071,2080,2092,2102,2107,2112,2126,2134,2140,2146,
+        2153,2159,2169,2175,2181,2184,2190,2200,2215,2225,2236,2250,2270,
+        2276,2286,2294,2300,2305,2316,2323,2328,2334,2339,2355,2363,2377,
+        2385,2394,2397,2403,2408,2421,2425,2446,2452,2457,2474,2485,2493,
+        2503,2509,2515,2519,2525,2531,2535,2547,2557,2562,2571,2575,2577,
+        2586,2625,2639,2644,2650,2655,2658,2664,2670,2677,2681,2694,2703,
+        2710,2714,2744,2763,2771,2774,2788,2791,2807,2813,2818
+    ]
 
 class KqlParser ( Parser ):
 
@@ -2515,7 +2080,7 @@ class KqlParser ( Parser ):
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
-        self.checkVersion("4.8")
+        self.checkVersion("4.13.2")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
@@ -2523,6 +2088,7 @@ class KqlParser ( Parser ):
 
 
     class TopContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2542,6 +2108,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTop" ):
                 listener.exitTop(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTop" ):
+                return visitor.visitTop(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2564,6 +2136,7 @@ class KqlParser ( Parser ):
 
 
     class QueryContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2598,6 +2171,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitQuery" ):
                 listener.exitQuery(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitQuery" ):
+                return visitor.visitQuery(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2628,7 +2207,7 @@ class KqlParser ( Parser ):
             self.state = 621
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.SEMICOLON:
+            if _la==34:
                 self.state = 620
                 self.match(KqlParser.SEMICOLON)
 
@@ -2645,6 +2224,7 @@ class KqlParser ( Parser ):
 
 
     class StatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2695,6 +2275,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStatement" ):
                 listener.exitStatement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStatement" ):
+                return visitor.visitStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2760,6 +2346,7 @@ class KqlParser ( Parser ):
 
 
     class AliasDatabaseStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2795,6 +2382,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitAliasDatabaseStatement" ):
                 listener.exitAliasDatabaseStatement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAliasDatabaseStatement" ):
+                return visitor.visitAliasDatabaseStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2824,6 +2417,7 @@ class KqlParser ( Parser ):
 
 
     class LetStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2864,6 +2458,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLetStatement" ):
                 listener.exitLetStatement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLetStatement" ):
+                return visitor.visitLetStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2917,6 +2517,7 @@ class KqlParser ( Parser ):
 
 
     class LetVariableDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2949,6 +2550,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitLetVariableDeclaration" ):
                 listener.exitLetVariableDeclaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLetVariableDeclaration" ):
+                return visitor.visitLetVariableDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2976,6 +2583,7 @@ class KqlParser ( Parser ):
 
 
     class LetFunctionDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3019,6 +2627,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitLetFunctionDeclaration" ):
                 listener.exitLetFunctionDeclaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLetFunctionDeclaration" ):
+                return visitor.visitLetFunctionDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3040,7 +2654,7 @@ class KqlParser ( Parser ):
             self.state = 657
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.OPENBRACKET) | (1 << KqlParser.ACCESS) | (1 << KqlParser.ACCUMULATE) | (1 << KqlParser.AGGREGATIONS) | (1 << KqlParser.ALIAS) | (1 << KqlParser.ALL) | (1 << KqlParser.AS) | (1 << KqlParser.AXES) | (1 << KqlParser.BASE) | (1 << KqlParser.BIN) | (1 << KqlParser.BY) | (1 << KqlParser.CLUSTER) | (1 << KqlParser.CONSUME) | (1 << KqlParser.CONTAINS))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (KqlParser.COUNT - 66)) | (1 << (KqlParser.DATABASE - 66)) | (1 << (KqlParser.DATATABLE - 66)) | (1 << (KqlParser.DECLARE - 66)) | (1 << (KqlParser.DEFAULT - 66)) | (1 << (KqlParser.DELTA - 66)) | (1 << (KqlParser.DISTINCT - 66)) | (1 << (KqlParser.EDGES - 66)) | (1 << (KqlParser.EVALUATE - 66)) | (1 << (KqlParser.EXECUTE - 66)) | (1 << (KqlParser.EXTEND - 66)) | (1 << (KqlParser.EXTERNALDATA - 66)) | (1 << (KqlParser.FACET - 66)) | (1 << (KqlParser.FILTER - 66)) | (1 << (KqlParser.FIND - 66)) | (1 << (KqlParser.FORK - 66)) | (1 << (KqlParser.FROM - 66)) | (1 << (KqlParser.HAS - 66)) | (1 << (KqlParser.HIDDEN_ - 66)) | (1 << (KqlParser.HOT - 66)) | (1 << (KqlParser.HOTDATA - 66)) | (1 << (KqlParser.HOTINDEX - 66)) | (1 << (KqlParser.ID - 66)))) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & ((1 << (KqlParser.IN - 130)) | (1 << (KqlParser.INTO - 130)) | (1 << (KqlParser.INVOKE - 130)) | (1 << (KqlParser.LEGEND - 130)) | (1 << (KqlParser.LET - 130)) | (1 << (KqlParser.LIMIT - 130)) | (1 << (KqlParser.LINEAR - 130)) | (1 << (KqlParser.LIST - 130)) | (1 << (KqlParser.LOOKUP - 130)) | (1 << (KqlParser.LOG - 130)) | (1 << (KqlParser.MAP - 130)) | (1 << (KqlParser.MATERIALIZE - 130)) | (1 << (KqlParser.NODES - 130)) | (1 << (KqlParser.NONE - 130)) | (1 << (KqlParser.NULL - 130)) | (1 << (KqlParser.NULLS - 130)) | (1 << (KqlParser.OF - 130)) | (1 << (KqlParser.ON - 130)) | (1 << (KqlParser.OPTIONAL - 130)) | (1 << (KqlParser.OUTPUT - 130)) | (1 << (KqlParser.PACK - 130)))) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & ((1 << (KqlParser.PARSE - 194)) | (1 << (KqlParser.PARTITION - 194)) | (1 << (KqlParser.PARTITIONBY - 194)) | (1 << (KqlParser.PATTERN - 194)) | (1 << (KqlParser.PLUGIN - 194)) | (1 << (KqlParser.PRINT - 194)) | (1 << (KqlParser.QUERYPARAMETERS - 194)) | (1 << (KqlParser.RANGE - 194)) | (1 << (KqlParser.REDUCE - 194)) | (1 << (KqlParser.RENDER - 194)) | (1 << (KqlParser.REPLACE - 194)) | (1 << (KqlParser.RESTRICT - 194)) | (1 << (KqlParser.SAMPLE - 194)) | (1 << (KqlParser.SAMPLE_DISTINCT - 194)) | (1 << (KqlParser.SCAN - 194)) | (1 << (KqlParser.SEARCH - 194)) | (1 << (KqlParser.SERIALIZE - 194)) | (1 << (KqlParser.SERIES - 194)) | (1 << (KqlParser.SET - 194)) | (1 << (KqlParser.SORT - 194)) | (1 << (KqlParser.STACKED - 194)) | (1 << (KqlParser.STACKED100 - 194)) | (1 << (KqlParser.STEP - 194)) | (1 << (KqlParser.SUMMARIZE - 194)) | (1 << (KqlParser.TAKE - 194)) | (1 << (KqlParser.THRESHOLD - 194)) | (1 << (KqlParser.TITLE - 194)) | (1 << (KqlParser.TO - 194)) | (1 << (KqlParser.TOP - 194)) | (1 << (KqlParser.TOP_HITTERS - 194)) | (1 << (KqlParser.TOP_NESTED - 194)) | (1 << (KqlParser.TOSCALAR - 194)) | (1 << (KqlParser.TOTABLE - 194)) | (1 << (KqlParser.TYPEOF - 194)) | (1 << (KqlParser.UNSTACKED - 194)) | (1 << (KqlParser.UUID - 194)) | (1 << (KqlParser.VIEW - 194)))) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & ((1 << (KqlParser.VISIBLE - 258)) | (1 << (KqlParser.WHERE - 258)) | (1 << (KqlParser.WITH - 258)) | (1 << (KqlParser.XAXIS - 258)) | (1 << (KqlParser.XCOLUMN - 258)) | (1 << (KqlParser.XMAX - 258)) | (1 << (KqlParser.XMIN - 258)) | (1 << (KqlParser.XTITLE - 258)) | (1 << (KqlParser.YAXIS - 258)) | (1 << (KqlParser.YCOLUMNS - 258)) | (1 << (KqlParser.YMAX - 258)) | (1 << (KqlParser.YMIN - 258)) | (1 << (KqlParser.YSPLIT - 258)) | (1 << (KqlParser.YTITLE - 258)) | (1 << (KqlParser.BOOL - 258)) | (1 << (KqlParser.GUID - 258)) | (1 << (KqlParser.IDENTIFIER - 258)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 7684416123978121216) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & 8358751552889101161) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & 7196752211023416333) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & -1443165259434554279) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & 288230376692775943) != 0):
                 self.state = 656
                 localctx.ParameterList = self.letFunctionParameterList()
 
@@ -3059,6 +2673,7 @@ class KqlParser ( Parser ):
 
 
     class LetViewDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3105,6 +2720,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitLetViewDeclaration" ):
                 listener.exitLetViewDeclaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLetViewDeclaration" ):
+                return visitor.visitLetViewDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3128,7 +2749,7 @@ class KqlParser ( Parser ):
             self.state = 668
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.OPENBRACKET) | (1 << KqlParser.ACCESS) | (1 << KqlParser.ACCUMULATE) | (1 << KqlParser.AGGREGATIONS) | (1 << KqlParser.ALIAS) | (1 << KqlParser.ALL) | (1 << KqlParser.AS) | (1 << KqlParser.AXES) | (1 << KqlParser.BASE) | (1 << KqlParser.BIN) | (1 << KqlParser.BY) | (1 << KqlParser.CLUSTER) | (1 << KqlParser.CONSUME) | (1 << KqlParser.CONTAINS))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (KqlParser.COUNT - 66)) | (1 << (KqlParser.DATABASE - 66)) | (1 << (KqlParser.DATATABLE - 66)) | (1 << (KqlParser.DECLARE - 66)) | (1 << (KqlParser.DEFAULT - 66)) | (1 << (KqlParser.DELTA - 66)) | (1 << (KqlParser.DISTINCT - 66)) | (1 << (KqlParser.EDGES - 66)) | (1 << (KqlParser.EVALUATE - 66)) | (1 << (KqlParser.EXECUTE - 66)) | (1 << (KqlParser.EXTEND - 66)) | (1 << (KqlParser.EXTERNALDATA - 66)) | (1 << (KqlParser.FACET - 66)) | (1 << (KqlParser.FILTER - 66)) | (1 << (KqlParser.FIND - 66)) | (1 << (KqlParser.FORK - 66)) | (1 << (KqlParser.FROM - 66)) | (1 << (KqlParser.HAS - 66)) | (1 << (KqlParser.HIDDEN_ - 66)) | (1 << (KqlParser.HOT - 66)) | (1 << (KqlParser.HOTDATA - 66)) | (1 << (KqlParser.HOTINDEX - 66)) | (1 << (KqlParser.ID - 66)))) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & ((1 << (KqlParser.IN - 130)) | (1 << (KqlParser.INTO - 130)) | (1 << (KqlParser.INVOKE - 130)) | (1 << (KqlParser.LEGEND - 130)) | (1 << (KqlParser.LET - 130)) | (1 << (KqlParser.LIMIT - 130)) | (1 << (KqlParser.LINEAR - 130)) | (1 << (KqlParser.LIST - 130)) | (1 << (KqlParser.LOOKUP - 130)) | (1 << (KqlParser.LOG - 130)) | (1 << (KqlParser.MAP - 130)) | (1 << (KqlParser.MATERIALIZE - 130)) | (1 << (KqlParser.NODES - 130)) | (1 << (KqlParser.NONE - 130)) | (1 << (KqlParser.NULL - 130)) | (1 << (KqlParser.NULLS - 130)) | (1 << (KqlParser.OF - 130)) | (1 << (KqlParser.ON - 130)) | (1 << (KqlParser.OPTIONAL - 130)) | (1 << (KqlParser.OUTPUT - 130)) | (1 << (KqlParser.PACK - 130)))) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & ((1 << (KqlParser.PARSE - 194)) | (1 << (KqlParser.PARTITION - 194)) | (1 << (KqlParser.PARTITIONBY - 194)) | (1 << (KqlParser.PATTERN - 194)) | (1 << (KqlParser.PLUGIN - 194)) | (1 << (KqlParser.PRINT - 194)) | (1 << (KqlParser.QUERYPARAMETERS - 194)) | (1 << (KqlParser.RANGE - 194)) | (1 << (KqlParser.REDUCE - 194)) | (1 << (KqlParser.RENDER - 194)) | (1 << (KqlParser.REPLACE - 194)) | (1 << (KqlParser.RESTRICT - 194)) | (1 << (KqlParser.SAMPLE - 194)) | (1 << (KqlParser.SAMPLE_DISTINCT - 194)) | (1 << (KqlParser.SCAN - 194)) | (1 << (KqlParser.SEARCH - 194)) | (1 << (KqlParser.SERIALIZE - 194)) | (1 << (KqlParser.SERIES - 194)) | (1 << (KqlParser.SET - 194)) | (1 << (KqlParser.SORT - 194)) | (1 << (KqlParser.STACKED - 194)) | (1 << (KqlParser.STACKED100 - 194)) | (1 << (KqlParser.STEP - 194)) | (1 << (KqlParser.SUMMARIZE - 194)) | (1 << (KqlParser.TAKE - 194)) | (1 << (KqlParser.THRESHOLD - 194)) | (1 << (KqlParser.TITLE - 194)) | (1 << (KqlParser.TO - 194)) | (1 << (KqlParser.TOP - 194)) | (1 << (KqlParser.TOP_HITTERS - 194)) | (1 << (KqlParser.TOP_NESTED - 194)) | (1 << (KqlParser.TOSCALAR - 194)) | (1 << (KqlParser.TOTABLE - 194)) | (1 << (KqlParser.TYPEOF - 194)) | (1 << (KqlParser.UNSTACKED - 194)) | (1 << (KqlParser.UUID - 194)) | (1 << (KqlParser.VIEW - 194)))) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & ((1 << (KqlParser.VISIBLE - 258)) | (1 << (KqlParser.WHERE - 258)) | (1 << (KqlParser.WITH - 258)) | (1 << (KqlParser.XAXIS - 258)) | (1 << (KqlParser.XCOLUMN - 258)) | (1 << (KqlParser.XMAX - 258)) | (1 << (KqlParser.XMIN - 258)) | (1 << (KqlParser.XTITLE - 258)) | (1 << (KqlParser.YAXIS - 258)) | (1 << (KqlParser.YCOLUMNS - 258)) | (1 << (KqlParser.YMAX - 258)) | (1 << (KqlParser.YMIN - 258)) | (1 << (KqlParser.YSPLIT - 258)) | (1 << (KqlParser.YTITLE - 258)) | (1 << (KqlParser.BOOL - 258)) | (1 << (KqlParser.GUID - 258)) | (1 << (KqlParser.IDENTIFIER - 258)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 7684416123978121216) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & 8358751552889101161) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & 7196752211023416333) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & -1443165259434554279) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & 288230376692775943) != 0):
                 self.state = 667
                 localctx.ParameterList = self.letViewParameterList()
 
@@ -3147,6 +2768,7 @@ class KqlParser ( Parser ):
 
 
     class LetViewParameterListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3178,6 +2800,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitLetViewParameterList" ):
                 listener.exitLetViewParameterList(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLetViewParameterList" ):
+                return visitor.visitLetViewParameterList(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3194,7 +2822,7 @@ class KqlParser ( Parser ):
             self.state = 678
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 674
                 self.match(KqlParser.COMMA)
                 self.state = 675
@@ -3214,6 +2842,7 @@ class KqlParser ( Parser ):
 
 
     class LetMaterializeDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3255,6 +2884,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitLetMaterializeDeclaration" ):
                 listener.exitLetMaterializeDeclaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLetMaterializeDeclaration" ):
+                return visitor.visitLetMaterializeDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3288,6 +2923,7 @@ class KqlParser ( Parser ):
 
 
     class LetEntityGroupDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3319,6 +2955,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitLetEntityGroupDeclaration" ):
                 listener.exitLetEntityGroupDeclaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLetEntityGroupDeclaration" ):
+                return visitor.visitLetEntityGroupDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3346,6 +2988,7 @@ class KqlParser ( Parser ):
 
 
     class LetFunctionParameterListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3385,6 +3028,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLetFunctionParameterList" ):
                 listener.exitLetFunctionParameterList(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLetFunctionParameterList" ):
+                return visitor.visitLetFunctionParameterList(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3440,6 +3089,7 @@ class KqlParser ( Parser ):
 
 
     class ScalarParameterContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3474,6 +3124,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitScalarParameter" ):
                 listener.exitScalarParameter(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitScalarParameter" ):
+                return visitor.visitScalarParameter(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3493,7 +3149,7 @@ class KqlParser ( Parser ):
             self.state = 711
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.EQUAL:
+            if _la==17:
                 self.state = 710
                 localctx.Default = self.scalarParameterDefault()
 
@@ -3508,6 +3164,7 @@ class KqlParser ( Parser ):
 
 
     class ScalarParameterDefaultContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3532,6 +3189,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitScalarParameterDefault" ):
                 listener.exitScalarParameterDefault(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitScalarParameterDefault" ):
+                return visitor.visitScalarParameterDefault(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3555,6 +3218,7 @@ class KqlParser ( Parser ):
 
 
     class TabularParameterContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3588,6 +3252,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTabularParameter" ):
                 listener.exitTabularParameter(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTabularParameter" ):
+                return visitor.visitTabularParameter(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3626,6 +3296,7 @@ class KqlParser ( Parser ):
 
 
     class TabularParameterOpenSchemaContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3650,6 +3321,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTabularParameterOpenSchema" ):
                 listener.exitTabularParameterOpenSchema(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTabularParameterOpenSchema" ):
+                return visitor.visitTabularParameterOpenSchema(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3676,6 +3353,7 @@ class KqlParser ( Parser ):
 
 
     class TabularParameterRowSchemaContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3713,6 +3391,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitTabularParameterRowSchema" ):
                 listener.exitTabularParameterRowSchema(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTabularParameterRowSchema" ):
+                return visitor.visitTabularParameterRowSchema(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3731,7 +3415,7 @@ class KqlParser ( Parser ):
             self.state = 732
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 728
                 self.match(KqlParser.COMMA)
                 self.state = 729
@@ -3753,6 +3437,7 @@ class KqlParser ( Parser ):
 
 
     class TabularParameterRowSchemaColumnDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3782,6 +3467,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitTabularParameterRowSchemaColumnDeclaration" ):
                 listener.exitTabularParameterRowSchemaColumnDeclaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTabularParameterRowSchemaColumnDeclaration" ):
+                return visitor.visitTabularParameterRowSchemaColumnDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3807,6 +3498,7 @@ class KqlParser ( Parser ):
 
 
     class LetFunctionBodyContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3849,6 +3541,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitLetFunctionBody" ):
                 listener.exitLetFunctionBody(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLetFunctionBody" ):
+                return visitor.visitLetFunctionBody(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3878,7 +3576,7 @@ class KqlParser ( Parser ):
             self.state = 751
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.ASTERISK) | (1 << KqlParser.DASH) | (1 << KqlParser.OPENBRACKET) | (1 << KqlParser.OPENPAREN) | (1 << KqlParser.PLUS) | (1 << KqlParser.ACCESS) | (1 << KqlParser.AGGREGATIONS) | (1 << KqlParser.ALIAS) | (1 << KqlParser.ALL) | (1 << KqlParser.AXES) | (1 << KqlParser.BASE) | (1 << KqlParser.BIN) | (1 << KqlParser.CLUSTER))) != 0) or ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & ((1 << (KqlParser.CONTEXTUAL_DATATABLE - 65)) | (1 << (KqlParser.COUNT - 65)) | (1 << (KqlParser.DATABASE - 65)) | (1 << (KqlParser.DATATABLE - 65)) | (1 << (KqlParser.DECLARE - 65)) | (1 << (KqlParser.DEFAULT - 65)) | (1 << (KqlParser.DELTA - 65)) | (1 << (KqlParser.EDGES - 65)) | (1 << (KqlParser.EVALUATE - 65)) | (1 << (KqlParser.EXECUTE - 65)) | (1 << (KqlParser.EXTERNALDATA - 65)) | (1 << (KqlParser.EXTERNAL_DATA - 65)) | (1 << (KqlParser.FACET - 65)) | (1 << (KqlParser.FIND - 65)) | (1 << (KqlParser.FORK - 65)) | (1 << (KqlParser.FROM - 65)) | (1 << (KqlParser.HIDDEN_ - 65)) | (1 << (KqlParser.HOT - 65)) | (1 << (KqlParser.HOTDATA - 65)) | (1 << (KqlParser.HOTINDEX - 65)) | (1 << (KqlParser.ID - 65)))) != 0) or ((((_la - 132)) & ~0x3f) == 0 and ((1 << (_la - 132)) & ((1 << (KqlParser.INTO - 132)) | (1 << (KqlParser.LEGEND - 132)) | (1 << (KqlParser.LET - 132)) | (1 << (KqlParser.LINEAR - 132)) | (1 << (KqlParser.LIST - 132)) | (1 << (KqlParser.LOOKUP - 132)) | (1 << (KqlParser.LOG - 132)) | (1 << (KqlParser.MACROEXPAND - 132)) | (1 << (KqlParser.MAP - 132)) | (1 << (KqlParser.MATERIALIZED_VIEW_COMBINE - 132)) | (1 << (KqlParser.NODES - 132)) | (1 << (KqlParser.NONE - 132)) | (1 << (KqlParser.NULL - 132)) | (1 << (KqlParser.NULLS - 132)) | (1 << (KqlParser.ON - 132)) | (1 << (KqlParser.OPTIONAL - 132)) | (1 << (KqlParser.OUTPUT - 132)) | (1 << (KqlParser.PACK - 132)))) != 0) or ((((_la - 197)) & ~0x3f) == 0 and ((1 << (_la - 197)) & ((1 << (KqlParser.PARTITION - 197)) | (1 << (KqlParser.PARTITIONBY - 197)) | (1 << (KqlParser.PATTERN - 197)) | (1 << (KqlParser.PLUGIN - 197)) | (1 << (KqlParser.PRINT - 197)) | (1 << (KqlParser.QUERYPARAMETERS - 197)) | (1 << (KqlParser.RANGE - 197)) | (1 << (KqlParser.REDUCE - 197)) | (1 << (KqlParser.RENDER - 197)) | (1 << (KqlParser.REPLACE - 197)) | (1 << (KqlParser.RESTRICT - 197)) | (1 << (KqlParser.SEARCH - 197)) | (1 << (KqlParser.SERIES - 197)) | (1 << (KqlParser.STACKED - 197)) | (1 << (KqlParser.STACKED100 - 197)) | (1 << (KqlParser.STEP - 197)) | (1 << (KqlParser.THRESHOLD - 197)) | (1 << (KqlParser.TOSCALAR - 197)) | (1 << (KqlParser.TOTABLE - 197)) | (1 << (KqlParser.TYPEOF - 197)) | (1 << (KqlParser.UNION - 197)) | (1 << (KqlParser.UNSTACKED - 197)) | (1 << (KqlParser.UUID - 197)) | (1 << (KqlParser.VIEW - 197)) | (1 << (KqlParser.VISIBLE - 197)) | (1 << (KqlParser.WITH - 197)))) != 0) or ((((_la - 268)) & ~0x3f) == 0 and ((1 << (_la - 268)) & ((1 << (KqlParser.XAXIS - 268)) | (1 << (KqlParser.XCOLUMN - 268)) | (1 << (KqlParser.XMAX - 268)) | (1 << (KqlParser.XMIN - 268)) | (1 << (KqlParser.XTITLE - 268)) | (1 << (KqlParser.YAXIS - 268)) | (1 << (KqlParser.YCOLUMNS - 268)) | (1 << (KqlParser.YMAX - 268)) | (1 << (KqlParser.YMIN - 268)) | (1 << (KqlParser.YSPLIT - 268)) | (1 << (KqlParser.YTITLE - 268)) | (1 << (KqlParser.BOOL - 268)) | (1 << (KqlParser.DYNAMIC - 268)) | (1 << (KqlParser.GUID - 268)) | (1 << (KqlParser.LONGLITERAL - 268)) | (1 << (KqlParser.INTLITERAL - 268)) | (1 << (KqlParser.REALLITERAL - 268)) | (1 << (KqlParser.DECIMALLITERAL - 268)) | (1 << (KqlParser.STRINGLITERAL - 268)) | (1 << (KqlParser.BOOLEANLITERAL - 268)) | (1 << (KqlParser.DATETIMELITERAL - 268)) | (1 << (KqlParser.TIMESPANLITERAL - 268)) | (1 << (KqlParser.TYPELITERAL - 268)) | (1 << (KqlParser.GUIDLITERAL - 268)) | (1 << (KqlParser.IDENTIFIER - 268)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 622630631754434562) != 0) or ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & -1729241517714430253) != 0) or ((((_la - 132)) & ~0x3f) == 0 and ((1 << (_la - 132)) & 1790180853509759745) != 0) or ((((_la - 197)) & ~0x3f) == 0 and ((1 << (_la - 197)) & -4656703218566889077) != 0) or ((((_la - 268)) & ~0x3f) == 0 and ((1 << (_la - 268)) & 492443770949631) != 0):
                 self.state = 750
                 localctx.Expression = self.expression()
 
@@ -3886,7 +3584,7 @@ class KqlParser ( Parser ):
             self.state = 754
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.SEMICOLON:
+            if _la==34:
                 self.state = 753
                 self.match(KqlParser.SEMICOLON)
 
@@ -3903,6 +3601,7 @@ class KqlParser ( Parser ):
 
 
     class LetFunctionBodyStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3929,6 +3628,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitLetFunctionBodyStatement" ):
                 listener.exitLetFunctionBodyStatement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLetFunctionBodyStatement" ):
+                return visitor.visitLetFunctionBodyStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3940,12 +3645,12 @@ class KqlParser ( Parser ):
             self.state = 760
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.LET]:
+            if token in [141]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 758
                 localctx.Let = self.letStatement()
                 pass
-            elif token in [KqlParser.DECLARE]:
+            elif token in [72]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 759
                 localctx.DeclareQueryParameters = self.declareQueryParametersStatement()
@@ -3963,6 +3668,7 @@ class KqlParser ( Parser ):
 
 
     class DeclarePatternStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3995,6 +3701,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitDeclarePatternStatement" ):
                 listener.exitDeclarePatternStatement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeclarePatternStatement" ):
+                return visitor.visitDeclarePatternStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4014,7 +3726,7 @@ class KqlParser ( Parser ):
             self.state = 766
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.EQUAL:
+            if _la==17:
                 self.state = 765
                 localctx.Definition = self.declarePatternDefinition()
 
@@ -4029,6 +3741,7 @@ class KqlParser ( Parser ):
 
 
     class DeclarePatternDefinitionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4073,6 +3786,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitDeclarePatternDefinition" ):
                 listener.exitDeclarePatternDefinition(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeclarePatternDefinition" ):
+                return visitor.visitDeclarePatternDefinition(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4090,7 +3809,7 @@ class KqlParser ( Parser ):
             self.state = 771
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.OPENBRACKET:
+            if _la==30:
                 self.state = 770
                 localctx.Path = self.declarePatternPathParameter()
 
@@ -4107,7 +3826,7 @@ class KqlParser ( Parser ):
                 self.state = 777 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not (_la==KqlParser.OPENPAREN):
+                if not (_la==31):
                     break
 
             self.state = 779
@@ -4122,6 +3841,7 @@ class KqlParser ( Parser ):
 
 
     class DeclarePatternParameterListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4159,6 +3879,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitDeclarePatternParameterList" ):
                 listener.exitDeclarePatternParameterList(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeclarePatternParameterList" ):
+                return visitor.visitDeclarePatternParameterList(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4177,7 +3903,7 @@ class KqlParser ( Parser ):
             self.state = 787
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 783
                 self.match(KqlParser.COMMA)
                 self.state = 784
@@ -4199,6 +3925,7 @@ class KqlParser ( Parser ):
 
 
     class DeclarePatternParameterContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4228,6 +3955,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitDeclarePatternParameter" ):
                 listener.exitDeclarePatternParameter(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeclarePatternParameter" ):
+                return visitor.visitDeclarePatternParameter(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4253,6 +3986,7 @@ class KqlParser ( Parser ):
 
 
     class DeclarePatternPathParameterContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4280,6 +4014,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitDeclarePatternPathParameter" ):
                 listener.exitDeclarePatternPathParameter(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeclarePatternPathParameter" ):
+                return visitor.visitDeclarePatternPathParameter(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4305,6 +4045,7 @@ class KqlParser ( Parser ):
 
 
     class DeclarePatternRuleContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4343,6 +4084,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitDeclarePatternRule" ):
                 listener.exitDeclarePatternRule(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeclarePatternRule" ):
+                return visitor.visitDeclarePatternRule(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4358,7 +4105,7 @@ class KqlParser ( Parser ):
             self.state = 802
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.DOT:
+            if _la==15:
                 self.state = 801
                 localctx.PathArgument = self.declarePatternRulePathArgument()
 
@@ -4370,7 +4117,7 @@ class KqlParser ( Parser ):
             self.state = 807
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.SEMICOLON:
+            if _la==34:
                 self.state = 806
                 localctx.TrailingSemicolon = self.match(KqlParser.SEMICOLON)
 
@@ -4385,6 +4132,7 @@ class KqlParser ( Parser ):
 
 
     class DeclarePatternRuleArgumentListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4422,6 +4170,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitDeclarePatternRuleArgumentList" ):
                 listener.exitDeclarePatternRuleArgumentList(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeclarePatternRuleArgumentList" ):
+                return visitor.visitDeclarePatternRuleArgumentList(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4440,7 +4194,7 @@ class KqlParser ( Parser ):
             self.state = 815
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 811
                 self.match(KqlParser.COMMA)
                 self.state = 812
@@ -4462,6 +4216,7 @@ class KqlParser ( Parser ):
 
 
     class DeclarePatternRulePathArgumentContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4492,6 +4247,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitDeclarePatternRulePathArgument" ):
                 listener.exitDeclarePatternRulePathArgument(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeclarePatternRulePathArgument" ):
+                return visitor.visitDeclarePatternRulePathArgument(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4519,6 +4280,7 @@ class KqlParser ( Parser ):
 
 
     class DeclarePatternRuleArgumentContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4538,6 +4300,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDeclarePatternRuleArgument" ):
                 listener.exitDeclarePatternRuleArgument(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeclarePatternRuleArgument" ):
+                return visitor.visitDeclarePatternRuleArgument(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -4560,6 +4328,7 @@ class KqlParser ( Parser ):
 
 
     class DeclarePatternBodyContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4602,6 +4371,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitDeclarePatternBody" ):
                 listener.exitDeclarePatternBody(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeclarePatternBody" ):
+                return visitor.visitDeclarePatternBody(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4641,6 +4416,7 @@ class KqlParser ( Parser ):
 
 
     class RestrictAccessStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4687,6 +4463,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitRestrictAccessStatement" ):
                 listener.exitRestrictAccessStatement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRestrictAccessStatement" ):
+                return visitor.visitRestrictAccessStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4711,7 +4493,7 @@ class KqlParser ( Parser ):
             self.state = 848
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 844
                 self.match(KqlParser.COMMA)
                 self.state = 845
@@ -4733,6 +4515,7 @@ class KqlParser ( Parser ):
 
 
     class RestrictAccessStatementEntityContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4758,6 +4541,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRestrictAccessStatementEntity" ):
                 listener.exitRestrictAccessStatementEntity(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRestrictAccessStatementEntity" ):
+                return visitor.visitRestrictAccessStatementEntity(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -4793,6 +4582,7 @@ class KqlParser ( Parser ):
 
 
     class SetStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4825,6 +4615,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitSetStatement" ):
                 listener.exitSetStatement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSetStatement" ):
+                return visitor.visitSetStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4842,7 +4638,7 @@ class KqlParser ( Parser ):
             self.state = 861
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.EQUAL:
+            if _la==17:
                 self.state = 859
                 self.match(KqlParser.EQUAL)
                 self.state = 860
@@ -4859,6 +4655,7 @@ class KqlParser ( Parser ):
 
 
     class SetStatementOptionValueContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4885,6 +4682,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitSetStatementOptionValue" ):
                 listener.exitSetStatementOptionValue(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSetStatementOptionValue" ):
+                return visitor.visitSetStatementOptionValue(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4896,12 +4699,12 @@ class KqlParser ( Parser ):
             self.state = 865
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.ACCESS, KqlParser.AGGREGATIONS, KqlParser.ALIAS, KqlParser.ALL, KqlParser.AXES, KqlParser.BASE, KqlParser.BIN, KqlParser.CLUSTER, KqlParser.DATABASE, KqlParser.DECLARE, KqlParser.DEFAULT, KqlParser.DELTA, KqlParser.EDGES, KqlParser.EVALUATE, KqlParser.EXECUTE, KqlParser.FACET, KqlParser.FORK, KqlParser.FROM, KqlParser.HIDDEN_, KqlParser.HOT, KqlParser.HOTDATA, KqlParser.HOTINDEX, KqlParser.ID, KqlParser.INTO, KqlParser.LEGEND, KqlParser.LET, KqlParser.LINEAR, KqlParser.LIST, KqlParser.LOOKUP, KqlParser.LOG, KqlParser.MAP, KqlParser.NODES, KqlParser.NONE, KqlParser.NULL, KqlParser.NULLS, KqlParser.ON, KqlParser.OPTIONAL, KqlParser.OUTPUT, KqlParser.PACK, KqlParser.PARTITION, KqlParser.PARTITIONBY, KqlParser.PATTERN, KqlParser.PLUGIN, KqlParser.QUERYPARAMETERS, KqlParser.RANGE, KqlParser.REDUCE, KqlParser.RENDER, KqlParser.REPLACE, KqlParser.RESTRICT, KqlParser.SERIES, KqlParser.STACKED, KqlParser.STACKED100, KqlParser.STEP, KqlParser.THRESHOLD, KqlParser.TYPEOF, KqlParser.UNSTACKED, KqlParser.UUID, KqlParser.VIEW, KqlParser.VISIBLE, KqlParser.WITH, KqlParser.XAXIS, KqlParser.XCOLUMN, KqlParser.XMAX, KqlParser.XMIN, KqlParser.XTITLE, KqlParser.YAXIS, KqlParser.YCOLUMNS, KqlParser.YMAX, KqlParser.YMIN, KqlParser.YSPLIT, KqlParser.YTITLE, KqlParser.BOOL, KqlParser.GUID, KqlParser.IDENTIFIER]:
+            if token in [38, 40, 41, 42, 50, 53, 55, 59, 69, 72, 74, 75, 78, 82, 83, 89, 94, 95, 112, 124, 126, 127, 128, 132, 140, 141, 145, 147, 148, 149, 153, 161, 162, 183, 184, 186, 187, 191, 192, 197, 198, 200, 204, 213, 214, 215, 218, 219, 220, 227, 232, 233, 237, 241, 253, 255, 256, 257, 258, 260, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 287, 316]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 863
                 localctx.Name = self.identifierOrKeywordName()
                 pass
-            elif token in [KqlParser.DASH, KqlParser.PLUS, KqlParser.DYNAMIC, KqlParser.LONGLITERAL, KqlParser.INTLITERAL, KqlParser.REALLITERAL, KqlParser.DECIMALLITERAL, KqlParser.STRINGLITERAL, KqlParser.BOOLEANLITERAL, KqlParser.DATETIMELITERAL, KqlParser.TIMESPANLITERAL, KqlParser.TYPELITERAL, KqlParser.GUIDLITERAL]:
+            elif token in [11, 33, 285, 305, 306, 307, 308, 309, 310, 311, 312, 313, 315]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 864
                 localctx.Literal = self.literalExpression()
@@ -4919,6 +4722,7 @@ class KqlParser ( Parser ):
 
 
     class DeclareQueryParametersStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4962,6 +4766,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitDeclareQueryParametersStatement" ):
                 listener.exitDeclareQueryParametersStatement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeclareQueryParametersStatement" ):
+                return visitor.visitDeclareQueryParametersStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4984,7 +4794,7 @@ class KqlParser ( Parser ):
             self.state = 875
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 871
                 self.match(KqlParser.COMMA)
                 self.state = 872
@@ -5006,6 +4816,7 @@ class KqlParser ( Parser ):
 
 
     class DeclareQueryParametersStatementParameterContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5040,6 +4851,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitDeclareQueryParametersStatementParameter" ):
                 listener.exitDeclareQueryParametersStatementParameter(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeclareQueryParametersStatementParameter" ):
+                return visitor.visitDeclareQueryParametersStatementParameter(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -5059,7 +4876,7 @@ class KqlParser ( Parser ):
             self.state = 884
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.EQUAL:
+            if _la==17:
                 self.state = 883
                 localctx.Default = self.scalarParameterDefault()
 
@@ -5074,6 +4891,7 @@ class KqlParser ( Parser ):
 
 
     class QueryStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5094,6 +4912,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitQueryStatement" ):
                 listener.exitQueryStatement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitQueryStatement" ):
+                return visitor.visitQueryStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5116,6 +4940,7 @@ class KqlParser ( Parser ):
 
 
     class ExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5135,6 +4960,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExpression" ):
                 listener.exitExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExpression" ):
+                return visitor.visitExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5157,6 +4988,7 @@ class KqlParser ( Parser ):
 
 
     class PipeExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5186,6 +5018,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPipeExpression" ):
                 listener.exitPipeExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPipeExpression" ):
+                return visitor.visitPipeExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5220,6 +5058,7 @@ class KqlParser ( Parser ):
 
 
     class PipedOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5244,6 +5083,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitPipedOperator" ):
                 listener.exitPipedOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPipedOperator" ):
+                return visitor.visitPipedOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -5267,6 +5112,7 @@ class KqlParser ( Parser ):
 
 
     class PipeSubExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5297,6 +5143,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitPipeSubExpression" ):
                 listener.exitPipeSubExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPipeSubExpression" ):
+                return visitor.visitPipeSubExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -5312,7 +5164,7 @@ class KqlParser ( Parser ):
             self.state = 904
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.BAR:
+            while _la==3:
                 self.state = 901
                 localctx._pipedOperator = self.pipedOperator()
                 localctx.PipedOperators.append(localctx._pipedOperator)
@@ -5330,6 +5182,7 @@ class KqlParser ( Parser ):
 
 
     class BeforePipeExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5369,6 +5222,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBeforePipeExpression" ):
                 listener.exitBeforePipeExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBeforePipeExpression" ):
+                return visitor.visitBeforePipeExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5428,6 +5287,7 @@ class KqlParser ( Parser ):
 
 
     class AfterPipeOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5640,6 +5500,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitAfterPipeOperator" ):
                 listener.exitAfterPipeOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAfterPipeOperator" ):
+                return visitor.visitAfterPipeOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -5651,247 +5517,247 @@ class KqlParser ( Parser ):
             self.state = 964
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.AS]:
+            if token in [47]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 915
                 self.asOperator()
                 pass
-            elif token in [KqlParser.ASSERTSCHEMA]:
+            elif token in [49]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 916
                 self.assertSchemaOperator()
                 pass
-            elif token in [KqlParser.CONSUME]:
+            elif token in [61]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 917
                 self.consumeOperator()
                 pass
-            elif token in [KqlParser.COUNT]:
+            elif token in [66]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 918
                 self.countOperator()
                 pass
-            elif token in [KqlParser.DISTINCT]:
+            elif token in [77]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 919
                 self.distinctOperator()
                 pass
-            elif token in [KqlParser.EXECUTE_AND_CACHE]:
+            elif token in [84]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 920
                 self.executeAndCacheOperator()
                 pass
-            elif token in [KqlParser.EXTEND]:
+            elif token in [86]:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 921
                 self.extendOperator()
                 pass
-            elif token in [KqlParser.FACET]:
+            elif token in [89]:
                 self.enterOuterAlt(localctx, 8)
                 self.state = 922
                 self.facetByOperator()
                 pass
-            elif token in [KqlParser.FIND]:
+            elif token in [91]:
                 self.enterOuterAlt(localctx, 9)
                 self.state = 923
                 self.findOperator()
                 pass
-            elif token in [KqlParser.FORK]:
+            elif token in [94]:
                 self.enterOuterAlt(localctx, 10)
                 self.state = 924
                 self.forkOperator()
                 pass
-            elif token in [KqlParser.GETSCHEMA]:
+            elif token in [96]:
                 self.enterOuterAlt(localctx, 11)
                 self.state = 925
                 self.getSchemaOperator()
                 pass
-            elif token in [KqlParser.GRAPHMARKCOMPONENTS]:
+            elif token in [99]:
                 self.enterOuterAlt(localctx, 12)
                 self.state = 926
                 self.graphMarkComponentsOperator()
                 pass
-            elif token in [KqlParser.GRAPHMATCH]:
+            elif token in [100]:
                 self.enterOuterAlt(localctx, 13)
                 self.state = 927
                 self.graphMatchOperator()
                 pass
-            elif token in [KqlParser.GRAPHMERGE]:
+            elif token in [101]:
                 self.enterOuterAlt(localctx, 14)
                 self.state = 928
                 self.graphMergeOperator()
                 pass
-            elif token in [KqlParser.GRAPHSHORTESTPATHS]:
+            elif token in [102]:
                 self.enterOuterAlt(localctx, 15)
                 self.state = 929
                 self.graphShortestPathsOperator()
                 pass
-            elif token in [KqlParser.GRAPHTOTABLE]:
+            elif token in [103]:
                 self.enterOuterAlt(localctx, 16)
                 self.state = 930
                 self.graphToTableOperator()
                 pass
-            elif token in [KqlParser.INVOKE]:
+            elif token in [133]:
                 self.enterOuterAlt(localctx, 17)
                 self.state = 931
                 self.invokeOperator()
                 pass
-            elif token in [KqlParser.JOIN]:
+            elif token in [136]:
                 self.enterOuterAlt(localctx, 18)
                 self.state = 932
                 self.joinOperator()
                 pass
-            elif token in [KqlParser.LOOKUP]:
+            elif token in [148]:
                 self.enterOuterAlt(localctx, 19)
                 self.state = 933
                 self.lookupOperator()
                 pass
-            elif token in [KqlParser.MAKEGRAPH]:
+            elif token in [151]:
                 self.enterOuterAlt(localctx, 20)
                 self.state = 934
                 self.makeGraphOperator()
                 pass
-            elif token in [KqlParser.MAKESERIES]:
+            elif token in [152]:
                 self.enterOuterAlt(localctx, 21)
                 self.state = 935
                 self.makeSeriesOperator()
                 pass
-            elif token in [KqlParser.MV_EXPAND, KqlParser.MVEXPAND]:
+            elif token in [158, 160]:
                 self.enterOuterAlt(localctx, 22)
                 self.state = 936
                 self.mvexpandOperator()
                 pass
-            elif token in [KqlParser.MV_APPLY, KqlParser.MVAPPLY]:
+            elif token in [157, 159]:
                 self.enterOuterAlt(localctx, 23)
                 self.state = 937
                 self.mvapplyOperator()
                 pass
-            elif token in [KqlParser.EVALUATE]:
+            elif token in [82]:
                 self.enterOuterAlt(localctx, 24)
                 self.state = 938
                 self.evaluateOperator()
                 pass
-            elif token in [KqlParser.PARSE]:
+            elif token in [194]:
                 self.enterOuterAlt(localctx, 25)
                 self.state = 939
                 self.parseOperator()
                 pass
-            elif token in [KqlParser.PARSEKV]:
+            elif token in [195]:
                 self.enterOuterAlt(localctx, 26)
                 self.state = 940
                 self.parseKvOperator()
                 pass
-            elif token in [KqlParser.PARSEWHERE]:
+            elif token in [196]:
                 self.enterOuterAlt(localctx, 27)
                 self.state = 941
                 self.parseWhereOperator()
                 pass
-            elif token in [KqlParser.PARTITION]:
+            elif token in [197]:
                 self.enterOuterAlt(localctx, 28)
                 self.state = 942
                 self.partitionOperator()
                 pass
-            elif token in [KqlParser.PARTITIONBY]:
+            elif token in [198]:
                 self.enterOuterAlt(localctx, 29)
                 self.state = 943
                 self.partitionByOperator()
                 pass
-            elif token in [KqlParser.PROJECT]:
+            elif token in [206]:
                 self.enterOuterAlt(localctx, 30)
                 self.state = 944
                 self.projectOperator()
                 pass
-            elif token in [KqlParser.PROJECTAWAY]:
+            elif token in [207]:
                 self.enterOuterAlt(localctx, 31)
                 self.state = 945
                 self.projectAwayOperator()
                 pass
-            elif token in [KqlParser.PROJECTRENAME]:
+            elif token in [210]:
                 self.enterOuterAlt(localctx, 32)
                 self.state = 946
                 self.projectRenameOperator()
                 pass
-            elif token in [KqlParser.PROJECTREORDER]:
+            elif token in [211]:
                 self.enterOuterAlt(localctx, 33)
                 self.state = 947
                 self.projectReorderOperator()
                 pass
-            elif token in [KqlParser.PROJECTKEEP]:
+            elif token in [209]:
                 self.enterOuterAlt(localctx, 34)
                 self.state = 948
                 self.projectKeepOperator()
                 pass
-            elif token in [KqlParser.REDUCE]:
+            elif token in [215]:
                 self.enterOuterAlt(localctx, 35)
                 self.state = 949
                 self.reduceByOperator()
                 pass
-            elif token in [KqlParser.RENDER]:
+            elif token in [218]:
                 self.enterOuterAlt(localctx, 36)
                 self.state = 950
                 self.renderOperator()
                 pass
-            elif token in [KqlParser.SAMPLE]:
+            elif token in [221]:
                 self.enterOuterAlt(localctx, 37)
                 self.state = 951
                 self.sampleOperator()
                 pass
-            elif token in [KqlParser.SAMPLE_DISTINCT]:
+            elif token in [222]:
                 self.enterOuterAlt(localctx, 38)
                 self.state = 952
                 self.sampleDistinctOperator()
                 pass
-            elif token in [KqlParser.SCAN]:
+            elif token in [223]:
                 self.enterOuterAlt(localctx, 39)
                 self.state = 953
                 self.scanOperator()
                 pass
-            elif token in [KqlParser.SEARCH]:
+            elif token in [225]:
                 self.enterOuterAlt(localctx, 40)
                 self.state = 954
                 self.searchOperator()
                 pass
-            elif token in [KqlParser.SERIALIZE]:
+            elif token in [226]:
                 self.enterOuterAlt(localctx, 41)
                 self.state = 955
                 self.serializeOperator()
                 pass
-            elif token in [KqlParser.ORDER, KqlParser.SORT]:
+            elif token in [189, 230]:
                 self.enterOuterAlt(localctx, 42)
                 self.state = 956
                 self.sortOperator()
                 pass
-            elif token in [KqlParser.SUMMARIZE]:
+            elif token in [238]:
                 self.enterOuterAlt(localctx, 43)
                 self.state = 957
                 self.summarizeOperator()
                 pass
-            elif token in [KqlParser.LIMIT, KqlParser.TAKE]:
+            elif token in [144, 240]:
                 self.enterOuterAlt(localctx, 44)
                 self.state = 958
                 self.takeOperator()
                 pass
-            elif token in [KqlParser.TOP_HITTERS]:
+            elif token in [248]:
                 self.enterOuterAlt(localctx, 45)
                 self.state = 959
                 self.topHittersOperator()
                 pass
-            elif token in [KqlParser.TOP]:
+            elif token in [247]:
                 self.enterOuterAlt(localctx, 46)
                 self.state = 960
                 self.topOperator()
                 pass
-            elif token in [KqlParser.TOP_NESTED]:
+            elif token in [249]:
                 self.enterOuterAlt(localctx, 47)
                 self.state = 961
                 self.topNestedOperator()
                 pass
-            elif token in [KqlParser.UNION]:
+            elif token in [254]:
                 self.enterOuterAlt(localctx, 48)
                 self.state = 962
                 self.unionOperator()
                 pass
-            elif token in [KqlParser.FILTER, KqlParser.WHERE]:
+            elif token in [90, 259]:
                 self.enterOuterAlt(localctx, 49)
                 self.state = 963
                 self.whereOperator()
@@ -5909,6 +5775,7 @@ class KqlParser ( Parser ):
 
 
     class BeforeOrAfterPipeOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5941,6 +5808,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitBeforeOrAfterPipeOperator" ):
                 listener.exitBeforeOrAfterPipeOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBeforeOrAfterPipeOperator" ):
+                return visitor.visitBeforeOrAfterPipeOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -5952,22 +5825,22 @@ class KqlParser ( Parser ):
             self.state = 970
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.FIND]:
+            if token in [91]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 966
                 self.findOperator()
                 pass
-            elif token in [KqlParser.SEARCH]:
+            elif token in [225]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 967
                 self.searchOperator()
                 pass
-            elif token in [KqlParser.UNION]:
+            elif token in [254]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 968
                 self.unionOperator()
                 pass
-            elif token in [KqlParser.EVALUATE]:
+            elif token in [82]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 969
                 self.evaluateOperator()
@@ -5985,6 +5858,7 @@ class KqlParser ( Parser ):
 
 
     class ForkPipeOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6101,6 +5975,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitForkPipeOperator" ):
                 listener.exitForkPipeOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitForkPipeOperator" ):
+                return visitor.visitForkPipeOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6112,127 +5992,127 @@ class KqlParser ( Parser ):
             self.state = 997
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.COUNT]:
+            if token in [66]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 972
                 self.countOperator()
                 pass
-            elif token in [KqlParser.EXTEND]:
+            elif token in [86]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 973
                 self.extendOperator()
                 pass
-            elif token in [KqlParser.FILTER, KqlParser.WHERE]:
+            elif token in [90, 259]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 974
                 self.whereOperator()
                 pass
-            elif token in [KqlParser.PARSE]:
+            elif token in [194]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 975
                 self.parseOperator()
                 pass
-            elif token in [KqlParser.PARSEWHERE]:
+            elif token in [196]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 976
                 self.parseWhereOperator()
                 pass
-            elif token in [KqlParser.LIMIT, KqlParser.TAKE]:
+            elif token in [144, 240]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 977
                 self.takeOperator()
                 pass
-            elif token in [KqlParser.TOP_NESTED]:
+            elif token in [249]:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 978
                 self.topNestedOperator()
                 pass
-            elif token in [KqlParser.PROJECT]:
+            elif token in [206]:
                 self.enterOuterAlt(localctx, 8)
                 self.state = 979
                 self.projectOperator()
                 pass
-            elif token in [KqlParser.PROJECTAWAY]:
+            elif token in [207]:
                 self.enterOuterAlt(localctx, 9)
                 self.state = 980
                 self.projectAwayOperator()
                 pass
-            elif token in [KqlParser.PROJECTRENAME]:
+            elif token in [210]:
                 self.enterOuterAlt(localctx, 10)
                 self.state = 981
                 self.projectRenameOperator()
                 pass
-            elif token in [KqlParser.PROJECTREORDER]:
+            elif token in [211]:
                 self.enterOuterAlt(localctx, 11)
                 self.state = 982
                 self.projectReorderOperator()
                 pass
-            elif token in [KqlParser.PROJECTKEEP]:
+            elif token in [209]:
                 self.enterOuterAlt(localctx, 12)
                 self.state = 983
                 self.projectKeepOperator()
                 pass
-            elif token in [KqlParser.SUMMARIZE]:
+            elif token in [238]:
                 self.enterOuterAlt(localctx, 13)
                 self.state = 984
                 self.summarizeOperator()
                 pass
-            elif token in [KqlParser.DISTINCT]:
+            elif token in [77]:
                 self.enterOuterAlt(localctx, 14)
                 self.state = 985
                 self.distinctOperator()
                 pass
-            elif token in [KqlParser.TOP_HITTERS]:
+            elif token in [248]:
                 self.enterOuterAlt(localctx, 15)
                 self.state = 986
                 self.topHittersOperator()
                 pass
-            elif token in [KqlParser.TOP]:
+            elif token in [247]:
                 self.enterOuterAlt(localctx, 16)
                 self.state = 987
                 self.topOperator()
                 pass
-            elif token in [KqlParser.ORDER, KqlParser.SORT]:
+            elif token in [189, 230]:
                 self.enterOuterAlt(localctx, 17)
                 self.state = 988
                 self.sortOperator()
                 pass
-            elif token in [KqlParser.MV_EXPAND, KqlParser.MVEXPAND]:
+            elif token in [158, 160]:
                 self.enterOuterAlt(localctx, 18)
                 self.state = 989
                 self.mvexpandOperator()
                 pass
-            elif token in [KqlParser.REDUCE]:
+            elif token in [215]:
                 self.enterOuterAlt(localctx, 19)
                 self.state = 990
                 self.reduceByOperator()
                 pass
-            elif token in [KqlParser.SAMPLE]:
+            elif token in [221]:
                 self.enterOuterAlt(localctx, 20)
                 self.state = 991
                 self.sampleOperator()
                 pass
-            elif token in [KqlParser.SAMPLE_DISTINCT]:
+            elif token in [222]:
                 self.enterOuterAlt(localctx, 21)
                 self.state = 992
                 self.sampleDistinctOperator()
                 pass
-            elif token in [KqlParser.AS]:
+            elif token in [47]:
                 self.enterOuterAlt(localctx, 22)
                 self.state = 993
                 self.asOperator()
                 pass
-            elif token in [KqlParser.INVOKE]:
+            elif token in [133]:
                 self.enterOuterAlt(localctx, 23)
                 self.state = 994
                 self.invokeOperator()
                 pass
-            elif token in [KqlParser.EXECUTE_AND_CACHE]:
+            elif token in [84]:
                 self.enterOuterAlt(localctx, 24)
                 self.state = 995
                 self.executeAndCacheOperator()
                 pass
-            elif token in [KqlParser.SCAN]:
+            elif token in [223]:
                 self.enterOuterAlt(localctx, 25)
                 self.state = 996
                 self.scanOperator()
@@ -6250,6 +6130,7 @@ class KqlParser ( Parser ):
 
 
     class AsOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6282,6 +6163,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAsOperator" ):
                 listener.exitAsOperator(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAsOperator" ):
+                return visitor.visitAsOperator(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6318,6 +6205,7 @@ class KqlParser ( Parser ):
 
 
     class AssertSchemaOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6342,6 +6230,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitAssertSchemaOperator" ):
                 listener.exitAssertSchemaOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAssertSchemaOperator" ):
+                return visitor.visitAssertSchemaOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6365,6 +6259,7 @@ class KqlParser ( Parser ):
 
 
     class ConsumeOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6393,6 +6288,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitConsumeOperator" ):
                 listener.exitConsumeOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConsumeOperator" ):
+                return visitor.visitConsumeOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6408,7 +6309,7 @@ class KqlParser ( Parser ):
             self.state = 1015
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & ((1 << (KqlParser.WITH_SOURCE - 266)) | (1 << (KqlParser.WITH_STEP_NAME - 266)) | (1 << (KqlParser.IDENTIFIER - 266)))) != 0):
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & 1125899906842627) != 0):
                 self.state = 1012
                 localctx._relaxedQueryOperatorParameter = self.relaxedQueryOperatorParameter()
                 localctx.Parameters.append(localctx._relaxedQueryOperatorParameter)
@@ -6426,6 +6327,7 @@ class KqlParser ( Parser ):
 
 
     class CountOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6454,6 +6356,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitCountOperator" ):
                 listener.exitCountOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCountOperator" ):
+                return visitor.visitCountOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6469,7 +6377,7 @@ class KqlParser ( Parser ):
             self.state = 1022
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & ((1 << (KqlParser.WITH_SOURCE - 266)) | (1 << (KqlParser.WITH_STEP_NAME - 266)) | (1 << (KqlParser.IDENTIFIER - 266)))) != 0):
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & 1125899906842627) != 0):
                 self.state = 1019
                 localctx._relaxedQueryOperatorParameter = self.relaxedQueryOperatorParameter()
                 localctx.Parameters.append(localctx._relaxedQueryOperatorParameter)
@@ -6487,6 +6395,7 @@ class KqlParser ( Parser ):
 
 
     class CountOperatorAsClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6511,6 +6420,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitCountOperatorAsClause" ):
                 listener.exitCountOperatorAsClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCountOperatorAsClause" ):
+                return visitor.visitCountOperatorAsClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6534,6 +6449,7 @@ class KqlParser ( Parser ):
 
 
     class DistinctOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6571,6 +6487,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDistinctOperator" ):
                 listener.exitDistinctOperator(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDistinctOperator" ):
+                return visitor.visitDistinctOperator(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6619,6 +6541,7 @@ class KqlParser ( Parser ):
 
 
     class DistinctOperatorStarTargetContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6637,6 +6560,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDistinctOperatorStarTarget" ):
                 listener.exitDistinctOperatorStarTarget(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDistinctOperatorStarTarget" ):
+                return visitor.visitDistinctOperatorStarTarget(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6659,6 +6588,7 @@ class KqlParser ( Parser ):
 
 
     class DistinctOperatorColumnListTargetContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6690,6 +6620,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitDistinctOperatorColumnListTarget" ):
                 listener.exitDistinctOperatorColumnListTarget(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDistinctOperatorColumnListTarget" ):
+                return visitor.visitDistinctOperatorColumnListTarget(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6706,7 +6642,7 @@ class KqlParser ( Parser ):
             self.state = 1046
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 1042
                 self.match(KqlParser.COMMA)
                 self.state = 1043
@@ -6726,6 +6662,7 @@ class KqlParser ( Parser ):
 
 
     class EvaluateOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6764,6 +6701,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitEvaluateOperator" ):
                 listener.exitEvaluateOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEvaluateOperator" ):
+                return visitor.visitEvaluateOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6793,7 +6736,7 @@ class KqlParser ( Parser ):
             self.state = 1058
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.COLON:
+            if _la==10:
                 self.state = 1057
                 localctx.SchemaClause = self.evaluateOperatorSchemaClause()
 
@@ -6808,6 +6751,7 @@ class KqlParser ( Parser ):
 
 
     class EvaluateOperatorSchemaClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6832,6 +6776,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitEvaluateOperatorSchemaClause" ):
                 listener.exitEvaluateOperatorSchemaClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEvaluateOperatorSchemaClause" ):
+                return visitor.visitEvaluateOperatorSchemaClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6855,6 +6805,7 @@ class KqlParser ( Parser ):
 
 
     class ExtendOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6889,6 +6840,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitExtendOperator" ):
                 listener.exitExtendOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExtendOperator" ):
+                return visitor.visitExtendOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6907,7 +6864,7 @@ class KqlParser ( Parser ):
             self.state = 1069
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 1065
                 self.match(KqlParser.COMMA)
                 self.state = 1066
@@ -6927,6 +6884,7 @@ class KqlParser ( Parser ):
 
 
     class ExecuteAndCacheOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6945,6 +6903,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExecuteAndCacheOperator" ):
                 listener.exitExecuteAndCacheOperator(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExecuteAndCacheOperator" ):
+                return visitor.visitExecuteAndCacheOperator(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6967,6 +6931,7 @@ class KqlParser ( Parser ):
 
 
     class FacetByOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7014,6 +6979,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitFacetByOperator" ):
                 listener.exitFacetByOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFacetByOperator" ):
+                return visitor.visitFacetByOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7034,7 +7005,7 @@ class KqlParser ( Parser ):
             self.state = 1081
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 1077
                 self.match(KqlParser.COMMA)
                 self.state = 1078
@@ -7066,6 +7037,7 @@ class KqlParser ( Parser ):
 
 
     class FacetByOperatorWithOperatorClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7090,6 +7062,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitFacetByOperatorWithOperatorClause" ):
                 listener.exitFacetByOperatorWithOperatorClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFacetByOperatorWithOperatorClause" ):
+                return visitor.visitFacetByOperatorWithOperatorClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7113,6 +7091,7 @@ class KqlParser ( Parser ):
 
 
     class FacetByOperatorWithExpressionClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7143,6 +7122,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitFacetByOperatorWithExpressionClause" ):
                 listener.exitFacetByOperatorWithExpressionClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFacetByOperatorWithExpressionClause" ):
+                return visitor.visitFacetByOperatorWithExpressionClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7170,6 +7155,7 @@ class KqlParser ( Parser ):
 
 
     class FindOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7219,6 +7205,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitFindOperator" ):
                 listener.exitFindOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFindOperator" ):
+                return visitor.visitFindOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7234,7 +7226,7 @@ class KqlParser ( Parser ):
             self.state = 1098
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.DATASCOPE:
+            if _la==70:
                 self.state = 1097
                 localctx.DataScopeClause = self.dataScopeClause()
 
@@ -7264,7 +7256,7 @@ class KqlParser ( Parser ):
             self.state = 1109
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.PROJECTAWAY_:
+            if _la==208:
                 self.state = 1108
                 localctx.ProjectAwayClause = self.findOperatorProjectAwayClause()
 
@@ -7279,6 +7271,7 @@ class KqlParser ( Parser ):
 
 
     class FindOperatorParametersWhereClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7312,6 +7305,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitFindOperatorParametersWhereClause" ):
                 listener.exitFindOperatorParametersWhereClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFindOperatorParametersWhereClause" ):
+                return visitor.visitFindOperatorParametersWhereClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7325,7 +7324,7 @@ class KqlParser ( Parser ):
             self.state = 1114
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & ((1 << (KqlParser.WITH_SOURCE - 266)) | (1 << (KqlParser.WITH_STEP_NAME - 266)) | (1 << (KqlParser.IDENTIFIER - 266)))) != 0):
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & 1125899906842627) != 0):
                 self.state = 1111
                 localctx._relaxedQueryOperatorParameter = self.relaxedQueryOperatorParameter()
                 localctx.Parameters.append(localctx._relaxedQueryOperatorParameter)
@@ -7336,7 +7335,7 @@ class KqlParser ( Parser ):
             self.state = 1118
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.IN:
+            if _la==130:
                 self.state = 1117
                 localctx.InClause = self.findOperatorInClause()
 
@@ -7353,6 +7352,7 @@ class KqlParser ( Parser ):
 
 
     class FindOperatorInClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7393,6 +7393,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitFindOperatorInClause" ):
                 listener.exitFindOperatorInClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFindOperatorInClause" ):
+                return visitor.visitFindOperatorInClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7413,7 +7419,7 @@ class KqlParser ( Parser ):
             self.state = 1129
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 1125
                 self.match(KqlParser.COMMA)
                 self.state = 1126
@@ -7435,6 +7441,7 @@ class KqlParser ( Parser ):
 
 
     class FindOperatorProjectClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7469,6 +7476,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitFindOperatorProjectClause" ):
                 listener.exitFindOperatorProjectClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFindOperatorProjectClause" ):
+                return visitor.visitFindOperatorProjectClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7487,7 +7500,7 @@ class KqlParser ( Parser ):
             self.state = 1140
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 1136
                 self.match(KqlParser.COMMA)
                 self.state = 1137
@@ -7507,6 +7520,7 @@ class KqlParser ( Parser ):
 
 
     class FindOperatorProjectExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7532,6 +7546,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFindOperatorProjectExpression" ):
                 listener.exitFindOperatorProjectExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFindOperatorProjectExpression" ):
+                return visitor.visitFindOperatorProjectExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7567,6 +7587,7 @@ class KqlParser ( Parser ):
 
 
     class FindOperatorColumnExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7593,6 +7614,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitFindOperatorColumnExpression" ):
                 listener.exitFindOperatorColumnExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFindOperatorColumnExpression" ):
+                return visitor.visitFindOperatorColumnExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7608,7 +7635,7 @@ class KqlParser ( Parser ):
             self.state = 1149
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.COLON:
+            if _la==10:
                 self.state = 1148
                 localctx.OptionalType = self.findOperatorOptionalColumnType()
 
@@ -7623,6 +7650,7 @@ class KqlParser ( Parser ):
 
 
     class FindOperatorOptionalColumnTypeContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7647,6 +7675,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitFindOperatorOptionalColumnType" ):
                 listener.exitFindOperatorOptionalColumnType(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFindOperatorOptionalColumnType" ):
+                return visitor.visitFindOperatorOptionalColumnType(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7670,6 +7704,7 @@ class KqlParser ( Parser ):
 
 
     class FindOperatorPackExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7698,6 +7733,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitFindOperatorPackExpression" ):
                 listener.exitFindOperatorPackExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFindOperatorPackExpression" ):
+                return visitor.visitFindOperatorPackExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7725,6 +7766,7 @@ class KqlParser ( Parser ):
 
 
     class FindOperatorProjectSmartClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7743,6 +7785,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFindOperatorProjectSmartClause" ):
                 listener.exitFindOperatorProjectSmartClause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFindOperatorProjectSmartClause" ):
+                return visitor.visitFindOperatorProjectSmartClause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7765,6 +7813,7 @@ class KqlParser ( Parser ):
 
 
     class FindOperatorProjectAwayClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7794,6 +7843,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitFindOperatorProjectAwayClause" ):
                 listener.exitFindOperatorProjectAwayClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFindOperatorProjectAwayClause" ):
+                return visitor.visitFindOperatorProjectAwayClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7808,11 +7863,11 @@ class KqlParser ( Parser ):
             self.state = 1164
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.ASTERISK]:
+            if token in [1]:
                 self.state = 1162
                 localctx.Star = self.findOperatorProjectAwayStar()
                 pass
-            elif token in [KqlParser.OPENBRACKET, KqlParser.ACCESS, KqlParser.ACCUMULATE, KqlParser.AGGREGATIONS, KqlParser.ALIAS, KqlParser.ALL, KqlParser.AS, KqlParser.AXES, KqlParser.BASE, KqlParser.BIN, KqlParser.BY, KqlParser.CLUSTER, KqlParser.CONSUME, KqlParser.CONTAINS, KqlParser.COUNT, KqlParser.DATABASE, KqlParser.DATATABLE, KqlParser.DECLARE, KqlParser.DEFAULT, KqlParser.DELTA, KqlParser.DISTINCT, KqlParser.EDGES, KqlParser.EVALUATE, KqlParser.EXECUTE, KqlParser.EXTEND, KqlParser.EXTERNALDATA, KqlParser.FACET, KqlParser.FILTER, KqlParser.FIND, KqlParser.FORK, KqlParser.FROM, KqlParser.HAS, KqlParser.HIDDEN_, KqlParser.HOT, KqlParser.HOTDATA, KqlParser.HOTINDEX, KqlParser.ID, KqlParser.IN, KqlParser.INTO, KqlParser.INVOKE, KqlParser.LEGEND, KqlParser.LET, KqlParser.LIMIT, KqlParser.LINEAR, KqlParser.LIST, KqlParser.LOOKUP, KqlParser.LOG, KqlParser.MAP, KqlParser.MATERIALIZE, KqlParser.NODES, KqlParser.NONE, KqlParser.NULL, KqlParser.NULLS, KqlParser.OF, KqlParser.ON, KqlParser.OPTIONAL, KqlParser.OUTPUT, KqlParser.PACK, KqlParser.PARSE, KqlParser.PARTITION, KqlParser.PARTITIONBY, KqlParser.PATTERN, KqlParser.PLUGIN, KqlParser.PRINT, KqlParser.QUERYPARAMETERS, KqlParser.RANGE, KqlParser.REDUCE, KqlParser.RENDER, KqlParser.REPLACE, KqlParser.RESTRICT, KqlParser.SAMPLE, KqlParser.SAMPLE_DISTINCT, KqlParser.SCAN, KqlParser.SEARCH, KqlParser.SERIALIZE, KqlParser.SERIES, KqlParser.SET, KqlParser.SORT, KqlParser.STACKED, KqlParser.STACKED100, KqlParser.STEP, KqlParser.SUMMARIZE, KqlParser.TAKE, KqlParser.THRESHOLD, KqlParser.TITLE, KqlParser.TO, KqlParser.TOP, KqlParser.TOP_HITTERS, KqlParser.TOP_NESTED, KqlParser.TOSCALAR, KqlParser.TOTABLE, KqlParser.TYPEOF, KqlParser.UNSTACKED, KqlParser.UUID, KqlParser.VIEW, KqlParser.VISIBLE, KqlParser.WHERE, KqlParser.WITH, KqlParser.XAXIS, KqlParser.XCOLUMN, KqlParser.XMAX, KqlParser.XMIN, KqlParser.XTITLE, KqlParser.YAXIS, KqlParser.YCOLUMNS, KqlParser.YMAX, KqlParser.YMIN, KqlParser.YSPLIT, KqlParser.YTITLE, KqlParser.BOOL, KqlParser.GUID, KqlParser.IDENTIFIER]:
+            elif token in [30, 38, 39, 40, 41, 42, 47, 50, 53, 55, 57, 59, 61, 62, 66, 69, 71, 72, 74, 75, 77, 78, 82, 83, 86, 87, 89, 90, 91, 94, 95, 104, 112, 124, 126, 127, 128, 130, 132, 133, 140, 141, 144, 145, 147, 148, 149, 153, 155, 161, 162, 183, 184, 185, 186, 187, 191, 192, 194, 197, 198, 200, 204, 205, 213, 214, 215, 218, 219, 220, 221, 222, 223, 225, 226, 227, 228, 230, 232, 233, 237, 238, 240, 241, 245, 246, 247, 248, 249, 250, 251, 253, 255, 256, 257, 258, 259, 260, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 287, 316]:
                 self.state = 1163
                 localctx.ColumnList = self.findOperatorProjectAwayColumnList()
                 pass
@@ -7829,6 +7884,7 @@ class KqlParser ( Parser ):
 
 
     class FindOperatorProjectAwayStarContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7847,6 +7903,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFindOperatorProjectAwayStar" ):
                 listener.exitFindOperatorProjectAwayStar(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFindOperatorProjectAwayStar" ):
+                return visitor.visitFindOperatorProjectAwayStar(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7869,6 +7931,7 @@ class KqlParser ( Parser ):
 
 
     class FindOperatorProjectAwayColumnListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7900,6 +7963,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitFindOperatorProjectAwayColumnList" ):
                 listener.exitFindOperatorProjectAwayColumnList(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFindOperatorProjectAwayColumnList" ):
+                return visitor.visitFindOperatorProjectAwayColumnList(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7916,7 +7985,7 @@ class KqlParser ( Parser ):
             self.state = 1173
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 1169
                 self.match(KqlParser.COMMA)
                 self.state = 1170
@@ -7936,6 +8005,7 @@ class KqlParser ( Parser ):
 
 
     class FindOperatorSourceContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7961,6 +8031,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFindOperatorSource" ):
                 listener.exitFindOperatorSource(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFindOperatorSource" ):
+                return visitor.visitFindOperatorSource(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7996,6 +8072,7 @@ class KqlParser ( Parser ):
 
 
     class FindOperatorSourceEntityExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8032,6 +8109,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitFindOperatorSourceEntityExpression" ):
                 listener.exitFindOperatorSourceEntityExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFindOperatorSourceEntityExpression" ):
+                return visitor.visitFindOperatorSourceEntityExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8047,7 +8130,7 @@ class KqlParser ( Parser ):
             self.state = 1185
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.BAR:
+            while _la==3:
                 self.state = 1181
                 self.match(KqlParser.BAR)
                 self.state = 1182
@@ -8067,6 +8150,7 @@ class KqlParser ( Parser ):
 
 
     class ForkOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8093,6 +8177,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitForkOperator" ):
                 listener.exitForkOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitForkOperator" ):
+                return visitor.visitForkOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8114,7 +8204,7 @@ class KqlParser ( Parser ):
                 self.state = 1192 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.OPENBRACKET) | (1 << KqlParser.OPENPAREN) | (1 << KqlParser.ACCESS) | (1 << KqlParser.AGGREGATIONS) | (1 << KqlParser.ALIAS) | (1 << KqlParser.ALL) | (1 << KqlParser.AXES) | (1 << KqlParser.BASE) | (1 << KqlParser.BIN) | (1 << KqlParser.CLUSTER))) != 0) or ((((_la - 69)) & ~0x3f) == 0 and ((1 << (_la - 69)) & ((1 << (KqlParser.DATABASE - 69)) | (1 << (KqlParser.DECLARE - 69)) | (1 << (KqlParser.DEFAULT - 69)) | (1 << (KqlParser.DELTA - 69)) | (1 << (KqlParser.EDGES - 69)) | (1 << (KqlParser.EVALUATE - 69)) | (1 << (KqlParser.EXECUTE - 69)) | (1 << (KqlParser.FACET - 69)) | (1 << (KqlParser.FORK - 69)) | (1 << (KqlParser.FROM - 69)) | (1 << (KqlParser.HIDDEN_ - 69)) | (1 << (KqlParser.HOT - 69)) | (1 << (KqlParser.HOTDATA - 69)) | (1 << (KqlParser.HOTINDEX - 69)) | (1 << (KqlParser.ID - 69)) | (1 << (KqlParser.INTO - 69)))) != 0) or ((((_la - 140)) & ~0x3f) == 0 and ((1 << (_la - 140)) & ((1 << (KqlParser.LEGEND - 140)) | (1 << (KqlParser.LET - 140)) | (1 << (KqlParser.LINEAR - 140)) | (1 << (KqlParser.LIST - 140)) | (1 << (KqlParser.LOOKUP - 140)) | (1 << (KqlParser.LOG - 140)) | (1 << (KqlParser.MAP - 140)) | (1 << (KqlParser.NODES - 140)) | (1 << (KqlParser.NONE - 140)) | (1 << (KqlParser.NULL - 140)) | (1 << (KqlParser.NULLS - 140)) | (1 << (KqlParser.ON - 140)) | (1 << (KqlParser.OPTIONAL - 140)) | (1 << (KqlParser.OUTPUT - 140)) | (1 << (KqlParser.PACK - 140)) | (1 << (KqlParser.PARTITION - 140)) | (1 << (KqlParser.PARTITIONBY - 140)) | (1 << (KqlParser.PATTERN - 140)))) != 0) or ((((_la - 204)) & ~0x3f) == 0 and ((1 << (_la - 204)) & ((1 << (KqlParser.PLUGIN - 204)) | (1 << (KqlParser.QUERYPARAMETERS - 204)) | (1 << (KqlParser.RANGE - 204)) | (1 << (KqlParser.REDUCE - 204)) | (1 << (KqlParser.RENDER - 204)) | (1 << (KqlParser.REPLACE - 204)) | (1 << (KqlParser.RESTRICT - 204)) | (1 << (KqlParser.SERIES - 204)) | (1 << (KqlParser.STACKED - 204)) | (1 << (KqlParser.STACKED100 - 204)) | (1 << (KqlParser.STEP - 204)) | (1 << (KqlParser.THRESHOLD - 204)) | (1 << (KqlParser.TYPEOF - 204)) | (1 << (KqlParser.UNSTACKED - 204)) | (1 << (KqlParser.UUID - 204)) | (1 << (KqlParser.VIEW - 204)) | (1 << (KqlParser.VISIBLE - 204)) | (1 << (KqlParser.WITH - 204)))) != 0) or ((((_la - 268)) & ~0x3f) == 0 and ((1 << (_la - 268)) & ((1 << (KqlParser.XAXIS - 268)) | (1 << (KqlParser.XCOLUMN - 268)) | (1 << (KqlParser.XMAX - 268)) | (1 << (KqlParser.XMIN - 268)) | (1 << (KqlParser.XTITLE - 268)) | (1 << (KqlParser.YAXIS - 268)) | (1 << (KqlParser.YCOLUMNS - 268)) | (1 << (KqlParser.YMAX - 268)) | (1 << (KqlParser.YMIN - 268)) | (1 << (KqlParser.YSPLIT - 268)) | (1 << (KqlParser.YTITLE - 268)) | (1 << (KqlParser.BOOL - 268)) | (1 << (KqlParser.GUID - 268)) | (1 << (KqlParser.IDENTIFIER - 268)))) != 0)):
+                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 622630623164497920) != 0) or ((((_la - 69)) & ~0x3f) == 0 and ((1 << (_la - 69)) & -8178528127110061463) != 0) or ((((_la - 140)) & ~0x3f) == 0 and ((1 << (_la - 140)) & 1592259962793370531) != 0) or ((((_la - 204)) & ~0x3f) == 0 and ((1 << (_la - 204)) & 106397688039329281) != 0) or ((((_la - 268)) & ~0x3f) == 0 and ((1 << (_la - 268)) & 281474977239039) != 0)):
                     break
 
         except RecognitionException as re:
@@ -8127,6 +8217,7 @@ class KqlParser ( Parser ):
 
 
     class ForkOperatorForkContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8159,6 +8250,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitForkOperatorFork" ):
                 listener.exitForkOperatorFork(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitForkOperatorFork" ):
+                return visitor.visitForkOperatorFork(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8172,7 +8269,7 @@ class KqlParser ( Parser ):
             self.state = 1195
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.OPENBRACKET) | (1 << KqlParser.ACCESS) | (1 << KqlParser.AGGREGATIONS) | (1 << KqlParser.ALIAS) | (1 << KqlParser.ALL) | (1 << KqlParser.AXES) | (1 << KqlParser.BASE) | (1 << KqlParser.BIN) | (1 << KqlParser.CLUSTER))) != 0) or ((((_la - 69)) & ~0x3f) == 0 and ((1 << (_la - 69)) & ((1 << (KqlParser.DATABASE - 69)) | (1 << (KqlParser.DECLARE - 69)) | (1 << (KqlParser.DEFAULT - 69)) | (1 << (KqlParser.DELTA - 69)) | (1 << (KqlParser.EDGES - 69)) | (1 << (KqlParser.EVALUATE - 69)) | (1 << (KqlParser.EXECUTE - 69)) | (1 << (KqlParser.FACET - 69)) | (1 << (KqlParser.FORK - 69)) | (1 << (KqlParser.FROM - 69)) | (1 << (KqlParser.HIDDEN_ - 69)) | (1 << (KqlParser.HOT - 69)) | (1 << (KqlParser.HOTDATA - 69)) | (1 << (KqlParser.HOTINDEX - 69)) | (1 << (KqlParser.ID - 69)) | (1 << (KqlParser.INTO - 69)))) != 0) or ((((_la - 140)) & ~0x3f) == 0 and ((1 << (_la - 140)) & ((1 << (KqlParser.LEGEND - 140)) | (1 << (KqlParser.LET - 140)) | (1 << (KqlParser.LINEAR - 140)) | (1 << (KqlParser.LIST - 140)) | (1 << (KqlParser.LOOKUP - 140)) | (1 << (KqlParser.LOG - 140)) | (1 << (KqlParser.MAP - 140)) | (1 << (KqlParser.NODES - 140)) | (1 << (KqlParser.NONE - 140)) | (1 << (KqlParser.NULL - 140)) | (1 << (KqlParser.NULLS - 140)) | (1 << (KqlParser.ON - 140)) | (1 << (KqlParser.OPTIONAL - 140)) | (1 << (KqlParser.OUTPUT - 140)) | (1 << (KqlParser.PACK - 140)) | (1 << (KqlParser.PARTITION - 140)) | (1 << (KqlParser.PARTITIONBY - 140)) | (1 << (KqlParser.PATTERN - 140)))) != 0) or ((((_la - 204)) & ~0x3f) == 0 and ((1 << (_la - 204)) & ((1 << (KqlParser.PLUGIN - 204)) | (1 << (KqlParser.QUERYPARAMETERS - 204)) | (1 << (KqlParser.RANGE - 204)) | (1 << (KqlParser.REDUCE - 204)) | (1 << (KqlParser.RENDER - 204)) | (1 << (KqlParser.REPLACE - 204)) | (1 << (KqlParser.RESTRICT - 204)) | (1 << (KqlParser.SERIES - 204)) | (1 << (KqlParser.STACKED - 204)) | (1 << (KqlParser.STACKED100 - 204)) | (1 << (KqlParser.STEP - 204)) | (1 << (KqlParser.THRESHOLD - 204)) | (1 << (KqlParser.TYPEOF - 204)) | (1 << (KqlParser.UNSTACKED - 204)) | (1 << (KqlParser.UUID - 204)) | (1 << (KqlParser.VIEW - 204)) | (1 << (KqlParser.VISIBLE - 204)) | (1 << (KqlParser.WITH - 204)))) != 0) or ((((_la - 268)) & ~0x3f) == 0 and ((1 << (_la - 268)) & ((1 << (KqlParser.XAXIS - 268)) | (1 << (KqlParser.XCOLUMN - 268)) | (1 << (KqlParser.XMAX - 268)) | (1 << (KqlParser.XMIN - 268)) | (1 << (KqlParser.XTITLE - 268)) | (1 << (KqlParser.YAXIS - 268)) | (1 << (KqlParser.YCOLUMNS - 268)) | (1 << (KqlParser.YMAX - 268)) | (1 << (KqlParser.YMIN - 268)) | (1 << (KqlParser.YSPLIT - 268)) | (1 << (KqlParser.YTITLE - 268)) | (1 << (KqlParser.BOOL - 268)) | (1 << (KqlParser.GUID - 268)) | (1 << (KqlParser.IDENTIFIER - 268)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 622630621017014272) != 0) or ((((_la - 69)) & ~0x3f) == 0 and ((1 << (_la - 69)) & -8178528127110061463) != 0) or ((((_la - 140)) & ~0x3f) == 0 and ((1 << (_la - 140)) & 1592259962793370531) != 0) or ((((_la - 204)) & ~0x3f) == 0 and ((1 << (_la - 204)) & 106397688039329281) != 0) or ((((_la - 268)) & ~0x3f) == 0 and ((1 << (_la - 268)) & 281474977239039) != 0):
                 self.state = 1194
                 localctx.Name = self.forkOperatorExpressionName()
 
@@ -8193,6 +8290,7 @@ class KqlParser ( Parser ):
 
 
     class ForkOperatorExpressionNameContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8217,6 +8315,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitForkOperatorExpressionName" ):
                 listener.exitForkOperatorExpressionName(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitForkOperatorExpressionName" ):
+                return visitor.visitForkOperatorExpressionName(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8240,6 +8344,7 @@ class KqlParser ( Parser ):
 
 
     class ForkOperatorExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8270,6 +8375,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitForkOperatorExpression" ):
                 listener.exitForkOperatorExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitForkOperatorExpression" ):
+                return visitor.visitForkOperatorExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8285,7 +8396,7 @@ class KqlParser ( Parser ):
             self.state = 1208
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.BAR:
+            while _la==3:
                 self.state = 1205
                 localctx._forkOperatorPipedOperator = self.forkOperatorPipedOperator()
                 localctx.PipedOperators.append(localctx._forkOperatorPipedOperator)
@@ -8303,6 +8414,7 @@ class KqlParser ( Parser ):
 
 
     class ForkOperatorPipedOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8327,6 +8439,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitForkOperatorPipedOperator" ):
                 listener.exitForkOperatorPipedOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitForkOperatorPipedOperator" ):
+                return visitor.visitForkOperatorPipedOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8350,6 +8468,7 @@ class KqlParser ( Parser ):
 
 
     class GetSchemaOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8368,6 +8487,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGetSchemaOperator" ):
                 listener.exitGetSchemaOperator(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGetSchemaOperator" ):
+                return visitor.visitGetSchemaOperator(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -8390,6 +8515,7 @@ class KqlParser ( Parser ):
 
 
     class GraphMarkComponentsOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8418,6 +8544,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitGraphMarkComponentsOperator" ):
                 listener.exitGraphMarkComponentsOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGraphMarkComponentsOperator" ):
+                return visitor.visitGraphMarkComponentsOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8433,7 +8565,7 @@ class KqlParser ( Parser ):
             self.state = 1220
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & ((1 << (KqlParser.WITH_SOURCE - 266)) | (1 << (KqlParser.WITH_STEP_NAME - 266)) | (1 << (KqlParser.IDENTIFIER - 266)))) != 0):
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & 1125899906842627) != 0):
                 self.state = 1217
                 localctx._relaxedQueryOperatorParameter = self.relaxedQueryOperatorParameter()
                 localctx.Parametems.append(localctx._relaxedQueryOperatorParameter)
@@ -8451,6 +8583,7 @@ class KqlParser ( Parser ):
 
 
     class GraphMatchOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8501,6 +8634,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitGraphMatchOperator" ):
                 listener.exitGraphMatchOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGraphMatchOperator" ):
+                return visitor.visitGraphMatchOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8516,7 +8655,7 @@ class KqlParser ( Parser ):
             self.state = 1227
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & ((1 << (KqlParser.WITH_SOURCE - 266)) | (1 << (KqlParser.WITH_STEP_NAME - 266)) | (1 << (KqlParser.IDENTIFIER - 266)))) != 0):
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & 1125899906842627) != 0):
                 self.state = 1224
                 localctx._relaxedQueryOperatorParameter = self.relaxedQueryOperatorParameter()
                 localctx.Parameters.append(localctx._relaxedQueryOperatorParameter)
@@ -8536,7 +8675,7 @@ class KqlParser ( Parser ):
             self.state = 1235
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.WHERE:
+            if _la==259:
                 self.state = 1234
                 localctx.WhereClause = self.graphMatchWhereClause()
 
@@ -8559,6 +8698,7 @@ class KqlParser ( Parser ):
 
 
     class GraphMatchPatternContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8590,6 +8730,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitGraphMatchPattern" ):
                 listener.exitGraphMatchPattern(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGraphMatchPattern" ):
+                return visitor.visitGraphMatchPattern(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8601,17 +8747,17 @@ class KqlParser ( Parser ):
             self.state = 1243
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.OPENPAREN]:
+            if token in [31]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1240
                 localctx.Node = self.graphMatchPatternNode()
                 pass
-            elif token in [KqlParser.DASHDASH, KqlParser.DASHDASH_GREATERTHAN, KqlParser.LESSTHAN_DASHDASH]:
+            elif token in [12, 13, 25]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1241
                 localctx.UnnamedEdge = self.graphMatchPatternUnnamedEdge()
                 pass
-            elif token in [KqlParser.DASH_OPENBRACKET, KqlParser.LESSTHAN_DASH_OPENBRACKET]:
+            elif token in [14, 26]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1242
                 localctx.NamedEdge = self.graphMatchPatternNamedEdge()
@@ -8629,6 +8775,7 @@ class KqlParser ( Parser ):
 
 
     class GraphMatchPatternNodeContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8656,6 +8803,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitGraphMatchPatternNode" ):
                 listener.exitGraphMatchPatternNode(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGraphMatchPatternNode" ):
+                return visitor.visitGraphMatchPatternNode(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8681,6 +8834,7 @@ class KqlParser ( Parser ):
 
 
     class GraphMatchPatternUnnamedEdgeContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8707,6 +8861,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitGraphMatchPatternUnnamedEdge" ):
                 listener.exitGraphMatchPatternUnnamedEdge(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGraphMatchPatternUnnamedEdge" ):
+                return visitor.visitGraphMatchPatternUnnamedEdge(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8720,7 +8880,7 @@ class KqlParser ( Parser ):
             self.state = 1249
             localctx.Direction = self._input.LT(1)
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.DASHDASH) | (1 << KqlParser.DASHDASH_GREATERTHAN) | (1 << KqlParser.LESSTHAN_DASHDASH))) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 33566720) != 0)):
                 localctx.Direction = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -8735,6 +8895,7 @@ class KqlParser ( Parser ):
 
 
     class GraphMatchPatternNamedEdgeContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8775,6 +8936,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitGraphMatchPatternNamedEdge" ):
                 listener.exitGraphMatchPatternNamedEdge(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGraphMatchPatternNamedEdge" ):
+                return visitor.visitGraphMatchPatternNamedEdge(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8788,7 +8955,7 @@ class KqlParser ( Parser ):
             self.state = 1251
             localctx.OpenBracket = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(_la==KqlParser.DASH_OPENBRACKET or _la==KqlParser.LESSTHAN_DASH_OPENBRACKET):
+            if not(_la==14 or _la==26):
                 localctx.OpenBracket = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -8798,7 +8965,7 @@ class KqlParser ( Parser ):
             self.state = 1254
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.ASTERISK:
+            if _la==1:
                 self.state = 1253
                 localctx.Range = self.graphMatchPatternRange()
 
@@ -8806,7 +8973,7 @@ class KqlParser ( Parser ):
             self.state = 1256
             localctx.CloseBracket = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(_la==KqlParser.CLOSEBRACKET_DASH or _la==KqlParser.CLOSEBRACKET_DASH_GREATERTHAN):
+            if not(_la==6 or _la==7):
                 localctx.CloseBracket = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -8821,6 +8988,7 @@ class KqlParser ( Parser ):
 
 
     class GraphMatchPatternRangeContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8852,6 +9020,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitGraphMatchPatternRange" ):
                 listener.exitGraphMatchPatternRange(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGraphMatchPatternRange" ):
+                return visitor.visitGraphMatchPatternRange(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8879,6 +9053,7 @@ class KqlParser ( Parser ):
 
 
     class GraphMatchWhereClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8903,6 +9078,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitGraphMatchWhereClause" ):
                 listener.exitGraphMatchWhereClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGraphMatchWhereClause" ):
+                return visitor.visitGraphMatchWhereClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8926,6 +9107,7 @@ class KqlParser ( Parser ):
 
 
     class GraphMatchProjectClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8960,6 +9142,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitGraphMatchProjectClause" ):
                 listener.exitGraphMatchProjectClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGraphMatchProjectClause" ):
+                return visitor.visitGraphMatchProjectClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8978,7 +9166,7 @@ class KqlParser ( Parser ):
             self.state = 1272
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 1268
                 self.match(KqlParser.COMMA)
                 self.state = 1269
@@ -8998,6 +9186,7 @@ class KqlParser ( Parser ):
 
 
     class GraphMergeOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9027,6 +9216,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitGraphMergeOperator" ):
                 listener.exitGraphMergeOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGraphMergeOperator" ):
+                return visitor.visitGraphMergeOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9044,7 +9239,7 @@ class KqlParser ( Parser ):
             self.state = 1278
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.ON:
+            if _la==186:
                 self.state = 1277
                 localctx.OnClause = self.joinOperatorOnClause()
 
@@ -9059,6 +9254,7 @@ class KqlParser ( Parser ):
 
 
     class GraphToTableOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9090,6 +9286,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitGraphToTableOperator" ):
                 listener.exitGraphToTableOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGraphToTableOperator" ):
+                return visitor.visitGraphToTableOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9120,6 +9322,7 @@ class KqlParser ( Parser ):
 
 
     class GraphToTableOutputContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9157,6 +9360,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitGraphToTableOutput" ):
                 listener.exitGraphToTableOutput(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGraphToTableOutput" ):
+                return visitor.visitGraphToTableOutput(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9170,7 +9379,7 @@ class KqlParser ( Parser ):
             self.state = 1285
             localctx.Keyword = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(_la==KqlParser.EDGES or _la==KqlParser.NODES):
+            if not(_la==78 or _la==161):
                 localctx.Keyword = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -9178,7 +9387,7 @@ class KqlParser ( Parser ):
             self.state = 1287
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.AS:
+            if _la==47:
                 self.state = 1286
                 localctx.AsClause = self.graphToTableAsClause()
 
@@ -9186,7 +9395,7 @@ class KqlParser ( Parser ):
             self.state = 1292
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & ((1 << (KqlParser.WITH_SOURCE - 266)) | (1 << (KqlParser.WITH_STEP_NAME - 266)) | (1 << (KqlParser.IDENTIFIER - 266)))) != 0):
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & 1125899906842627) != 0):
                 self.state = 1289
                 localctx._relaxedQueryOperatorParameter = self.relaxedQueryOperatorParameter()
                 localctx.Parameters.append(localctx._relaxedQueryOperatorParameter)
@@ -9204,6 +9413,7 @@ class KqlParser ( Parser ):
 
 
     class GraphToTableAsClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9228,6 +9438,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitGraphToTableAsClause" ):
                 listener.exitGraphToTableAsClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGraphToTableAsClause" ):
+                return visitor.visitGraphToTableAsClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9251,6 +9467,7 @@ class KqlParser ( Parser ):
 
 
     class GraphShortestPathsOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9301,6 +9518,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitGraphShortestPathsOperator" ):
                 listener.exitGraphShortestPathsOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGraphShortestPathsOperator" ):
+                return visitor.visitGraphShortestPathsOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9316,7 +9539,7 @@ class KqlParser ( Parser ):
             self.state = 1302
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & ((1 << (KqlParser.WITH_SOURCE - 266)) | (1 << (KqlParser.WITH_STEP_NAME - 266)) | (1 << (KqlParser.IDENTIFIER - 266)))) != 0):
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & 1125899906842627) != 0):
                 self.state = 1299
                 localctx._relaxedQueryOperatorParameter = self.relaxedQueryOperatorParameter()
                 localctx.Parameters.append(localctx._relaxedQueryOperatorParameter)
@@ -9336,7 +9559,7 @@ class KqlParser ( Parser ):
             self.state = 1310
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.WHERE:
+            if _la==259:
                 self.state = 1309
                 localctx.WhereClause = self.graphMatchWhereClause()
 
@@ -9359,6 +9582,7 @@ class KqlParser ( Parser ):
 
 
     class InvokeOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9383,6 +9607,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitInvokeOperator" ):
                 listener.exitInvokeOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInvokeOperator" ):
+                return visitor.visitInvokeOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9406,6 +9636,7 @@ class KqlParser ( Parser ):
 
 
     class JoinOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9449,6 +9680,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitJoinOperator" ):
                 listener.exitJoinOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJoinOperator" ):
+                return visitor.visitJoinOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9477,15 +9714,15 @@ class KqlParser ( Parser ):
             self.state = 1328
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.ON]:
+            if token in [186]:
                 self.state = 1326
                 localctx.OnClause = self.joinOperatorOnClause()
                 pass
-            elif token in [KqlParser.WHERE]:
+            elif token in [259]:
                 self.state = 1327
                 localctx.WhereClause = self.joinOperatorWhereClause()
                 pass
-            elif token in [KqlParser.EOF, KqlParser.BAR, KqlParser.CLOSEBRACE, KqlParser.CLOSEPAREN, KqlParser.SEMICOLON, KqlParser.PROJECT]:
+            elif token in [-1, 3, 4, 8, 34, 206]:
                 pass
             else:
                 pass
@@ -9499,6 +9736,7 @@ class KqlParser ( Parser ):
 
 
     class JoinOperatorOnClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9533,6 +9771,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitJoinOperatorOnClause" ):
                 listener.exitJoinOperatorOnClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJoinOperatorOnClause" ):
+                return visitor.visitJoinOperatorOnClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9548,14 +9792,14 @@ class KqlParser ( Parser ):
             self.state = 1339
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.ASTERISK) | (1 << KqlParser.DASH) | (1 << KqlParser.OPENBRACKET) | (1 << KqlParser.OPENPAREN) | (1 << KqlParser.PLUS) | (1 << KqlParser.ACCESS) | (1 << KqlParser.AGGREGATIONS) | (1 << KqlParser.ALIAS) | (1 << KqlParser.ALL) | (1 << KqlParser.AXES) | (1 << KqlParser.BASE) | (1 << KqlParser.BIN) | (1 << KqlParser.CLUSTER))) != 0) or ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & ((1 << (KqlParser.CONTEXTUAL_DATATABLE - 65)) | (1 << (KqlParser.COUNT - 65)) | (1 << (KqlParser.DATABASE - 65)) | (1 << (KqlParser.DATATABLE - 65)) | (1 << (KqlParser.DECLARE - 65)) | (1 << (KqlParser.DEFAULT - 65)) | (1 << (KqlParser.DELTA - 65)) | (1 << (KqlParser.EDGES - 65)) | (1 << (KqlParser.EVALUATE - 65)) | (1 << (KqlParser.EXECUTE - 65)) | (1 << (KqlParser.EXTERNALDATA - 65)) | (1 << (KqlParser.EXTERNAL_DATA - 65)) | (1 << (KqlParser.FACET - 65)) | (1 << (KqlParser.FORK - 65)) | (1 << (KqlParser.FROM - 65)) | (1 << (KqlParser.HIDDEN_ - 65)) | (1 << (KqlParser.HOT - 65)) | (1 << (KqlParser.HOTDATA - 65)) | (1 << (KqlParser.HOTINDEX - 65)) | (1 << (KqlParser.ID - 65)))) != 0) or ((((_la - 132)) & ~0x3f) == 0 and ((1 << (_la - 132)) & ((1 << (KqlParser.INTO - 132)) | (1 << (KqlParser.LEGEND - 132)) | (1 << (KqlParser.LET - 132)) | (1 << (KqlParser.LINEAR - 132)) | (1 << (KqlParser.LIST - 132)) | (1 << (KqlParser.LOOKUP - 132)) | (1 << (KqlParser.LOG - 132)) | (1 << (KqlParser.MAP - 132)) | (1 << (KqlParser.MATERIALIZED_VIEW_COMBINE - 132)) | (1 << (KqlParser.NODES - 132)) | (1 << (KqlParser.NONE - 132)) | (1 << (KqlParser.NULL - 132)) | (1 << (KqlParser.NULLS - 132)) | (1 << (KqlParser.ON - 132)) | (1 << (KqlParser.OPTIONAL - 132)) | (1 << (KqlParser.OUTPUT - 132)) | (1 << (KqlParser.PACK - 132)))) != 0) or ((((_la - 197)) & ~0x3f) == 0 and ((1 << (_la - 197)) & ((1 << (KqlParser.PARTITION - 197)) | (1 << (KqlParser.PARTITIONBY - 197)) | (1 << (KqlParser.PATTERN - 197)) | (1 << (KqlParser.PLUGIN - 197)) | (1 << (KqlParser.QUERYPARAMETERS - 197)) | (1 << (KqlParser.RANGE - 197)) | (1 << (KqlParser.REDUCE - 197)) | (1 << (KqlParser.RENDER - 197)) | (1 << (KqlParser.REPLACE - 197)) | (1 << (KqlParser.RESTRICT - 197)) | (1 << (KqlParser.SERIES - 197)) | (1 << (KqlParser.STACKED - 197)) | (1 << (KqlParser.STACKED100 - 197)) | (1 << (KqlParser.STEP - 197)) | (1 << (KqlParser.THRESHOLD - 197)) | (1 << (KqlParser.TOSCALAR - 197)) | (1 << (KqlParser.TOTABLE - 197)) | (1 << (KqlParser.TYPEOF - 197)) | (1 << (KqlParser.UNSTACKED - 197)) | (1 << (KqlParser.UUID - 197)) | (1 << (KqlParser.VIEW - 197)) | (1 << (KqlParser.VISIBLE - 197)) | (1 << (KqlParser.WITH - 197)))) != 0) or ((((_la - 268)) & ~0x3f) == 0 and ((1 << (_la - 268)) & ((1 << (KqlParser.XAXIS - 268)) | (1 << (KqlParser.XCOLUMN - 268)) | (1 << (KqlParser.XMAX - 268)) | (1 << (KqlParser.XMIN - 268)) | (1 << (KqlParser.XTITLE - 268)) | (1 << (KqlParser.YAXIS - 268)) | (1 << (KqlParser.YCOLUMNS - 268)) | (1 << (KqlParser.YMAX - 268)) | (1 << (KqlParser.YMIN - 268)) | (1 << (KqlParser.YSPLIT - 268)) | (1 << (KqlParser.YTITLE - 268)) | (1 << (KqlParser.BOOL - 268)) | (1 << (KqlParser.DYNAMIC - 268)) | (1 << (KqlParser.GUID - 268)) | (1 << (KqlParser.LONGLITERAL - 268)) | (1 << (KqlParser.INTLITERAL - 268)) | (1 << (KqlParser.REALLITERAL - 268)) | (1 << (KqlParser.DECIMALLITERAL - 268)) | (1 << (KqlParser.STRINGLITERAL - 268)) | (1 << (KqlParser.BOOLEANLITERAL - 268)) | (1 << (KqlParser.DATETIMELITERAL - 268)) | (1 << (KqlParser.TIMESPANLITERAL - 268)) | (1 << (KqlParser.TYPELITERAL - 268)) | (1 << (KqlParser.GUIDLITERAL - 268)) | (1 << (KqlParser.IDENTIFIER - 268)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 622630631754434562) != 0) or ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & -1729241517781539117) != 0) or ((((_la - 132)) & ~0x3f) == 0 and ((1 << (_la - 132)) & 1790180853509497601) != 0) or ((((_la - 197)) & ~0x3f) == 0 and ((1 << (_la - 197)) & -4800818406911180661) != 0) or ((((_la - 268)) & ~0x3f) == 0 and ((1 << (_la - 268)) & 492443770949631) != 0):
                 self.state = 1331
                 localctx._unnamedExpression = self.unnamedExpression()
                 localctx.Expressions.append(localctx._unnamedExpression)
                 self.state = 1336
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==KqlParser.COMMA:
+                while _la==9:
                     self.state = 1332
                     self.match(KqlParser.COMMA)
                     self.state = 1333
@@ -9577,6 +9821,7 @@ class KqlParser ( Parser ):
 
 
     class JoinOperatorWhereClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9601,6 +9846,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitJoinOperatorWhereClause" ):
                 listener.exitJoinOperatorWhereClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJoinOperatorWhereClause" ):
+                return visitor.visitJoinOperatorWhereClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9624,6 +9875,7 @@ class KqlParser ( Parser ):
 
 
     class LookupOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9662,6 +9914,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitLookupOperator" ):
                 listener.exitLookupOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLookupOperator" ):
+                return visitor.visitLookupOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9699,6 +9957,7 @@ class KqlParser ( Parser ):
 
 
     class MacroExpandOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9761,6 +10020,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMacroExpandOperator" ):
                 listener.exitMacroExpandOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMacroExpandOperator" ):
+                return visitor.visitMacroExpandOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9813,7 +10078,7 @@ class KqlParser ( Parser ):
             self.state = 1374
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.SEMICOLON:
+            if _la==34:
                 self.state = 1373
                 self.match(KqlParser.SEMICOLON)
 
@@ -9830,6 +10095,7 @@ class KqlParser ( Parser ):
 
 
     class MacroExpandEntityGroupContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9860,6 +10126,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMacroExpandEntityGroup" ):
                 listener.exitMacroExpandEntityGroup(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMacroExpandEntityGroup" ):
+                return visitor.visitMacroExpandEntityGroup(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -9901,6 +10173,7 @@ class KqlParser ( Parser ):
 
 
     class EntityGroupExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9941,6 +10214,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitEntityGroupExpression" ):
                 listener.exitEntityGroupExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntityGroupExpression" ):
+                return visitor.visitEntityGroupExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9961,7 +10240,7 @@ class KqlParser ( Parser ):
             self.state = 1390
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 1386
                 self.match(KqlParser.COMMA)
                 self.state = 1387
@@ -9983,6 +10262,7 @@ class KqlParser ( Parser ):
 
 
     class MakeGraphOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10042,6 +10322,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMakeGraphOperator" ):
                 listener.exitMakeGraphOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMakeGraphOperator" ):
+                return visitor.visitMakeGraphOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10071,7 +10357,7 @@ class KqlParser ( Parser ):
             self.state = 1403
             localctx.Direction = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(_la==KqlParser.DASHDASH or _la==KqlParser.DASHDASH_GREATERTHAN):
+            if not(_la==12 or _la==13):
                 localctx.Direction = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -10081,22 +10367,22 @@ class KqlParser ( Parser ):
             self.state = 1407
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.WITH_NODE_ID]:
+            if token in [265]:
                 self.state = 1405
                 localctx.IdClause = self.makeGraphIdClause()
                 pass
-            elif token in [KqlParser.WITH]:
+            elif token in [260]:
                 self.state = 1406
                 localctx.TablesAndKeysClause = self.makeGraphTablesAndKeysClause()
                 pass
-            elif token in [KqlParser.EOF, KqlParser.BAR, KqlParser.CLOSEBRACE, KqlParser.CLOSEPAREN, KqlParser.SEMICOLON, KqlParser.PARTITIONEDBY, KqlParser.PROJECT]:
+            elif token in [-1, 3, 4, 8, 34, 199, 206]:
                 pass
             else:
                 pass
             self.state = 1410
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.PARTITIONEDBY:
+            if _la==199:
                 self.state = 1409
                 localctx.PartitionedByClause = self.makeGraphPartitionedByClause()
 
@@ -10111,6 +10397,7 @@ class KqlParser ( Parser ):
 
 
     class MakeGraphIdClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10138,6 +10425,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMakeGraphIdClause" ):
                 listener.exitMakeGraphIdClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMakeGraphIdClause" ):
+                return visitor.visitMakeGraphIdClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10163,6 +10456,7 @@ class KqlParser ( Parser ):
 
 
     class MakeGraphTablesAndKeysClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10195,6 +10489,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMakeGraphTablesAndKeysClause" ):
                 listener.exitMakeGraphTablesAndKeysClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMakeGraphTablesAndKeysClause" ):
+                return visitor.visitMakeGraphTablesAndKeysClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10222,6 +10522,7 @@ class KqlParser ( Parser ):
 
 
     class MakeGraphPartitionedByClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10257,6 +10558,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMakeGraphPartitionedByClause" ):
                 listener.exitMakeGraphPartitionedByClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMakeGraphPartitionedByClause" ):
+                return visitor.visitMakeGraphPartitionedByClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10286,6 +10593,7 @@ class KqlParser ( Parser ):
 
 
     class MakeSeriesOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10349,6 +10657,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMakeSeriesOperator" ):
                 listener.exitMakeSeriesOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMakeSeriesOperator" ):
+                return visitor.visitMakeSeriesOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10379,7 +10693,7 @@ class KqlParser ( Parser ):
             self.state = 1439
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 1435
                 self.match(KqlParser.COMMA)
                 self.state = 1436
@@ -10394,11 +10708,11 @@ class KqlParser ( Parser ):
             self.state = 1445
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.IN]:
+            if token in [130]:
                 self.state = 1443
                 localctx.InRangeClause = self.makeSeriesOperatorInRangeClause()
                 pass
-            elif token in [KqlParser.FROM, KqlParser.STEP, KqlParser.TO]:
+            elif token in [95, 237, 246]:
                 self.state = 1444
                 localctx.FromToStepClause = self.makeSeriesOperatorFromToStepClause()
                 pass
@@ -10408,7 +10722,7 @@ class KqlParser ( Parser ):
             self.state = 1448
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.BY:
+            if _la==57:
                 self.state = 1447
                 localctx.ByClause = self.makeSeriesOperatorByClause()
 
@@ -10423,6 +10737,7 @@ class KqlParser ( Parser ):
 
 
     class MakeSeriesOperatorOnClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10447,6 +10762,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMakeSeriesOperatorOnClause" ):
                 listener.exitMakeSeriesOperatorOnClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMakeSeriesOperatorOnClause" ):
+                return visitor.visitMakeSeriesOperatorOnClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10470,6 +10791,7 @@ class KqlParser ( Parser ):
 
 
     class MakeSeriesOperatorAggregationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10496,6 +10818,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMakeSeriesOperatorAggregation" ):
                 listener.exitMakeSeriesOperatorAggregation(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMakeSeriesOperatorAggregation" ):
+                return visitor.visitMakeSeriesOperatorAggregation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10511,7 +10839,7 @@ class KqlParser ( Parser ):
             self.state = 1455
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.DEFAULT:
+            if _la==74:
                 self.state = 1454
                 localctx.Default = self.makeSeriesOperatorExpressionDefaultClause()
 
@@ -10526,6 +10854,7 @@ class KqlParser ( Parser ):
 
 
     class MakeSeriesOperatorExpressionDefaultClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10553,6 +10882,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMakeSeriesOperatorExpressionDefaultClause" ):
                 listener.exitMakeSeriesOperatorExpressionDefaultClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMakeSeriesOperatorExpressionDefaultClause" ):
+                return visitor.visitMakeSeriesOperatorExpressionDefaultClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10578,6 +10913,7 @@ class KqlParser ( Parser ):
 
 
     class MakeSeriesOperatorInRangeClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10624,6 +10960,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMakeSeriesOperatorInRangeClause" ):
                 listener.exitMakeSeriesOperatorInRangeClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMakeSeriesOperatorInRangeClause" ):
+                return visitor.visitMakeSeriesOperatorInRangeClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10661,6 +11003,7 @@ class KqlParser ( Parser ):
 
 
     class MakeSeriesOperatorFromToStepClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10696,6 +11039,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMakeSeriesOperatorFromToStepClause" ):
                 listener.exitMakeSeriesOperatorFromToStepClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMakeSeriesOperatorFromToStepClause" ):
+                return visitor.visitMakeSeriesOperatorFromToStepClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10709,7 +11058,7 @@ class KqlParser ( Parser ):
             self.state = 1473
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.FROM:
+            if _la==95:
                 self.state = 1471
                 self.match(KqlParser.FROM)
                 self.state = 1472
@@ -10719,7 +11068,7 @@ class KqlParser ( Parser ):
             self.state = 1477
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.TO:
+            if _la==246:
                 self.state = 1475
                 self.match(KqlParser.TO)
                 self.state = 1476
@@ -10740,6 +11089,7 @@ class KqlParser ( Parser ):
 
 
     class MakeSeriesOperatorByClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10774,6 +11124,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMakeSeriesOperatorByClause" ):
                 listener.exitMakeSeriesOperatorByClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMakeSeriesOperatorByClause" ):
+                return visitor.visitMakeSeriesOperatorByClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10792,7 +11148,7 @@ class KqlParser ( Parser ):
             self.state = 1488
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 1484
                 self.match(KqlParser.COMMA)
                 self.state = 1485
@@ -10812,6 +11168,7 @@ class KqlParser ( Parser ):
 
 
     class MvapplyOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10883,6 +11240,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMvapplyOperator" ):
                 listener.exitMvapplyOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMvapplyOperator" ):
+                return visitor.visitMvapplyOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10896,7 +11259,7 @@ class KqlParser ( Parser ):
             self.state = 1491
             localctx.Keyword = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(_la==KqlParser.MV_APPLY or _la==KqlParser.MVAPPLY):
+            if not(_la==157 or _la==159):
                 localctx.Keyword = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -10904,7 +11267,7 @@ class KqlParser ( Parser ):
             self.state = 1495
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or _la==KqlParser.WITH_SOURCE or _la==KqlParser.WITH_STEP_NAME:
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or _la==266 or _la==267:
                 self.state = 1492
                 localctx._strictQueryOperatorParameter = self.strictQueryOperatorParameter()
                 localctx.Parameters.append(localctx._strictQueryOperatorParameter)
@@ -10918,7 +11281,7 @@ class KqlParser ( Parser ):
             self.state = 1503
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 1499
                 self.match(KqlParser.COMMA)
                 self.state = 1500
@@ -10931,7 +11294,7 @@ class KqlParser ( Parser ):
             self.state = 1507
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.LIMIT:
+            if _la==144:
                 self.state = 1506
                 localctx.LimitClause = self.mvapplyOperatorLimitClause()
 
@@ -10939,7 +11302,7 @@ class KqlParser ( Parser ):
             self.state = 1510
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.ID:
+            if _la==128:
                 self.state = 1509
                 localctx.IdClause = self.mvapplyOperatorIdClause()
 
@@ -10962,6 +11325,7 @@ class KqlParser ( Parser ):
 
 
     class MvapplyOperatorLimitClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10984,6 +11348,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMvapplyOperatorLimitClause" ):
                 listener.exitMvapplyOperatorLimitClause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMvapplyOperatorLimitClause" ):
+                return visitor.visitMvapplyOperatorLimitClause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11008,6 +11378,7 @@ class KqlParser ( Parser ):
 
 
     class MvapplyOperatorIdClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11030,6 +11401,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMvapplyOperatorIdClause" ):
                 listener.exitMvapplyOperatorIdClause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMvapplyOperatorIdClause" ):
+                return visitor.visitMvapplyOperatorIdClause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11054,6 +11431,7 @@ class KqlParser ( Parser ):
 
 
     class MvapplyOperatorExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11080,6 +11458,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMvapplyOperatorExpression" ):
                 listener.exitMvapplyOperatorExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMvapplyOperatorExpression" ):
+                return visitor.visitMvapplyOperatorExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11095,7 +11479,7 @@ class KqlParser ( Parser ):
             self.state = 1525
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.TO:
+            if _la==246:
                 self.state = 1524
                 localctx.ToClause = self.mvapplyOperatorExpressionToClause()
 
@@ -11110,6 +11494,7 @@ class KqlParser ( Parser ):
 
 
     class MvapplyOperatorExpressionToClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11132,6 +11517,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMvapplyOperatorExpressionToClause" ):
                 listener.exitMvapplyOperatorExpressionToClause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMvapplyOperatorExpressionToClause" ):
+                return visitor.visitMvapplyOperatorExpressionToClause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11156,6 +11547,7 @@ class KqlParser ( Parser ):
 
 
     class MvexpandOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11208,6 +11600,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMvexpandOperator" ):
                 listener.exitMvexpandOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMvexpandOperator" ):
+                return visitor.visitMvexpandOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11221,7 +11619,7 @@ class KqlParser ( Parser ):
             self.state = 1530
             localctx.Keyword = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(_la==KqlParser.MV_EXPAND or _la==KqlParser.MVEXPAND):
+            if not(_la==158 or _la==160):
                 localctx.Keyword = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -11229,7 +11627,7 @@ class KqlParser ( Parser ):
             self.state = 1534
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or _la==KqlParser.WITH_SOURCE or _la==KqlParser.WITH_STEP_NAME:
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or _la==266 or _la==267:
                 self.state = 1531
                 localctx._strictQueryOperatorParameter = self.strictQueryOperatorParameter()
                 localctx.Parameters.append(localctx._strictQueryOperatorParameter)
@@ -11243,7 +11641,7 @@ class KqlParser ( Parser ):
             self.state = 1542
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 1538
                 self.match(KqlParser.COMMA)
                 self.state = 1539
@@ -11256,7 +11654,7 @@ class KqlParser ( Parser ):
             self.state = 1546
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.LIMIT:
+            if _la==144:
                 self.state = 1545
                 localctx.LimitClause = self.mvapplyOperatorLimitClause()
 
@@ -11271,6 +11669,7 @@ class KqlParser ( Parser ):
 
 
     class MvexpandOperatorExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11297,6 +11696,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMvexpandOperatorExpression" ):
                 listener.exitMvexpandOperatorExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMvexpandOperatorExpression" ):
+                return visitor.visitMvexpandOperatorExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11312,7 +11717,7 @@ class KqlParser ( Parser ):
             self.state = 1550
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.TO:
+            if _la==246:
                 self.state = 1549
                 localctx.ToClause = self.mvapplyOperatorExpressionToClause()
 
@@ -11327,6 +11732,7 @@ class KqlParser ( Parser ):
 
 
     class ParseOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11364,6 +11770,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitParseOperator" ):
                 listener.exitParseOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParseOperator" ):
+                return visitor.visitParseOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11379,7 +11791,7 @@ class KqlParser ( Parser ):
             self.state = 1554
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.KIND:
+            if _la==137:
                 self.state = 1553
                 localctx.KindClause = self.parseOperatorKindClause()
 
@@ -11400,6 +11812,7 @@ class KqlParser ( Parser ):
 
 
     class ParseOperatorKindClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11437,6 +11850,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitParseOperatorKindClause" ):
                 listener.exitParseOperatorKindClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParseOperatorKindClause" ):
+                return visitor.visitParseOperatorKindClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11454,7 +11873,7 @@ class KqlParser ( Parser ):
             self.state = 1562
             localctx.Kind = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(((((_la - 216)) & ~0x3f) == 0 and ((1 << (_la - 216)) & ((1 << (KqlParser.REGEX - 216)) | (1 << (KqlParser.RELAXED - 216)) | (1 << (KqlParser.SIMPLE - 216)))) != 0)):
+            if not(((((_la - 216)) & ~0x3f) == 0 and ((1 << (_la - 216)) & 8195) != 0)):
                 localctx.Kind = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -11462,7 +11881,7 @@ class KqlParser ( Parser ):
             self.state = 1564
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.FLAGS:
+            if _la==93:
                 self.state = 1563
                 localctx.FlagsClause = self.parseOperatorFlagsClause()
 
@@ -11477,6 +11896,7 @@ class KqlParser ( Parser ):
 
 
     class ParseOperatorFlagsClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11503,6 +11923,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitParseOperatorFlagsClause" ):
                 listener.exitParseOperatorFlagsClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParseOperatorFlagsClause" ):
+                return visitor.visitParseOperatorFlagsClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11528,6 +11954,7 @@ class KqlParser ( Parser ):
 
 
     class ParseOperatorNameAndOptionalTypeContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11557,6 +11984,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitParseOperatorNameAndOptionalType" ):
                 listener.exitParseOperatorNameAndOptionalType(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParseOperatorNameAndOptionalType" ):
+                return visitor.visitParseOperatorNameAndOptionalType(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11572,7 +12005,7 @@ class KqlParser ( Parser ):
             self.state = 1573
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.COLON:
+            if _la==10:
                 self.state = 1571
                 self.match(KqlParser.COLON)
                 self.state = 1572
@@ -11589,6 +12022,7 @@ class KqlParser ( Parser ):
 
 
     class ParseOperatorPatternContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11623,6 +12057,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitParseOperatorPattern" ):
                 listener.exitParseOperatorPattern(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParseOperatorPattern" ):
+                return visitor.visitParseOperatorPattern(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11636,7 +12076,7 @@ class KqlParser ( Parser ):
             self.state = 1576
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.OPENBRACKET) | (1 << KqlParser.ACCESS) | (1 << KqlParser.AGGREGATIONS) | (1 << KqlParser.ALIAS) | (1 << KqlParser.ALL) | (1 << KqlParser.AXES) | (1 << KqlParser.BASE) | (1 << KqlParser.BIN) | (1 << KqlParser.CLUSTER))) != 0) or ((((_la - 69)) & ~0x3f) == 0 and ((1 << (_la - 69)) & ((1 << (KqlParser.DATABASE - 69)) | (1 << (KqlParser.DECLARE - 69)) | (1 << (KqlParser.DEFAULT - 69)) | (1 << (KqlParser.DELTA - 69)) | (1 << (KqlParser.EDGES - 69)) | (1 << (KqlParser.EVALUATE - 69)) | (1 << (KqlParser.EXECUTE - 69)) | (1 << (KqlParser.FACET - 69)) | (1 << (KqlParser.FORK - 69)) | (1 << (KqlParser.FROM - 69)) | (1 << (KqlParser.HIDDEN_ - 69)) | (1 << (KqlParser.HOT - 69)) | (1 << (KqlParser.HOTDATA - 69)) | (1 << (KqlParser.HOTINDEX - 69)) | (1 << (KqlParser.ID - 69)) | (1 << (KqlParser.INTO - 69)))) != 0) or ((((_la - 140)) & ~0x3f) == 0 and ((1 << (_la - 140)) & ((1 << (KqlParser.LEGEND - 140)) | (1 << (KqlParser.LET - 140)) | (1 << (KqlParser.LINEAR - 140)) | (1 << (KqlParser.LIST - 140)) | (1 << (KqlParser.LOOKUP - 140)) | (1 << (KqlParser.LOG - 140)) | (1 << (KqlParser.MAP - 140)) | (1 << (KqlParser.NODES - 140)) | (1 << (KqlParser.NONE - 140)) | (1 << (KqlParser.NULL - 140)) | (1 << (KqlParser.NULLS - 140)) | (1 << (KqlParser.ON - 140)) | (1 << (KqlParser.OPTIONAL - 140)) | (1 << (KqlParser.OUTPUT - 140)) | (1 << (KqlParser.PACK - 140)) | (1 << (KqlParser.PARTITION - 140)) | (1 << (KqlParser.PARTITIONBY - 140)) | (1 << (KqlParser.PATTERN - 140)))) != 0) or ((((_la - 204)) & ~0x3f) == 0 and ((1 << (_la - 204)) & ((1 << (KqlParser.PLUGIN - 204)) | (1 << (KqlParser.QUERYPARAMETERS - 204)) | (1 << (KqlParser.RANGE - 204)) | (1 << (KqlParser.REDUCE - 204)) | (1 << (KqlParser.RENDER - 204)) | (1 << (KqlParser.REPLACE - 204)) | (1 << (KqlParser.RESTRICT - 204)) | (1 << (KqlParser.SERIES - 204)) | (1 << (KqlParser.STACKED - 204)) | (1 << (KqlParser.STACKED100 - 204)) | (1 << (KqlParser.STEP - 204)) | (1 << (KqlParser.THRESHOLD - 204)) | (1 << (KqlParser.TYPEOF - 204)) | (1 << (KqlParser.UNSTACKED - 204)) | (1 << (KqlParser.UUID - 204)) | (1 << (KqlParser.VIEW - 204)) | (1 << (KqlParser.VISIBLE - 204)) | (1 << (KqlParser.WITH - 204)))) != 0) or ((((_la - 268)) & ~0x3f) == 0 and ((1 << (_la - 268)) & ((1 << (KqlParser.XAXIS - 268)) | (1 << (KqlParser.XCOLUMN - 268)) | (1 << (KqlParser.XMAX - 268)) | (1 << (KqlParser.XMIN - 268)) | (1 << (KqlParser.XTITLE - 268)) | (1 << (KqlParser.YAXIS - 268)) | (1 << (KqlParser.YCOLUMNS - 268)) | (1 << (KqlParser.YMAX - 268)) | (1 << (KqlParser.YMIN - 268)) | (1 << (KqlParser.YSPLIT - 268)) | (1 << (KqlParser.YTITLE - 268)) | (1 << (KqlParser.BOOL - 268)) | (1 << (KqlParser.GUID - 268)) | (1 << (KqlParser.IDENTIFIER - 268)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 622630621017014272) != 0) or ((((_la - 69)) & ~0x3f) == 0 and ((1 << (_la - 69)) & -8178528127110061463) != 0) or ((((_la - 140)) & ~0x3f) == 0 and ((1 << (_la - 140)) & 1592259962793370531) != 0) or ((((_la - 204)) & ~0x3f) == 0 and ((1 << (_la - 204)) & 106397688039329281) != 0) or ((((_la - 268)) & ~0x3f) == 0 and ((1 << (_la - 268)) & 281474977239039) != 0):
                 self.state = 1575
                 localctx.LeadingColumn = self.parseOperatorNameAndOptionalType()
 
@@ -11656,7 +12096,7 @@ class KqlParser ( Parser ):
             self.state = 1585
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.ASTERISK:
+            if _la==1:
                 self.state = 1584
                 localctx.TrailingStar = self.match(KqlParser.ASTERISK)
 
@@ -11671,6 +12111,7 @@ class KqlParser ( Parser ):
 
 
     class ParseOperatorPatternSegmentContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11700,6 +12141,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitParseOperatorPatternSegment" ):
                 listener.exitParseOperatorPatternSegment(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParseOperatorPatternSegment" ):
+                return visitor.visitParseOperatorPatternSegment(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11713,7 +12160,7 @@ class KqlParser ( Parser ):
             self.state = 1588
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.ASTERISK:
+            if _la==1:
                 self.state = 1587
                 self.match(KqlParser.ASTERISK)
 
@@ -11723,7 +12170,7 @@ class KqlParser ( Parser ):
             self.state = 1592
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.OPENBRACKET) | (1 << KqlParser.ACCESS) | (1 << KqlParser.AGGREGATIONS) | (1 << KqlParser.ALIAS) | (1 << KqlParser.ALL) | (1 << KqlParser.AXES) | (1 << KqlParser.BASE) | (1 << KqlParser.BIN) | (1 << KqlParser.CLUSTER))) != 0) or ((((_la - 69)) & ~0x3f) == 0 and ((1 << (_la - 69)) & ((1 << (KqlParser.DATABASE - 69)) | (1 << (KqlParser.DECLARE - 69)) | (1 << (KqlParser.DEFAULT - 69)) | (1 << (KqlParser.DELTA - 69)) | (1 << (KqlParser.EDGES - 69)) | (1 << (KqlParser.EVALUATE - 69)) | (1 << (KqlParser.EXECUTE - 69)) | (1 << (KqlParser.FACET - 69)) | (1 << (KqlParser.FORK - 69)) | (1 << (KqlParser.FROM - 69)) | (1 << (KqlParser.HIDDEN_ - 69)) | (1 << (KqlParser.HOT - 69)) | (1 << (KqlParser.HOTDATA - 69)) | (1 << (KqlParser.HOTINDEX - 69)) | (1 << (KqlParser.ID - 69)) | (1 << (KqlParser.INTO - 69)))) != 0) or ((((_la - 140)) & ~0x3f) == 0 and ((1 << (_la - 140)) & ((1 << (KqlParser.LEGEND - 140)) | (1 << (KqlParser.LET - 140)) | (1 << (KqlParser.LINEAR - 140)) | (1 << (KqlParser.LIST - 140)) | (1 << (KqlParser.LOOKUP - 140)) | (1 << (KqlParser.LOG - 140)) | (1 << (KqlParser.MAP - 140)) | (1 << (KqlParser.NODES - 140)) | (1 << (KqlParser.NONE - 140)) | (1 << (KqlParser.NULL - 140)) | (1 << (KqlParser.NULLS - 140)) | (1 << (KqlParser.ON - 140)) | (1 << (KqlParser.OPTIONAL - 140)) | (1 << (KqlParser.OUTPUT - 140)) | (1 << (KqlParser.PACK - 140)) | (1 << (KqlParser.PARTITION - 140)) | (1 << (KqlParser.PARTITIONBY - 140)) | (1 << (KqlParser.PATTERN - 140)))) != 0) or ((((_la - 204)) & ~0x3f) == 0 and ((1 << (_la - 204)) & ((1 << (KqlParser.PLUGIN - 204)) | (1 << (KqlParser.QUERYPARAMETERS - 204)) | (1 << (KqlParser.RANGE - 204)) | (1 << (KqlParser.REDUCE - 204)) | (1 << (KqlParser.RENDER - 204)) | (1 << (KqlParser.REPLACE - 204)) | (1 << (KqlParser.RESTRICT - 204)) | (1 << (KqlParser.SERIES - 204)) | (1 << (KqlParser.STACKED - 204)) | (1 << (KqlParser.STACKED100 - 204)) | (1 << (KqlParser.STEP - 204)) | (1 << (KqlParser.THRESHOLD - 204)) | (1 << (KqlParser.TYPEOF - 204)) | (1 << (KqlParser.UNSTACKED - 204)) | (1 << (KqlParser.UUID - 204)) | (1 << (KqlParser.VIEW - 204)) | (1 << (KqlParser.VISIBLE - 204)) | (1 << (KqlParser.WITH - 204)))) != 0) or ((((_la - 268)) & ~0x3f) == 0 and ((1 << (_la - 268)) & ((1 << (KqlParser.XAXIS - 268)) | (1 << (KqlParser.XCOLUMN - 268)) | (1 << (KqlParser.XMAX - 268)) | (1 << (KqlParser.XMIN - 268)) | (1 << (KqlParser.XTITLE - 268)) | (1 << (KqlParser.YAXIS - 268)) | (1 << (KqlParser.YCOLUMNS - 268)) | (1 << (KqlParser.YMAX - 268)) | (1 << (KqlParser.YMIN - 268)) | (1 << (KqlParser.YSPLIT - 268)) | (1 << (KqlParser.YTITLE - 268)) | (1 << (KqlParser.BOOL - 268)) | (1 << (KqlParser.GUID - 268)) | (1 << (KqlParser.IDENTIFIER - 268)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 622630621017014272) != 0) or ((((_la - 69)) & ~0x3f) == 0 and ((1 << (_la - 69)) & -8178528127110061463) != 0) or ((((_la - 140)) & ~0x3f) == 0 and ((1 << (_la - 140)) & 1592259962793370531) != 0) or ((((_la - 204)) & ~0x3f) == 0 and ((1 << (_la - 204)) & 106397688039329281) != 0) or ((((_la - 268)) & ~0x3f) == 0 and ((1 << (_la - 268)) & 281474977239039) != 0):
                 self.state = 1591
                 localctx.Column = self.parseOperatorNameAndOptionalType()
 
@@ -11738,6 +12185,7 @@ class KqlParser ( Parser ):
 
 
     class ParseWhereOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11775,6 +12223,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitParseWhereOperator" ):
                 listener.exitParseWhereOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParseWhereOperator" ):
+                return visitor.visitParseWhereOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11790,7 +12244,7 @@ class KqlParser ( Parser ):
             self.state = 1596
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.KIND:
+            if _la==137:
                 self.state = 1595
                 localctx.KindClause = self.parseOperatorKindClause()
 
@@ -11811,6 +12265,7 @@ class KqlParser ( Parser ):
 
 
     class ParseKvOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11845,6 +12300,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitParseKvOperator" ):
                 listener.exitParseKvOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParseKvOperator" ):
+                return visitor.visitParseKvOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11864,7 +12325,7 @@ class KqlParser ( Parser ):
             self.state = 1606
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.WITH:
+            if _la==260:
                 self.state = 1605
                 localctx.WithClause = self.parseKvWithClause()
 
@@ -11879,6 +12340,7 @@ class KqlParser ( Parser ):
 
 
     class ParseKvWithClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11919,6 +12381,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitParseKvWithClause" ):
                 listener.exitParseKvWithClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParseKvWithClause" ):
+                return visitor.visitParseKvWithClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11939,7 +12407,7 @@ class KqlParser ( Parser ):
             self.state = 1615
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 1611
                 self.match(KqlParser.COMMA)
                 self.state = 1612
@@ -11961,6 +12429,7 @@ class KqlParser ( Parser ):
 
 
     class PartitionOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12012,6 +12481,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitPartitionOperator" ):
                 listener.exitPartitionOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPartitionOperator" ):
+                return visitor.visitPartitionOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12027,7 +12502,7 @@ class KqlParser ( Parser ):
             self.state = 1624
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & ((1 << (KqlParser.WITH_SOURCE - 266)) | (1 << (KqlParser.WITH_STEP_NAME - 266)) | (1 << (KqlParser.IDENTIFIER - 266)))) != 0):
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & 1125899906842627) != 0):
                 self.state = 1621
                 localctx._relaxedQueryOperatorParameter = self.relaxedQueryOperatorParameter()
                 localctx.Parameters.append(localctx._relaxedQueryOperatorParameter)
@@ -12042,7 +12517,7 @@ class KqlParser ( Parser ):
             self.state = 1630
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.IN:
+            if _la==130:
                 self.state = 1629
                 localctx.InClause = self.partitionOperatorInClause()
 
@@ -12050,11 +12525,11 @@ class KqlParser ( Parser ):
             self.state = 1634
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.OPENPAREN]:
+            if token in [31]:
                 self.state = 1632
                 localctx.SubExpressionBody = self.partitionOperatorSubExpressionBody()
                 pass
-            elif token in [KqlParser.OPENBRACE]:
+            elif token in [29]:
                 self.state = 1633
                 localctx.FullExpressionBody = self.partitionOperatorFullExpressionBody()
                 pass
@@ -12071,6 +12546,7 @@ class KqlParser ( Parser ):
 
 
     class PartitionOperatorInClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12100,6 +12576,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitPartitionOperatorInClause" ):
                 listener.exitPartitionOperatorInClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPartitionOperatorInClause" ):
+                return visitor.visitPartitionOperatorInClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12114,11 +12596,11 @@ class KqlParser ( Parser ):
             self.state = 1639
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.OPENBRACKET, KqlParser.ACCESS, KqlParser.AGGREGATIONS, KqlParser.ALIAS, KqlParser.ALL, KqlParser.AXES, KqlParser.BASE, KqlParser.BIN, KqlParser.CLUSTER, KqlParser.COUNT, KqlParser.DATABASE, KqlParser.DECLARE, KqlParser.DEFAULT, KqlParser.DELTA, KqlParser.EDGES, KqlParser.EVALUATE, KqlParser.EXECUTE, KqlParser.FACET, KqlParser.FORK, KqlParser.FROM, KqlParser.HIDDEN_, KqlParser.HOT, KqlParser.HOTDATA, KqlParser.HOTINDEX, KqlParser.ID, KqlParser.INTO, KqlParser.LEGEND, KqlParser.LET, KqlParser.LINEAR, KqlParser.LIST, KqlParser.LOOKUP, KqlParser.LOG, KqlParser.MAP, KqlParser.NODES, KqlParser.NONE, KqlParser.NULL, KqlParser.NULLS, KqlParser.ON, KqlParser.OPTIONAL, KqlParser.OUTPUT, KqlParser.PACK, KqlParser.PARTITION, KqlParser.PARTITIONBY, KqlParser.PATTERN, KqlParser.PLUGIN, KqlParser.QUERYPARAMETERS, KqlParser.RANGE, KqlParser.REDUCE, KqlParser.RENDER, KqlParser.REPLACE, KqlParser.RESTRICT, KqlParser.SERIES, KqlParser.STACKED, KqlParser.STACKED100, KqlParser.STEP, KqlParser.THRESHOLD, KqlParser.TYPEOF, KqlParser.UNSTACKED, KqlParser.UUID, KqlParser.VIEW, KqlParser.VISIBLE, KqlParser.WITH, KqlParser.XAXIS, KqlParser.XCOLUMN, KqlParser.XMAX, KqlParser.XMIN, KqlParser.XTITLE, KqlParser.YAXIS, KqlParser.YCOLUMNS, KqlParser.YMAX, KqlParser.YMIN, KqlParser.YSPLIT, KqlParser.YTITLE, KqlParser.BOOL, KqlParser.GUID, KqlParser.IDENTIFIER]:
+            if token in [30, 38, 40, 41, 42, 50, 53, 55, 59, 66, 69, 72, 74, 75, 78, 82, 83, 89, 94, 95, 112, 124, 126, 127, 128, 132, 140, 141, 145, 147, 148, 149, 153, 161, 162, 183, 184, 186, 187, 191, 192, 197, 198, 200, 204, 213, 214, 215, 218, 219, 220, 227, 232, 233, 237, 241, 253, 255, 256, 257, 258, 260, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 287, 316]:
                 self.state = 1637
                 localctx.FunctionCall = self.functionCallExpression()
                 pass
-            elif token in [KqlParser.DYNAMIC]:
+            elif token in [285]:
                 self.state = 1638
                 localctx.Literal = self.dynamicLiteralExpression()
                 pass
@@ -12135,6 +12617,7 @@ class KqlParser ( Parser ):
 
 
     class PartitionOperatorSubExpressionBodyContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12162,6 +12645,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitPartitionOperatorSubExpressionBody" ):
                 listener.exitPartitionOperatorSubExpressionBody(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPartitionOperatorSubExpressionBody" ):
+                return visitor.visitPartitionOperatorSubExpressionBody(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12187,6 +12676,7 @@ class KqlParser ( Parser ):
 
 
     class PartitionOperatorFullExpressionBodyContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12214,6 +12704,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitPartitionOperatorFullExpressionBody" ):
                 listener.exitPartitionOperatorFullExpressionBody(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPartitionOperatorFullExpressionBody" ):
+                return visitor.visitPartitionOperatorFullExpressionBody(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12239,6 +12735,7 @@ class KqlParser ( Parser ):
 
 
     class PartitionByOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12288,6 +12785,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitPartitionByOperator" ):
                 listener.exitPartitionByOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPartitionByOperator" ):
+                return visitor.visitPartitionByOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12317,7 +12820,7 @@ class KqlParser ( Parser ):
             self.state = 1658
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.ID:
+            if _la==128:
                 self.state = 1657
                 localctx.IdClause = self.partitionByOperatorIdClause()
 
@@ -12338,6 +12841,7 @@ class KqlParser ( Parser ):
 
 
     class PartitionByOperatorIdClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12360,6 +12864,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPartitionByOperatorIdClause" ):
                 listener.exitPartitionByOperatorIdClause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPartitionByOperatorIdClause" ):
+                return visitor.visitPartitionByOperatorIdClause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12384,6 +12894,7 @@ class KqlParser ( Parser ):
 
 
     class PrintOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12418,6 +12929,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitPrintOperator" ):
                 listener.exitPrintOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrintOperator" ):
+                return visitor.visitPrintOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12436,7 +12953,7 @@ class KqlParser ( Parser ):
             self.state = 1673
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 1669
                 self.match(KqlParser.COMMA)
                 self.state = 1670
@@ -12456,6 +12973,7 @@ class KqlParser ( Parser ):
 
 
     class ProjectAwayOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12490,6 +13008,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitProjectAwayOperator" ):
                 listener.exitProjectAwayOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProjectAwayOperator" ):
+                return visitor.visitProjectAwayOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12505,14 +13029,14 @@ class KqlParser ( Parser ):
             self.state = 1685
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.ASTERISK) | (1 << KqlParser.OPENBRACKET) | (1 << KqlParser.ACCESS) | (1 << KqlParser.ACCUMULATE) | (1 << KqlParser.AGGREGATIONS) | (1 << KqlParser.ALIAS) | (1 << KqlParser.ALL) | (1 << KqlParser.AS) | (1 << KqlParser.AXES) | (1 << KqlParser.BASE) | (1 << KqlParser.BIN) | (1 << KqlParser.BY) | (1 << KqlParser.CLUSTER) | (1 << KqlParser.CONSUME) | (1 << KqlParser.CONTAINS))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (KqlParser.COUNT - 66)) | (1 << (KqlParser.DATABASE - 66)) | (1 << (KqlParser.DATATABLE - 66)) | (1 << (KqlParser.DECLARE - 66)) | (1 << (KqlParser.DEFAULT - 66)) | (1 << (KqlParser.DELTA - 66)) | (1 << (KqlParser.DISTINCT - 66)) | (1 << (KqlParser.EDGES - 66)) | (1 << (KqlParser.EVALUATE - 66)) | (1 << (KqlParser.EXECUTE - 66)) | (1 << (KqlParser.EXTEND - 66)) | (1 << (KqlParser.EXTERNALDATA - 66)) | (1 << (KqlParser.FACET - 66)) | (1 << (KqlParser.FILTER - 66)) | (1 << (KqlParser.FIND - 66)) | (1 << (KqlParser.FORK - 66)) | (1 << (KqlParser.FROM - 66)) | (1 << (KqlParser.HAS - 66)) | (1 << (KqlParser.HIDDEN_ - 66)) | (1 << (KqlParser.HOT - 66)) | (1 << (KqlParser.HOTDATA - 66)) | (1 << (KqlParser.HOTINDEX - 66)) | (1 << (KqlParser.ID - 66)))) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & ((1 << (KqlParser.IN - 130)) | (1 << (KqlParser.INTO - 130)) | (1 << (KqlParser.INVOKE - 130)) | (1 << (KqlParser.LEGEND - 130)) | (1 << (KqlParser.LET - 130)) | (1 << (KqlParser.LIMIT - 130)) | (1 << (KqlParser.LINEAR - 130)) | (1 << (KqlParser.LIST - 130)) | (1 << (KqlParser.LOOKUP - 130)) | (1 << (KqlParser.LOG - 130)) | (1 << (KqlParser.MAP - 130)) | (1 << (KqlParser.MATERIALIZE - 130)) | (1 << (KqlParser.NODES - 130)) | (1 << (KqlParser.NONE - 130)) | (1 << (KqlParser.NULL - 130)) | (1 << (KqlParser.NULLS - 130)) | (1 << (KqlParser.OF - 130)) | (1 << (KqlParser.ON - 130)) | (1 << (KqlParser.OPTIONAL - 130)) | (1 << (KqlParser.OUTPUT - 130)) | (1 << (KqlParser.PACK - 130)))) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & ((1 << (KqlParser.PARSE - 194)) | (1 << (KqlParser.PARTITION - 194)) | (1 << (KqlParser.PARTITIONBY - 194)) | (1 << (KqlParser.PATTERN - 194)) | (1 << (KqlParser.PLUGIN - 194)) | (1 << (KqlParser.PRINT - 194)) | (1 << (KqlParser.QUERYPARAMETERS - 194)) | (1 << (KqlParser.RANGE - 194)) | (1 << (KqlParser.REDUCE - 194)) | (1 << (KqlParser.RENDER - 194)) | (1 << (KqlParser.REPLACE - 194)) | (1 << (KqlParser.RESTRICT - 194)) | (1 << (KqlParser.SAMPLE - 194)) | (1 << (KqlParser.SAMPLE_DISTINCT - 194)) | (1 << (KqlParser.SCAN - 194)) | (1 << (KqlParser.SEARCH - 194)) | (1 << (KqlParser.SERIALIZE - 194)) | (1 << (KqlParser.SERIES - 194)) | (1 << (KqlParser.SET - 194)) | (1 << (KqlParser.SORT - 194)) | (1 << (KqlParser.STACKED - 194)) | (1 << (KqlParser.STACKED100 - 194)) | (1 << (KqlParser.STEP - 194)) | (1 << (KqlParser.SUMMARIZE - 194)) | (1 << (KqlParser.TAKE - 194)) | (1 << (KqlParser.THRESHOLD - 194)) | (1 << (KqlParser.TITLE - 194)) | (1 << (KqlParser.TO - 194)) | (1 << (KqlParser.TOP - 194)) | (1 << (KqlParser.TOP_HITTERS - 194)) | (1 << (KqlParser.TOP_NESTED - 194)) | (1 << (KqlParser.TOSCALAR - 194)) | (1 << (KqlParser.TOTABLE - 194)) | (1 << (KqlParser.TYPEOF - 194)) | (1 << (KqlParser.UNSTACKED - 194)) | (1 << (KqlParser.UUID - 194)) | (1 << (KqlParser.VIEW - 194)))) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & ((1 << (KqlParser.VISIBLE - 258)) | (1 << (KqlParser.WHERE - 258)) | (1 << (KqlParser.WITH - 258)) | (1 << (KqlParser.XAXIS - 258)) | (1 << (KqlParser.XCOLUMN - 258)) | (1 << (KqlParser.XMAX - 258)) | (1 << (KqlParser.XMIN - 258)) | (1 << (KqlParser.XTITLE - 258)) | (1 << (KqlParser.YAXIS - 258)) | (1 << (KqlParser.YCOLUMNS - 258)) | (1 << (KqlParser.YMAX - 258)) | (1 << (KqlParser.YMIN - 258)) | (1 << (KqlParser.YSPLIT - 258)) | (1 << (KqlParser.YTITLE - 258)) | (1 << (KqlParser.BOOL - 258)) | (1 << (KqlParser.GUID - 258)) | (1 << (KqlParser.IDENTIFIER - 258)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 7684416123978121218) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & 8358751552889101161) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & 7196752211023416333) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & -1443165259434554279) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & 288230376692775943) != 0):
                 self.state = 1677
                 localctx._simpleOrWildcardedNameReference = self.simpleOrWildcardedNameReference()
                 localctx.Columns.append(localctx._simpleOrWildcardedNameReference)
                 self.state = 1682
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==KqlParser.COMMA:
+                while _la==9:
                     self.state = 1678
                     self.match(KqlParser.COMMA)
                     self.state = 1679
@@ -12534,6 +13058,7 @@ class KqlParser ( Parser ):
 
 
     class ProjectKeepOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12568,6 +13093,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitProjectKeepOperator" ):
                 listener.exitProjectKeepOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProjectKeepOperator" ):
+                return visitor.visitProjectKeepOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12586,7 +13117,7 @@ class KqlParser ( Parser ):
             self.state = 1693
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 1689
                 self.match(KqlParser.COMMA)
                 self.state = 1690
@@ -12606,6 +13137,7 @@ class KqlParser ( Parser ):
 
 
     class ProjectOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12640,6 +13172,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitProjectOperator" ):
                 listener.exitProjectOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProjectOperator" ):
+                return visitor.visitProjectOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12655,14 +13193,14 @@ class KqlParser ( Parser ):
             self.state = 1705
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.ASTERISK) | (1 << KqlParser.DASH) | (1 << KqlParser.OPENBRACKET) | (1 << KqlParser.OPENPAREN) | (1 << KqlParser.PLUS) | (1 << KqlParser.ACCESS) | (1 << KqlParser.ACCUMULATE) | (1 << KqlParser.AGGREGATIONS) | (1 << KqlParser.ALIAS) | (1 << KqlParser.ALL) | (1 << KqlParser.AS) | (1 << KqlParser.AXES) | (1 << KqlParser.BASE) | (1 << KqlParser.BIN) | (1 << KqlParser.BY) | (1 << KqlParser.CLUSTER) | (1 << KqlParser.CONSUME) | (1 << KqlParser.CONTAINS))) != 0) or ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & ((1 << (KqlParser.CONTEXTUAL_DATATABLE - 65)) | (1 << (KqlParser.COUNT - 65)) | (1 << (KqlParser.DATABASE - 65)) | (1 << (KqlParser.DATATABLE - 65)) | (1 << (KqlParser.DECLARE - 65)) | (1 << (KqlParser.DEFAULT - 65)) | (1 << (KqlParser.DELTA - 65)) | (1 << (KqlParser.DISTINCT - 65)) | (1 << (KqlParser.EDGES - 65)) | (1 << (KqlParser.EVALUATE - 65)) | (1 << (KqlParser.EXECUTE - 65)) | (1 << (KqlParser.EXTEND - 65)) | (1 << (KqlParser.EXTERNALDATA - 65)) | (1 << (KqlParser.EXTERNAL_DATA - 65)) | (1 << (KqlParser.FACET - 65)) | (1 << (KqlParser.FILTER - 65)) | (1 << (KqlParser.FIND - 65)) | (1 << (KqlParser.FORK - 65)) | (1 << (KqlParser.FROM - 65)) | (1 << (KqlParser.HAS - 65)) | (1 << (KqlParser.HIDDEN_ - 65)) | (1 << (KqlParser.HOT - 65)) | (1 << (KqlParser.HOTDATA - 65)) | (1 << (KqlParser.HOTINDEX - 65)) | (1 << (KqlParser.ID - 65)))) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & ((1 << (KqlParser.IN - 130)) | (1 << (KqlParser.INTO - 130)) | (1 << (KqlParser.INVOKE - 130)) | (1 << (KqlParser.LEGEND - 130)) | (1 << (KqlParser.LET - 130)) | (1 << (KqlParser.LIMIT - 130)) | (1 << (KqlParser.LINEAR - 130)) | (1 << (KqlParser.LIST - 130)) | (1 << (KqlParser.LOOKUP - 130)) | (1 << (KqlParser.LOG - 130)) | (1 << (KqlParser.MAP - 130)) | (1 << (KqlParser.MATERIALIZE - 130)) | (1 << (KqlParser.MATERIALIZED_VIEW_COMBINE - 130)) | (1 << (KqlParser.NODES - 130)) | (1 << (KqlParser.NONE - 130)) | (1 << (KqlParser.NULL - 130)) | (1 << (KqlParser.NULLS - 130)) | (1 << (KqlParser.OF - 130)) | (1 << (KqlParser.ON - 130)) | (1 << (KqlParser.OPTIONAL - 130)) | (1 << (KqlParser.OUTPUT - 130)) | (1 << (KqlParser.PACK - 130)))) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & ((1 << (KqlParser.PARSE - 194)) | (1 << (KqlParser.PARTITION - 194)) | (1 << (KqlParser.PARTITIONBY - 194)) | (1 << (KqlParser.PATTERN - 194)) | (1 << (KqlParser.PLUGIN - 194)) | (1 << (KqlParser.PRINT - 194)) | (1 << (KqlParser.QUERYPARAMETERS - 194)) | (1 << (KqlParser.RANGE - 194)) | (1 << (KqlParser.REDUCE - 194)) | (1 << (KqlParser.RENDER - 194)) | (1 << (KqlParser.REPLACE - 194)) | (1 << (KqlParser.RESTRICT - 194)) | (1 << (KqlParser.SAMPLE - 194)) | (1 << (KqlParser.SAMPLE_DISTINCT - 194)) | (1 << (KqlParser.SCAN - 194)) | (1 << (KqlParser.SEARCH - 194)) | (1 << (KqlParser.SERIALIZE - 194)) | (1 << (KqlParser.SERIES - 194)) | (1 << (KqlParser.SET - 194)) | (1 << (KqlParser.SORT - 194)) | (1 << (KqlParser.STACKED - 194)) | (1 << (KqlParser.STACKED100 - 194)) | (1 << (KqlParser.STEP - 194)) | (1 << (KqlParser.SUMMARIZE - 194)) | (1 << (KqlParser.TAKE - 194)) | (1 << (KqlParser.THRESHOLD - 194)) | (1 << (KqlParser.TITLE - 194)) | (1 << (KqlParser.TO - 194)) | (1 << (KqlParser.TOP - 194)) | (1 << (KqlParser.TOP_HITTERS - 194)) | (1 << (KqlParser.TOP_NESTED - 194)) | (1 << (KqlParser.TOSCALAR - 194)) | (1 << (KqlParser.TOTABLE - 194)) | (1 << (KqlParser.TYPEOF - 194)) | (1 << (KqlParser.UNSTACKED - 194)) | (1 << (KqlParser.UUID - 194)) | (1 << (KqlParser.VIEW - 194)))) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & ((1 << (KqlParser.VISIBLE - 258)) | (1 << (KqlParser.WHERE - 258)) | (1 << (KqlParser.WITH - 258)) | (1 << (KqlParser.XAXIS - 258)) | (1 << (KqlParser.XCOLUMN - 258)) | (1 << (KqlParser.XMAX - 258)) | (1 << (KqlParser.XMIN - 258)) | (1 << (KqlParser.XTITLE - 258)) | (1 << (KqlParser.YAXIS - 258)) | (1 << (KqlParser.YCOLUMNS - 258)) | (1 << (KqlParser.YMAX - 258)) | (1 << (KqlParser.YMIN - 258)) | (1 << (KqlParser.YSPLIT - 258)) | (1 << (KqlParser.YTITLE - 258)) | (1 << (KqlParser.BOOL - 258)) | (1 << (KqlParser.DYNAMIC - 258)) | (1 << (KqlParser.GUID - 258)) | (1 << (KqlParser.LONGLITERAL - 258)) | (1 << (KqlParser.INTLITERAL - 258)) | (1 << (KqlParser.REALLITERAL - 258)) | (1 << (KqlParser.DECIMALLITERAL - 258)) | (1 << (KqlParser.STRINGLITERAL - 258)) | (1 << (KqlParser.BOOLEANLITERAL - 258)) | (1 << (KqlParser.DATETIMELITERAL - 258)) | (1 << (KqlParser.TIMESPANLITERAL - 258)) | (1 << (KqlParser.TYPELITERAL - 258)) | (1 << (KqlParser.GUIDLITERAL - 258)) | (1 << (KqlParser.IDENTIFIER - 258)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 7684416134715541506) != 0) or ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & -1729240967922960685) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & 7196752211090525197) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & -1443165259434554279) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & 504262421452422151) != 0):
                 self.state = 1697
                 localctx._namedExpression = self.namedExpression()
                 localctx.Expressions.append(localctx._namedExpression)
                 self.state = 1702
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==KqlParser.COMMA:
+                while _la==9:
                     self.state = 1698
                     self.match(KqlParser.COMMA)
                     self.state = 1699
@@ -12684,6 +13222,7 @@ class KqlParser ( Parser ):
 
 
     class ProjectRenameOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12718,6 +13257,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitProjectRenameOperator" ):
                 listener.exitProjectRenameOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProjectRenameOperator" ):
+                return visitor.visitProjectRenameOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12733,14 +13278,14 @@ class KqlParser ( Parser ):
             self.state = 1716
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.ASTERISK) | (1 << KqlParser.DASH) | (1 << KqlParser.OPENBRACKET) | (1 << KqlParser.OPENPAREN) | (1 << KqlParser.PLUS) | (1 << KqlParser.ACCESS) | (1 << KqlParser.ACCUMULATE) | (1 << KqlParser.AGGREGATIONS) | (1 << KqlParser.ALIAS) | (1 << KqlParser.ALL) | (1 << KqlParser.AS) | (1 << KqlParser.AXES) | (1 << KqlParser.BASE) | (1 << KqlParser.BIN) | (1 << KqlParser.BY) | (1 << KqlParser.CLUSTER) | (1 << KqlParser.CONSUME) | (1 << KqlParser.CONTAINS))) != 0) or ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & ((1 << (KqlParser.CONTEXTUAL_DATATABLE - 65)) | (1 << (KqlParser.COUNT - 65)) | (1 << (KqlParser.DATABASE - 65)) | (1 << (KqlParser.DATATABLE - 65)) | (1 << (KqlParser.DECLARE - 65)) | (1 << (KqlParser.DEFAULT - 65)) | (1 << (KqlParser.DELTA - 65)) | (1 << (KqlParser.DISTINCT - 65)) | (1 << (KqlParser.EDGES - 65)) | (1 << (KqlParser.EVALUATE - 65)) | (1 << (KqlParser.EXECUTE - 65)) | (1 << (KqlParser.EXTEND - 65)) | (1 << (KqlParser.EXTERNALDATA - 65)) | (1 << (KqlParser.EXTERNAL_DATA - 65)) | (1 << (KqlParser.FACET - 65)) | (1 << (KqlParser.FILTER - 65)) | (1 << (KqlParser.FIND - 65)) | (1 << (KqlParser.FORK - 65)) | (1 << (KqlParser.FROM - 65)) | (1 << (KqlParser.HAS - 65)) | (1 << (KqlParser.HIDDEN_ - 65)) | (1 << (KqlParser.HOT - 65)) | (1 << (KqlParser.HOTDATA - 65)) | (1 << (KqlParser.HOTINDEX - 65)) | (1 << (KqlParser.ID - 65)))) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & ((1 << (KqlParser.IN - 130)) | (1 << (KqlParser.INTO - 130)) | (1 << (KqlParser.INVOKE - 130)) | (1 << (KqlParser.LEGEND - 130)) | (1 << (KqlParser.LET - 130)) | (1 << (KqlParser.LIMIT - 130)) | (1 << (KqlParser.LINEAR - 130)) | (1 << (KqlParser.LIST - 130)) | (1 << (KqlParser.LOOKUP - 130)) | (1 << (KqlParser.LOG - 130)) | (1 << (KqlParser.MAP - 130)) | (1 << (KqlParser.MATERIALIZE - 130)) | (1 << (KqlParser.MATERIALIZED_VIEW_COMBINE - 130)) | (1 << (KqlParser.NODES - 130)) | (1 << (KqlParser.NONE - 130)) | (1 << (KqlParser.NULL - 130)) | (1 << (KqlParser.NULLS - 130)) | (1 << (KqlParser.OF - 130)) | (1 << (KqlParser.ON - 130)) | (1 << (KqlParser.OPTIONAL - 130)) | (1 << (KqlParser.OUTPUT - 130)) | (1 << (KqlParser.PACK - 130)))) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & ((1 << (KqlParser.PARSE - 194)) | (1 << (KqlParser.PARTITION - 194)) | (1 << (KqlParser.PARTITIONBY - 194)) | (1 << (KqlParser.PATTERN - 194)) | (1 << (KqlParser.PLUGIN - 194)) | (1 << (KqlParser.PRINT - 194)) | (1 << (KqlParser.QUERYPARAMETERS - 194)) | (1 << (KqlParser.RANGE - 194)) | (1 << (KqlParser.REDUCE - 194)) | (1 << (KqlParser.RENDER - 194)) | (1 << (KqlParser.REPLACE - 194)) | (1 << (KqlParser.RESTRICT - 194)) | (1 << (KqlParser.SAMPLE - 194)) | (1 << (KqlParser.SAMPLE_DISTINCT - 194)) | (1 << (KqlParser.SCAN - 194)) | (1 << (KqlParser.SEARCH - 194)) | (1 << (KqlParser.SERIALIZE - 194)) | (1 << (KqlParser.SERIES - 194)) | (1 << (KqlParser.SET - 194)) | (1 << (KqlParser.SORT - 194)) | (1 << (KqlParser.STACKED - 194)) | (1 << (KqlParser.STACKED100 - 194)) | (1 << (KqlParser.STEP - 194)) | (1 << (KqlParser.SUMMARIZE - 194)) | (1 << (KqlParser.TAKE - 194)) | (1 << (KqlParser.THRESHOLD - 194)) | (1 << (KqlParser.TITLE - 194)) | (1 << (KqlParser.TO - 194)) | (1 << (KqlParser.TOP - 194)) | (1 << (KqlParser.TOP_HITTERS - 194)) | (1 << (KqlParser.TOP_NESTED - 194)) | (1 << (KqlParser.TOSCALAR - 194)) | (1 << (KqlParser.TOTABLE - 194)) | (1 << (KqlParser.TYPEOF - 194)) | (1 << (KqlParser.UNSTACKED - 194)) | (1 << (KqlParser.UUID - 194)) | (1 << (KqlParser.VIEW - 194)))) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & ((1 << (KqlParser.VISIBLE - 258)) | (1 << (KqlParser.WHERE - 258)) | (1 << (KqlParser.WITH - 258)) | (1 << (KqlParser.XAXIS - 258)) | (1 << (KqlParser.XCOLUMN - 258)) | (1 << (KqlParser.XMAX - 258)) | (1 << (KqlParser.XMIN - 258)) | (1 << (KqlParser.XTITLE - 258)) | (1 << (KqlParser.YAXIS - 258)) | (1 << (KqlParser.YCOLUMNS - 258)) | (1 << (KqlParser.YMAX - 258)) | (1 << (KqlParser.YMIN - 258)) | (1 << (KqlParser.YSPLIT - 258)) | (1 << (KqlParser.YTITLE - 258)) | (1 << (KqlParser.BOOL - 258)) | (1 << (KqlParser.DYNAMIC - 258)) | (1 << (KqlParser.GUID - 258)) | (1 << (KqlParser.LONGLITERAL - 258)) | (1 << (KqlParser.INTLITERAL - 258)) | (1 << (KqlParser.REALLITERAL - 258)) | (1 << (KqlParser.DECIMALLITERAL - 258)) | (1 << (KqlParser.STRINGLITERAL - 258)) | (1 << (KqlParser.BOOLEANLITERAL - 258)) | (1 << (KqlParser.DATETIMELITERAL - 258)) | (1 << (KqlParser.TIMESPANLITERAL - 258)) | (1 << (KqlParser.TYPELITERAL - 258)) | (1 << (KqlParser.GUIDLITERAL - 258)) | (1 << (KqlParser.IDENTIFIER - 258)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 7684416134715541506) != 0) or ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & -1729240967922960685) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & 7196752211090525197) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & -1443165259434554279) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & 504262421452422151) != 0):
                 self.state = 1708
                 localctx._namedExpression = self.namedExpression()
                 localctx.Expressions.append(localctx._namedExpression)
                 self.state = 1713
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==KqlParser.COMMA:
+                while _la==9:
                     self.state = 1709
                     self.match(KqlParser.COMMA)
                     self.state = 1710
@@ -12762,6 +13307,7 @@ class KqlParser ( Parser ):
 
 
     class ProjectReorderOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12796,6 +13342,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitProjectReorderOperator" ):
                 listener.exitProjectReorderOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProjectReorderOperator" ):
+                return visitor.visitProjectReorderOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12811,14 +13363,14 @@ class KqlParser ( Parser ):
             self.state = 1727
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.ASTERISK) | (1 << KqlParser.OPENBRACKET) | (1 << KqlParser.ACCESS) | (1 << KqlParser.ACCUMULATE) | (1 << KqlParser.AGGREGATIONS) | (1 << KqlParser.ALIAS) | (1 << KqlParser.ALL) | (1 << KqlParser.AS) | (1 << KqlParser.AXES) | (1 << KqlParser.BASE) | (1 << KqlParser.BIN) | (1 << KqlParser.BY) | (1 << KqlParser.CLUSTER) | (1 << KqlParser.CONSUME) | (1 << KqlParser.CONTAINS))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (KqlParser.COUNT - 66)) | (1 << (KqlParser.DATABASE - 66)) | (1 << (KqlParser.DATATABLE - 66)) | (1 << (KqlParser.DECLARE - 66)) | (1 << (KqlParser.DEFAULT - 66)) | (1 << (KqlParser.DELTA - 66)) | (1 << (KqlParser.DISTINCT - 66)) | (1 << (KqlParser.EDGES - 66)) | (1 << (KqlParser.EVALUATE - 66)) | (1 << (KqlParser.EXECUTE - 66)) | (1 << (KqlParser.EXTEND - 66)) | (1 << (KqlParser.EXTERNALDATA - 66)) | (1 << (KqlParser.FACET - 66)) | (1 << (KqlParser.FILTER - 66)) | (1 << (KqlParser.FIND - 66)) | (1 << (KqlParser.FORK - 66)) | (1 << (KqlParser.FROM - 66)) | (1 << (KqlParser.HAS - 66)) | (1 << (KqlParser.HIDDEN_ - 66)) | (1 << (KqlParser.HOT - 66)) | (1 << (KqlParser.HOTDATA - 66)) | (1 << (KqlParser.HOTINDEX - 66)) | (1 << (KqlParser.ID - 66)))) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & ((1 << (KqlParser.IN - 130)) | (1 << (KqlParser.INTO - 130)) | (1 << (KqlParser.INVOKE - 130)) | (1 << (KqlParser.LEGEND - 130)) | (1 << (KqlParser.LET - 130)) | (1 << (KqlParser.LIMIT - 130)) | (1 << (KqlParser.LINEAR - 130)) | (1 << (KqlParser.LIST - 130)) | (1 << (KqlParser.LOOKUP - 130)) | (1 << (KqlParser.LOG - 130)) | (1 << (KqlParser.MAP - 130)) | (1 << (KqlParser.MATERIALIZE - 130)) | (1 << (KqlParser.NODES - 130)) | (1 << (KqlParser.NONE - 130)) | (1 << (KqlParser.NULL - 130)) | (1 << (KqlParser.NULLS - 130)) | (1 << (KqlParser.OF - 130)) | (1 << (KqlParser.ON - 130)) | (1 << (KqlParser.OPTIONAL - 130)) | (1 << (KqlParser.OUTPUT - 130)) | (1 << (KqlParser.PACK - 130)))) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & ((1 << (KqlParser.PARSE - 194)) | (1 << (KqlParser.PARTITION - 194)) | (1 << (KqlParser.PARTITIONBY - 194)) | (1 << (KqlParser.PATTERN - 194)) | (1 << (KqlParser.PLUGIN - 194)) | (1 << (KqlParser.PRINT - 194)) | (1 << (KqlParser.QUERYPARAMETERS - 194)) | (1 << (KqlParser.RANGE - 194)) | (1 << (KqlParser.REDUCE - 194)) | (1 << (KqlParser.RENDER - 194)) | (1 << (KqlParser.REPLACE - 194)) | (1 << (KqlParser.RESTRICT - 194)) | (1 << (KqlParser.SAMPLE - 194)) | (1 << (KqlParser.SAMPLE_DISTINCT - 194)) | (1 << (KqlParser.SCAN - 194)) | (1 << (KqlParser.SEARCH - 194)) | (1 << (KqlParser.SERIALIZE - 194)) | (1 << (KqlParser.SERIES - 194)) | (1 << (KqlParser.SET - 194)) | (1 << (KqlParser.SORT - 194)) | (1 << (KqlParser.STACKED - 194)) | (1 << (KqlParser.STACKED100 - 194)) | (1 << (KqlParser.STEP - 194)) | (1 << (KqlParser.SUMMARIZE - 194)) | (1 << (KqlParser.TAKE - 194)) | (1 << (KqlParser.THRESHOLD - 194)) | (1 << (KqlParser.TITLE - 194)) | (1 << (KqlParser.TO - 194)) | (1 << (KqlParser.TOP - 194)) | (1 << (KqlParser.TOP_HITTERS - 194)) | (1 << (KqlParser.TOP_NESTED - 194)) | (1 << (KqlParser.TOSCALAR - 194)) | (1 << (KqlParser.TOTABLE - 194)) | (1 << (KqlParser.TYPEOF - 194)) | (1 << (KqlParser.UNSTACKED - 194)) | (1 << (KqlParser.UUID - 194)) | (1 << (KqlParser.VIEW - 194)))) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & ((1 << (KqlParser.VISIBLE - 258)) | (1 << (KqlParser.WHERE - 258)) | (1 << (KqlParser.WITH - 258)) | (1 << (KqlParser.XAXIS - 258)) | (1 << (KqlParser.XCOLUMN - 258)) | (1 << (KqlParser.XMAX - 258)) | (1 << (KqlParser.XMIN - 258)) | (1 << (KqlParser.XTITLE - 258)) | (1 << (KqlParser.YAXIS - 258)) | (1 << (KqlParser.YCOLUMNS - 258)) | (1 << (KqlParser.YMAX - 258)) | (1 << (KqlParser.YMIN - 258)) | (1 << (KqlParser.YSPLIT - 258)) | (1 << (KqlParser.YTITLE - 258)) | (1 << (KqlParser.BOOL - 258)) | (1 << (KqlParser.GUID - 258)) | (1 << (KqlParser.IDENTIFIER - 258)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 7684416123978121218) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & 8358751552889101161) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & 7196752211023416333) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & -1443165259434554279) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & 288230376692775943) != 0):
                 self.state = 1719
                 localctx._projectReorderExpression = self.projectReorderExpression()
                 localctx.Expressions.append(localctx._projectReorderExpression)
                 self.state = 1724
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==KqlParser.COMMA:
+                while _la==9:
                     self.state = 1720
                     self.match(KqlParser.COMMA)
                     self.state = 1721
@@ -12840,6 +13392,7 @@ class KqlParser ( Parser ):
 
 
     class ProjectReorderExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12874,6 +13427,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitProjectReorderExpression" ):
                 listener.exitProjectReorderExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProjectReorderExpression" ):
+                return visitor.visitProjectReorderExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12889,11 +13448,11 @@ class KqlParser ( Parser ):
             self.state = 1731
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((((_la - 48)) & ~0x3f) == 0 and ((1 << (_la - 48)) & ((1 << (KqlParser.ASC - 48)) | (1 << (KqlParser.DESC - 48)) | (1 << (KqlParser.GRANNYASC - 48)) | (1 << (KqlParser.GRANNYDESC - 48)))) != 0):
+            if ((((_la - 48)) & ~0x3f) == 0 and ((1 << (_la - 48)) & 1688850128699393) != 0):
                 self.state = 1730
                 localctx.Order = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(((((_la - 48)) & ~0x3f) == 0 and ((1 << (_la - 48)) & ((1 << (KqlParser.ASC - 48)) | (1 << (KqlParser.DESC - 48)) | (1 << (KqlParser.GRANNYASC - 48)) | (1 << (KqlParser.GRANNYDESC - 48)))) != 0)):
+                if not(((((_la - 48)) & ~0x3f) == 0 and ((1 << (_la - 48)) & 1688850128699393) != 0)):
                     localctx.Order = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -12910,6 +13469,7 @@ class KqlParser ( Parser ):
 
 
     class ReduceByOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12951,6 +13511,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitReduceByOperator" ):
                 listener.exitReduceByOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReduceByOperator" ):
+                return visitor.visitReduceByOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12966,7 +13532,7 @@ class KqlParser ( Parser ):
             self.state = 1737
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or _la==KqlParser.WITH_SOURCE or _la==KqlParser.WITH_STEP_NAME:
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or _la==266 or _la==267:
                 self.state = 1734
                 localctx._strictQueryOperatorParameter = self.strictQueryOperatorParameter()
                 localctx.Parameters.append(localctx._strictQueryOperatorParameter)
@@ -12981,7 +13547,7 @@ class KqlParser ( Parser ):
             self.state = 1743
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.WITH:
+            if _la==260:
                 self.state = 1742
                 localctx.WithClause = self.reduceByWithClause()
 
@@ -12996,6 +13562,7 @@ class KqlParser ( Parser ):
 
 
     class ReduceByWithClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -13030,6 +13597,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitReduceByWithClause" ):
                 listener.exitReduceByWithClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReduceByWithClause" ):
+                return visitor.visitReduceByWithClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13048,7 +13621,7 @@ class KqlParser ( Parser ):
             self.state = 1751
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 1747
                 self.match(KqlParser.COMMA)
                 self.state = 1748
@@ -13068,6 +13641,7 @@ class KqlParser ( Parser ):
 
 
     class RenderOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -13155,6 +13729,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitRenderOperator" ):
                 listener.exitRenderOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRenderOperator" ):
+                return visitor.visitRenderOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13170,7 +13750,7 @@ class KqlParser ( Parser ):
             self.state = 1755
             localctx.CharType = self._input.LT(1)
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.CHART3D_) | (1 << KqlParser.ANOMALYCHART) | (1 << KqlParser.AREACHART) | (1 << KqlParser.BARCHART) | (1 << KqlParser.CARD) | (1 << KqlParser.COLUMNCHART))) != 0) or ((((_la - 138)) & ~0x3f) == 0 and ((1 << (_la - 138)) & ((1 << (KqlParser.LADDERCHART - 138)) | (1 << (KqlParser.LINECHART - 138)) | (1 << (KqlParser.LIST - 138)))) != 0) or ((((_la - 202)) & ~0x3f) == 0 and ((1 << (_la - 202)) & ((1 << (KqlParser.PIECHART - 202)) | (1 << (KqlParser.PIVOTCHART - 202)) | (1 << (KqlParser.SCATTERCHART - 202)) | (1 << (KqlParser.STACKEDAREACHART - 202)) | (1 << (KqlParser.TABLE - 202)) | (1 << (KqlParser.TIMECHART - 202)) | (1 << (KqlParser.TIMELINE - 202)) | (1 << (KqlParser.TIMEPIVOT - 202)) | (1 << (KqlParser.TREEMAP - 202)))) != 0) or _la==KqlParser.IDENTIFIER):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 1445743578755104768) != 0) or ((((_la - 138)) & ~0x3f) == 0 and ((1 << (_la - 138)) & 769) != 0) or ((((_la - 202)) & ~0x3f) == 0 and ((1 << (_la - 202)) & 1133738226352131) != 0) or _la==316):
                 localctx.CharType = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -13197,6 +13777,7 @@ class KqlParser ( Parser ):
 
 
     class RenderOperatorWithClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -13237,6 +13818,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitRenderOperatorWithClause" ):
                 listener.exitRenderOperatorWithClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRenderOperatorWithClause" ):
+                return visitor.visitRenderOperatorWithClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13254,14 +13841,14 @@ class KqlParser ( Parser ):
             self.state = 1770
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.ACCUMULATE or _la==KqlParser.ANOMALYCOLUMNS or _la==KqlParser.KIND or _la==KqlParser.LEGEND or ((((_la - 227)) & ~0x3f) == 0 and ((1 << (_la - 227)) & ((1 << (KqlParser.SERIES - 227)) | (1 << (KqlParser.TITLE - 227)) | (1 << (KqlParser.XAXIS - 227)) | (1 << (KqlParser.XCOLUMN - 227)) | (1 << (KqlParser.XMAX - 227)) | (1 << (KqlParser.XMIN - 227)) | (1 << (KqlParser.XTITLE - 227)) | (1 << (KqlParser.YAXIS - 227)) | (1 << (KqlParser.YCOLUMNS - 227)) | (1 << (KqlParser.YMAX - 227)) | (1 << (KqlParser.YMIN - 227)) | (1 << (KqlParser.YSPLIT - 227)) | (1 << (KqlParser.YTITLE - 227)))) != 0):
+            if _la==39 or _la==45 or _la==137 or _la==140 or ((((_la - 227)) & ~0x3f) == 0 and ((1 << (_la - 227)) & 4501400604377089) != 0):
                 self.state = 1762
                 localctx._renderOperatorProperty = self.renderOperatorProperty()
                 localctx.Properties.append(localctx._renderOperatorProperty)
                 self.state = 1767
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==KqlParser.COMMA:
+                while _la==9:
                     self.state = 1763
                     self.match(KqlParser.COMMA)
                     self.state = 1764
@@ -13285,6 +13872,7 @@ class KqlParser ( Parser ):
 
 
     class RenderOperatorLegacyPropertyListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -13310,6 +13898,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitRenderOperatorLegacyPropertyList" ):
                 listener.exitRenderOperatorLegacyPropertyList(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRenderOperatorLegacyPropertyList" ):
+                return visitor.visitRenderOperatorLegacyPropertyList(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13330,7 +13924,7 @@ class KqlParser ( Parser ):
                 self.state = 1777 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not (_la==KqlParser.ACCUMULATE or _la==KqlParser.BY or _la==KqlParser.KIND or _la==KqlParser.TITLE or _la==KqlParser.WITH):
+                if not (_la==39 or _la==57 or _la==137 or _la==245 or _la==260):
                     break
 
         except RecognitionException as re:
@@ -13343,6 +13937,7 @@ class KqlParser ( Parser ):
 
 
     class RenderOperatorPropertyContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -13480,6 +14075,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitRenderOperatorProperty" ):
                 listener.exitRenderOperatorProperty(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRenderOperatorProperty" ):
+                return visitor.visitRenderOperatorProperty(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13492,7 +14093,7 @@ class KqlParser ( Parser ):
             self.state = 1830
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.TITLE]:
+            if token in [245]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1779
                 localctx.Name = self.match(KqlParser.TITLE)
@@ -13501,7 +14102,7 @@ class KqlParser ( Parser ):
                 self.state = 1781
                 localctx.ExpressionValue = self.functionCallOrPathExpression()
                 pass
-            elif token in [KqlParser.XCOLUMN]:
+            elif token in [269]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1782
                 localctx.Name = self.match(KqlParser.XCOLUMN)
@@ -13510,7 +14111,7 @@ class KqlParser ( Parser ):
                 self.state = 1784
                 localctx.NameValue = self.simpleNameReference()
                 pass
-            elif token in [KqlParser.SERIES]:
+            elif token in [227]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1785
                 localctx.Name = self.match(KqlParser.SERIES)
@@ -13519,7 +14120,7 @@ class KqlParser ( Parser ):
                 self.state = 1787
                 localctx.NameListValue = self.renderPropertyNameList()
                 pass
-            elif token in [KqlParser.YCOLUMNS]:
+            elif token in [274]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 1788
                 localctx.Name = self.match(KqlParser.YCOLUMNS)
@@ -13528,7 +14129,7 @@ class KqlParser ( Parser ):
                 self.state = 1790
                 localctx.NameListValue = self.renderPropertyNameList()
                 pass
-            elif token in [KqlParser.ANOMALYCOLUMNS]:
+            elif token in [45]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 1791
                 localctx.Name = self.match(KqlParser.ANOMALYCOLUMNS)
@@ -13537,7 +14138,7 @@ class KqlParser ( Parser ):
                 self.state = 1793
                 localctx.NameListValue = self.renderPropertyNameList()
                 pass
-            elif token in [KqlParser.KIND]:
+            elif token in [137]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 1794
                 localctx.Name = self.match(KqlParser.KIND)
@@ -13546,13 +14147,13 @@ class KqlParser ( Parser ):
                 self.state = 1796
                 localctx.TokenValue = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==KqlParser.DEFAULT or _la==KqlParser.MAP or ((((_la - 232)) & ~0x3f) == 0 and ((1 << (_la - 232)) & ((1 << (KqlParser.STACKED - 232)) | (1 << (KqlParser.STACKED100 - 232)) | (1 << (KqlParser.UNSTACKED - 232)))) != 0)):
+                if not(_la==74 or _la==153 or ((((_la - 232)) & ~0x3f) == 0 and ((1 << (_la - 232)) & 8388611) != 0)):
                     localctx.TokenValue = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
                 pass
-            elif token in [KqlParser.XTITLE]:
+            elif token in [272]:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 1797
                 localctx.Name = self.match(KqlParser.XTITLE)
@@ -13561,7 +14162,7 @@ class KqlParser ( Parser ):
                 self.state = 1799
                 localctx.ExpressionValue = self.functionCallOrPathExpression()
                 pass
-            elif token in [KqlParser.YTITLE]:
+            elif token in [278]:
                 self.enterOuterAlt(localctx, 8)
                 self.state = 1800
                 localctx.Name = self.match(KqlParser.YTITLE)
@@ -13570,7 +14171,7 @@ class KqlParser ( Parser ):
                 self.state = 1802
                 localctx.ExpressionValue = self.functionCallOrPathExpression()
                 pass
-            elif token in [KqlParser.XAXIS]:
+            elif token in [268]:
                 self.enterOuterAlt(localctx, 9)
                 self.state = 1803
                 localctx.Name = self.match(KqlParser.XAXIS)
@@ -13579,13 +14180,13 @@ class KqlParser ( Parser ):
                 self.state = 1805
                 localctx.TokenValue = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==KqlParser.LINEAR or _la==KqlParser.LOG):
+                if not(_la==145 or _la==149):
                     localctx.TokenValue = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
                 pass
-            elif token in [KqlParser.YAXIS]:
+            elif token in [273]:
                 self.enterOuterAlt(localctx, 10)
                 self.state = 1806
                 localctx.Name = self.match(KqlParser.YAXIS)
@@ -13594,13 +14195,13 @@ class KqlParser ( Parser ):
                 self.state = 1808
                 localctx.TokenValue = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==KqlParser.LINEAR or _la==KqlParser.LOG):
+                if not(_la==145 or _la==149):
                     localctx.TokenValue = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
                 pass
-            elif token in [KqlParser.LEGEND]:
+            elif token in [140]:
                 self.enterOuterAlt(localctx, 11)
                 self.state = 1809
                 localctx.Name = self.match(KqlParser.LEGEND)
@@ -13609,13 +14210,13 @@ class KqlParser ( Parser ):
                 self.state = 1811
                 localctx.TokenValue = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==KqlParser.HIDDEN_ or _la==KqlParser.VISIBLE):
+                if not(_la==112 or _la==258):
                     localctx.TokenValue = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
                 pass
-            elif token in [KqlParser.YSPLIT]:
+            elif token in [277]:
                 self.enterOuterAlt(localctx, 12)
                 self.state = 1812
                 localctx.Name = self.match(KqlParser.YSPLIT)
@@ -13624,13 +14225,13 @@ class KqlParser ( Parser ):
                 self.state = 1814
                 localctx.TokenValue = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==KqlParser.AXES or _la==KqlParser.NONE or _la==KqlParser.PANELS):
+                if not(_la==50 or _la==162 or _la==193):
                     localctx.TokenValue = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
                 pass
-            elif token in [KqlParser.ACCUMULATE]:
+            elif token in [39]:
                 self.enterOuterAlt(localctx, 13)
                 self.state = 1815
                 localctx.Name = self.match(KqlParser.ACCUMULATE)
@@ -13639,7 +14240,7 @@ class KqlParser ( Parser ):
                 self.state = 1817
                 localctx.BoolValue = self.match(KqlParser.BOOLEANLITERAL)
                 pass
-            elif token in [KqlParser.YMIN]:
+            elif token in [276]:
                 self.enterOuterAlt(localctx, 14)
                 self.state = 1818
                 localctx.Name = self.match(KqlParser.YMIN)
@@ -13648,7 +14249,7 @@ class KqlParser ( Parser ):
                 self.state = 1820
                 localctx.NumberValue = self.numericLiteralExpression()
                 pass
-            elif token in [KqlParser.YMAX]:
+            elif token in [275]:
                 self.enterOuterAlt(localctx, 15)
                 self.state = 1821
                 localctx.Name = self.match(KqlParser.YMAX)
@@ -13657,7 +14258,7 @@ class KqlParser ( Parser ):
                 self.state = 1823
                 localctx.NumberValue = self.numericLiteralExpression()
                 pass
-            elif token in [KqlParser.XMIN]:
+            elif token in [271]:
                 self.enterOuterAlt(localctx, 16)
                 self.state = 1824
                 localctx.Name = self.match(KqlParser.XMIN)
@@ -13666,7 +14267,7 @@ class KqlParser ( Parser ):
                 self.state = 1826
                 localctx.LiteralValue = self.literalExpression()
                 pass
-            elif token in [KqlParser.XMAX]:
+            elif token in [270]:
                 self.enterOuterAlt(localctx, 17)
                 self.state = 1827
                 localctx.Name = self.match(KqlParser.XMAX)
@@ -13688,6 +14289,7 @@ class KqlParser ( Parser ):
 
 
     class RenderPropertyNameListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -13718,6 +14320,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRenderPropertyNameList" ):
                 listener.exitRenderPropertyNameList(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRenderPropertyNameList" ):
+                return visitor.visitRenderPropertyNameList(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -13755,6 +14363,7 @@ class KqlParser ( Parser ):
 
 
     class RenderOperatorLegacyPropertyContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -13820,6 +14429,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitRenderOperatorLegacyProperty" ):
                 listener.exitRenderOperatorLegacyProperty(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRenderOperatorLegacyProperty" ):
+                return visitor.visitRenderOperatorLegacyProperty(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13832,7 +14447,7 @@ class KqlParser ( Parser ):
             self.state = 1853
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.TITLE]:
+            if token in [245]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1840
                 localctx.Name = self.match(KqlParser.TITLE)
@@ -13841,7 +14456,7 @@ class KqlParser ( Parser ):
                 self.state = 1842
                 localctx.StringValue = self.stringLiteralExpression()
                 pass
-            elif token in [KqlParser.KIND]:
+            elif token in [137]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1843
                 localctx.Name = self.match(KqlParser.KIND)
@@ -13850,27 +14465,27 @@ class KqlParser ( Parser ):
                 self.state = 1845
                 localctx.TokenValue = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==KqlParser.DEFAULT or _la==KqlParser.MAP or ((((_la - 232)) & ~0x3f) == 0 and ((1 << (_la - 232)) & ((1 << (KqlParser.STACKED - 232)) | (1 << (KqlParser.STACKED100 - 232)) | (1 << (KqlParser.UNSTACKED - 232)))) != 0)):
+                if not(_la==74 or _la==153 or ((((_la - 232)) & ~0x3f) == 0 and ((1 << (_la - 232)) & 8388611) != 0)):
                     localctx.TokenValue = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
                 pass
-            elif token in [KqlParser.WITH]:
+            elif token in [260]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1846
                 localctx.Name = self.match(KqlParser.WITH)
                 self.state = 1847
                 localctx.StringValue = self.stringLiteralExpression()
                 pass
-            elif token in [KqlParser.BY]:
+            elif token in [57]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 1848
                 localctx.Name = self.match(KqlParser.BY)
                 self.state = 1849
                 localctx.NameListValue = self.renderPropertyNameList()
                 pass
-            elif token in [KqlParser.ACCUMULATE]:
+            elif token in [39]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 1850
                 localctx.Name = self.match(KqlParser.ACCUMULATE)
@@ -13892,6 +14507,7 @@ class KqlParser ( Parser ):
 
 
     class SampleDistinctOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -13932,6 +14548,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitSampleDistinctOperator" ):
                 listener.exitSampleDistinctOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSampleDistinctOperator" ):
+                return visitor.visitSampleDistinctOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13947,7 +14569,7 @@ class KqlParser ( Parser ):
             self.state = 1859
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or _la==KqlParser.WITH_SOURCE or _la==KqlParser.WITH_STEP_NAME:
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or _la==266 or _la==267:
                 self.state = 1856
                 localctx._strictQueryOperatorParameter = self.strictQueryOperatorParameter()
                 localctx.Parameters.append(localctx._strictQueryOperatorParameter)
@@ -13971,6 +14593,7 @@ class KqlParser ( Parser ):
 
 
     class SampleOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -14004,6 +14627,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitSampleOperator" ):
                 listener.exitSampleOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSampleOperator" ):
+                return visitor.visitSampleOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14019,7 +14648,7 @@ class KqlParser ( Parser ):
             self.state = 1870
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or _la==KqlParser.WITH_SOURCE or _la==KqlParser.WITH_STEP_NAME:
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or _la==266 or _la==267:
                 self.state = 1867
                 localctx._strictQueryOperatorParameter = self.strictQueryOperatorParameter()
                 localctx.Parameters.append(localctx._strictQueryOperatorParameter)
@@ -14039,6 +14668,7 @@ class KqlParser ( Parser ):
 
 
     class ScanOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -14100,6 +14730,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitScanOperator" ):
                 listener.exitScanOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitScanOperator" ):
+                return visitor.visitScanOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14115,7 +14751,7 @@ class KqlParser ( Parser ):
             self.state = 1879
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & ((1 << (KqlParser.WITH_SOURCE - 266)) | (1 << (KqlParser.WITH_STEP_NAME - 266)) | (1 << (KqlParser.IDENTIFIER - 266)))) != 0):
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & 1125899906842627) != 0):
                 self.state = 1876
                 localctx._relaxedQueryOperatorParameter = self.relaxedQueryOperatorParameter()
                 localctx.Parameters.append(localctx._relaxedQueryOperatorParameter)
@@ -14126,7 +14762,7 @@ class KqlParser ( Parser ):
             self.state = 1883
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.ORDER:
+            if _la==189:
                 self.state = 1882
                 localctx.OrderByClause = self.scanOperatorOrderByClause()
 
@@ -14134,7 +14770,7 @@ class KqlParser ( Parser ):
             self.state = 1886
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.PARTITION:
+            if _la==197:
                 self.state = 1885
                 localctx.PartitionByClause = self.scanOperatorPartitionByClause()
 
@@ -14142,7 +14778,7 @@ class KqlParser ( Parser ):
             self.state = 1889
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.DECLARE:
+            if _la==72:
                 self.state = 1888
                 localctx.DeclareClause = self.scanOperatorDeclareClause()
 
@@ -14161,7 +14797,7 @@ class KqlParser ( Parser ):
                 self.state = 1896 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not (_la==KqlParser.STEP):
+                if not (_la==237):
                     break
 
             self.state = 1898
@@ -14176,6 +14812,7 @@ class KqlParser ( Parser ):
 
 
     class ScanOperatorOrderByClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -14210,6 +14847,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitScanOperatorOrderByClause" ):
                 listener.exitScanOperatorOrderByClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitScanOperatorOrderByClause" ):
+                return visitor.visitScanOperatorOrderByClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14242,6 +14885,7 @@ class KqlParser ( Parser ):
 
 
     class ScanOperatorPartitionByClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -14279,6 +14923,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitScanOperatorPartitionByClause" ):
                 listener.exitScanOperatorPartitionByClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitScanOperatorPartitionByClause" ):
+                return visitor.visitScanOperatorPartitionByClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14299,7 +14949,7 @@ class KqlParser ( Parser ):
             self.state = 1913
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 1909
                 self.match(KqlParser.COMMA)
                 self.state = 1910
@@ -14319,6 +14969,7 @@ class KqlParser ( Parser ):
 
 
     class ScanOperatorDeclareClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -14359,6 +15010,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitScanOperatorDeclareClause" ):
                 listener.exitScanOperatorDeclareClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitScanOperatorDeclareClause" ):
+                return visitor.visitScanOperatorDeclareClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14379,7 +15036,7 @@ class KqlParser ( Parser ):
             self.state = 1923
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 1919
                 self.match(KqlParser.COMMA)
                 self.state = 1920
@@ -14401,6 +15058,7 @@ class KqlParser ( Parser ):
 
 
     class ScanOperatorStepContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -14449,6 +15107,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitScanOperatorStep" ):
                 listener.exitScanOperatorStep(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitScanOperatorStep" ):
+                return visitor.visitScanOperatorStep(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14466,7 +15130,7 @@ class KqlParser ( Parser ):
             self.state = 1931
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.OPTIONAL:
+            if _la==187:
                 self.state = 1930
                 self.match(KqlParser.OPTIONAL)
 
@@ -14474,7 +15138,7 @@ class KqlParser ( Parser ):
             self.state = 1934
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.OUTPUT:
+            if _la==191:
                 self.state = 1933
                 localctx.OutputClause = self.scanOperatorStepOutputClause()
 
@@ -14486,7 +15150,7 @@ class KqlParser ( Parser ):
             self.state = 1939
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.EQUAL_GREATERTHAN:
+            if _la==36:
                 self.state = 1938
                 localctx.Body = self.scanOperatorBody()
 
@@ -14503,6 +15167,7 @@ class KqlParser ( Parser ):
 
 
     class ScanOperatorStepOutputClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -14535,6 +15200,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitScanOperatorStepOutputClause" ):
                 listener.exitScanOperatorStepOutputClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitScanOperatorStepOutputClause" ):
+                return visitor.visitScanOperatorStepOutputClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14552,7 +15223,7 @@ class KqlParser ( Parser ):
             self.state = 1945
             localctx.OutputKind = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(_la==KqlParser.ALL or _la==KqlParser.LAST or _la==KqlParser.NONE):
+            if not(_la==42 or _la==139 or _la==162):
                 localctx.OutputKind = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -14567,6 +15238,7 @@ class KqlParser ( Parser ):
 
 
     class ScanOperatorBodyContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -14601,6 +15273,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitScanOperatorBody" ):
                 listener.exitScanOperatorBody(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitScanOperatorBody" ):
+                return visitor.visitScanOperatorBody(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14619,7 +15297,7 @@ class KqlParser ( Parser ):
             self.state = 1953
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 1949
                 self.match(KqlParser.COMMA)
                 self.state = 1950
@@ -14639,6 +15317,7 @@ class KqlParser ( Parser ):
 
 
     class ScanOperatorAssignmentContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -14668,6 +15347,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitScanOperatorAssignment" ):
                 listener.exitScanOperatorAssignment(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitScanOperatorAssignment" ):
+                return visitor.visitScanOperatorAssignment(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14693,6 +15378,7 @@ class KqlParser ( Parser ):
 
 
     class SearchOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -14746,6 +15432,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitSearchOperator" ):
                 listener.exitSearchOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSearchOperator" ):
+                return visitor.visitSearchOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14773,7 +15465,7 @@ class KqlParser ( Parser ):
             self.state = 1968
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.DATASCOPE:
+            if _la==70:
                 self.state = 1967
                 localctx.DataScope = self.dataScopeClause()
 
@@ -14781,7 +15473,7 @@ class KqlParser ( Parser ):
             self.state = 1971
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.IN:
+            if _la==130:
                 self.state = 1970
                 localctx.InClause = self.searchOperatorInClause()
 
@@ -14815,6 +15507,7 @@ class KqlParser ( Parser ):
 
 
     class SearchOperatorStarAndExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -14842,6 +15535,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitSearchOperatorStarAndExpression" ):
                 listener.exitSearchOperatorStarAndExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSearchOperatorStarAndExpression" ):
+                return visitor.visitSearchOperatorStarAndExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14867,6 +15566,7 @@ class KqlParser ( Parser ):
 
 
     class SearchOperatorInClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -14907,6 +15607,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitSearchOperatorInClause" ):
                 listener.exitSearchOperatorInClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSearchOperatorInClause" ):
+                return visitor.visitSearchOperatorInClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14927,7 +15633,7 @@ class KqlParser ( Parser ):
             self.state = 1989
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 1985
                 self.match(KqlParser.COMMA)
                 self.state = 1986
@@ -14949,6 +15655,7 @@ class KqlParser ( Parser ):
 
 
     class SerializeOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -14992,6 +15699,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitSerializeOperator" ):
                 listener.exitSerializeOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSerializeOperator" ):
+                return visitor.visitSerializeOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15007,7 +15720,7 @@ class KqlParser ( Parser ):
             self.state = 1998
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or _la==KqlParser.WITH_SOURCE or _la==KqlParser.WITH_STEP_NAME:
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or _la==266 or _la==267:
                 self.state = 1995
                 localctx._strictQueryOperatorParameter = self.strictQueryOperatorParameter()
                 localctx.Parameters.append(localctx._strictQueryOperatorParameter)
@@ -15021,7 +15734,7 @@ class KqlParser ( Parser ):
             self.state = 2006
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 2002
                 self.match(KqlParser.COMMA)
                 self.state = 2003
@@ -15041,6 +15754,7 @@ class KqlParser ( Parser ):
 
 
     class SortOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -15091,6 +15805,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitSortOperator" ):
                 listener.exitSortOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSortOperator" ):
+                return visitor.visitSortOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15104,7 +15824,7 @@ class KqlParser ( Parser ):
             self.state = 2009
             localctx.Keyword = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(_la==KqlParser.ORDER or _la==KqlParser.SORT):
+            if not(_la==189 or _la==230):
                 localctx.Keyword = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -15112,7 +15832,7 @@ class KqlParser ( Parser ):
             self.state = 2013
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & ((1 << (KqlParser.WITH_SOURCE - 266)) | (1 << (KqlParser.WITH_STEP_NAME - 266)) | (1 << (KqlParser.IDENTIFIER - 266)))) != 0):
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & 1125899906842627) != 0):
                 self.state = 2010
                 localctx._relaxedQueryOperatorParameter = self.relaxedQueryOperatorParameter()
                 localctx.Parameters.append(localctx._relaxedQueryOperatorParameter)
@@ -15128,7 +15848,7 @@ class KqlParser ( Parser ):
             self.state = 2022
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 2018
                 self.match(KqlParser.COMMA)
                 self.state = 2019
@@ -15148,6 +15868,7 @@ class KqlParser ( Parser ):
 
 
     class OrderedExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -15174,6 +15895,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitOrderedExpression" ):
                 listener.exitOrderedExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOrderedExpression" ):
+                return visitor.visitOrderedExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15197,6 +15924,7 @@ class KqlParser ( Parser ):
 
 
     class SortOrderingContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -15230,6 +15958,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitSortOrdering" ):
                 listener.exitSortOrdering(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSortOrdering" ):
+                return visitor.visitSortOrdering(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15243,11 +15977,11 @@ class KqlParser ( Parser ):
             self.state = 2029
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.ASC or _la==KqlParser.DESC:
+            if _la==48 or _la==76:
                 self.state = 2028
                 localctx.OrderKind = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==KqlParser.ASC or _la==KqlParser.DESC):
+                if not(_la==48 or _la==76):
                     localctx.OrderKind = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -15257,13 +15991,13 @@ class KqlParser ( Parser ):
             self.state = 2033
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.NULLS:
+            if _la==184:
                 self.state = 2031
                 self.match(KqlParser.NULLS)
                 self.state = 2032
                 localctx.NullsKind = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==KqlParser.FIRST or _la==KqlParser.LAST):
+                if not(_la==92 or _la==139):
                     localctx.NullsKind = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -15280,6 +16014,7 @@ class KqlParser ( Parser ):
 
 
     class SummarizeOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -15328,6 +16063,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitSummarizeOperator" ):
                 listener.exitSummarizeOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSummarizeOperator" ):
+                return visitor.visitSummarizeOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15343,7 +16084,7 @@ class KqlParser ( Parser ):
             self.state = 2039
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or _la==KqlParser.WITH_SOURCE or _la==KqlParser.WITH_STEP_NAME:
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or _la==266 or _la==267:
                 self.state = 2036
                 localctx._strictQueryOperatorParameter = self.strictQueryOperatorParameter()
                 localctx.Parameters.append(localctx._strictQueryOperatorParameter)
@@ -15361,7 +16102,7 @@ class KqlParser ( Parser ):
                 self.state = 2047
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==KqlParser.COMMA:
+                while _la==9:
                     self.state = 2043
                     self.match(KqlParser.COMMA)
                     self.state = 2044
@@ -15376,7 +16117,7 @@ class KqlParser ( Parser ):
             self.state = 2053
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.BY:
+            if _la==57:
                 self.state = 2052
                 localctx.ByClause = self.summarizeOperatorByClause()
 
@@ -15391,6 +16132,7 @@ class KqlParser ( Parser ):
 
 
     class SummarizeOperatorByClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -15427,6 +16169,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitSummarizeOperatorByClause" ):
                 listener.exitSummarizeOperatorByClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSummarizeOperatorByClause" ):
+                return visitor.visitSummarizeOperatorByClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15451,7 +16199,7 @@ class KqlParser ( Parser ):
             self.state = 2061
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.BIN:
+            if _la==55:
                 self.state = 2060
                 localctx.BinClause = self.summarizeOperatorLegacyBinClause()
 
@@ -15466,6 +16214,7 @@ class KqlParser ( Parser ):
 
 
     class SummarizeOperatorLegacyBinClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -15493,6 +16242,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitSummarizeOperatorLegacyBinClause" ):
                 listener.exitSummarizeOperatorLegacyBinClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSummarizeOperatorLegacyBinClause" ):
+                return visitor.visitSummarizeOperatorLegacyBinClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15518,6 +16273,7 @@ class KqlParser ( Parser ):
 
 
     class TakeOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -15555,6 +16311,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitTakeOperator" ):
                 listener.exitTakeOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTakeOperator" ):
+                return visitor.visitTakeOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15568,7 +16330,7 @@ class KqlParser ( Parser ):
             self.state = 2067
             localctx.Keyword = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(_la==KqlParser.LIMIT or _la==KqlParser.TAKE):
+            if not(_la==144 or _la==240):
                 localctx.Keyword = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -15576,7 +16338,7 @@ class KqlParser ( Parser ):
             self.state = 2071
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or _la==KqlParser.WITH_SOURCE or _la==KqlParser.WITH_STEP_NAME:
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or _la==266 or _la==267:
                 self.state = 2068
                 localctx._strictQueryOperatorParameter = self.strictQueryOperatorParameter()
                 localctx.Parameters.append(localctx._strictQueryOperatorParameter)
@@ -15596,6 +16358,7 @@ class KqlParser ( Parser ):
 
 
     class TopOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -15637,6 +16400,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitTopOperator" ):
                 listener.exitTopOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTopOperator" ):
+                return visitor.visitTopOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15652,7 +16421,7 @@ class KqlParser ( Parser ):
             self.state = 2080
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or _la==KqlParser.WITH_SOURCE or _la==KqlParser.WITH_STEP_NAME:
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or _la==266 or _la==267:
                 self.state = 2077
                 localctx._strictQueryOperatorParameter = self.strictQueryOperatorParameter()
                 localctx.Parameters.append(localctx._strictQueryOperatorParameter)
@@ -15676,6 +16445,7 @@ class KqlParser ( Parser ):
 
 
     class TopHittersOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -15712,6 +16482,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitTopHittersOperator" ):
                 listener.exitTopHittersOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTopHittersOperator" ):
+                return visitor.visitTopHittersOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15733,7 +16509,7 @@ class KqlParser ( Parser ):
             self.state = 2092
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.BY:
+            if _la==57:
                 self.state = 2091
                 localctx.ByClause = self.topHittersOperatorByClause()
 
@@ -15748,6 +16524,7 @@ class KqlParser ( Parser ):
 
 
     class TopHittersOperatorByClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -15772,6 +16549,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitTopHittersOperatorByClause" ):
                 listener.exitTopHittersOperatorByClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTopHittersOperatorByClause" ):
+                return visitor.visitTopHittersOperatorByClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15795,6 +16578,7 @@ class KqlParser ( Parser ):
 
 
     class TopNestedOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -15826,6 +16610,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitTopNestedOperator" ):
                 listener.exitTopNestedOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTopNestedOperator" ):
+                return visitor.visitTopNestedOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15842,7 +16632,7 @@ class KqlParser ( Parser ):
             self.state = 2102
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 2098
                 self.match(KqlParser.COMMA)
                 self.state = 2099
@@ -15862,6 +16652,7 @@ class KqlParser ( Parser ):
 
 
     class TopNestedOperatorPartContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -15906,6 +16697,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitTopNestedOperatorPart" ):
                 listener.exitTopNestedOperatorPart(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTopNestedOperatorPart" ):
+                return visitor.visitTopNestedOperatorPart(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15933,7 +16730,7 @@ class KqlParser ( Parser ):
             self.state = 2112
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.WITH:
+            if _la==260:
                 self.state = 2111
                 localctx.WithOthers = self.topNestedOperatorWithOthersClause()
 
@@ -15952,6 +16749,7 @@ class KqlParser ( Parser ):
 
 
     class TopNestedOperatorWithOthersClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -15982,6 +16780,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitTopNestedOperatorWithOthersClause" ):
                 listener.exitTopNestedOperatorWithOthersClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTopNestedOperatorWithOthersClause" ):
+                return visitor.visitTopNestedOperatorWithOthersClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16009,6 +16813,7 @@ class KqlParser ( Parser ):
 
 
     class UnionOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -16052,6 +16857,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitUnionOperator" ):
                 listener.exitUnionOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUnionOperator" ):
+                return visitor.visitUnionOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16082,7 +16893,7 @@ class KqlParser ( Parser ):
             self.state = 2134
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 2130
                 self.match(KqlParser.COMMA)
                 self.state = 2131
@@ -16102,6 +16913,7 @@ class KqlParser ( Parser ):
 
 
     class UnionOperatorExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -16129,6 +16941,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitUnionOperatorExpression" ):
                 listener.exitUnionOperatorExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUnionOperatorExpression" ):
+                return visitor.visitUnionOperatorExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -16170,6 +16988,7 @@ class KqlParser ( Parser ):
 
 
     class WhereOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -16207,6 +17026,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitWhereOperator" ):
                 listener.exitWhereOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWhereOperator" ):
+                return visitor.visitWhereOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16220,7 +17045,7 @@ class KqlParser ( Parser ):
             self.state = 2142
             localctx.Keyword = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(_la==KqlParser.FILTER or _la==KqlParser.WHERE):
+            if not(_la==90 or _la==259):
                 localctx.Keyword = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -16228,7 +17053,7 @@ class KqlParser ( Parser ):
             self.state = 2146
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or _la==KqlParser.WITH_SOURCE or _la==KqlParser.WITH_STEP_NAME:
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or _la==266 or _la==267:
                 self.state = 2143
                 localctx._strictQueryOperatorParameter = self.strictQueryOperatorParameter()
                 localctx.Parameters.append(localctx._strictQueryOperatorParameter)
@@ -16248,6 +17073,7 @@ class KqlParser ( Parser ):
 
 
     class ContextualSubExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -16272,6 +17098,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitContextualSubExpression" ):
                 listener.exitContextualSubExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitContextualSubExpression" ):
+                return visitor.visitContextualSubExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16283,12 +17115,12 @@ class KqlParser ( Parser ):
             self.state = 2153
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.AS, KqlParser.ASSERTSCHEMA, KqlParser.CONSUME, KqlParser.COUNT, KqlParser.DISTINCT, KqlParser.EVALUATE, KqlParser.EXECUTE_AND_CACHE, KqlParser.EXTEND, KqlParser.FACET, KqlParser.FILTER, KqlParser.FIND, KqlParser.FORK, KqlParser.GETSCHEMA, KqlParser.GRAPHMARKCOMPONENTS, KqlParser.GRAPHMATCH, KqlParser.GRAPHMERGE, KqlParser.GRAPHSHORTESTPATHS, KqlParser.GRAPHTOTABLE, KqlParser.INVOKE, KqlParser.JOIN, KqlParser.LIMIT, KqlParser.LOOKUP, KqlParser.MAKEGRAPH, KqlParser.MAKESERIES, KqlParser.MV_APPLY, KqlParser.MV_EXPAND, KqlParser.MVAPPLY, KqlParser.MVEXPAND, KqlParser.ORDER, KqlParser.PARSE, KqlParser.PARSEKV, KqlParser.PARSEWHERE, KqlParser.PARTITION, KqlParser.PARTITIONBY, KqlParser.PROJECT, KqlParser.PROJECTAWAY, KqlParser.PROJECTKEEP, KqlParser.PROJECTRENAME, KqlParser.PROJECTREORDER, KqlParser.REDUCE, KqlParser.RENDER, KqlParser.SAMPLE, KqlParser.SAMPLE_DISTINCT, KqlParser.SCAN, KqlParser.SEARCH, KqlParser.SERIALIZE, KqlParser.SORT, KqlParser.SUMMARIZE, KqlParser.TAKE, KqlParser.TOP, KqlParser.TOP_HITTERS, KqlParser.TOP_NESTED, KqlParser.UNION, KqlParser.WHERE]:
+            if token in [47, 49, 61, 66, 77, 82, 84, 86, 89, 90, 91, 94, 96, 99, 100, 101, 102, 103, 133, 136, 144, 148, 151, 152, 157, 158, 159, 160, 189, 194, 195, 196, 197, 198, 206, 207, 209, 210, 211, 215, 218, 221, 222, 223, 225, 226, 230, 238, 240, 247, 248, 249, 254, 259]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2151
                 self.pipeSubExpression()
                 pass
-            elif token in [KqlParser.CONTEXTUAL_DATATABLE]:
+            elif token in [65]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2152
                 self.contextualPipeExpression()
@@ -16306,6 +17138,7 @@ class KqlParser ( Parser ):
 
 
     class ContextualPipeExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -16336,6 +17169,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitContextualPipeExpression" ):
                 listener.exitContextualPipeExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitContextualPipeExpression" ):
+                return visitor.visitContextualPipeExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16351,7 +17190,7 @@ class KqlParser ( Parser ):
             self.state = 2159
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.BAR:
+            while _la==3:
                 self.state = 2156
                 localctx._contextualPipeExpressionPipedOperator = self.contextualPipeExpressionPipedOperator()
                 localctx.PipedOperators.append(localctx._contextualPipeExpressionPipedOperator)
@@ -16369,6 +17208,7 @@ class KqlParser ( Parser ):
 
 
     class ContextualPipeExpressionPipedOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -16393,6 +17233,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitContextualPipeExpressionPipedOperator" ):
                 listener.exitContextualPipeExpressionPipedOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitContextualPipeExpressionPipedOperator" ):
+                return visitor.visitContextualPipeExpressionPipedOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16416,6 +17262,7 @@ class KqlParser ( Parser ):
 
 
     class StrictQueryOperatorParameterContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -16533,6 +17380,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitStrictQueryOperatorParameter" ):
                 listener.exitStrictQueryOperatorParameter(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStrictQueryOperatorParameter" ):
+                return visitor.visitStrictQueryOperatorParameter(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16546,7 +17399,7 @@ class KqlParser ( Parser ):
             self.state = 2165
             localctx.NameToken = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or _la==KqlParser.WITH_SOURCE or _la==KqlParser.WITH_STEP_NAME):
+            if not(((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or _la==266 or _la==267):
                 localctx.NameToken = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -16556,11 +17409,11 @@ class KqlParser ( Parser ):
             self.state = 2169
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.ACCESS, KqlParser.AGGREGATIONS, KqlParser.ALIAS, KqlParser.ALL, KqlParser.AXES, KqlParser.BASE, KqlParser.BIN, KqlParser.CLUSTER, KqlParser.DATABASE, KqlParser.DECLARE, KqlParser.DEFAULT, KqlParser.DELTA, KqlParser.EDGES, KqlParser.EVALUATE, KqlParser.EXECUTE, KqlParser.FACET, KqlParser.FORK, KqlParser.FROM, KqlParser.HIDDEN_, KqlParser.HOT, KqlParser.HOTDATA, KqlParser.HOTINDEX, KqlParser.ID, KqlParser.INTO, KqlParser.LEGEND, KqlParser.LET, KqlParser.LINEAR, KqlParser.LIST, KqlParser.LOOKUP, KqlParser.LOG, KqlParser.MAP, KqlParser.NODES, KqlParser.NONE, KqlParser.NULL, KqlParser.NULLS, KqlParser.ON, KqlParser.OPTIONAL, KqlParser.OUTPUT, KqlParser.PACK, KqlParser.PARTITION, KqlParser.PARTITIONBY, KqlParser.PATTERN, KqlParser.PLUGIN, KqlParser.QUERYPARAMETERS, KqlParser.RANGE, KqlParser.REDUCE, KqlParser.RENDER, KqlParser.REPLACE, KqlParser.RESTRICT, KqlParser.SERIES, KqlParser.STACKED, KqlParser.STACKED100, KqlParser.STEP, KqlParser.THRESHOLD, KqlParser.TYPEOF, KqlParser.UNSTACKED, KqlParser.UUID, KqlParser.VIEW, KqlParser.VISIBLE, KqlParser.WITH, KqlParser.XAXIS, KqlParser.XCOLUMN, KqlParser.XMAX, KqlParser.XMIN, KqlParser.XTITLE, KqlParser.YAXIS, KqlParser.YCOLUMNS, KqlParser.YMAX, KqlParser.YMIN, KqlParser.YSPLIT, KqlParser.YTITLE, KqlParser.BOOL, KqlParser.GUID, KqlParser.IDENTIFIER]:
+            if token in [38, 40, 41, 42, 50, 53, 55, 59, 69, 72, 74, 75, 78, 82, 83, 89, 94, 95, 112, 124, 126, 127, 128, 132, 140, 141, 145, 147, 148, 149, 153, 161, 162, 183, 184, 186, 187, 191, 192, 197, 198, 200, 204, 213, 214, 215, 218, 219, 220, 227, 232, 233, 237, 241, 253, 255, 256, 257, 258, 260, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 287, 316]:
                 self.state = 2167
                 localctx.NameValue = self.identifierOrKeywordName()
                 pass
-            elif token in [KqlParser.DASH, KqlParser.PLUS, KqlParser.DYNAMIC, KqlParser.LONGLITERAL, KqlParser.INTLITERAL, KqlParser.REALLITERAL, KqlParser.DECIMALLITERAL, KqlParser.STRINGLITERAL, KqlParser.BOOLEANLITERAL, KqlParser.DATETIMELITERAL, KqlParser.TIMESPANLITERAL, KqlParser.TYPELITERAL, KqlParser.GUIDLITERAL]:
+            elif token in [11, 33, 285, 305, 306, 307, 308, 309, 310, 311, 312, 313, 315]:
                 self.state = 2168
                 localctx.LiteralValue = self.literalExpression()
                 pass
@@ -16577,6 +17430,7 @@ class KqlParser ( Parser ):
 
 
     class RelaxedQueryOperatorParameterContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -16697,6 +17551,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitRelaxedQueryOperatorParameter" ):
                 listener.exitRelaxedQueryOperatorParameter(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRelaxedQueryOperatorParameter" ):
+                return visitor.visitRelaxedQueryOperatorParameter(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16710,7 +17570,7 @@ class KqlParser ( Parser ):
             self.state = 2171
             localctx.NameToken = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & ((1 << (KqlParser.WITH_SOURCE - 266)) | (1 << (KqlParser.WITH_STEP_NAME - 266)) | (1 << (KqlParser.IDENTIFIER - 266)))) != 0)):
+            if not(((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & 1125899906842627) != 0)):
                 localctx.NameToken = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -16720,11 +17580,11 @@ class KqlParser ( Parser ):
             self.state = 2175
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.ACCESS, KqlParser.AGGREGATIONS, KqlParser.ALIAS, KqlParser.ALL, KqlParser.AXES, KqlParser.BASE, KqlParser.BIN, KqlParser.CLUSTER, KqlParser.DATABASE, KqlParser.DECLARE, KqlParser.DEFAULT, KqlParser.DELTA, KqlParser.EDGES, KqlParser.EVALUATE, KqlParser.EXECUTE, KqlParser.FACET, KqlParser.FORK, KqlParser.FROM, KqlParser.HIDDEN_, KqlParser.HOT, KqlParser.HOTDATA, KqlParser.HOTINDEX, KqlParser.ID, KqlParser.INTO, KqlParser.LEGEND, KqlParser.LET, KqlParser.LINEAR, KqlParser.LIST, KqlParser.LOOKUP, KqlParser.LOG, KqlParser.MAP, KqlParser.NODES, KqlParser.NONE, KqlParser.NULL, KqlParser.NULLS, KqlParser.ON, KqlParser.OPTIONAL, KqlParser.OUTPUT, KqlParser.PACK, KqlParser.PARTITION, KqlParser.PARTITIONBY, KqlParser.PATTERN, KqlParser.PLUGIN, KqlParser.QUERYPARAMETERS, KqlParser.RANGE, KqlParser.REDUCE, KqlParser.RENDER, KqlParser.REPLACE, KqlParser.RESTRICT, KqlParser.SERIES, KqlParser.STACKED, KqlParser.STACKED100, KqlParser.STEP, KqlParser.THRESHOLD, KqlParser.TYPEOF, KqlParser.UNSTACKED, KqlParser.UUID, KqlParser.VIEW, KqlParser.VISIBLE, KqlParser.WITH, KqlParser.XAXIS, KqlParser.XCOLUMN, KqlParser.XMAX, KqlParser.XMIN, KqlParser.XTITLE, KqlParser.YAXIS, KqlParser.YCOLUMNS, KqlParser.YMAX, KqlParser.YMIN, KqlParser.YSPLIT, KqlParser.YTITLE, KqlParser.BOOL, KqlParser.GUID, KqlParser.IDENTIFIER]:
+            if token in [38, 40, 41, 42, 50, 53, 55, 59, 69, 72, 74, 75, 78, 82, 83, 89, 94, 95, 112, 124, 126, 127, 128, 132, 140, 141, 145, 147, 148, 149, 153, 161, 162, 183, 184, 186, 187, 191, 192, 197, 198, 200, 204, 213, 214, 215, 218, 219, 220, 227, 232, 233, 237, 241, 253, 255, 256, 257, 258, 260, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 287, 316]:
                 self.state = 2173
                 localctx.NameValue = self.identifierOrKeywordName()
                 pass
-            elif token in [KqlParser.DASH, KqlParser.PLUS, KqlParser.DYNAMIC, KqlParser.LONGLITERAL, KqlParser.INTLITERAL, KqlParser.REALLITERAL, KqlParser.DECIMALLITERAL, KqlParser.STRINGLITERAL, KqlParser.BOOLEANLITERAL, KqlParser.DATETIMELITERAL, KqlParser.TIMESPANLITERAL, KqlParser.TYPELITERAL, KqlParser.GUIDLITERAL]:
+            elif token in [11, 33, 285, 305, 306, 307, 308, 309, 310, 311, 312, 313, 315]:
                 self.state = 2174
                 localctx.LiteralValue = self.literalExpression()
                 pass
@@ -16741,6 +17601,7 @@ class KqlParser ( Parser ):
 
 
     class QueryOperatorPropertyContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -16774,6 +17635,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitQueryOperatorProperty" ):
                 listener.exitQueryOperatorProperty(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitQueryOperatorProperty" ):
+                return visitor.visitQueryOperatorProperty(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16790,11 +17657,11 @@ class KqlParser ( Parser ):
             self.state = 2181
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.ACCESS, KqlParser.AGGREGATIONS, KqlParser.ALIAS, KqlParser.ALL, KqlParser.AXES, KqlParser.BASE, KqlParser.BIN, KqlParser.CLUSTER, KqlParser.DATABASE, KqlParser.DECLARE, KqlParser.DEFAULT, KqlParser.DELTA, KqlParser.EDGES, KqlParser.EVALUATE, KqlParser.EXECUTE, KqlParser.FACET, KqlParser.FORK, KqlParser.FROM, KqlParser.HIDDEN_, KqlParser.HOT, KqlParser.HOTDATA, KqlParser.HOTINDEX, KqlParser.ID, KqlParser.INTO, KqlParser.LEGEND, KqlParser.LET, KqlParser.LINEAR, KqlParser.LIST, KqlParser.LOOKUP, KqlParser.LOG, KqlParser.MAP, KqlParser.NODES, KqlParser.NONE, KqlParser.NULL, KqlParser.NULLS, KqlParser.ON, KqlParser.OPTIONAL, KqlParser.OUTPUT, KqlParser.PACK, KqlParser.PARTITION, KqlParser.PARTITIONBY, KqlParser.PATTERN, KqlParser.PLUGIN, KqlParser.QUERYPARAMETERS, KqlParser.RANGE, KqlParser.REDUCE, KqlParser.RENDER, KqlParser.REPLACE, KqlParser.RESTRICT, KqlParser.SERIES, KqlParser.STACKED, KqlParser.STACKED100, KqlParser.STEP, KqlParser.THRESHOLD, KqlParser.TYPEOF, KqlParser.UNSTACKED, KqlParser.UUID, KqlParser.VIEW, KqlParser.VISIBLE, KqlParser.WITH, KqlParser.XAXIS, KqlParser.XCOLUMN, KqlParser.XMAX, KqlParser.XMIN, KqlParser.XTITLE, KqlParser.YAXIS, KqlParser.YCOLUMNS, KqlParser.YMAX, KqlParser.YMIN, KqlParser.YSPLIT, KqlParser.YTITLE, KqlParser.BOOL, KqlParser.GUID, KqlParser.IDENTIFIER]:
+            if token in [38, 40, 41, 42, 50, 53, 55, 59, 69, 72, 74, 75, 78, 82, 83, 89, 94, 95, 112, 124, 126, 127, 128, 132, 140, 141, 145, 147, 148, 149, 153, 161, 162, 183, 184, 186, 187, 191, 192, 197, 198, 200, 204, 213, 214, 215, 218, 219, 220, 227, 232, 233, 237, 241, 253, 255, 256, 257, 258, 260, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 287, 316]:
                 self.state = 2179
                 localctx.NameValue = self.identifierOrKeywordName()
                 pass
-            elif token in [KqlParser.DASH, KqlParser.PLUS, KqlParser.DYNAMIC, KqlParser.LONGLITERAL, KqlParser.INTLITERAL, KqlParser.REALLITERAL, KqlParser.DECIMALLITERAL, KqlParser.STRINGLITERAL, KqlParser.BOOLEANLITERAL, KqlParser.DATETIMELITERAL, KqlParser.TIMESPANLITERAL, KqlParser.TYPELITERAL, KqlParser.GUIDLITERAL]:
+            elif token in [11, 33, 285, 305, 306, 307, 308, 309, 310, 311, 312, 313, 315]:
                 self.state = 2180
                 localctx.LiteralValue = self.literalExpression()
                 pass
@@ -16811,6 +17678,7 @@ class KqlParser ( Parser ):
 
 
     class NamedExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -16836,6 +17704,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitNamedExpression" ):
                 listener.exitNamedExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNamedExpression" ):
+                return visitor.visitNamedExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -16866,6 +17740,7 @@ class KqlParser ( Parser ):
 
 
     class NamedExpressionNameClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -16895,6 +17770,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitNamedExpressionNameClause" ):
                 listener.exitNamedExpressionNameClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNamedExpressionNameClause" ):
+                return visitor.visitNamedExpressionNameClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16907,11 +17788,11 @@ class KqlParser ( Parser ):
             self.state = 2190
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.OPENBRACKET, KqlParser.ACCESS, KqlParser.ACCUMULATE, KqlParser.AGGREGATIONS, KqlParser.ALIAS, KqlParser.ALL, KqlParser.AS, KqlParser.AXES, KqlParser.BASE, KqlParser.BIN, KqlParser.BY, KqlParser.CLUSTER, KqlParser.CONSUME, KqlParser.CONTAINS, KqlParser.COUNT, KqlParser.DATABASE, KqlParser.DATATABLE, KqlParser.DECLARE, KqlParser.DEFAULT, KqlParser.DELTA, KqlParser.DISTINCT, KqlParser.EDGES, KqlParser.EVALUATE, KqlParser.EXECUTE, KqlParser.EXTEND, KqlParser.EXTERNALDATA, KqlParser.FACET, KqlParser.FILTER, KqlParser.FIND, KqlParser.FORK, KqlParser.FROM, KqlParser.HAS, KqlParser.HIDDEN_, KqlParser.HOT, KqlParser.HOTDATA, KqlParser.HOTINDEX, KqlParser.ID, KqlParser.IN, KqlParser.INTO, KqlParser.INVOKE, KqlParser.LEGEND, KqlParser.LET, KqlParser.LIMIT, KqlParser.LINEAR, KqlParser.LIST, KqlParser.LOOKUP, KqlParser.LOG, KqlParser.MAP, KqlParser.MATERIALIZE, KqlParser.NODES, KqlParser.NONE, KqlParser.NULL, KqlParser.NULLS, KqlParser.OF, KqlParser.ON, KqlParser.OPTIONAL, KqlParser.OUTPUT, KqlParser.PACK, KqlParser.PARSE, KqlParser.PARTITION, KqlParser.PARTITIONBY, KqlParser.PATTERN, KqlParser.PLUGIN, KqlParser.PRINT, KqlParser.QUERYPARAMETERS, KqlParser.RANGE, KqlParser.REDUCE, KqlParser.RENDER, KqlParser.REPLACE, KqlParser.RESTRICT, KqlParser.SAMPLE, KqlParser.SAMPLE_DISTINCT, KqlParser.SCAN, KqlParser.SEARCH, KqlParser.SERIALIZE, KqlParser.SERIES, KqlParser.SET, KqlParser.SORT, KqlParser.STACKED, KqlParser.STACKED100, KqlParser.STEP, KqlParser.SUMMARIZE, KqlParser.TAKE, KqlParser.THRESHOLD, KqlParser.TITLE, KqlParser.TO, KqlParser.TOP, KqlParser.TOP_HITTERS, KqlParser.TOP_NESTED, KqlParser.TOSCALAR, KqlParser.TOTABLE, KqlParser.TYPEOF, KqlParser.UNSTACKED, KqlParser.UUID, KqlParser.VIEW, KqlParser.VISIBLE, KqlParser.WHERE, KqlParser.WITH, KqlParser.XAXIS, KqlParser.XCOLUMN, KqlParser.XMAX, KqlParser.XMIN, KqlParser.XTITLE, KqlParser.YAXIS, KqlParser.YCOLUMNS, KqlParser.YMAX, KqlParser.YMIN, KqlParser.YSPLIT, KqlParser.YTITLE, KqlParser.BOOL, KqlParser.GUID, KqlParser.IDENTIFIER]:
+            if token in [30, 38, 39, 40, 41, 42, 47, 50, 53, 55, 57, 59, 61, 62, 66, 69, 71, 72, 74, 75, 77, 78, 82, 83, 86, 87, 89, 90, 91, 94, 95, 104, 112, 124, 126, 127, 128, 130, 132, 133, 140, 141, 144, 145, 147, 148, 149, 153, 155, 161, 162, 183, 184, 185, 186, 187, 191, 192, 194, 197, 198, 200, 204, 205, 213, 214, 215, 218, 219, 220, 221, 222, 223, 225, 226, 227, 228, 230, 232, 233, 237, 238, 240, 241, 245, 246, 247, 248, 249, 250, 251, 253, 255, 256, 257, 258, 259, 260, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 287, 316]:
                 self.state = 2188
                 localctx.Name = self.identifierOrExtendedKeywordOrEscapedName()
                 pass
-            elif token in [KqlParser.OPENPAREN]:
+            elif token in [31]:
                 self.state = 2189
                 localctx.NameList = self.namedExpressionNameList()
                 pass
@@ -16930,6 +17811,7 @@ class KqlParser ( Parser ):
 
 
     class NamedExpressionNameListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -16967,6 +17849,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitNamedExpressionNameList" ):
                 listener.exitNamedExpressionNameList(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNamedExpressionNameList" ):
+                return visitor.visitNamedExpressionNameList(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16985,7 +17873,7 @@ class KqlParser ( Parser ):
             self.state = 2200
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 2196
                 self.match(KqlParser.COMMA)
                 self.state = 2197
@@ -17007,6 +17895,7 @@ class KqlParser ( Parser ):
 
 
     class ScopedFunctionCallExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -17036,6 +17925,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitScopedFunctionCallExpression" ):
                 listener.exitScopedFunctionCallExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitScopedFunctionCallExpression" ):
+                return visitor.visitScopedFunctionCallExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17061,6 +17956,7 @@ class KqlParser ( Parser ):
 
 
     class UnnamedExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -17080,6 +17976,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitUnnamedExpression" ):
                 listener.exitUnnamedExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUnnamedExpression" ):
+                return visitor.visitUnnamedExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -17102,6 +18004,7 @@ class KqlParser ( Parser ):
 
 
     class LogicalOrExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -17132,6 +18035,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitLogicalOrExpression" ):
                 listener.exitLogicalOrExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLogicalOrExpression" ):
+                return visitor.visitLogicalOrExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17147,7 +18056,7 @@ class KqlParser ( Parser ):
             self.state = 2215
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.OR:
+            while _la==188:
                 self.state = 2212
                 localctx._logicalOrOperation = self.logicalOrOperation()
                 localctx.Operations.append(localctx._logicalOrOperation)
@@ -17165,6 +18074,7 @@ class KqlParser ( Parser ):
 
 
     class LogicalOrOperationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -17189,6 +18099,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitLogicalOrOperation" ):
                 listener.exitLogicalOrOperation(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLogicalOrOperation" ):
+                return visitor.visitLogicalOrOperation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17212,6 +18128,7 @@ class KqlParser ( Parser ):
 
 
     class LogicalAndExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -17242,6 +18159,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitLogicalAndExpression" ):
                 listener.exitLogicalAndExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLogicalAndExpression" ):
+                return visitor.visitLogicalAndExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17257,7 +18180,7 @@ class KqlParser ( Parser ):
             self.state = 2225
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.AND:
+            while _la==43:
                 self.state = 2222
                 localctx._logicalAndOperation = self.logicalAndOperation()
                 localctx.Operations.append(localctx._logicalAndOperation)
@@ -17275,6 +18198,7 @@ class KqlParser ( Parser ):
 
 
     class LogicalAndOperationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -17299,6 +18223,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitLogicalAndOperation" ):
                 listener.exitLogicalAndOperation(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLogicalAndOperation" ):
+                return visitor.visitLogicalAndOperation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17322,6 +18252,7 @@ class KqlParser ( Parser ):
 
 
     class EqualityExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -17357,6 +18288,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEqualityExpression" ):
                 listener.exitEqualityExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEqualityExpression" ):
+                return visitor.visitEqualityExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -17410,6 +18347,7 @@ class KqlParser ( Parser ):
 
 
     class EqualsEqualityExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -17445,6 +18383,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitEqualsEqualityExpression" ):
                 listener.exitEqualsEqualityExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEqualsEqualityExpression" ):
+                return visitor.visitEqualsEqualityExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17460,7 +18404,7 @@ class KqlParser ( Parser ):
             self.state = 2239
             localctx.OperatorToken = self._input.LT(1)
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.EQUALEQUAL) | (1 << KqlParser.EXCLAIMATIONPOINT_EQUAL) | (1 << KqlParser.LESSTHAN_GREATERTHAN))) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 269746176) != 0)):
                 localctx.OperatorToken = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -17477,6 +18421,7 @@ class KqlParser ( Parser ):
 
 
     class ListEqualityExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -17538,6 +18483,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitListEqualityExpression" ):
                 listener.exitListEqualityExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitListEqualityExpression" ):
+                return visitor.visitListEqualityExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17553,7 +18504,7 @@ class KqlParser ( Parser ):
             self.state = 2243
             localctx.OperatorToken = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(((((_la - 105)) & ~0x3f) == 0 and ((1 << (_la - 105)) & ((1 << (KqlParser.HAS_ALL - 105)) | (1 << (KqlParser.HAS_ANY - 105)) | (1 << (KqlParser.IN - 105)) | (1 << (KqlParser.IN_CI - 105)))) != 0) or _la==KqlParser.NOT_IN or _la==KqlParser.NOT_IN_CI):
+            if not(((((_la - 105)) & ~0x3f) == 0 and ((1 << (_la - 105)) & 100663299) != 0) or _la==175 or _la==176):
                 localctx.OperatorToken = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -17566,7 +18517,7 @@ class KqlParser ( Parser ):
             self.state = 2250
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 2246
                 self.match(KqlParser.COMMA)
                 self.state = 2247
@@ -17588,6 +18539,7 @@ class KqlParser ( Parser ):
 
 
     class BetweenEqualityExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -17634,6 +18586,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitBetweenEqualityExpression" ):
                 listener.exitBetweenEqualityExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBetweenEqualityExpression" ):
+                return visitor.visitBetweenEqualityExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17649,7 +18607,7 @@ class KqlParser ( Parser ):
             self.state = 2256
             localctx.OperatorToken = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(_la==KqlParser.BETWEEN or _la==KqlParser.NOT_BETWEEN):
+            if not(_la==54 or _la==164):
                 localctx.OperatorToken = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -17674,6 +18632,7 @@ class KqlParser ( Parser ):
 
 
     class StarEqualityExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -17701,6 +18660,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitStarEqualityExpression" ):
                 listener.exitStarEqualityExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStarEqualityExpression" ):
+                return visitor.visitStarEqualityExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17726,6 +18691,7 @@ class KqlParser ( Parser ):
 
 
     class RelationalExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -17764,6 +18730,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitRelationalExpression" ):
                 listener.exitRelationalExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRelationalExpression" ):
+                return visitor.visitRelationalExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17779,11 +18751,11 @@ class KqlParser ( Parser ):
             self.state = 2270
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.GREATERTHAN) | (1 << KqlParser.GREATERTHAN_EQUAL) | (1 << KqlParser.LESSTHAN) | (1 << KqlParser.LESSTHAN_EQUAL))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 163577856) != 0):
                 self.state = 2268
                 localctx.OperatorToken = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.GREATERTHAN) | (1 << KqlParser.GREATERTHAN_EQUAL) | (1 << KqlParser.LESSTHAN) | (1 << KqlParser.LESSTHAN_EQUAL))) != 0)):
+                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 163577856) != 0)):
                     localctx.OperatorToken = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -17802,6 +18774,7 @@ class KqlParser ( Parser ):
 
 
     class AdditiveExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -17832,6 +18805,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitAdditiveExpression" ):
                 listener.exitAdditiveExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAdditiveExpression" ):
+                return visitor.visitAdditiveExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17847,7 +18826,7 @@ class KqlParser ( Parser ):
             self.state = 2276
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.DASH or _la==KqlParser.PLUS:
+            while _la==11 or _la==33:
                 self.state = 2273
                 localctx._additiveOperation = self.additiveOperation()
                 localctx.Operations.append(localctx._additiveOperation)
@@ -17865,6 +18844,7 @@ class KqlParser ( Parser ):
 
 
     class AdditiveOperationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -17893,6 +18873,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitAdditiveOperation" ):
                 listener.exitAdditiveOperation(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAdditiveOperation" ):
+                return visitor.visitAdditiveOperation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17906,7 +18892,7 @@ class KqlParser ( Parser ):
             self.state = 2279
             localctx.OperatorToken = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(_la==KqlParser.DASH or _la==KqlParser.PLUS):
+            if not(_la==11 or _la==33):
                 localctx.OperatorToken = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -17923,6 +18909,7 @@ class KqlParser ( Parser ):
 
 
     class MultiplicativeExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -17953,6 +18940,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMultiplicativeExpression" ):
                 listener.exitMultiplicativeExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMultiplicativeExpression" ):
+                return visitor.visitMultiplicativeExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17968,7 +18961,7 @@ class KqlParser ( Parser ):
             self.state = 2286
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.ASTERISK) | (1 << KqlParser.PERCENTSIGN) | (1 << KqlParser.SLASH))) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 38654705666) != 0):
                 self.state = 2283
                 localctx._multiplicativeOperation = self.multiplicativeOperation()
                 localctx.Operations.append(localctx._multiplicativeOperation)
@@ -17986,6 +18979,7 @@ class KqlParser ( Parser ):
 
 
     class MultiplicativeOperationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -18017,6 +19011,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMultiplicativeOperation" ):
                 listener.exitMultiplicativeOperation(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMultiplicativeOperation" ):
+                return visitor.visitMultiplicativeOperation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18030,7 +19030,7 @@ class KqlParser ( Parser ):
             self.state = 2289
             localctx.OperatorToken = self._input.LT(1)
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.ASTERISK) | (1 << KqlParser.PERCENTSIGN) | (1 << KqlParser.SLASH))) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 38654705666) != 0)):
                 localctx.OperatorToken = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -18047,6 +19047,7 @@ class KqlParser ( Parser ):
 
 
     class StringOperatorExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -18071,6 +19072,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitStringOperatorExpression" ):
                 listener.exitStringOperatorExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStringOperatorExpression" ):
+                return visitor.visitStringOperatorExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18082,12 +19089,12 @@ class KqlParser ( Parser ):
             self.state = 2294
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.DASH, KqlParser.OPENBRACKET, KqlParser.OPENPAREN, KqlParser.PLUS, KqlParser.ACCESS, KqlParser.AGGREGATIONS, KqlParser.ALIAS, KqlParser.ALL, KqlParser.AXES, KqlParser.BASE, KqlParser.BIN, KqlParser.CLUSTER, KqlParser.CONTEXTUAL_DATATABLE, KqlParser.COUNT, KqlParser.DATABASE, KqlParser.DATATABLE, KqlParser.DECLARE, KqlParser.DEFAULT, KqlParser.DELTA, KqlParser.EDGES, KqlParser.EVALUATE, KqlParser.EXECUTE, KqlParser.EXTERNALDATA, KqlParser.EXTERNAL_DATA, KqlParser.FACET, KqlParser.FORK, KqlParser.FROM, KqlParser.HIDDEN_, KqlParser.HOT, KqlParser.HOTDATA, KqlParser.HOTINDEX, KqlParser.ID, KqlParser.INTO, KqlParser.LEGEND, KqlParser.LET, KqlParser.LINEAR, KqlParser.LIST, KqlParser.LOOKUP, KqlParser.LOG, KqlParser.MAP, KqlParser.MATERIALIZED_VIEW_COMBINE, KqlParser.NODES, KqlParser.NONE, KqlParser.NULL, KqlParser.NULLS, KqlParser.ON, KqlParser.OPTIONAL, KqlParser.OUTPUT, KqlParser.PACK, KqlParser.PARTITION, KqlParser.PARTITIONBY, KqlParser.PATTERN, KqlParser.PLUGIN, KqlParser.QUERYPARAMETERS, KqlParser.RANGE, KqlParser.REDUCE, KqlParser.RENDER, KqlParser.REPLACE, KqlParser.RESTRICT, KqlParser.SERIES, KqlParser.STACKED, KqlParser.STACKED100, KqlParser.STEP, KqlParser.THRESHOLD, KqlParser.TOSCALAR, KqlParser.TOTABLE, KqlParser.TYPEOF, KqlParser.UNSTACKED, KqlParser.UUID, KqlParser.VIEW, KqlParser.VISIBLE, KqlParser.WITH, KqlParser.XAXIS, KqlParser.XCOLUMN, KqlParser.XMAX, KqlParser.XMIN, KqlParser.XTITLE, KqlParser.YAXIS, KqlParser.YCOLUMNS, KqlParser.YMAX, KqlParser.YMIN, KqlParser.YSPLIT, KqlParser.YTITLE, KqlParser.BOOL, KqlParser.DYNAMIC, KqlParser.GUID, KqlParser.LONGLITERAL, KqlParser.INTLITERAL, KqlParser.REALLITERAL, KqlParser.DECIMALLITERAL, KqlParser.STRINGLITERAL, KqlParser.BOOLEANLITERAL, KqlParser.DATETIMELITERAL, KqlParser.TIMESPANLITERAL, KqlParser.TYPELITERAL, KqlParser.GUIDLITERAL, KqlParser.IDENTIFIER]:
+            if token in [11, 30, 31, 33, 38, 40, 41, 42, 50, 53, 55, 59, 65, 66, 69, 71, 72, 74, 75, 78, 82, 83, 87, 88, 89, 94, 95, 112, 124, 126, 127, 128, 132, 140, 141, 145, 147, 148, 149, 153, 156, 161, 162, 183, 184, 186, 187, 191, 192, 197, 198, 200, 204, 213, 214, 215, 218, 219, 220, 227, 232, 233, 237, 241, 250, 251, 253, 255, 256, 257, 258, 260, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 285, 287, 305, 306, 307, 308, 309, 310, 311, 312, 313, 315, 316]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2292
                 self.stringBinaryOperatorExpression()
                 pass
-            elif token in [KqlParser.ASTERISK]:
+            elif token in [1]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2293
                 self.stringStarOperatorExpression()
@@ -18105,6 +19112,7 @@ class KqlParser ( Parser ):
 
 
     class StringBinaryOperatorExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -18135,6 +19143,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitStringBinaryOperatorExpression" ):
                 listener.exitStringBinaryOperatorExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStringBinaryOperatorExpression" ):
+                return visitor.visitStringBinaryOperatorExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18150,7 +19164,7 @@ class KqlParser ( Parser ):
             self.state = 2300
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.COLON) | (1 << KqlParser.EQUALTILDE) | (1 << KqlParser.EXCLAIMATIONPOINT_TILDE) | (1 << KqlParser.CONTAINS) | (1 << KqlParser.CONTAINSCS))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (KqlParser.CONTAINS_CS - 64)) | (1 << (KqlParser.ENDSWITH - 64)) | (1 << (KqlParser.ENDSWITH_CS - 64)) | (1 << (KqlParser.HAS - 64)) | (1 << (KqlParser.HAS_CS - 64)) | (1 << (KqlParser.HASPREFIX - 64)) | (1 << (KqlParser.HASPREFIX_CS - 64)) | (1 << (KqlParser.HASSUFFIX - 64)) | (1 << (KqlParser.HASSUFFIX_CS - 64)))) != 0) or ((((_la - 142)) & ~0x3f) == 0 and ((1 << (_la - 142)) & ((1 << (KqlParser.LIKE - 142)) | (1 << (KqlParser.LIKECS - 142)) | (1 << (KqlParser.MATCHES_REGEX - 142)) | (1 << (KqlParser.NOT_CONTAINS - 142)) | (1 << (KqlParser.NOT_CONTAINS_CS - 142)) | (1 << (KqlParser.NOT_ENDSWITH_CS - 142)) | (1 << (KqlParser.NOT_ENDSWITH - 142)) | (1 << (KqlParser.NOT_HAS - 142)) | (1 << (KqlParser.NOT_HAS_CS - 142)) | (1 << (KqlParser.NOT_HASPREFIX - 142)) | (1 << (KqlParser.NOT_HASPREFIX_CS - 142)) | (1 << (KqlParser.NOT_HASSUFFIX - 142)) | (1 << (KqlParser.NOT_HASSUFFIX_CS - 142)) | (1 << (KqlParser.NOT_STARTSWITH - 142)) | (1 << (KqlParser.NOT_STARTSWITH_CS - 142)) | (1 << (KqlParser.NOTCONTAINS - 142)) | (1 << (KqlParser.NOTCONTAINSCS - 142)) | (1 << (KqlParser.NOTLIKE - 142)) | (1 << (KqlParser.NOTLIKECS - 142)))) != 0) or _la==KqlParser.STARTSWITH or _la==KqlParser.STARTSWITH_CS:
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & -4611686018424765440) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & 273778395414529) != 0) or ((((_la - 142)) & ~0x3f) == 0 and ((1 << (_la - 142)) & 2173245067267) != 0) or _la==235 or _la==236:
                 self.state = 2297
                 localctx._stringBinaryOperation = self.stringBinaryOperation()
                 localctx.Operations.append(localctx._stringBinaryOperation)
@@ -18168,6 +19182,7 @@ class KqlParser ( Parser ):
 
 
     class StringBinaryOperationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -18198,6 +19213,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitStringBinaryOperation" ):
                 listener.exitStringBinaryOperation(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStringBinaryOperation" ):
+                return visitor.visitStringBinaryOperation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18210,11 +19231,11 @@ class KqlParser ( Parser ):
             self.state = 2305
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.EQUALTILDE, KqlParser.EXCLAIMATIONPOINT_TILDE, KqlParser.CONTAINS, KqlParser.CONTAINSCS, KqlParser.CONTAINS_CS, KqlParser.ENDSWITH, KqlParser.ENDSWITH_CS, KqlParser.HAS, KqlParser.HAS_CS, KqlParser.HASPREFIX, KqlParser.HASPREFIX_CS, KqlParser.HASSUFFIX, KqlParser.HASSUFFIX_CS, KqlParser.LIKE, KqlParser.LIKECS, KqlParser.MATCHES_REGEX, KqlParser.NOT_CONTAINS, KqlParser.NOT_CONTAINS_CS, KqlParser.NOT_ENDSWITH_CS, KqlParser.NOT_ENDSWITH, KqlParser.NOT_HAS, KqlParser.NOT_HAS_CS, KqlParser.NOT_HASPREFIX, KqlParser.NOT_HASPREFIX_CS, KqlParser.NOT_HASSUFFIX, KqlParser.NOT_HASSUFFIX_CS, KqlParser.NOT_STARTSWITH, KqlParser.NOT_STARTSWITH_CS, KqlParser.NOTCONTAINS, KqlParser.NOTCONTAINSCS, KqlParser.NOTLIKE, KqlParser.NOTLIKECS, KqlParser.STARTSWITH, KqlParser.STARTSWITH_CS]:
+            if token in [19, 21, 62, 63, 64, 79, 80, 104, 107, 108, 109, 110, 111, 142, 143, 154, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 177, 178, 179, 180, 181, 182, 235, 236]:
                 self.state = 2303
                 localctx.Operator = self.stringBinaryOperator()
                 pass
-            elif token in [KqlParser.COLON]:
+            elif token in [10]:
                 self.state = 2304
                 localctx.HasOperator = self.match(KqlParser.COLON)
                 pass
@@ -18233,6 +19254,7 @@ class KqlParser ( Parser ):
 
 
     class StringBinaryOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -18352,6 +19374,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitStringBinaryOperator" ):
                 listener.exitStringBinaryOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStringBinaryOperator" ):
+                return visitor.visitStringBinaryOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18365,7 +19393,7 @@ class KqlParser ( Parser ):
             self.state = 2309
             localctx.OperatorToken = self._input.LT(1)
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.EQUALTILDE) | (1 << KqlParser.EXCLAIMATIONPOINT_TILDE) | (1 << KqlParser.CONTAINS) | (1 << KqlParser.CONTAINSCS))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (KqlParser.CONTAINS_CS - 64)) | (1 << (KqlParser.ENDSWITH - 64)) | (1 << (KqlParser.ENDSWITH_CS - 64)) | (1 << (KqlParser.HAS - 64)) | (1 << (KqlParser.HAS_CS - 64)) | (1 << (KqlParser.HASPREFIX - 64)) | (1 << (KqlParser.HASPREFIX_CS - 64)) | (1 << (KqlParser.HASSUFFIX - 64)) | (1 << (KqlParser.HASSUFFIX_CS - 64)))) != 0) or ((((_la - 142)) & ~0x3f) == 0 and ((1 << (_la - 142)) & ((1 << (KqlParser.LIKE - 142)) | (1 << (KqlParser.LIKECS - 142)) | (1 << (KqlParser.MATCHES_REGEX - 142)) | (1 << (KqlParser.NOT_CONTAINS - 142)) | (1 << (KqlParser.NOT_CONTAINS_CS - 142)) | (1 << (KqlParser.NOT_ENDSWITH_CS - 142)) | (1 << (KqlParser.NOT_ENDSWITH - 142)) | (1 << (KqlParser.NOT_HAS - 142)) | (1 << (KqlParser.NOT_HAS_CS - 142)) | (1 << (KqlParser.NOT_HASPREFIX - 142)) | (1 << (KqlParser.NOT_HASPREFIX_CS - 142)) | (1 << (KqlParser.NOT_HASSUFFIX - 142)) | (1 << (KqlParser.NOT_HASSUFFIX_CS - 142)) | (1 << (KqlParser.NOT_STARTSWITH - 142)) | (1 << (KqlParser.NOT_STARTSWITH_CS - 142)) | (1 << (KqlParser.NOTCONTAINS - 142)) | (1 << (KqlParser.NOTCONTAINSCS - 142)) | (1 << (KqlParser.NOTLIKE - 142)) | (1 << (KqlParser.NOTLIKECS - 142)))) != 0) or _la==KqlParser.STARTSWITH or _la==KqlParser.STARTSWITH_CS):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & -4611686018424766464) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & 273778395414529) != 0) or ((((_la - 142)) & ~0x3f) == 0 and ((1 << (_la - 142)) & 2173245067267) != 0) or _la==235 or _la==236):
                 localctx.OperatorToken = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -18380,6 +19408,7 @@ class KqlParser ( Parser ):
 
 
     class StringStarOperatorExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -18410,6 +19439,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitStringStarOperatorExpression" ):
                 listener.exitStringStarOperatorExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStringStarOperatorExpression" ):
+                return visitor.visitStringStarOperatorExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18435,6 +19470,7 @@ class KqlParser ( Parser ):
 
 
     class InvocationExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -18463,6 +19499,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitInvocationExpression" ):
                 listener.exitInvocationExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInvocationExpression" ):
+                return visitor.visitInvocationExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18476,11 +19518,11 @@ class KqlParser ( Parser ):
             self.state = 2316
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.DASH or _la==KqlParser.PLUS:
+            if _la==11 or _la==33:
                 self.state = 2315
                 localctx.OperatorToken = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==KqlParser.DASH or _la==KqlParser.PLUS):
+                if not(_la==11 or _la==33):
                     localctx.OperatorToken = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -18499,6 +19541,7 @@ class KqlParser ( Parser ):
 
 
     class FunctionCallOrPathExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -18526,6 +19569,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunctionCallOrPathExpression" ):
                 listener.exitFunctionCallOrPathExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionCallOrPathExpression" ):
+                return visitor.visitFunctionCallOrPathExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -18567,6 +19616,7 @@ class KqlParser ( Parser ):
 
 
     class FunctionCallOrPathRootContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -18594,6 +19644,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunctionCallOrPathRoot" ):
                 listener.exitFunctionCallOrPathRoot(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionCallOrPathRoot" ):
+                return visitor.visitFunctionCallOrPathRoot(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -18635,6 +19691,7 @@ class KqlParser ( Parser ):
 
 
     class FunctionCallOrPathPathExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -18665,6 +19722,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitFunctionCallOrPathPathExpression" ):
                 listener.exitFunctionCallOrPathPathExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionCallOrPathPathExpression" ):
+                return visitor.visitFunctionCallOrPathPathExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18687,7 +19750,7 @@ class KqlParser ( Parser ):
                 self.state = 2334 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not (_la==KqlParser.DOT or _la==KqlParser.OPENBRACKET):
+                if not (_la==15 or _la==30):
                     break
 
         except RecognitionException as re:
@@ -18700,6 +19763,7 @@ class KqlParser ( Parser ):
 
 
     class FunctionCallOrPathOperationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -18727,6 +19791,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunctionCallOrPathOperation" ):
                 listener.exitFunctionCallOrPathOperation(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionCallOrPathOperation" ):
+                return visitor.visitFunctionCallOrPathOperation(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -18768,6 +19838,7 @@ class KqlParser ( Parser ):
 
 
     class FunctionalCallOrPathPathOperationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -18792,6 +19863,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitFunctionalCallOrPathPathOperation" ):
                 listener.exitFunctionalCallOrPathPathOperation(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionalCallOrPathPathOperation" ):
+                return visitor.visitFunctionalCallOrPathPathOperation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18815,6 +19892,7 @@ class KqlParser ( Parser ):
 
 
     class FunctionCallOrPathElementOperationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -18842,6 +19920,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitFunctionCallOrPathElementOperation" ):
                 listener.exitFunctionCallOrPathElementOperation(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionCallOrPathElementOperation" ):
+                return visitor.visitFunctionCallOrPathElementOperation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18867,6 +19951,7 @@ class KqlParser ( Parser ):
 
 
     class LegacyFunctionCallOrPathElementOperationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -18897,6 +19982,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitLegacyFunctionCallOrPathElementOperation" ):
                 listener.exitLegacyFunctionCallOrPathElementOperation(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLegacyFunctionCallOrPathElementOperation" ):
+                return visitor.visitLegacyFunctionCallOrPathElementOperation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18924,6 +20015,7 @@ class KqlParser ( Parser ):
 
 
     class ToScalarExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -18958,6 +20050,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitToScalarExpression" ):
                 listener.exitToScalarExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitToScalarExpression" ):
+                return visitor.visitToScalarExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18973,7 +20071,7 @@ class KqlParser ( Parser ):
             self.state = 2355
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.KIND:
+            if _la==137:
                 self.state = 2354
                 self.noOptimizationParameter()
 
@@ -18994,6 +20092,7 @@ class KqlParser ( Parser ):
 
 
     class ToTableExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -19028,6 +20127,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitToTableExpression" ):
                 listener.exitToTableExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitToTableExpression" ):
+                return visitor.visitToTableExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19043,7 +20148,7 @@ class KqlParser ( Parser ):
             self.state = 2363
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.KIND:
+            if _la==137:
                 self.state = 2362
                 self.noOptimizationParameter()
 
@@ -19064,6 +20169,7 @@ class KqlParser ( Parser ):
 
 
     class NoOptimizationParameterContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -19088,6 +20194,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitNoOptimizationParameter" ):
                 listener.exitNoOptimizationParameter(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNoOptimizationParameter" ):
+                return visitor.visitNoOptimizationParameter(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19114,6 +20226,7 @@ class KqlParser ( Parser ):
 
 
     class DotCompositeFunctionCallExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -19143,6 +20256,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDotCompositeFunctionCallExpression" ):
                 listener.exitDotCompositeFunctionCallExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDotCompositeFunctionCallExpression" ):
+                return visitor.visitDotCompositeFunctionCallExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19177,6 +20296,7 @@ class KqlParser ( Parser ):
 
 
     class DotCompositeFunctionCallOperationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -19201,6 +20321,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitDotCompositeFunctionCallOperation" ):
                 listener.exitDotCompositeFunctionCallOperation(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDotCompositeFunctionCallOperation" ):
+                return visitor.visitDotCompositeFunctionCallOperation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19224,6 +20350,7 @@ class KqlParser ( Parser ):
 
 
     class FunctionCallExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -19248,6 +20375,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitFunctionCallExpression" ):
                 listener.exitFunctionCallExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionCallExpression" ):
+                return visitor.visitFunctionCallExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19259,12 +20392,12 @@ class KqlParser ( Parser ):
             self.state = 2385
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.OPENBRACKET, KqlParser.ACCESS, KqlParser.AGGREGATIONS, KqlParser.ALIAS, KqlParser.ALL, KqlParser.AXES, KqlParser.BASE, KqlParser.BIN, KqlParser.CLUSTER, KqlParser.DATABASE, KqlParser.DECLARE, KqlParser.DEFAULT, KqlParser.DELTA, KqlParser.EDGES, KqlParser.EVALUATE, KqlParser.EXECUTE, KqlParser.FACET, KqlParser.FORK, KqlParser.FROM, KqlParser.HIDDEN_, KqlParser.HOT, KqlParser.HOTDATA, KqlParser.HOTINDEX, KqlParser.ID, KqlParser.INTO, KqlParser.LEGEND, KqlParser.LET, KqlParser.LINEAR, KqlParser.LIST, KqlParser.LOOKUP, KqlParser.LOG, KqlParser.MAP, KqlParser.NODES, KqlParser.NONE, KqlParser.NULL, KqlParser.NULLS, KqlParser.ON, KqlParser.OPTIONAL, KqlParser.OUTPUT, KqlParser.PACK, KqlParser.PARTITION, KqlParser.PARTITIONBY, KqlParser.PATTERN, KqlParser.PLUGIN, KqlParser.QUERYPARAMETERS, KqlParser.RANGE, KqlParser.REDUCE, KqlParser.RENDER, KqlParser.REPLACE, KqlParser.RESTRICT, KqlParser.SERIES, KqlParser.STACKED, KqlParser.STACKED100, KqlParser.STEP, KqlParser.THRESHOLD, KqlParser.TYPEOF, KqlParser.UNSTACKED, KqlParser.UUID, KqlParser.VIEW, KqlParser.VISIBLE, KqlParser.WITH, KqlParser.XAXIS, KqlParser.XCOLUMN, KqlParser.XMAX, KqlParser.XMIN, KqlParser.XTITLE, KqlParser.YAXIS, KqlParser.YCOLUMNS, KqlParser.YMAX, KqlParser.YMIN, KqlParser.YSPLIT, KqlParser.YTITLE, KqlParser.BOOL, KqlParser.GUID, KqlParser.IDENTIFIER]:
+            if token in [30, 38, 40, 41, 42, 50, 53, 55, 59, 69, 72, 74, 75, 78, 82, 83, 89, 94, 95, 112, 124, 126, 127, 128, 132, 140, 141, 145, 147, 148, 149, 153, 161, 162, 183, 184, 186, 187, 191, 192, 197, 198, 200, 204, 213, 214, 215, 218, 219, 220, 227, 232, 233, 237, 241, 253, 255, 256, 257, 258, 260, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 287, 316]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2383
                 self.namedFunctionCallExpression()
                 pass
-            elif token in [KqlParser.COUNT]:
+            elif token in [66]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2384
                 self.countExpression()
@@ -19282,6 +20415,7 @@ class KqlParser ( Parser ):
 
 
     class NamedFunctionCallExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -19324,6 +20458,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitNamedFunctionCallExpression" ):
                 listener.exitNamedFunctionCallExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNamedFunctionCallExpression" ):
+                return visitor.visitNamedFunctionCallExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19341,14 +20481,14 @@ class KqlParser ( Parser ):
             self.state = 2397
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.ASTERISK) | (1 << KqlParser.DASH) | (1 << KqlParser.OPENBRACKET) | (1 << KqlParser.OPENPAREN) | (1 << KqlParser.PLUS) | (1 << KqlParser.ACCESS) | (1 << KqlParser.ACCUMULATE) | (1 << KqlParser.AGGREGATIONS) | (1 << KqlParser.ALIAS) | (1 << KqlParser.ALL) | (1 << KqlParser.AS) | (1 << KqlParser.AXES) | (1 << KqlParser.BASE) | (1 << KqlParser.BIN) | (1 << KqlParser.BY) | (1 << KqlParser.CLUSTER) | (1 << KqlParser.CONSUME) | (1 << KqlParser.CONTAINS))) != 0) or ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & ((1 << (KqlParser.CONTEXTUAL_DATATABLE - 65)) | (1 << (KqlParser.COUNT - 65)) | (1 << (KqlParser.DATABASE - 65)) | (1 << (KqlParser.DATATABLE - 65)) | (1 << (KqlParser.DECLARE - 65)) | (1 << (KqlParser.DEFAULT - 65)) | (1 << (KqlParser.DELTA - 65)) | (1 << (KqlParser.DISTINCT - 65)) | (1 << (KqlParser.EDGES - 65)) | (1 << (KqlParser.EVALUATE - 65)) | (1 << (KqlParser.EXECUTE - 65)) | (1 << (KqlParser.EXTEND - 65)) | (1 << (KqlParser.EXTERNALDATA - 65)) | (1 << (KqlParser.EXTERNAL_DATA - 65)) | (1 << (KqlParser.FACET - 65)) | (1 << (KqlParser.FILTER - 65)) | (1 << (KqlParser.FIND - 65)) | (1 << (KqlParser.FORK - 65)) | (1 << (KqlParser.FROM - 65)) | (1 << (KqlParser.HAS - 65)) | (1 << (KqlParser.HIDDEN_ - 65)) | (1 << (KqlParser.HOT - 65)) | (1 << (KqlParser.HOTDATA - 65)) | (1 << (KqlParser.HOTINDEX - 65)) | (1 << (KqlParser.ID - 65)))) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & ((1 << (KqlParser.IN - 130)) | (1 << (KqlParser.INTO - 130)) | (1 << (KqlParser.INVOKE - 130)) | (1 << (KqlParser.LEGEND - 130)) | (1 << (KqlParser.LET - 130)) | (1 << (KqlParser.LIMIT - 130)) | (1 << (KqlParser.LINEAR - 130)) | (1 << (KqlParser.LIST - 130)) | (1 << (KqlParser.LOOKUP - 130)) | (1 << (KqlParser.LOG - 130)) | (1 << (KqlParser.MAP - 130)) | (1 << (KqlParser.MATERIALIZE - 130)) | (1 << (KqlParser.MATERIALIZED_VIEW_COMBINE - 130)) | (1 << (KqlParser.NODES - 130)) | (1 << (KqlParser.NONE - 130)) | (1 << (KqlParser.NULL - 130)) | (1 << (KqlParser.NULLS - 130)) | (1 << (KqlParser.OF - 130)) | (1 << (KqlParser.ON - 130)) | (1 << (KqlParser.OPTIONAL - 130)) | (1 << (KqlParser.OUTPUT - 130)) | (1 << (KqlParser.PACK - 130)))) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & ((1 << (KqlParser.PARSE - 194)) | (1 << (KqlParser.PARTITION - 194)) | (1 << (KqlParser.PARTITIONBY - 194)) | (1 << (KqlParser.PATTERN - 194)) | (1 << (KqlParser.PLUGIN - 194)) | (1 << (KqlParser.PRINT - 194)) | (1 << (KqlParser.QUERYPARAMETERS - 194)) | (1 << (KqlParser.RANGE - 194)) | (1 << (KqlParser.REDUCE - 194)) | (1 << (KqlParser.RENDER - 194)) | (1 << (KqlParser.REPLACE - 194)) | (1 << (KqlParser.RESTRICT - 194)) | (1 << (KqlParser.SAMPLE - 194)) | (1 << (KqlParser.SAMPLE_DISTINCT - 194)) | (1 << (KqlParser.SCAN - 194)) | (1 << (KqlParser.SEARCH - 194)) | (1 << (KqlParser.SERIALIZE - 194)) | (1 << (KqlParser.SERIES - 194)) | (1 << (KqlParser.SET - 194)) | (1 << (KqlParser.SORT - 194)) | (1 << (KqlParser.STACKED - 194)) | (1 << (KqlParser.STACKED100 - 194)) | (1 << (KqlParser.STEP - 194)) | (1 << (KqlParser.SUMMARIZE - 194)) | (1 << (KqlParser.TAKE - 194)) | (1 << (KqlParser.THRESHOLD - 194)) | (1 << (KqlParser.TITLE - 194)) | (1 << (KqlParser.TO - 194)) | (1 << (KqlParser.TOP - 194)) | (1 << (KqlParser.TOP_HITTERS - 194)) | (1 << (KqlParser.TOP_NESTED - 194)) | (1 << (KqlParser.TOSCALAR - 194)) | (1 << (KqlParser.TOTABLE - 194)) | (1 << (KqlParser.TYPEOF - 194)) | (1 << (KqlParser.UNSTACKED - 194)) | (1 << (KqlParser.UUID - 194)) | (1 << (KqlParser.VIEW - 194)))) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & ((1 << (KqlParser.VISIBLE - 258)) | (1 << (KqlParser.WHERE - 258)) | (1 << (KqlParser.WITH - 258)) | (1 << (KqlParser.XAXIS - 258)) | (1 << (KqlParser.XCOLUMN - 258)) | (1 << (KqlParser.XMAX - 258)) | (1 << (KqlParser.XMIN - 258)) | (1 << (KqlParser.XTITLE - 258)) | (1 << (KqlParser.YAXIS - 258)) | (1 << (KqlParser.YCOLUMNS - 258)) | (1 << (KqlParser.YMAX - 258)) | (1 << (KqlParser.YMIN - 258)) | (1 << (KqlParser.YSPLIT - 258)) | (1 << (KqlParser.YTITLE - 258)) | (1 << (KqlParser.BOOL - 258)) | (1 << (KqlParser.DYNAMIC - 258)) | (1 << (KqlParser.GUID - 258)) | (1 << (KqlParser.LONGLITERAL - 258)) | (1 << (KqlParser.INTLITERAL - 258)) | (1 << (KqlParser.REALLITERAL - 258)) | (1 << (KqlParser.DECIMALLITERAL - 258)) | (1 << (KqlParser.STRINGLITERAL - 258)) | (1 << (KqlParser.BOOLEANLITERAL - 258)) | (1 << (KqlParser.DATETIMELITERAL - 258)) | (1 << (KqlParser.TIMESPANLITERAL - 258)) | (1 << (KqlParser.TYPELITERAL - 258)) | (1 << (KqlParser.GUIDLITERAL - 258)) | (1 << (KqlParser.IDENTIFIER - 258)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 7684416134715541506) != 0) or ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & -1729240967922960685) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & 7196752211090525197) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & -1443165259434554279) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & 504262421452422151) != 0):
                 self.state = 2389
                 localctx._argumentExpression = self.argumentExpression()
                 localctx.Arguments.append(localctx._argumentExpression)
                 self.state = 2394
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==KqlParser.COMMA:
+                while _la==9:
                     self.state = 2390
                     self.match(KqlParser.COMMA)
                     self.state = 2391
@@ -19372,6 +20512,7 @@ class KqlParser ( Parser ):
 
 
     class ArgumentExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -19395,6 +20536,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitArgumentExpression" ):
                 listener.exitArgumentExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArgumentExpression" ):
+                return visitor.visitArgumentExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19430,6 +20577,7 @@ class KqlParser ( Parser ):
 
 
     class CountExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -19460,6 +20608,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitCountExpression" ):
                 listener.exitCountExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCountExpression" ):
+                return visitor.visitCountExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19477,7 +20631,7 @@ class KqlParser ( Parser ):
             self.state = 2408
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.ASTERISK) | (1 << KqlParser.DASH) | (1 << KqlParser.OPENBRACKET) | (1 << KqlParser.OPENPAREN) | (1 << KqlParser.PLUS) | (1 << KqlParser.ACCESS) | (1 << KqlParser.ACCUMULATE) | (1 << KqlParser.AGGREGATIONS) | (1 << KqlParser.ALIAS) | (1 << KqlParser.ALL) | (1 << KqlParser.AS) | (1 << KqlParser.AXES) | (1 << KqlParser.BASE) | (1 << KqlParser.BIN) | (1 << KqlParser.BY) | (1 << KqlParser.CLUSTER) | (1 << KqlParser.CONSUME) | (1 << KqlParser.CONTAINS))) != 0) or ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & ((1 << (KqlParser.CONTEXTUAL_DATATABLE - 65)) | (1 << (KqlParser.COUNT - 65)) | (1 << (KqlParser.DATABASE - 65)) | (1 << (KqlParser.DATATABLE - 65)) | (1 << (KqlParser.DECLARE - 65)) | (1 << (KqlParser.DEFAULT - 65)) | (1 << (KqlParser.DELTA - 65)) | (1 << (KqlParser.DISTINCT - 65)) | (1 << (KqlParser.EDGES - 65)) | (1 << (KqlParser.EVALUATE - 65)) | (1 << (KqlParser.EXECUTE - 65)) | (1 << (KqlParser.EXTEND - 65)) | (1 << (KqlParser.EXTERNALDATA - 65)) | (1 << (KqlParser.EXTERNAL_DATA - 65)) | (1 << (KqlParser.FACET - 65)) | (1 << (KqlParser.FILTER - 65)) | (1 << (KqlParser.FIND - 65)) | (1 << (KqlParser.FORK - 65)) | (1 << (KqlParser.FROM - 65)) | (1 << (KqlParser.HAS - 65)) | (1 << (KqlParser.HIDDEN_ - 65)) | (1 << (KqlParser.HOT - 65)) | (1 << (KqlParser.HOTDATA - 65)) | (1 << (KqlParser.HOTINDEX - 65)) | (1 << (KqlParser.ID - 65)))) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & ((1 << (KqlParser.IN - 130)) | (1 << (KqlParser.INTO - 130)) | (1 << (KqlParser.INVOKE - 130)) | (1 << (KqlParser.LEGEND - 130)) | (1 << (KqlParser.LET - 130)) | (1 << (KqlParser.LIMIT - 130)) | (1 << (KqlParser.LINEAR - 130)) | (1 << (KqlParser.LIST - 130)) | (1 << (KqlParser.LOOKUP - 130)) | (1 << (KqlParser.LOG - 130)) | (1 << (KqlParser.MAP - 130)) | (1 << (KqlParser.MATERIALIZE - 130)) | (1 << (KqlParser.MATERIALIZED_VIEW_COMBINE - 130)) | (1 << (KqlParser.NODES - 130)) | (1 << (KqlParser.NONE - 130)) | (1 << (KqlParser.NULL - 130)) | (1 << (KqlParser.NULLS - 130)) | (1 << (KqlParser.OF - 130)) | (1 << (KqlParser.ON - 130)) | (1 << (KqlParser.OPTIONAL - 130)) | (1 << (KqlParser.OUTPUT - 130)) | (1 << (KqlParser.PACK - 130)))) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & ((1 << (KqlParser.PARSE - 194)) | (1 << (KqlParser.PARTITION - 194)) | (1 << (KqlParser.PARTITIONBY - 194)) | (1 << (KqlParser.PATTERN - 194)) | (1 << (KqlParser.PLUGIN - 194)) | (1 << (KqlParser.PRINT - 194)) | (1 << (KqlParser.QUERYPARAMETERS - 194)) | (1 << (KqlParser.RANGE - 194)) | (1 << (KqlParser.REDUCE - 194)) | (1 << (KqlParser.RENDER - 194)) | (1 << (KqlParser.REPLACE - 194)) | (1 << (KqlParser.RESTRICT - 194)) | (1 << (KqlParser.SAMPLE - 194)) | (1 << (KqlParser.SAMPLE_DISTINCT - 194)) | (1 << (KqlParser.SCAN - 194)) | (1 << (KqlParser.SEARCH - 194)) | (1 << (KqlParser.SERIALIZE - 194)) | (1 << (KqlParser.SERIES - 194)) | (1 << (KqlParser.SET - 194)) | (1 << (KqlParser.SORT - 194)) | (1 << (KqlParser.STACKED - 194)) | (1 << (KqlParser.STACKED100 - 194)) | (1 << (KqlParser.STEP - 194)) | (1 << (KqlParser.SUMMARIZE - 194)) | (1 << (KqlParser.TAKE - 194)) | (1 << (KqlParser.THRESHOLD - 194)) | (1 << (KqlParser.TITLE - 194)) | (1 << (KqlParser.TO - 194)) | (1 << (KqlParser.TOP - 194)) | (1 << (KqlParser.TOP_HITTERS - 194)) | (1 << (KqlParser.TOP_NESTED - 194)) | (1 << (KqlParser.TOSCALAR - 194)) | (1 << (KqlParser.TOTABLE - 194)) | (1 << (KqlParser.TYPEOF - 194)) | (1 << (KqlParser.UNSTACKED - 194)) | (1 << (KqlParser.UUID - 194)) | (1 << (KqlParser.VIEW - 194)))) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & ((1 << (KqlParser.VISIBLE - 258)) | (1 << (KqlParser.WHERE - 258)) | (1 << (KqlParser.WITH - 258)) | (1 << (KqlParser.XAXIS - 258)) | (1 << (KqlParser.XCOLUMN - 258)) | (1 << (KqlParser.XMAX - 258)) | (1 << (KqlParser.XMIN - 258)) | (1 << (KqlParser.XTITLE - 258)) | (1 << (KqlParser.YAXIS - 258)) | (1 << (KqlParser.YCOLUMNS - 258)) | (1 << (KqlParser.YMAX - 258)) | (1 << (KqlParser.YMIN - 258)) | (1 << (KqlParser.YSPLIT - 258)) | (1 << (KqlParser.YTITLE - 258)) | (1 << (KqlParser.BOOL - 258)) | (1 << (KqlParser.DYNAMIC - 258)) | (1 << (KqlParser.GUID - 258)) | (1 << (KqlParser.LONGLITERAL - 258)) | (1 << (KqlParser.INTLITERAL - 258)) | (1 << (KqlParser.REALLITERAL - 258)) | (1 << (KqlParser.DECIMALLITERAL - 258)) | (1 << (KqlParser.STRINGLITERAL - 258)) | (1 << (KqlParser.BOOLEANLITERAL - 258)) | (1 << (KqlParser.DATETIMELITERAL - 258)) | (1 << (KqlParser.TIMESPANLITERAL - 258)) | (1 << (KqlParser.TYPELITERAL - 258)) | (1 << (KqlParser.GUIDLITERAL - 258)) | (1 << (KqlParser.IDENTIFIER - 258)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 7684416134715541506) != 0) or ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & -1729240967922960685) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & 7196752211090525197) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & -1443165259434554279) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & 504262421452422151) != 0):
                 self.state = 2407
                 localctx.Expression = self.namedExpression()
 
@@ -19494,6 +20648,7 @@ class KqlParser ( Parser ):
 
 
     class StarExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -19512,6 +20667,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStarExpression" ):
                 listener.exitStarExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStarExpression" ):
+                return visitor.visitStarExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19534,6 +20695,7 @@ class KqlParser ( Parser ):
 
 
     class PrimaryExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -19578,6 +20740,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitPrimaryExpression" ):
                 listener.exitPrimaryExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrimaryExpression" ):
+                return visitor.visitPrimaryExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19589,37 +20757,37 @@ class KqlParser ( Parser ):
             self.state = 2421
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.DYNAMIC, KqlParser.LONGLITERAL, KqlParser.INTLITERAL, KqlParser.REALLITERAL, KqlParser.DECIMALLITERAL, KqlParser.STRINGLITERAL, KqlParser.BOOLEANLITERAL, KqlParser.DATETIMELITERAL, KqlParser.TIMESPANLITERAL, KqlParser.TYPELITERAL, KqlParser.GUIDLITERAL]:
+            if token in [285, 305, 306, 307, 308, 309, 310, 311, 312, 313, 315]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2414
                 self.unsignedLiteralExpression()
                 pass
-            elif token in [KqlParser.OPENBRACKET, KqlParser.ACCESS, KqlParser.AGGREGATIONS, KqlParser.ALIAS, KqlParser.ALL, KqlParser.AXES, KqlParser.BASE, KqlParser.BIN, KqlParser.CLUSTER, KqlParser.DATABASE, KqlParser.DECLARE, KqlParser.DEFAULT, KqlParser.DELTA, KqlParser.EDGES, KqlParser.EVALUATE, KqlParser.EXECUTE, KqlParser.FACET, KqlParser.FORK, KqlParser.FROM, KqlParser.HIDDEN_, KqlParser.HOT, KqlParser.HOTDATA, KqlParser.HOTINDEX, KqlParser.ID, KqlParser.INTO, KqlParser.LEGEND, KqlParser.LET, KqlParser.LINEAR, KqlParser.LIST, KqlParser.LOOKUP, KqlParser.LOG, KqlParser.MAP, KqlParser.NODES, KqlParser.NONE, KqlParser.NULL, KqlParser.NULLS, KqlParser.ON, KqlParser.OPTIONAL, KqlParser.OUTPUT, KqlParser.PACK, KqlParser.PARTITION, KqlParser.PARTITIONBY, KqlParser.PATTERN, KqlParser.PLUGIN, KqlParser.QUERYPARAMETERS, KqlParser.RANGE, KqlParser.REDUCE, KqlParser.RENDER, KqlParser.REPLACE, KqlParser.RESTRICT, KqlParser.SERIES, KqlParser.STACKED, KqlParser.STACKED100, KqlParser.STEP, KqlParser.THRESHOLD, KqlParser.TYPEOF, KqlParser.UNSTACKED, KqlParser.UUID, KqlParser.VIEW, KqlParser.VISIBLE, KqlParser.WITH, KqlParser.XAXIS, KqlParser.XCOLUMN, KqlParser.XMAX, KqlParser.XMIN, KqlParser.XTITLE, KqlParser.YAXIS, KqlParser.YCOLUMNS, KqlParser.YMAX, KqlParser.YMIN, KqlParser.YSPLIT, KqlParser.YTITLE, KqlParser.BOOL, KqlParser.GUID, KqlParser.IDENTIFIER]:
+            elif token in [30, 38, 40, 41, 42, 50, 53, 55, 59, 69, 72, 74, 75, 78, 82, 83, 89, 94, 95, 112, 124, 126, 127, 128, 132, 140, 141, 145, 147, 148, 149, 153, 161, 162, 183, 184, 186, 187, 191, 192, 197, 198, 200, 204, 213, 214, 215, 218, 219, 220, 227, 232, 233, 237, 241, 253, 255, 256, 257, 258, 260, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 287, 316]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2415
                 self.nameReferenceWithDataScope()
                 pass
-            elif token in [KqlParser.DATATABLE]:
+            elif token in [71]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 2416
                 self.dataTableExpression()
                 pass
-            elif token in [KqlParser.EXTERNALDATA, KqlParser.EXTERNAL_DATA]:
+            elif token in [87, 88]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 2417
                 self.externalDataExpression()
                 pass
-            elif token in [KqlParser.CONTEXTUAL_DATATABLE]:
+            elif token in [65]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 2418
                 self.contextualDataTableExpression()
                 pass
-            elif token in [KqlParser.MATERIALIZED_VIEW_COMBINE]:
+            elif token in [156]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 2419
                 self.materializedViewCombineExpression()
                 pass
-            elif token in [KqlParser.OPENPAREN]:
+            elif token in [31]:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 2420
                 self.parenthesizedExpression()
@@ -19637,6 +20805,7 @@ class KqlParser ( Parser ):
 
 
     class NameReferenceWithDataScopeContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -19663,6 +20832,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitNameReferenceWithDataScope" ):
                 listener.exitNameReferenceWithDataScope(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNameReferenceWithDataScope" ):
+                return visitor.visitNameReferenceWithDataScope(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19678,7 +20853,7 @@ class KqlParser ( Parser ):
             self.state = 2425
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.DATASCOPE:
+            if _la==70:
                 self.state = 2424
                 localctx.Scope = self.dataScopeClause()
 
@@ -19693,6 +20868,7 @@ class KqlParser ( Parser ):
 
 
     class DataScopeClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -19722,6 +20898,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitDataScopeClause" ):
                 listener.exitDataScopeClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDataScopeClause" ):
+                return visitor.visitDataScopeClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19739,7 +20921,7 @@ class KqlParser ( Parser ):
             self.state = 2429
             localctx.KindToken = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(_la==KqlParser.ALL or _la==KqlParser.HOTCACHE):
+            if not(_la==42 or _la==125):
                 localctx.KindToken = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -19754,6 +20936,7 @@ class KqlParser ( Parser ):
 
 
     class ParenthesizedExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -19781,6 +20964,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitParenthesizedExpression" ):
                 listener.exitParenthesizedExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParenthesizedExpression" ):
+                return visitor.visitParenthesizedExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19806,6 +20995,7 @@ class KqlParser ( Parser ):
 
 
     class RangeExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -19849,6 +21039,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitRangeExpression" ):
                 listener.exitRangeExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRangeExpression" ):
+                return visitor.visitRangeExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19884,6 +21080,7 @@ class KqlParser ( Parser ):
 
 
     class EntityExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -19907,6 +21104,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEntityExpression" ):
                 listener.exitEntityExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntityExpression" ):
+                return visitor.visitEntityExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19942,6 +21145,7 @@ class KqlParser ( Parser ):
 
 
     class EntityPathOrElementExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -19972,6 +21176,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitEntityPathOrElementExpression" ):
                 listener.exitEntityPathOrElementExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntityPathOrElementExpression" ):
+                return visitor.visitEntityPathOrElementExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19994,7 +21204,7 @@ class KqlParser ( Parser ):
                 self.state = 2452 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not (_la==KqlParser.DOT or _la==KqlParser.OPENBRACKET):
+                if not (_la==15 or _la==30):
                     break
 
         except RecognitionException as re:
@@ -20007,6 +21217,7 @@ class KqlParser ( Parser ):
 
 
     class EntityPathOrElementOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -20037,6 +21248,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEntityPathOrElementOperator" ):
                 listener.exitEntityPathOrElementOperator(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntityPathOrElementOperator" ):
+                return visitor.visitEntityPathOrElementOperator(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -20078,6 +21295,7 @@ class KqlParser ( Parser ):
 
 
     class EntityPathOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -20102,6 +21320,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitEntityPathOperator" ):
                 listener.exitEntityPathOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntityPathOperator" ):
+                return visitor.visitEntityPathOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -20125,6 +21349,7 @@ class KqlParser ( Parser ):
 
 
     class EntityElementOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -20152,6 +21377,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitEntityElementOperator" ):
                 listener.exitEntityElementOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntityElementOperator" ):
+                return visitor.visitEntityElementOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -20177,6 +21408,7 @@ class KqlParser ( Parser ):
 
 
     class LegacyEntityPathElementOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -20207,6 +21439,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitLegacyEntityPathElementOperator" ):
                 listener.exitLegacyEntityPathElementOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLegacyEntityPathElementOperator" ):
+                return visitor.visitLegacyEntityPathElementOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -20234,6 +21472,7 @@ class KqlParser ( Parser ):
 
 
     class EntityNameContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -20265,6 +21504,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitEntityName" ):
                 listener.exitEntityName(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntityName" ):
+                return visitor.visitEntityName(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -20276,17 +21521,17 @@ class KqlParser ( Parser ):
             self.state = 2474
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.ATSIGN]:
+            if token in [2]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2471
                 localctx.ATSIGN = self.atSignName()
                 pass
-            elif token in [KqlParser.OPENBRACKET, KqlParser.ACCESS, KqlParser.ACCUMULATE, KqlParser.AGGREGATIONS, KqlParser.ALIAS, KqlParser.ALL, KqlParser.AS, KqlParser.AXES, KqlParser.BASE, KqlParser.BIN, KqlParser.BY, KqlParser.CLUSTER, KqlParser.CONSUME, KqlParser.CONTAINS, KqlParser.COUNT, KqlParser.DATABASE, KqlParser.DATATABLE, KqlParser.DECLARE, KqlParser.DEFAULT, KqlParser.DELTA, KqlParser.DISTINCT, KqlParser.EDGES, KqlParser.EVALUATE, KqlParser.EXECUTE, KqlParser.EXTEND, KqlParser.EXTERNALDATA, KqlParser.FACET, KqlParser.FILTER, KqlParser.FIND, KqlParser.FORK, KqlParser.FROM, KqlParser.HAS, KqlParser.HIDDEN_, KqlParser.HOT, KqlParser.HOTDATA, KqlParser.HOTINDEX, KqlParser.ID, KqlParser.IN, KqlParser.INTO, KqlParser.INVOKE, KqlParser.LEGEND, KqlParser.LET, KqlParser.LIMIT, KqlParser.LINEAR, KqlParser.LIST, KqlParser.LOOKUP, KqlParser.LOG, KqlParser.MAP, KqlParser.MATERIALIZE, KqlParser.NODES, KqlParser.NONE, KqlParser.NULL, KqlParser.NULLS, KqlParser.OF, KqlParser.ON, KqlParser.OPTIONAL, KqlParser.OUTPUT, KqlParser.PACK, KqlParser.PARSE, KqlParser.PARTITION, KqlParser.PARTITIONBY, KqlParser.PATTERN, KqlParser.PLUGIN, KqlParser.PRINT, KqlParser.QUERYPARAMETERS, KqlParser.RANGE, KqlParser.REDUCE, KqlParser.RENDER, KqlParser.REPLACE, KqlParser.RESTRICT, KqlParser.SAMPLE, KqlParser.SAMPLE_DISTINCT, KqlParser.SCAN, KqlParser.SEARCH, KqlParser.SERIALIZE, KqlParser.SERIES, KqlParser.SET, KqlParser.SORT, KqlParser.STACKED, KqlParser.STACKED100, KqlParser.STEP, KqlParser.SUMMARIZE, KqlParser.TAKE, KqlParser.THRESHOLD, KqlParser.TITLE, KqlParser.TO, KqlParser.TOP, KqlParser.TOP_HITTERS, KqlParser.TOP_NESTED, KqlParser.TOSCALAR, KqlParser.TOTABLE, KqlParser.TYPEOF, KqlParser.UNSTACKED, KqlParser.UUID, KqlParser.VIEW, KqlParser.VISIBLE, KqlParser.WHERE, KqlParser.WITH, KqlParser.XAXIS, KqlParser.XCOLUMN, KqlParser.XMAX, KqlParser.XMIN, KqlParser.XTITLE, KqlParser.YAXIS, KqlParser.YCOLUMNS, KqlParser.YMAX, KqlParser.YMIN, KqlParser.YSPLIT, KqlParser.YTITLE, KqlParser.BOOL, KqlParser.GUID, KqlParser.IDENTIFIER]:
+            elif token in [30, 38, 39, 40, 41, 42, 47, 50, 53, 55, 57, 59, 61, 62, 66, 69, 71, 72, 74, 75, 77, 78, 82, 83, 86, 87, 89, 90, 91, 94, 95, 104, 112, 124, 126, 127, 128, 130, 132, 133, 140, 141, 144, 145, 147, 148, 149, 153, 155, 161, 162, 183, 184, 185, 186, 187, 191, 192, 194, 197, 198, 200, 204, 205, 213, 214, 215, 218, 219, 220, 221, 222, 223, 225, 226, 227, 228, 230, 232, 233, 237, 238, 240, 241, 245, 246, 247, 248, 249, 250, 251, 253, 255, 256, 257, 258, 259, 260, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 287, 316]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2472
                 localctx.Name = self.identifierOrExtendedKeywordOrEscapedName()
                 pass
-            elif token in [KqlParser.KIND, KqlParser.WITHSOURCE, KqlParser.WITH_SOURCE]:
+            elif token in [137, 262, 266]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 2473
                 localctx.ExtendedName = self.extendedPathName()
@@ -20304,6 +21549,7 @@ class KqlParser ( Parser ):
 
 
     class EntityNameReferenceContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -20324,6 +21570,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEntityNameReference" ):
                 listener.exitEntityNameReference(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntityNameReference" ):
+                return visitor.visitEntityNameReference(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -20346,6 +21598,7 @@ class KqlParser ( Parser ):
 
 
     class AtSignNameContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -20365,6 +21618,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAtSignName" ):
                 listener.exitAtSignName(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAtSignName" ):
+                return visitor.visitAtSignName(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -20387,6 +21646,7 @@ class KqlParser ( Parser ):
 
 
     class ExtendedPathNameContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -20413,6 +21673,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitExtendedPathName" ):
                 listener.exitExtendedPathName(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExtendedPathName" ):
+                return visitor.visitExtendedPathName(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -20426,7 +21692,7 @@ class KqlParser ( Parser ):
             self.state = 2480
             localctx.NameToken = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(_la==KqlParser.KIND or _la==KqlParser.WITHSOURCE or _la==KqlParser.WITH_SOURCE):
+            if not(_la==137 or _la==262 or _la==266):
                 localctx.NameToken = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -20441,6 +21707,7 @@ class KqlParser ( Parser ):
 
 
     class WildcardedEntityExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -20468,6 +21735,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitWildcardedEntityExpression" ):
                 listener.exitWildcardedEntityExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWildcardedEntityExpression" ):
+                return visitor.visitWildcardedEntityExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -20509,6 +21782,7 @@ class KqlParser ( Parser ):
 
 
     class WildcardedPathExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -20538,6 +21812,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitWildcardedPathExpression" ):
                 listener.exitWildcardedPathExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWildcardedPathExpression" ):
+                return visitor.visitWildcardedPathExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -20563,6 +21843,7 @@ class KqlParser ( Parser ):
 
 
     class WildcardedPathNameContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -20586,6 +21867,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitWildcardedPathName" ):
                 listener.exitWildcardedPathName(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWildcardedPathName" ):
+                return visitor.visitWildcardedPathName(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -20621,6 +21908,7 @@ class KqlParser ( Parser ):
 
 
     class ContextualDataTableExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -20649,6 +21937,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitContextualDataTableExpression" ):
                 listener.exitContextualDataTableExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitContextualDataTableExpression" ):
+                return visitor.visitContextualDataTableExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -20674,6 +21968,7 @@ class KqlParser ( Parser ):
 
 
     class DataTableExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -20728,6 +22023,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitDataTableExpression" ):
                 listener.exitDataTableExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDataTableExpression" ):
+                return visitor.visitDataTableExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -20743,7 +22044,7 @@ class KqlParser ( Parser ):
             self.state = 2503
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & ((1 << (KqlParser.WITH_SOURCE - 266)) | (1 << (KqlParser.WITH_STEP_NAME - 266)) | (1 << (KqlParser.IDENTIFIER - 266)))) != 0):
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & 1125899906842627) != 0):
                 self.state = 2500
                 localctx._relaxedQueryOperatorParameter = self.relaxedQueryOperatorParameter()
                 localctx.Parameters.append(localctx._relaxedQueryOperatorParameter)
@@ -20758,7 +22059,7 @@ class KqlParser ( Parser ):
             self.state = 2509
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.DASH or _la==KqlParser.PLUS or ((((_la - 285)) & ~0x3f) == 0 and ((1 << (_la - 285)) & ((1 << (KqlParser.DYNAMIC - 285)) | (1 << (KqlParser.LONGLITERAL - 285)) | (1 << (KqlParser.INTLITERAL - 285)) | (1 << (KqlParser.REALLITERAL - 285)) | (1 << (KqlParser.DECIMALLITERAL - 285)) | (1 << (KqlParser.STRINGLITERAL - 285)) | (1 << (KqlParser.BOOLEANLITERAL - 285)) | (1 << (KqlParser.DATETIMELITERAL - 285)) | (1 << (KqlParser.TIMESPANLITERAL - 285)) | (1 << (KqlParser.TYPELITERAL - 285)) | (1 << (KqlParser.GUIDLITERAL - 285)))) != 0):
+            if _la==11 or _la==33 or ((((_la - 285)) & ~0x3f) == 0 and ((1 << (_la - 285)) & 1609564161) != 0):
                 self.state = 2508
                 localctx._literalExpression = self.literalExpression()
                 localctx.Values.append(localctx._literalExpression)
@@ -20781,7 +22082,7 @@ class KqlParser ( Parser ):
             self.state = 2519
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.COMMA:
+            if _la==9:
                 self.state = 2518
                 self.match(KqlParser.COMMA)
 
@@ -20798,6 +22099,7 @@ class KqlParser ( Parser ):
 
 
     class RowSchemaContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -20835,6 +22137,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitRowSchema" ):
                 listener.exitRowSchema(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRowSchema" ):
+                return visitor.visitRowSchema(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -20850,7 +22158,7 @@ class KqlParser ( Parser ):
             self.state = 2525
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.OPENBRACKET) | (1 << KqlParser.ACCESS) | (1 << KqlParser.ACCUMULATE) | (1 << KqlParser.AGGREGATIONS) | (1 << KqlParser.ALIAS) | (1 << KqlParser.ALL) | (1 << KqlParser.AS) | (1 << KqlParser.AXES) | (1 << KqlParser.BASE) | (1 << KqlParser.BIN) | (1 << KqlParser.BY) | (1 << KqlParser.CLUSTER) | (1 << KqlParser.CONSUME) | (1 << KqlParser.CONTAINS))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (KqlParser.COUNT - 66)) | (1 << (KqlParser.DATABASE - 66)) | (1 << (KqlParser.DATATABLE - 66)) | (1 << (KqlParser.DECLARE - 66)) | (1 << (KqlParser.DEFAULT - 66)) | (1 << (KqlParser.DELTA - 66)) | (1 << (KqlParser.DISTINCT - 66)) | (1 << (KqlParser.EDGES - 66)) | (1 << (KqlParser.EVALUATE - 66)) | (1 << (KqlParser.EXECUTE - 66)) | (1 << (KqlParser.EXTEND - 66)) | (1 << (KqlParser.EXTERNALDATA - 66)) | (1 << (KqlParser.FACET - 66)) | (1 << (KqlParser.FILTER - 66)) | (1 << (KqlParser.FIND - 66)) | (1 << (KqlParser.FORK - 66)) | (1 << (KqlParser.FROM - 66)) | (1 << (KqlParser.HAS - 66)) | (1 << (KqlParser.HIDDEN_ - 66)) | (1 << (KqlParser.HOT - 66)) | (1 << (KqlParser.HOTDATA - 66)) | (1 << (KqlParser.HOTINDEX - 66)) | (1 << (KqlParser.ID - 66)))) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & ((1 << (KqlParser.IN - 130)) | (1 << (KqlParser.INTO - 130)) | (1 << (KqlParser.INVOKE - 130)) | (1 << (KqlParser.LEGEND - 130)) | (1 << (KqlParser.LET - 130)) | (1 << (KqlParser.LIMIT - 130)) | (1 << (KqlParser.LINEAR - 130)) | (1 << (KqlParser.LIST - 130)) | (1 << (KqlParser.LOOKUP - 130)) | (1 << (KqlParser.LOG - 130)) | (1 << (KqlParser.MAP - 130)) | (1 << (KqlParser.MATERIALIZE - 130)) | (1 << (KqlParser.NODES - 130)) | (1 << (KqlParser.NONE - 130)) | (1 << (KqlParser.NULL - 130)) | (1 << (KqlParser.NULLS - 130)) | (1 << (KqlParser.OF - 130)) | (1 << (KqlParser.ON - 130)) | (1 << (KqlParser.OPTIONAL - 130)) | (1 << (KqlParser.OUTPUT - 130)) | (1 << (KqlParser.PACK - 130)))) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & ((1 << (KqlParser.PARSE - 194)) | (1 << (KqlParser.PARTITION - 194)) | (1 << (KqlParser.PARTITIONBY - 194)) | (1 << (KqlParser.PATTERN - 194)) | (1 << (KqlParser.PLUGIN - 194)) | (1 << (KqlParser.PRINT - 194)) | (1 << (KqlParser.QUERYPARAMETERS - 194)) | (1 << (KqlParser.RANGE - 194)) | (1 << (KqlParser.REDUCE - 194)) | (1 << (KqlParser.RENDER - 194)) | (1 << (KqlParser.REPLACE - 194)) | (1 << (KqlParser.RESTRICT - 194)) | (1 << (KqlParser.SAMPLE - 194)) | (1 << (KqlParser.SAMPLE_DISTINCT - 194)) | (1 << (KqlParser.SCAN - 194)) | (1 << (KqlParser.SEARCH - 194)) | (1 << (KqlParser.SERIALIZE - 194)) | (1 << (KqlParser.SERIES - 194)) | (1 << (KqlParser.SET - 194)) | (1 << (KqlParser.SORT - 194)) | (1 << (KqlParser.STACKED - 194)) | (1 << (KqlParser.STACKED100 - 194)) | (1 << (KqlParser.STEP - 194)) | (1 << (KqlParser.SUMMARIZE - 194)) | (1 << (KqlParser.TAKE - 194)) | (1 << (KqlParser.THRESHOLD - 194)) | (1 << (KqlParser.TITLE - 194)) | (1 << (KqlParser.TO - 194)) | (1 << (KqlParser.TOP - 194)) | (1 << (KqlParser.TOP_HITTERS - 194)) | (1 << (KqlParser.TOP_NESTED - 194)) | (1 << (KqlParser.TOSCALAR - 194)) | (1 << (KqlParser.TOTABLE - 194)) | (1 << (KqlParser.TYPEOF - 194)) | (1 << (KqlParser.UNSTACKED - 194)) | (1 << (KqlParser.UUID - 194)) | (1 << (KqlParser.VIEW - 194)))) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & ((1 << (KqlParser.VISIBLE - 258)) | (1 << (KqlParser.WHERE - 258)) | (1 << (KqlParser.WITH - 258)) | (1 << (KqlParser.XAXIS - 258)) | (1 << (KqlParser.XCOLUMN - 258)) | (1 << (KqlParser.XMAX - 258)) | (1 << (KqlParser.XMIN - 258)) | (1 << (KqlParser.XTITLE - 258)) | (1 << (KqlParser.YAXIS - 258)) | (1 << (KqlParser.YCOLUMNS - 258)) | (1 << (KqlParser.YMAX - 258)) | (1 << (KqlParser.YMIN - 258)) | (1 << (KqlParser.YSPLIT - 258)) | (1 << (KqlParser.YTITLE - 258)) | (1 << (KqlParser.BOOL - 258)) | (1 << (KqlParser.GUID - 258)) | (1 << (KqlParser.IDENTIFIER - 258)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 7684416123978121216) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & 8358751552889101161) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & 7196752211023416333) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & -1443165259434554279) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & 288230376692775943) != 0):
                 self.state = 2524
                 localctx._rowSchemaColumnDeclaration = self.rowSchemaColumnDeclaration()
                 localctx.Columns.append(localctx._rowSchemaColumnDeclaration)
@@ -20873,7 +22181,7 @@ class KqlParser ( Parser ):
             self.state = 2535
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.COMMA:
+            if _la==9:
                 self.state = 2534
                 self.match(KqlParser.COMMA)
 
@@ -20890,6 +22198,7 @@ class KqlParser ( Parser ):
 
 
     class RowSchemaColumnDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -20919,6 +22228,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitRowSchemaColumnDeclaration" ):
                 listener.exitRowSchemaColumnDeclaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRowSchemaColumnDeclaration" ):
+                return visitor.visitRowSchemaColumnDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -20944,6 +22259,7 @@ class KqlParser ( Parser ):
 
 
     class ExternalDataExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -21007,6 +22323,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitExternalDataExpression" ):
                 listener.exitExternalDataExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExternalDataExpression" ):
+                return visitor.visitExternalDataExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -21020,7 +22342,7 @@ class KqlParser ( Parser ):
             self.state = 2543
             localctx.Keyword = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(_la==KqlParser.EXTERNALDATA or _la==KqlParser.EXTERNAL_DATA):
+            if not(_la==87 or _la==88):
                 localctx.Keyword = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -21028,7 +22350,7 @@ class KqlParser ( Parser ):
             self.state = 2547
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (KqlParser.BAGEXPANSION - 51)) | (1 << (KqlParser.BIN_LEGACY - 51)) | (1 << (KqlParser.CROSSCLUSTER__ - 51)) | (1 << (KqlParser.CROSSDB__ - 51)) | (1 << (KqlParser.DECODEBLOCKS - 51)) | (1 << (KqlParser.EXPANDOUTPUT - 51)) | (1 << (KqlParser.HINT_CONCURRENCY - 51)) | (1 << (KqlParser.HINT_DISTRIBUTION - 51)))) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & ((1 << (KqlParser.HINT_MATERIALIZED - 115)) | (1 << (KqlParser.HINT_NUM_PARTITIONS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS - 115)) | (1 << (KqlParser.HINT_PASS_FILTERS_COLUMN - 115)) | (1 << (KqlParser.HINT_PROGRESSIVE_TOP - 115)) | (1 << (KqlParser.HINT_REMOTE - 115)) | (1 << (KqlParser.HINT_SUFFLEKEY - 115)) | (1 << (KqlParser.HINT_SPREAD - 115)) | (1 << (KqlParser.HINT_STRATEGY - 115)) | (1 << (KqlParser.ID__ - 115)) | (1 << (KqlParser.ISFUZZY - 115)) | (1 << (KqlParser.ISFUZZY__ - 115)) | (1 << (KqlParser.KIND - 115)))) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & ((1 << (KqlParser.PACKEDCOLUMN__ - 201)) | (1 << (KqlParser.SOURCECOLUMNINDEX__ - 201)) | (1 << (KqlParser.WITHNOSOURCE__ - 201)) | (1 << (KqlParser.WITHSOURCE - 201)) | (1 << (KqlParser.WITH_ITEM_INDEX - 201)) | (1 << (KqlParser.WITH_MATCH_ID - 201)))) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & ((1 << (KqlParser.WITH_SOURCE - 266)) | (1 << (KqlParser.WITH_STEP_NAME - 266)) | (1 << (KqlParser.IDENTIFIER - 266)))) != 0):
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & -4611686001243127775) != 0) or ((((_la - 115)) & ~0x3f) == 0 and ((1 << (_la - 115)) & 5784063) != 0) or ((((_la - 201)) & ~0x3f) == 0 and ((1 << (_la - 201)) & -1152921503533105151) != 0) or ((((_la - 266)) & ~0x3f) == 0 and ((1 << (_la - 266)) & 1125899906842627) != 0):
                 self.state = 2544
                 localctx._relaxedQueryOperatorParameter = self.relaxedQueryOperatorParameter()
                 localctx.Parameters.append(localctx._relaxedQueryOperatorParameter)
@@ -21046,7 +22368,7 @@ class KqlParser ( Parser ):
             self.state = 2557
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.COMMA:
+            while _la==9:
                 self.state = 2553
                 self.match(KqlParser.COMMA)
                 self.state = 2554
@@ -21076,6 +22398,7 @@ class KqlParser ( Parser ):
 
 
     class ExternalDataWithClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -21116,6 +22439,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitExternalDataWithClause" ):
                 listener.exitExternalDataWithClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExternalDataWithClause" ):
+                return visitor.visitExternalDataWithClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -21133,7 +22462,7 @@ class KqlParser ( Parser ):
             self.state = 2577
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.OPENBRACKET) | (1 << KqlParser.ACCESS) | (1 << KqlParser.ACCUMULATE) | (1 << KqlParser.AGGREGATIONS) | (1 << KqlParser.ALIAS) | (1 << KqlParser.ALL) | (1 << KqlParser.AS) | (1 << KqlParser.AXES) | (1 << KqlParser.BASE) | (1 << KqlParser.BIN) | (1 << KqlParser.BY) | (1 << KqlParser.CLUSTER) | (1 << KqlParser.CONSUME) | (1 << KqlParser.CONTAINS))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (KqlParser.COUNT - 66)) | (1 << (KqlParser.DATABASE - 66)) | (1 << (KqlParser.DATATABLE - 66)) | (1 << (KqlParser.DECLARE - 66)) | (1 << (KqlParser.DEFAULT - 66)) | (1 << (KqlParser.DELTA - 66)) | (1 << (KqlParser.DISTINCT - 66)) | (1 << (KqlParser.EDGES - 66)) | (1 << (KqlParser.EVALUATE - 66)) | (1 << (KqlParser.EXECUTE - 66)) | (1 << (KqlParser.EXTEND - 66)) | (1 << (KqlParser.EXTERNALDATA - 66)) | (1 << (KqlParser.FACET - 66)) | (1 << (KqlParser.FILTER - 66)) | (1 << (KqlParser.FIND - 66)) | (1 << (KqlParser.FORK - 66)) | (1 << (KqlParser.FROM - 66)) | (1 << (KqlParser.HAS - 66)) | (1 << (KqlParser.HIDDEN_ - 66)) | (1 << (KqlParser.HOT - 66)) | (1 << (KqlParser.HOTDATA - 66)) | (1 << (KqlParser.HOTINDEX - 66)) | (1 << (KqlParser.ID - 66)))) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & ((1 << (KqlParser.IN - 130)) | (1 << (KqlParser.INTO - 130)) | (1 << (KqlParser.INVOKE - 130)) | (1 << (KqlParser.LEGEND - 130)) | (1 << (KqlParser.LET - 130)) | (1 << (KqlParser.LIMIT - 130)) | (1 << (KqlParser.LINEAR - 130)) | (1 << (KqlParser.LIST - 130)) | (1 << (KqlParser.LOOKUP - 130)) | (1 << (KqlParser.LOG - 130)) | (1 << (KqlParser.MAP - 130)) | (1 << (KqlParser.MATERIALIZE - 130)) | (1 << (KqlParser.NODES - 130)) | (1 << (KqlParser.NONE - 130)) | (1 << (KqlParser.NULL - 130)) | (1 << (KqlParser.NULLS - 130)) | (1 << (KqlParser.OF - 130)) | (1 << (KqlParser.ON - 130)) | (1 << (KqlParser.OPTIONAL - 130)) | (1 << (KqlParser.OUTPUT - 130)) | (1 << (KqlParser.PACK - 130)))) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & ((1 << (KqlParser.PARSE - 194)) | (1 << (KqlParser.PARTITION - 194)) | (1 << (KqlParser.PARTITIONBY - 194)) | (1 << (KqlParser.PATTERN - 194)) | (1 << (KqlParser.PLUGIN - 194)) | (1 << (KqlParser.PRINT - 194)) | (1 << (KqlParser.QUERYPARAMETERS - 194)) | (1 << (KqlParser.RANGE - 194)) | (1 << (KqlParser.REDUCE - 194)) | (1 << (KqlParser.RENDER - 194)) | (1 << (KqlParser.REPLACE - 194)) | (1 << (KqlParser.RESTRICT - 194)) | (1 << (KqlParser.SAMPLE - 194)) | (1 << (KqlParser.SAMPLE_DISTINCT - 194)) | (1 << (KqlParser.SCAN - 194)) | (1 << (KqlParser.SEARCH - 194)) | (1 << (KqlParser.SERIALIZE - 194)) | (1 << (KqlParser.SERIES - 194)) | (1 << (KqlParser.SET - 194)) | (1 << (KqlParser.SORT - 194)) | (1 << (KqlParser.STACKED - 194)) | (1 << (KqlParser.STACKED100 - 194)) | (1 << (KqlParser.STEP - 194)) | (1 << (KqlParser.SUMMARIZE - 194)) | (1 << (KqlParser.TAKE - 194)) | (1 << (KqlParser.THRESHOLD - 194)) | (1 << (KqlParser.TITLE - 194)) | (1 << (KqlParser.TO - 194)) | (1 << (KqlParser.TOP - 194)) | (1 << (KqlParser.TOP_HITTERS - 194)) | (1 << (KqlParser.TOP_NESTED - 194)) | (1 << (KqlParser.TOSCALAR - 194)) | (1 << (KqlParser.TOTABLE - 194)) | (1 << (KqlParser.TYPEOF - 194)) | (1 << (KqlParser.UNSTACKED - 194)) | (1 << (KqlParser.UUID - 194)) | (1 << (KqlParser.VIEW - 194)))) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & ((1 << (KqlParser.VISIBLE - 258)) | (1 << (KqlParser.WHERE - 258)) | (1 << (KqlParser.WITH - 258)) | (1 << (KqlParser.XAXIS - 258)) | (1 << (KqlParser.XCOLUMN - 258)) | (1 << (KqlParser.XMAX - 258)) | (1 << (KqlParser.XMIN - 258)) | (1 << (KqlParser.XTITLE - 258)) | (1 << (KqlParser.YAXIS - 258)) | (1 << (KqlParser.YCOLUMNS - 258)) | (1 << (KqlParser.YMAX - 258)) | (1 << (KqlParser.YMIN - 258)) | (1 << (KqlParser.YSPLIT - 258)) | (1 << (KqlParser.YTITLE - 258)) | (1 << (KqlParser.BOOL - 258)) | (1 << (KqlParser.GUID - 258)) | (1 << (KqlParser.IDENTIFIER - 258)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 7684416123978121216) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & 8358751552889101161) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & 7196752211023416333) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & -1443165259434554279) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & 288230376692775943) != 0):
                 self.state = 2566
                 localctx._externalDataWithClauseProperty = self.externalDataWithClauseProperty()
                 localctx.Properties.append(localctx._externalDataWithClauseProperty)
@@ -21154,7 +22483,7 @@ class KqlParser ( Parser ):
                 self.state = 2575
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==KqlParser.COMMA:
+                if _la==9:
                     self.state = 2574
                     self.match(KqlParser.COMMA)
 
@@ -21173,6 +22502,7 @@ class KqlParser ( Parser ):
 
 
     class ExternalDataWithClausePropertyContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -21228,6 +22558,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitExternalDataWithClauseProperty" ):
                 listener.exitExternalDataWithClauseProperty(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExternalDataWithClauseProperty" ):
+                return visitor.visitExternalDataWithClauseProperty(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -21245,21 +22581,21 @@ class KqlParser ( Parser ):
             self.state = 2586
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.STRINGLITERAL]:
+            if token in [309]:
                 self.state = 2583
                 localctx.StringValue = self.stringLiteralExpression()
                 pass
-            elif token in [KqlParser.LONGLITERAL, KqlParser.REALLITERAL, KqlParser.BOOLEANLITERAL, KqlParser.DATETIMELITERAL, KqlParser.TYPELITERAL, KqlParser.RAWGUIDLITERAL, KqlParser.GUIDLITERAL]:
+            elif token in [305, 307, 310, 311, 313, 314, 315]:
                 self.state = 2584
                 localctx.TokenValue = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(((((_la - 305)) & ~0x3f) == 0 and ((1 << (_la - 305)) & ((1 << (KqlParser.LONGLITERAL - 305)) | (1 << (KqlParser.REALLITERAL - 305)) | (1 << (KqlParser.BOOLEANLITERAL - 305)) | (1 << (KqlParser.DATETIMELITERAL - 305)) | (1 << (KqlParser.TYPELITERAL - 305)) | (1 << (KqlParser.RAWGUIDLITERAL - 305)) | (1 << (KqlParser.GUIDLITERAL - 305)))) != 0)):
+                if not(((((_la - 305)) & ~0x3f) == 0 and ((1 << (_la - 305)) & 1893) != 0)):
                     localctx.TokenValue = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
                 pass
-            elif token in [KqlParser.OPENBRACKET, KqlParser.ACCESS, KqlParser.ACCUMULATE, KqlParser.AGGREGATIONS, KqlParser.ALIAS, KqlParser.ALL, KqlParser.AS, KqlParser.AXES, KqlParser.BASE, KqlParser.BIN, KqlParser.BY, KqlParser.CLUSTER, KqlParser.CONSUME, KqlParser.CONTAINS, KqlParser.COUNT, KqlParser.DATABASE, KqlParser.DATATABLE, KqlParser.DECLARE, KqlParser.DEFAULT, KqlParser.DELTA, KqlParser.DISTINCT, KqlParser.EDGES, KqlParser.EVALUATE, KqlParser.EXECUTE, KqlParser.EXTEND, KqlParser.EXTERNALDATA, KqlParser.FACET, KqlParser.FILTER, KqlParser.FIND, KqlParser.FORK, KqlParser.FROM, KqlParser.HAS, KqlParser.HIDDEN_, KqlParser.HOT, KqlParser.HOTDATA, KqlParser.HOTINDEX, KqlParser.ID, KqlParser.IN, KqlParser.INTO, KqlParser.INVOKE, KqlParser.LEGEND, KqlParser.LET, KqlParser.LIMIT, KqlParser.LINEAR, KqlParser.LIST, KqlParser.LOOKUP, KqlParser.LOG, KqlParser.MAP, KqlParser.MATERIALIZE, KqlParser.NODES, KqlParser.NONE, KqlParser.NULL, KqlParser.NULLS, KqlParser.OF, KqlParser.ON, KqlParser.OPTIONAL, KqlParser.OUTPUT, KqlParser.PACK, KqlParser.PARSE, KqlParser.PARTITION, KqlParser.PARTITIONBY, KqlParser.PATTERN, KqlParser.PLUGIN, KqlParser.PRINT, KqlParser.QUERYPARAMETERS, KqlParser.RANGE, KqlParser.REDUCE, KqlParser.RENDER, KqlParser.REPLACE, KqlParser.RESTRICT, KqlParser.SAMPLE, KqlParser.SAMPLE_DISTINCT, KqlParser.SCAN, KqlParser.SEARCH, KqlParser.SERIALIZE, KqlParser.SERIES, KqlParser.SET, KqlParser.SORT, KqlParser.STACKED, KqlParser.STACKED100, KqlParser.STEP, KqlParser.SUMMARIZE, KqlParser.TAKE, KqlParser.THRESHOLD, KqlParser.TITLE, KqlParser.TO, KqlParser.TOP, KqlParser.TOP_HITTERS, KqlParser.TOP_NESTED, KqlParser.TOSCALAR, KqlParser.TOTABLE, KqlParser.TYPEOF, KqlParser.UNSTACKED, KqlParser.UUID, KqlParser.VIEW, KqlParser.VISIBLE, KqlParser.WHERE, KqlParser.WITH, KqlParser.XAXIS, KqlParser.XCOLUMN, KqlParser.XMAX, KqlParser.XMIN, KqlParser.XTITLE, KqlParser.YAXIS, KqlParser.YCOLUMNS, KqlParser.YMAX, KqlParser.YMIN, KqlParser.YSPLIT, KqlParser.YTITLE, KqlParser.BOOL, KqlParser.GUID, KqlParser.IDENTIFIER]:
+            elif token in [30, 38, 39, 40, 41, 42, 47, 50, 53, 55, 57, 59, 61, 62, 66, 69, 71, 72, 74, 75, 77, 78, 82, 83, 86, 87, 89, 90, 91, 94, 95, 104, 112, 124, 126, 127, 128, 130, 132, 133, 140, 141, 144, 145, 147, 148, 149, 153, 155, 161, 162, 183, 184, 185, 186, 187, 191, 192, 194, 197, 198, 200, 204, 205, 213, 214, 215, 218, 219, 220, 221, 222, 223, 225, 226, 227, 228, 230, 232, 233, 237, 238, 240, 241, 245, 246, 247, 248, 249, 250, 251, 253, 255, 256, 257, 258, 259, 260, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 287, 316]:
                 self.state = 2585
                 localctx.NameValue = self.parameterName()
                 pass
@@ -21276,6 +22612,7 @@ class KqlParser ( Parser ):
 
 
     class MaterializedViewCombineExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -21321,6 +22658,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMaterializedViewCombineExpression" ):
                 listener.exitMaterializedViewCombineExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMaterializedViewCombineExpression" ):
+                return visitor.visitMaterializedViewCombineExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -21354,6 +22697,7 @@ class KqlParser ( Parser ):
 
 
     class MaterializeViewCombineBaseClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -21384,6 +22728,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMaterializeViewCombineBaseClause" ):
                 listener.exitMaterializeViewCombineBaseClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMaterializeViewCombineBaseClause" ):
+                return visitor.visitMaterializeViewCombineBaseClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -21411,6 +22761,7 @@ class KqlParser ( Parser ):
 
 
     class MaterializedViewCombineDeltaClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -21441,6 +22792,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMaterializedViewCombineDeltaClause" ):
                 listener.exitMaterializedViewCombineDeltaClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMaterializedViewCombineDeltaClause" ):
+                return visitor.visitMaterializedViewCombineDeltaClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -21468,6 +22825,7 @@ class KqlParser ( Parser ):
 
 
     class MaterializedViewCombineAggregationsClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -21498,6 +22856,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitMaterializedViewCombineAggregationsClause" ):
                 listener.exitMaterializedViewCombineAggregationsClause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMaterializedViewCombineAggregationsClause" ):
+                return visitor.visitMaterializedViewCombineAggregationsClause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -21525,6 +22889,7 @@ class KqlParser ( Parser ):
 
 
     class ScalarTypeContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -21593,6 +22958,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitScalarType" ):
                 listener.exitScalarType(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitScalarType" ):
+                return visitor.visitScalarType(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -21606,7 +22977,7 @@ class KqlParser ( Parser ):
             self.state = 2611
             localctx.Token = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(((((_la - 279)) & ~0x3f) == 0 and ((1 << (_la - 279)) & ((1 << (KqlParser.BOOL - 279)) | (1 << (KqlParser.BOOLEAN - 279)) | (1 << (KqlParser.DATE - 279)) | (1 << (KqlParser.DATETIME - 279)) | (1 << (KqlParser.DECIMAL - 279)) | (1 << (KqlParser.DOUBLE - 279)) | (1 << (KqlParser.DYNAMIC - 279)) | (1 << (KqlParser.GUID - 279)) | (1 << (KqlParser.INT - 279)) | (1 << (KqlParser.INT8 - 279)) | (1 << (KqlParser.INT64 - 279)) | (1 << (KqlParser.LONG - 279)) | (1 << (KqlParser.STRING - 279)) | (1 << (KqlParser.REAL - 279)) | (1 << (KqlParser.TIME - 279)) | (1 << (KqlParser.TIMESPAN - 279)) | (1 << (KqlParser.UNIQUEID - 279)))) != 0)):
+            if not(((((_la - 279)) & ~0x3f) == 0 and ((1 << (_la - 279)) & 34072447) != 0)):
                 localctx.Token = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -21621,6 +22992,7 @@ class KqlParser ( Parser ):
 
 
     class ExtendedScalarTypeContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -21716,6 +23088,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitExtendedScalarType" ):
                 listener.exitExtendedScalarType(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExtendedScalarType" ):
+                return visitor.visitExtendedScalarType(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -21729,7 +23107,7 @@ class KqlParser ( Parser ):
             self.state = 2613
             localctx.Token = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(((((_la - 279)) & ~0x3f) == 0 and ((1 << (_la - 279)) & ((1 << (KqlParser.BOOL - 279)) | (1 << (KqlParser.BOOLEAN - 279)) | (1 << (KqlParser.DATE - 279)) | (1 << (KqlParser.DATETIME - 279)) | (1 << (KqlParser.DECIMAL - 279)) | (1 << (KqlParser.DOUBLE - 279)) | (1 << (KqlParser.DYNAMIC - 279)) | (1 << (KqlParser.FLOAT - 279)) | (1 << (KqlParser.GUID - 279)) | (1 << (KqlParser.INT - 279)) | (1 << (KqlParser.INT8 - 279)) | (1 << (KqlParser.INT16 - 279)) | (1 << (KqlParser.INT32 - 279)) | (1 << (KqlParser.INT64 - 279)) | (1 << (KqlParser.LONG - 279)) | (1 << (KqlParser.STRING - 279)) | (1 << (KqlParser.REAL - 279)) | (1 << (KqlParser.TIME - 279)) | (1 << (KqlParser.TIMESPAN - 279)) | (1 << (KqlParser.UINT - 279)) | (1 << (KqlParser.UINT8 - 279)) | (1 << (KqlParser.UINT16 - 279)) | (1 << (KqlParser.UINT32 - 279)) | (1 << (KqlParser.UINT64 - 279)) | (1 << (KqlParser.ULONG - 279)) | (1 << (KqlParser.UNIQUEID - 279)))) != 0)):
+            if not(((((_la - 279)) & ~0x3f) == 0 and ((1 << (_la - 279)) & 67108863) != 0)):
                 localctx.Token = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -21744,6 +23122,7 @@ class KqlParser ( Parser ):
 
 
     class ParameterNameContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -21764,6 +23143,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitParameterName" ):
                 listener.exitParameterName(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParameterName" ):
+                return visitor.visitParameterName(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -21786,6 +23171,7 @@ class KqlParser ( Parser ):
 
 
     class SimpleNameReferenceContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -21806,6 +23192,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSimpleNameReference" ):
                 listener.exitSimpleNameReference(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSimpleNameReference" ):
+                return visitor.visitSimpleNameReference(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -21828,6 +23220,7 @@ class KqlParser ( Parser ):
 
 
     class ExtendedNameReferenceContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -21848,6 +23241,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExtendedNameReference" ):
                 listener.exitExtendedNameReference(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExtendedNameReference" ):
+                return visitor.visitExtendedNameReference(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -21870,6 +23269,7 @@ class KqlParser ( Parser ):
 
 
     class WildcardedNameReferenceContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -21890,6 +23290,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitWildcardedNameReference" ):
                 listener.exitWildcardedNameReference(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWildcardedNameReference" ):
+                return visitor.visitWildcardedNameReference(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -21912,6 +23318,7 @@ class KqlParser ( Parser ):
 
 
     class SimpleOrWildcardedNameReferenceContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -21937,6 +23344,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSimpleOrWildcardedNameReference" ):
                 listener.exitSimpleOrWildcardedNameReference(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSimpleOrWildcardedNameReference" ):
+                return visitor.visitSimpleOrWildcardedNameReference(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -21972,6 +23385,7 @@ class KqlParser ( Parser ):
 
 
     class IdentifierNameContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -21991,6 +23405,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIdentifierName" ):
                 listener.exitIdentifierName(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIdentifierName" ):
+                return visitor.visitIdentifierName(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -22013,6 +23433,7 @@ class KqlParser ( Parser ):
 
 
     class KeywordNameContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -22249,6 +23670,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitKeywordName" ):
                 listener.exitKeywordName(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitKeywordName" ):
+                return visitor.visitKeywordName(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -22262,7 +23689,7 @@ class KqlParser ( Parser ):
             self.state = 2629
             localctx.Token = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(((((_la - 38)) & ~0x3f) == 0 and ((1 << (_la - 38)) & ((1 << (KqlParser.ACCESS - 38)) | (1 << (KqlParser.AGGREGATIONS - 38)) | (1 << (KqlParser.ALIAS - 38)) | (1 << (KqlParser.ALL - 38)) | (1 << (KqlParser.AXES - 38)) | (1 << (KqlParser.BASE - 38)) | (1 << (KqlParser.BIN - 38)) | (1 << (KqlParser.CLUSTER - 38)) | (1 << (KqlParser.DATABASE - 38)) | (1 << (KqlParser.DECLARE - 38)) | (1 << (KqlParser.DEFAULT - 38)) | (1 << (KqlParser.DELTA - 38)) | (1 << (KqlParser.EDGES - 38)) | (1 << (KqlParser.EVALUATE - 38)) | (1 << (KqlParser.EXECUTE - 38)) | (1 << (KqlParser.FACET - 38)) | (1 << (KqlParser.FORK - 38)) | (1 << (KqlParser.FROM - 38)))) != 0) or ((((_la - 112)) & ~0x3f) == 0 and ((1 << (_la - 112)) & ((1 << (KqlParser.HIDDEN_ - 112)) | (1 << (KqlParser.HOT - 112)) | (1 << (KqlParser.HOTDATA - 112)) | (1 << (KqlParser.HOTINDEX - 112)) | (1 << (KqlParser.ID - 112)) | (1 << (KqlParser.INTO - 112)) | (1 << (KqlParser.LEGEND - 112)) | (1 << (KqlParser.LET - 112)) | (1 << (KqlParser.LINEAR - 112)) | (1 << (KqlParser.LIST - 112)) | (1 << (KqlParser.LOOKUP - 112)) | (1 << (KqlParser.LOG - 112)) | (1 << (KqlParser.MAP - 112)) | (1 << (KqlParser.NODES - 112)) | (1 << (KqlParser.NONE - 112)))) != 0) or ((((_la - 183)) & ~0x3f) == 0 and ((1 << (_la - 183)) & ((1 << (KqlParser.NULL - 183)) | (1 << (KqlParser.NULLS - 183)) | (1 << (KqlParser.ON - 183)) | (1 << (KqlParser.OPTIONAL - 183)) | (1 << (KqlParser.OUTPUT - 183)) | (1 << (KqlParser.PACK - 183)) | (1 << (KqlParser.PARTITION - 183)) | (1 << (KqlParser.PARTITIONBY - 183)) | (1 << (KqlParser.PATTERN - 183)) | (1 << (KqlParser.PLUGIN - 183)) | (1 << (KqlParser.QUERYPARAMETERS - 183)) | (1 << (KqlParser.RANGE - 183)) | (1 << (KqlParser.REDUCE - 183)) | (1 << (KqlParser.RENDER - 183)) | (1 << (KqlParser.REPLACE - 183)) | (1 << (KqlParser.RESTRICT - 183)) | (1 << (KqlParser.SERIES - 183)) | (1 << (KqlParser.STACKED - 183)) | (1 << (KqlParser.STACKED100 - 183)) | (1 << (KqlParser.STEP - 183)) | (1 << (KqlParser.THRESHOLD - 183)))) != 0) or ((((_la - 253)) & ~0x3f) == 0 and ((1 << (_la - 253)) & ((1 << (KqlParser.TYPEOF - 253)) | (1 << (KqlParser.UNSTACKED - 253)) | (1 << (KqlParser.UUID - 253)) | (1 << (KqlParser.VIEW - 253)) | (1 << (KqlParser.VISIBLE - 253)) | (1 << (KqlParser.WITH - 253)) | (1 << (KqlParser.XAXIS - 253)) | (1 << (KqlParser.XCOLUMN - 253)) | (1 << (KqlParser.XMAX - 253)) | (1 << (KqlParser.XMIN - 253)) | (1 << (KqlParser.XTITLE - 253)) | (1 << (KqlParser.YAXIS - 253)) | (1 << (KqlParser.YCOLUMNS - 253)) | (1 << (KqlParser.YMAX - 253)) | (1 << (KqlParser.YMIN - 253)) | (1 << (KqlParser.YSPLIT - 253)) | (1 << (KqlParser.YTITLE - 253)) | (1 << (KqlParser.BOOL - 253)) | (1 << (KqlParser.GUID - 253)))) != 0)):
+            if not(((((_la - 38)) & ~0x3f) == 0 and ((1 << (_la - 38)) & 218478683485278237) != 0) or ((((_la - 112)) & ~0x3f) == 0 and ((1 << (_la - 112)) & 1691298798096385) != 0) or ((((_la - 183)) & ~0x3f) == 0 and ((1 << (_la - 183)) & 307951464744141595) != 0) or ((((_la - 253)) & ~0x3f) == 0 and ((1 << (_la - 253)) & 17314054333) != 0)):
                 localctx.Token = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -22277,6 +23704,7 @@ class KqlParser ( Parser ):
 
 
     class ExtendedKeywordNameContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -22405,6 +23833,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitExtendedKeywordName" ):
                 listener.exitExtendedKeywordName(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExtendedKeywordName" ):
+                return visitor.visitExtendedKeywordName(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -22418,7 +23852,7 @@ class KqlParser ( Parser ):
             self.state = 2631
             localctx.Token = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(((((_la - 39)) & ~0x3f) == 0 and ((1 << (_la - 39)) & ((1 << (KqlParser.ACCUMULATE - 39)) | (1 << (KqlParser.AS - 39)) | (1 << (KqlParser.BY - 39)) | (1 << (KqlParser.CONSUME - 39)) | (1 << (KqlParser.CONTAINS - 39)) | (1 << (KqlParser.COUNT - 39)) | (1 << (KqlParser.DATATABLE - 39)) | (1 << (KqlParser.DISTINCT - 39)) | (1 << (KqlParser.EXTEND - 39)) | (1 << (KqlParser.EXTERNALDATA - 39)) | (1 << (KqlParser.FILTER - 39)) | (1 << (KqlParser.FIND - 39)))) != 0) or ((((_la - 104)) & ~0x3f) == 0 and ((1 << (_la - 104)) & ((1 << (KqlParser.HAS - 104)) | (1 << (KqlParser.IN - 104)) | (1 << (KqlParser.INVOKE - 104)) | (1 << (KqlParser.LIMIT - 104)) | (1 << (KqlParser.MATERIALIZE - 104)))) != 0) or ((((_la - 185)) & ~0x3f) == 0 and ((1 << (_la - 185)) & ((1 << (KqlParser.OF - 185)) | (1 << (KqlParser.PARSE - 185)) | (1 << (KqlParser.PRINT - 185)) | (1 << (KqlParser.SAMPLE - 185)) | (1 << (KqlParser.SAMPLE_DISTINCT - 185)) | (1 << (KqlParser.SCAN - 185)) | (1 << (KqlParser.SEARCH - 185)) | (1 << (KqlParser.SERIALIZE - 185)) | (1 << (KqlParser.SET - 185)) | (1 << (KqlParser.SORT - 185)) | (1 << (KqlParser.SUMMARIZE - 185)) | (1 << (KqlParser.TAKE - 185)) | (1 << (KqlParser.TITLE - 185)) | (1 << (KqlParser.TO - 185)) | (1 << (KqlParser.TOP - 185)) | (1 << (KqlParser.TOP_HITTERS - 185)))) != 0) or ((((_la - 249)) & ~0x3f) == 0 and ((1 << (_la - 249)) & ((1 << (KqlParser.TOP_NESTED - 249)) | (1 << (KqlParser.TOSCALAR - 249)) | (1 << (KqlParser.TOTABLE - 249)) | (1 << (KqlParser.WHERE - 249)))) != 0)):
+            if not(((((_la - 39)) & ~0x3f) == 0 and ((1 << (_la - 39)) & 7177891226059009) != 0) or ((((_la - 104)) & ~0x3f) == 0 and ((1 << (_la - 104)) & 2252899929292801) != 0) or ((((_la - 185)) & ~0x3f) == 0 and ((1 << (_la - 185)) & -1107837748295761407) != 0) or ((((_la - 249)) & ~0x3f) == 0 and ((1 << (_la - 249)) & 1031) != 0)):
                 localctx.Token = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -22433,6 +23867,7 @@ class KqlParser ( Parser ):
 
 
     class EscapedNameContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -22460,6 +23895,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitEscapedName" ):
                 listener.exitEscapedName(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEscapedName" ):
+                return visitor.visitEscapedName(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -22485,6 +23926,7 @@ class KqlParser ( Parser ):
 
 
     class IdentifierOrKeywordNameContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -22511,6 +23953,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitIdentifierOrKeywordName" ):
                 listener.exitIdentifierOrKeywordName(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIdentifierOrKeywordName" ):
+                return visitor.visitIdentifierOrKeywordName(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -22522,12 +23970,12 @@ class KqlParser ( Parser ):
             self.state = 2639
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.IDENTIFIER]:
+            if token in [316]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2637
                 localctx.Identifier = self.identifierName()
                 pass
-            elif token in [KqlParser.ACCESS, KqlParser.AGGREGATIONS, KqlParser.ALIAS, KqlParser.ALL, KqlParser.AXES, KqlParser.BASE, KqlParser.BIN, KqlParser.CLUSTER, KqlParser.DATABASE, KqlParser.DECLARE, KqlParser.DEFAULT, KqlParser.DELTA, KqlParser.EDGES, KqlParser.EVALUATE, KqlParser.EXECUTE, KqlParser.FACET, KqlParser.FORK, KqlParser.FROM, KqlParser.HIDDEN_, KqlParser.HOT, KqlParser.HOTDATA, KqlParser.HOTINDEX, KqlParser.ID, KqlParser.INTO, KqlParser.LEGEND, KqlParser.LET, KqlParser.LINEAR, KqlParser.LIST, KqlParser.LOOKUP, KqlParser.LOG, KqlParser.MAP, KqlParser.NODES, KqlParser.NONE, KqlParser.NULL, KqlParser.NULLS, KqlParser.ON, KqlParser.OPTIONAL, KqlParser.OUTPUT, KqlParser.PACK, KqlParser.PARTITION, KqlParser.PARTITIONBY, KqlParser.PATTERN, KqlParser.PLUGIN, KqlParser.QUERYPARAMETERS, KqlParser.RANGE, KqlParser.REDUCE, KqlParser.RENDER, KqlParser.REPLACE, KqlParser.RESTRICT, KqlParser.SERIES, KqlParser.STACKED, KqlParser.STACKED100, KqlParser.STEP, KqlParser.THRESHOLD, KqlParser.TYPEOF, KqlParser.UNSTACKED, KqlParser.UUID, KqlParser.VIEW, KqlParser.VISIBLE, KqlParser.WITH, KqlParser.XAXIS, KqlParser.XCOLUMN, KqlParser.XMAX, KqlParser.XMIN, KqlParser.XTITLE, KqlParser.YAXIS, KqlParser.YCOLUMNS, KqlParser.YMAX, KqlParser.YMIN, KqlParser.YSPLIT, KqlParser.YTITLE, KqlParser.BOOL, KqlParser.GUID]:
+            elif token in [38, 40, 41, 42, 50, 53, 55, 59, 69, 72, 74, 75, 78, 82, 83, 89, 94, 95, 112, 124, 126, 127, 128, 132, 140, 141, 145, 147, 148, 149, 153, 161, 162, 183, 184, 186, 187, 191, 192, 197, 198, 200, 204, 213, 214, 215, 218, 219, 220, 227, 232, 233, 237, 241, 253, 255, 256, 257, 258, 260, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 287]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2638
                 localctx.Keyword = self.keywordName()
@@ -22545,6 +23993,7 @@ class KqlParser ( Parser ):
 
 
     class IdentifierOrKeywordOrEscapedNameContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -22576,6 +24025,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitIdentifierOrKeywordOrEscapedName" ):
                 listener.exitIdentifierOrKeywordOrEscapedName(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIdentifierOrKeywordOrEscapedName" ):
+                return visitor.visitIdentifierOrKeywordOrEscapedName(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -22587,17 +24042,17 @@ class KqlParser ( Parser ):
             self.state = 2644
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.IDENTIFIER]:
+            if token in [316]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2641
                 localctx.Identifier = self.identifierName()
                 pass
-            elif token in [KqlParser.ACCESS, KqlParser.AGGREGATIONS, KqlParser.ALIAS, KqlParser.ALL, KqlParser.AXES, KqlParser.BASE, KqlParser.BIN, KqlParser.CLUSTER, KqlParser.DATABASE, KqlParser.DECLARE, KqlParser.DEFAULT, KqlParser.DELTA, KqlParser.EDGES, KqlParser.EVALUATE, KqlParser.EXECUTE, KqlParser.FACET, KqlParser.FORK, KqlParser.FROM, KqlParser.HIDDEN_, KqlParser.HOT, KqlParser.HOTDATA, KqlParser.HOTINDEX, KqlParser.ID, KqlParser.INTO, KqlParser.LEGEND, KqlParser.LET, KqlParser.LINEAR, KqlParser.LIST, KqlParser.LOOKUP, KqlParser.LOG, KqlParser.MAP, KqlParser.NODES, KqlParser.NONE, KqlParser.NULL, KqlParser.NULLS, KqlParser.ON, KqlParser.OPTIONAL, KqlParser.OUTPUT, KqlParser.PACK, KqlParser.PARTITION, KqlParser.PARTITIONBY, KqlParser.PATTERN, KqlParser.PLUGIN, KqlParser.QUERYPARAMETERS, KqlParser.RANGE, KqlParser.REDUCE, KqlParser.RENDER, KqlParser.REPLACE, KqlParser.RESTRICT, KqlParser.SERIES, KqlParser.STACKED, KqlParser.STACKED100, KqlParser.STEP, KqlParser.THRESHOLD, KqlParser.TYPEOF, KqlParser.UNSTACKED, KqlParser.UUID, KqlParser.VIEW, KqlParser.VISIBLE, KqlParser.WITH, KqlParser.XAXIS, KqlParser.XCOLUMN, KqlParser.XMAX, KqlParser.XMIN, KqlParser.XTITLE, KqlParser.YAXIS, KqlParser.YCOLUMNS, KqlParser.YMAX, KqlParser.YMIN, KqlParser.YSPLIT, KqlParser.YTITLE, KqlParser.BOOL, KqlParser.GUID]:
+            elif token in [38, 40, 41, 42, 50, 53, 55, 59, 69, 72, 74, 75, 78, 82, 83, 89, 94, 95, 112, 124, 126, 127, 128, 132, 140, 141, 145, 147, 148, 149, 153, 161, 162, 183, 184, 186, 187, 191, 192, 197, 198, 200, 204, 213, 214, 215, 218, 219, 220, 227, 232, 233, 237, 241, 253, 255, 256, 257, 258, 260, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 287]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2642
                 localctx.Keyword = self.keywordName()
                 pass
-            elif token in [KqlParser.OPENBRACKET]:
+            elif token in [30]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 2643
                 localctx.Escaped = self.escapedName()
@@ -22615,6 +24070,7 @@ class KqlParser ( Parser ):
 
 
     class IdentifierOrExtendedKeywordOrEscapedNameContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -22651,6 +24107,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitIdentifierOrExtendedKeywordOrEscapedName" ):
                 listener.exitIdentifierOrExtendedKeywordOrEscapedName(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIdentifierOrExtendedKeywordOrEscapedName" ):
+                return visitor.visitIdentifierOrExtendedKeywordOrEscapedName(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -22662,22 +24124,22 @@ class KqlParser ( Parser ):
             self.state = 2650
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.IDENTIFIER]:
+            if token in [316]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2646
                 localctx.Identifier = self.identifierName()
                 pass
-            elif token in [KqlParser.ACCESS, KqlParser.AGGREGATIONS, KqlParser.ALIAS, KqlParser.ALL, KqlParser.AXES, KqlParser.BASE, KqlParser.BIN, KqlParser.CLUSTER, KqlParser.DATABASE, KqlParser.DECLARE, KqlParser.DEFAULT, KqlParser.DELTA, KqlParser.EDGES, KqlParser.EVALUATE, KqlParser.EXECUTE, KqlParser.FACET, KqlParser.FORK, KqlParser.FROM, KqlParser.HIDDEN_, KqlParser.HOT, KqlParser.HOTDATA, KqlParser.HOTINDEX, KqlParser.ID, KqlParser.INTO, KqlParser.LEGEND, KqlParser.LET, KqlParser.LINEAR, KqlParser.LIST, KqlParser.LOOKUP, KqlParser.LOG, KqlParser.MAP, KqlParser.NODES, KqlParser.NONE, KqlParser.NULL, KqlParser.NULLS, KqlParser.ON, KqlParser.OPTIONAL, KqlParser.OUTPUT, KqlParser.PACK, KqlParser.PARTITION, KqlParser.PARTITIONBY, KqlParser.PATTERN, KqlParser.PLUGIN, KqlParser.QUERYPARAMETERS, KqlParser.RANGE, KqlParser.REDUCE, KqlParser.RENDER, KqlParser.REPLACE, KqlParser.RESTRICT, KqlParser.SERIES, KqlParser.STACKED, KqlParser.STACKED100, KqlParser.STEP, KqlParser.THRESHOLD, KqlParser.TYPEOF, KqlParser.UNSTACKED, KqlParser.UUID, KqlParser.VIEW, KqlParser.VISIBLE, KqlParser.WITH, KqlParser.XAXIS, KqlParser.XCOLUMN, KqlParser.XMAX, KqlParser.XMIN, KqlParser.XTITLE, KqlParser.YAXIS, KqlParser.YCOLUMNS, KqlParser.YMAX, KqlParser.YMIN, KqlParser.YSPLIT, KqlParser.YTITLE, KqlParser.BOOL, KqlParser.GUID]:
+            elif token in [38, 40, 41, 42, 50, 53, 55, 59, 69, 72, 74, 75, 78, 82, 83, 89, 94, 95, 112, 124, 126, 127, 128, 132, 140, 141, 145, 147, 148, 149, 153, 161, 162, 183, 184, 186, 187, 191, 192, 197, 198, 200, 204, 213, 214, 215, 218, 219, 220, 227, 232, 233, 237, 241, 253, 255, 256, 257, 258, 260, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 287]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2647
                 localctx.Keyword = self.keywordName()
                 pass
-            elif token in [KqlParser.ACCUMULATE, KqlParser.AS, KqlParser.BY, KqlParser.CONSUME, KqlParser.CONTAINS, KqlParser.COUNT, KqlParser.DATATABLE, KqlParser.DISTINCT, KqlParser.EXTEND, KqlParser.EXTERNALDATA, KqlParser.FILTER, KqlParser.FIND, KqlParser.HAS, KqlParser.IN, KqlParser.INVOKE, KqlParser.LIMIT, KqlParser.MATERIALIZE, KqlParser.OF, KqlParser.PARSE, KqlParser.PRINT, KqlParser.SAMPLE, KqlParser.SAMPLE_DISTINCT, KqlParser.SCAN, KqlParser.SEARCH, KqlParser.SERIALIZE, KqlParser.SET, KqlParser.SORT, KqlParser.SUMMARIZE, KqlParser.TAKE, KqlParser.TITLE, KqlParser.TO, KqlParser.TOP, KqlParser.TOP_HITTERS, KqlParser.TOP_NESTED, KqlParser.TOSCALAR, KqlParser.TOTABLE, KqlParser.WHERE]:
+            elif token in [39, 47, 57, 61, 62, 66, 71, 77, 86, 87, 90, 91, 104, 130, 133, 144, 155, 185, 194, 205, 221, 222, 223, 225, 226, 228, 230, 238, 240, 245, 246, 247, 248, 249, 250, 251, 259]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 2648
                 localctx.ExtendedKeyword = self.extendedKeywordName()
                 pass
-            elif token in [KqlParser.OPENBRACKET]:
+            elif token in [30]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 2649
                 localctx.Escaped = self.escapedName()
@@ -22695,6 +24157,7 @@ class KqlParser ( Parser ):
 
 
     class IdentifierOrExtendedKeywordNameContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -22726,6 +24189,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitIdentifierOrExtendedKeywordName" ):
                 listener.exitIdentifierOrExtendedKeywordName(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIdentifierOrExtendedKeywordName" ):
+                return visitor.visitIdentifierOrExtendedKeywordName(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -22737,17 +24206,17 @@ class KqlParser ( Parser ):
             self.state = 2655
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.IDENTIFIER]:
+            if token in [316]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2652
                 localctx.Identifier = self.identifierName()
                 pass
-            elif token in [KqlParser.ACCESS, KqlParser.AGGREGATIONS, KqlParser.ALIAS, KqlParser.ALL, KqlParser.AXES, KqlParser.BASE, KqlParser.BIN, KqlParser.CLUSTER, KqlParser.DATABASE, KqlParser.DECLARE, KqlParser.DEFAULT, KqlParser.DELTA, KqlParser.EDGES, KqlParser.EVALUATE, KqlParser.EXECUTE, KqlParser.FACET, KqlParser.FORK, KqlParser.FROM, KqlParser.HIDDEN_, KqlParser.HOT, KqlParser.HOTDATA, KqlParser.HOTINDEX, KqlParser.ID, KqlParser.INTO, KqlParser.LEGEND, KqlParser.LET, KqlParser.LINEAR, KqlParser.LIST, KqlParser.LOOKUP, KqlParser.LOG, KqlParser.MAP, KqlParser.NODES, KqlParser.NONE, KqlParser.NULL, KqlParser.NULLS, KqlParser.ON, KqlParser.OPTIONAL, KqlParser.OUTPUT, KqlParser.PACK, KqlParser.PARTITION, KqlParser.PARTITIONBY, KqlParser.PATTERN, KqlParser.PLUGIN, KqlParser.QUERYPARAMETERS, KqlParser.RANGE, KqlParser.REDUCE, KqlParser.RENDER, KqlParser.REPLACE, KqlParser.RESTRICT, KqlParser.SERIES, KqlParser.STACKED, KqlParser.STACKED100, KqlParser.STEP, KqlParser.THRESHOLD, KqlParser.TYPEOF, KqlParser.UNSTACKED, KqlParser.UUID, KqlParser.VIEW, KqlParser.VISIBLE, KqlParser.WITH, KqlParser.XAXIS, KqlParser.XCOLUMN, KqlParser.XMAX, KqlParser.XMIN, KqlParser.XTITLE, KqlParser.YAXIS, KqlParser.YCOLUMNS, KqlParser.YMAX, KqlParser.YMIN, KqlParser.YSPLIT, KqlParser.YTITLE, KqlParser.BOOL, KqlParser.GUID]:
+            elif token in [38, 40, 41, 42, 50, 53, 55, 59, 69, 72, 74, 75, 78, 82, 83, 89, 94, 95, 112, 124, 126, 127, 128, 132, 140, 141, 145, 147, 148, 149, 153, 161, 162, 183, 184, 186, 187, 191, 192, 197, 198, 200, 204, 213, 214, 215, 218, 219, 220, 227, 232, 233, 237, 241, 253, 255, 256, 257, 258, 260, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 287]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2653
                 localctx.Keyword = self.keywordName()
                 pass
-            elif token in [KqlParser.ACCUMULATE, KqlParser.AS, KqlParser.BY, KqlParser.CONSUME, KqlParser.CONTAINS, KqlParser.COUNT, KqlParser.DATATABLE, KqlParser.DISTINCT, KqlParser.EXTEND, KqlParser.EXTERNALDATA, KqlParser.FILTER, KqlParser.FIND, KqlParser.HAS, KqlParser.IN, KqlParser.INVOKE, KqlParser.LIMIT, KqlParser.MATERIALIZE, KqlParser.OF, KqlParser.PARSE, KqlParser.PRINT, KqlParser.SAMPLE, KqlParser.SAMPLE_DISTINCT, KqlParser.SCAN, KqlParser.SEARCH, KqlParser.SERIALIZE, KqlParser.SET, KqlParser.SORT, KqlParser.SUMMARIZE, KqlParser.TAKE, KqlParser.TITLE, KqlParser.TO, KqlParser.TOP, KqlParser.TOP_HITTERS, KqlParser.TOP_NESTED, KqlParser.TOSCALAR, KqlParser.TOTABLE, KqlParser.WHERE]:
+            elif token in [39, 47, 57, 61, 62, 66, 71, 77, 86, 87, 90, 91, 104, 130, 133, 144, 155, 185, 194, 205, 221, 222, 223, 225, 226, 228, 230, 238, 240, 245, 246, 247, 248, 249, 250, 251, 259]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 2654
                 localctx.ExtendedKeyword = self.extendedKeywordName()
@@ -22765,6 +24234,7 @@ class KqlParser ( Parser ):
 
 
     class WildcardedNameContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -22798,6 +24268,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitWildcardedName" ):
                 listener.exitWildcardedName(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWildcardedName" ):
+                return visitor.visitWildcardedName(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -22811,7 +24287,7 @@ class KqlParser ( Parser ):
             self.state = 2658
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.ACCESS) | (1 << KqlParser.ACCUMULATE) | (1 << KqlParser.AGGREGATIONS) | (1 << KqlParser.ALIAS) | (1 << KqlParser.ALL) | (1 << KqlParser.AS) | (1 << KqlParser.AXES) | (1 << KqlParser.BASE) | (1 << KqlParser.BIN) | (1 << KqlParser.BY) | (1 << KqlParser.CLUSTER) | (1 << KqlParser.CONSUME) | (1 << KqlParser.CONTAINS))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (KqlParser.COUNT - 66)) | (1 << (KqlParser.DATABASE - 66)) | (1 << (KqlParser.DATATABLE - 66)) | (1 << (KqlParser.DECLARE - 66)) | (1 << (KqlParser.DEFAULT - 66)) | (1 << (KqlParser.DELTA - 66)) | (1 << (KqlParser.DISTINCT - 66)) | (1 << (KqlParser.EDGES - 66)) | (1 << (KqlParser.EVALUATE - 66)) | (1 << (KqlParser.EXECUTE - 66)) | (1 << (KqlParser.EXTEND - 66)) | (1 << (KqlParser.EXTERNALDATA - 66)) | (1 << (KqlParser.FACET - 66)) | (1 << (KqlParser.FILTER - 66)) | (1 << (KqlParser.FIND - 66)) | (1 << (KqlParser.FORK - 66)) | (1 << (KqlParser.FROM - 66)) | (1 << (KqlParser.HAS - 66)) | (1 << (KqlParser.HIDDEN_ - 66)) | (1 << (KqlParser.HOT - 66)) | (1 << (KqlParser.HOTDATA - 66)) | (1 << (KqlParser.HOTINDEX - 66)) | (1 << (KqlParser.ID - 66)))) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & ((1 << (KqlParser.IN - 130)) | (1 << (KqlParser.INTO - 130)) | (1 << (KqlParser.INVOKE - 130)) | (1 << (KqlParser.LEGEND - 130)) | (1 << (KqlParser.LET - 130)) | (1 << (KqlParser.LIMIT - 130)) | (1 << (KqlParser.LINEAR - 130)) | (1 << (KqlParser.LIST - 130)) | (1 << (KqlParser.LOOKUP - 130)) | (1 << (KqlParser.LOG - 130)) | (1 << (KqlParser.MAP - 130)) | (1 << (KqlParser.MATERIALIZE - 130)) | (1 << (KqlParser.NODES - 130)) | (1 << (KqlParser.NONE - 130)) | (1 << (KqlParser.NULL - 130)) | (1 << (KqlParser.NULLS - 130)) | (1 << (KqlParser.OF - 130)) | (1 << (KqlParser.ON - 130)) | (1 << (KqlParser.OPTIONAL - 130)) | (1 << (KqlParser.OUTPUT - 130)) | (1 << (KqlParser.PACK - 130)))) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & ((1 << (KqlParser.PARSE - 194)) | (1 << (KqlParser.PARTITION - 194)) | (1 << (KqlParser.PARTITIONBY - 194)) | (1 << (KqlParser.PATTERN - 194)) | (1 << (KqlParser.PLUGIN - 194)) | (1 << (KqlParser.PRINT - 194)) | (1 << (KqlParser.QUERYPARAMETERS - 194)) | (1 << (KqlParser.RANGE - 194)) | (1 << (KqlParser.REDUCE - 194)) | (1 << (KqlParser.RENDER - 194)) | (1 << (KqlParser.REPLACE - 194)) | (1 << (KqlParser.RESTRICT - 194)) | (1 << (KqlParser.SAMPLE - 194)) | (1 << (KqlParser.SAMPLE_DISTINCT - 194)) | (1 << (KqlParser.SCAN - 194)) | (1 << (KqlParser.SEARCH - 194)) | (1 << (KqlParser.SERIALIZE - 194)) | (1 << (KqlParser.SERIES - 194)) | (1 << (KqlParser.SET - 194)) | (1 << (KqlParser.SORT - 194)) | (1 << (KqlParser.STACKED - 194)) | (1 << (KqlParser.STACKED100 - 194)) | (1 << (KqlParser.STEP - 194)) | (1 << (KqlParser.SUMMARIZE - 194)) | (1 << (KqlParser.TAKE - 194)) | (1 << (KqlParser.THRESHOLD - 194)) | (1 << (KqlParser.TITLE - 194)) | (1 << (KqlParser.TO - 194)) | (1 << (KqlParser.TOP - 194)) | (1 << (KqlParser.TOP_HITTERS - 194)) | (1 << (KqlParser.TOP_NESTED - 194)) | (1 << (KqlParser.TOSCALAR - 194)) | (1 << (KqlParser.TOTABLE - 194)) | (1 << (KqlParser.TYPEOF - 194)) | (1 << (KqlParser.UNSTACKED - 194)) | (1 << (KqlParser.UUID - 194)) | (1 << (KqlParser.VIEW - 194)))) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & ((1 << (KqlParser.VISIBLE - 258)) | (1 << (KqlParser.WHERE - 258)) | (1 << (KqlParser.WITH - 258)) | (1 << (KqlParser.XAXIS - 258)) | (1 << (KqlParser.XCOLUMN - 258)) | (1 << (KqlParser.XMAX - 258)) | (1 << (KqlParser.XMIN - 258)) | (1 << (KqlParser.XTITLE - 258)) | (1 << (KqlParser.YAXIS - 258)) | (1 << (KqlParser.YCOLUMNS - 258)) | (1 << (KqlParser.YMAX - 258)) | (1 << (KqlParser.YMIN - 258)) | (1 << (KqlParser.YSPLIT - 258)) | (1 << (KqlParser.YTITLE - 258)) | (1 << (KqlParser.BOOL - 258)) | (1 << (KqlParser.GUID - 258)) | (1 << (KqlParser.IDENTIFIER - 258)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 7684416122904379392) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & 8358751552889101161) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & 7196752211023416333) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & -1443165259434554279) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & 288230376692775943) != 0):
                 self.state = 2657
                 localctx.Prefix = self.wildcardedNamePrefix()
 
@@ -22821,7 +24297,7 @@ class KqlParser ( Parser ):
             self.state = 2664
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.ASTERISK) | (1 << KqlParser.ACCESS) | (1 << KqlParser.ACCUMULATE) | (1 << KqlParser.AGGREGATIONS) | (1 << KqlParser.ALIAS) | (1 << KqlParser.ALL) | (1 << KqlParser.AS) | (1 << KqlParser.AXES) | (1 << KqlParser.BASE) | (1 << KqlParser.BIN) | (1 << KqlParser.BY) | (1 << KqlParser.CLUSTER) | (1 << KqlParser.CONSUME) | (1 << KqlParser.CONTAINS))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (KqlParser.COUNT - 66)) | (1 << (KqlParser.DATABASE - 66)) | (1 << (KqlParser.DATATABLE - 66)) | (1 << (KqlParser.DECLARE - 66)) | (1 << (KqlParser.DEFAULT - 66)) | (1 << (KqlParser.DELTA - 66)) | (1 << (KqlParser.DISTINCT - 66)) | (1 << (KqlParser.EDGES - 66)) | (1 << (KqlParser.EVALUATE - 66)) | (1 << (KqlParser.EXECUTE - 66)) | (1 << (KqlParser.EXTEND - 66)) | (1 << (KqlParser.EXTERNALDATA - 66)) | (1 << (KqlParser.FACET - 66)) | (1 << (KqlParser.FILTER - 66)) | (1 << (KqlParser.FIND - 66)) | (1 << (KqlParser.FORK - 66)) | (1 << (KqlParser.FROM - 66)) | (1 << (KqlParser.HAS - 66)) | (1 << (KqlParser.HIDDEN_ - 66)) | (1 << (KqlParser.HOT - 66)) | (1 << (KqlParser.HOTDATA - 66)) | (1 << (KqlParser.HOTINDEX - 66)) | (1 << (KqlParser.ID - 66)))) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & ((1 << (KqlParser.IN - 130)) | (1 << (KqlParser.INTO - 130)) | (1 << (KqlParser.INVOKE - 130)) | (1 << (KqlParser.LEGEND - 130)) | (1 << (KqlParser.LET - 130)) | (1 << (KqlParser.LIMIT - 130)) | (1 << (KqlParser.LINEAR - 130)) | (1 << (KqlParser.LIST - 130)) | (1 << (KqlParser.LOOKUP - 130)) | (1 << (KqlParser.LOG - 130)) | (1 << (KqlParser.MAP - 130)) | (1 << (KqlParser.MATERIALIZE - 130)) | (1 << (KqlParser.NODES - 130)) | (1 << (KqlParser.NONE - 130)) | (1 << (KqlParser.NULL - 130)) | (1 << (KqlParser.NULLS - 130)) | (1 << (KqlParser.OF - 130)) | (1 << (KqlParser.ON - 130)) | (1 << (KqlParser.OPTIONAL - 130)) | (1 << (KqlParser.OUTPUT - 130)) | (1 << (KqlParser.PACK - 130)))) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & ((1 << (KqlParser.PARSE - 194)) | (1 << (KqlParser.PARTITION - 194)) | (1 << (KqlParser.PARTITIONBY - 194)) | (1 << (KqlParser.PATTERN - 194)) | (1 << (KqlParser.PLUGIN - 194)) | (1 << (KqlParser.PRINT - 194)) | (1 << (KqlParser.QUERYPARAMETERS - 194)) | (1 << (KqlParser.RANGE - 194)) | (1 << (KqlParser.REDUCE - 194)) | (1 << (KqlParser.RENDER - 194)) | (1 << (KqlParser.REPLACE - 194)) | (1 << (KqlParser.RESTRICT - 194)) | (1 << (KqlParser.SAMPLE - 194)) | (1 << (KqlParser.SAMPLE_DISTINCT - 194)) | (1 << (KqlParser.SCAN - 194)) | (1 << (KqlParser.SEARCH - 194)) | (1 << (KqlParser.SERIALIZE - 194)) | (1 << (KqlParser.SERIES - 194)) | (1 << (KqlParser.SET - 194)) | (1 << (KqlParser.SORT - 194)) | (1 << (KqlParser.STACKED - 194)) | (1 << (KqlParser.STACKED100 - 194)) | (1 << (KqlParser.STEP - 194)) | (1 << (KqlParser.SUMMARIZE - 194)) | (1 << (KqlParser.TAKE - 194)) | (1 << (KqlParser.THRESHOLD - 194)) | (1 << (KqlParser.TITLE - 194)) | (1 << (KqlParser.TO - 194)) | (1 << (KqlParser.TOP - 194)) | (1 << (KqlParser.TOP_HITTERS - 194)) | (1 << (KqlParser.TOP_NESTED - 194)) | (1 << (KqlParser.TOSCALAR - 194)) | (1 << (KqlParser.TOTABLE - 194)) | (1 << (KqlParser.TYPEOF - 194)) | (1 << (KqlParser.UNSTACKED - 194)) | (1 << (KqlParser.UUID - 194)) | (1 << (KqlParser.VIEW - 194)))) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & ((1 << (KqlParser.VISIBLE - 258)) | (1 << (KqlParser.WHERE - 258)) | (1 << (KqlParser.WITH - 258)) | (1 << (KqlParser.XAXIS - 258)) | (1 << (KqlParser.XCOLUMN - 258)) | (1 << (KqlParser.XMAX - 258)) | (1 << (KqlParser.XMIN - 258)) | (1 << (KqlParser.XTITLE - 258)) | (1 << (KqlParser.YAXIS - 258)) | (1 << (KqlParser.YCOLUMNS - 258)) | (1 << (KqlParser.YMAX - 258)) | (1 << (KqlParser.YMIN - 258)) | (1 << (KqlParser.YSPLIT - 258)) | (1 << (KqlParser.YTITLE - 258)) | (1 << (KqlParser.BOOL - 258)) | (1 << (KqlParser.GUID - 258)) | (1 << (KqlParser.LONGLITERAL - 258)) | (1 << (KqlParser.IDENTIFIER - 258)))) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 7684416122904379394) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & 8358751552889101161) != 0) or ((((_la - 130)) & ~0x3f) == 0 and ((1 << (_la - 130)) & 7196752211023416333) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & -1443165259434554279) != 0) or ((((_la - 258)) & ~0x3f) == 0 and ((1 << (_la - 258)) & 288371114181131271) != 0):
                 self.state = 2661
                 localctx._wildcardedNameSegment = self.wildcardedNameSegment()
                 localctx.Segments.append(localctx._wildcardedNameSegment)
@@ -22839,6 +24315,7 @@ class KqlParser ( Parser ):
 
 
     class WildcardedNamePrefixContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -22869,6 +24346,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitWildcardedNamePrefix" ):
                 listener.exitWildcardedNamePrefix(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWildcardedNamePrefix" ):
+                return visitor.visitWildcardedNamePrefix(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -22880,17 +24363,17 @@ class KqlParser ( Parser ):
             self.state = 2670
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.IDENTIFIER]:
+            if token in [316]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2667
                 localctx.Identifier = self.match(KqlParser.IDENTIFIER)
                 pass
-            elif token in [KqlParser.ACCESS, KqlParser.AGGREGATIONS, KqlParser.ALIAS, KqlParser.ALL, KqlParser.AXES, KqlParser.BASE, KqlParser.BIN, KqlParser.CLUSTER, KqlParser.DATABASE, KqlParser.DECLARE, KqlParser.DEFAULT, KqlParser.DELTA, KqlParser.EDGES, KqlParser.EVALUATE, KqlParser.EXECUTE, KqlParser.FACET, KqlParser.FORK, KqlParser.FROM, KqlParser.HIDDEN_, KqlParser.HOT, KqlParser.HOTDATA, KqlParser.HOTINDEX, KqlParser.ID, KqlParser.INTO, KqlParser.LEGEND, KqlParser.LET, KqlParser.LINEAR, KqlParser.LIST, KqlParser.LOOKUP, KqlParser.LOG, KqlParser.MAP, KqlParser.NODES, KqlParser.NONE, KqlParser.NULL, KqlParser.NULLS, KqlParser.ON, KqlParser.OPTIONAL, KqlParser.OUTPUT, KqlParser.PACK, KqlParser.PARTITION, KqlParser.PARTITIONBY, KqlParser.PATTERN, KqlParser.PLUGIN, KqlParser.QUERYPARAMETERS, KqlParser.RANGE, KqlParser.REDUCE, KqlParser.RENDER, KqlParser.REPLACE, KqlParser.RESTRICT, KqlParser.SERIES, KqlParser.STACKED, KqlParser.STACKED100, KqlParser.STEP, KqlParser.THRESHOLD, KqlParser.TYPEOF, KqlParser.UNSTACKED, KqlParser.UUID, KqlParser.VIEW, KqlParser.VISIBLE, KqlParser.WITH, KqlParser.XAXIS, KqlParser.XCOLUMN, KqlParser.XMAX, KqlParser.XMIN, KqlParser.XTITLE, KqlParser.YAXIS, KqlParser.YCOLUMNS, KqlParser.YMAX, KqlParser.YMIN, KqlParser.YSPLIT, KqlParser.YTITLE, KqlParser.BOOL, KqlParser.GUID]:
+            elif token in [38, 40, 41, 42, 50, 53, 55, 59, 69, 72, 74, 75, 78, 82, 83, 89, 94, 95, 112, 124, 126, 127, 128, 132, 140, 141, 145, 147, 148, 149, 153, 161, 162, 183, 184, 186, 187, 191, 192, 197, 198, 200, 204, 213, 214, 215, 218, 219, 220, 227, 232, 233, 237, 241, 253, 255, 256, 257, 258, 260, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 287]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2668
                 localctx.Keyword = self.keywordName()
                 pass
-            elif token in [KqlParser.ACCUMULATE, KqlParser.AS, KqlParser.BY, KqlParser.CONSUME, KqlParser.CONTAINS, KqlParser.COUNT, KqlParser.DATATABLE, KqlParser.DISTINCT, KqlParser.EXTEND, KqlParser.EXTERNALDATA, KqlParser.FILTER, KqlParser.FIND, KqlParser.HAS, KqlParser.IN, KqlParser.INVOKE, KqlParser.LIMIT, KqlParser.MATERIALIZE, KqlParser.OF, KqlParser.PARSE, KqlParser.PRINT, KqlParser.SAMPLE, KqlParser.SAMPLE_DISTINCT, KqlParser.SCAN, KqlParser.SEARCH, KqlParser.SERIALIZE, KqlParser.SET, KqlParser.SORT, KqlParser.SUMMARIZE, KqlParser.TAKE, KqlParser.TITLE, KqlParser.TO, KqlParser.TOP, KqlParser.TOP_HITTERS, KqlParser.TOP_NESTED, KqlParser.TOSCALAR, KqlParser.TOTABLE, KqlParser.WHERE]:
+            elif token in [39, 47, 57, 61, 62, 66, 71, 77, 86, 87, 90, 91, 104, 130, 133, 144, 155, 185, 194, 205, 221, 222, 223, 225, 226, 228, 230, 238, 240, 245, 246, 247, 248, 249, 250, 251, 259]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 2669
                 localctx.ExtendedKeyword = self.extendedKeywordName()
@@ -22908,6 +24391,7 @@ class KqlParser ( Parser ):
 
 
     class WildcardedNameSegmentContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -22946,6 +24430,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitWildcardedNameSegment" ):
                 listener.exitWildcardedNameSegment(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWildcardedNameSegment" ):
+                return visitor.visitWildcardedNameSegment(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -22957,27 +24447,27 @@ class KqlParser ( Parser ):
             self.state = 2677
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.IDENTIFIER]:
+            if token in [316]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2672
                 localctx.Identifier = self.match(KqlParser.IDENTIFIER)
                 pass
-            elif token in [KqlParser.ACCESS, KqlParser.AGGREGATIONS, KqlParser.ALIAS, KqlParser.ALL, KqlParser.AXES, KqlParser.BASE, KqlParser.BIN, KqlParser.CLUSTER, KqlParser.DATABASE, KqlParser.DECLARE, KqlParser.DEFAULT, KqlParser.DELTA, KqlParser.EDGES, KqlParser.EVALUATE, KqlParser.EXECUTE, KqlParser.FACET, KqlParser.FORK, KqlParser.FROM, KqlParser.HIDDEN_, KqlParser.HOT, KqlParser.HOTDATA, KqlParser.HOTINDEX, KqlParser.ID, KqlParser.INTO, KqlParser.LEGEND, KqlParser.LET, KqlParser.LINEAR, KqlParser.LIST, KqlParser.LOOKUP, KqlParser.LOG, KqlParser.MAP, KqlParser.NODES, KqlParser.NONE, KqlParser.NULL, KqlParser.NULLS, KqlParser.ON, KqlParser.OPTIONAL, KqlParser.OUTPUT, KqlParser.PACK, KqlParser.PARTITION, KqlParser.PARTITIONBY, KqlParser.PATTERN, KqlParser.PLUGIN, KqlParser.QUERYPARAMETERS, KqlParser.RANGE, KqlParser.REDUCE, KqlParser.RENDER, KqlParser.REPLACE, KqlParser.RESTRICT, KqlParser.SERIES, KqlParser.STACKED, KqlParser.STACKED100, KqlParser.STEP, KqlParser.THRESHOLD, KqlParser.TYPEOF, KqlParser.UNSTACKED, KqlParser.UUID, KqlParser.VIEW, KqlParser.VISIBLE, KqlParser.WITH, KqlParser.XAXIS, KqlParser.XCOLUMN, KqlParser.XMAX, KqlParser.XMIN, KqlParser.XTITLE, KqlParser.YAXIS, KqlParser.YCOLUMNS, KqlParser.YMAX, KqlParser.YMIN, KqlParser.YSPLIT, KqlParser.YTITLE, KqlParser.BOOL, KqlParser.GUID]:
+            elif token in [38, 40, 41, 42, 50, 53, 55, 59, 69, 72, 74, 75, 78, 82, 83, 89, 94, 95, 112, 124, 126, 127, 128, 132, 140, 141, 145, 147, 148, 149, 153, 161, 162, 183, 184, 186, 187, 191, 192, 197, 198, 200, 204, 213, 214, 215, 218, 219, 220, 227, 232, 233, 237, 241, 253, 255, 256, 257, 258, 260, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 287]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2673
                 localctx.Keyword = self.keywordName()
                 pass
-            elif token in [KqlParser.ACCUMULATE, KqlParser.AS, KqlParser.BY, KqlParser.CONSUME, KqlParser.CONTAINS, KqlParser.COUNT, KqlParser.DATATABLE, KqlParser.DISTINCT, KqlParser.EXTEND, KqlParser.EXTERNALDATA, KqlParser.FILTER, KqlParser.FIND, KqlParser.HAS, KqlParser.IN, KqlParser.INVOKE, KqlParser.LIMIT, KqlParser.MATERIALIZE, KqlParser.OF, KqlParser.PARSE, KqlParser.PRINT, KqlParser.SAMPLE, KqlParser.SAMPLE_DISTINCT, KqlParser.SCAN, KqlParser.SEARCH, KqlParser.SERIALIZE, KqlParser.SET, KqlParser.SORT, KqlParser.SUMMARIZE, KqlParser.TAKE, KqlParser.TITLE, KqlParser.TO, KqlParser.TOP, KqlParser.TOP_HITTERS, KqlParser.TOP_NESTED, KqlParser.TOSCALAR, KqlParser.TOTABLE, KqlParser.WHERE]:
+            elif token in [39, 47, 57, 61, 62, 66, 71, 77, 86, 87, 90, 91, 104, 130, 133, 144, 155, 185, 194, 205, 221, 222, 223, 225, 226, 228, 230, 238, 240, 245, 246, 247, 248, 249, 250, 251, 259]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 2674
                 localctx.ExtendedKeyword = self.extendedKeywordName()
                 pass
-            elif token in [KqlParser.LONGLITERAL]:
+            elif token in [305]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 2675
                 localctx.Number = self.match(KqlParser.LONGLITERAL)
                 pass
-            elif token in [KqlParser.ASTERISK]:
+            elif token in [1]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 2676
                 localctx.Star = self.match(KqlParser.ASTERISK)
@@ -22995,6 +24485,7 @@ class KqlParser ( Parser ):
 
 
     class LiteralExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -23021,6 +24512,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitLiteralExpression" ):
                 listener.exitLiteralExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLiteralExpression" ):
+                return visitor.visitLiteralExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -23032,12 +24529,12 @@ class KqlParser ( Parser ):
             self.state = 2681
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.DASH, KqlParser.PLUS]:
+            if token in [11, 33]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2679
                 localctx.Signed = self.signedLiteralExpression()
                 pass
-            elif token in [KqlParser.DYNAMIC, KqlParser.LONGLITERAL, KqlParser.INTLITERAL, KqlParser.REALLITERAL, KqlParser.DECIMALLITERAL, KqlParser.STRINGLITERAL, KqlParser.BOOLEANLITERAL, KqlParser.DATETIMELITERAL, KqlParser.TIMESPANLITERAL, KqlParser.TYPELITERAL, KqlParser.GUIDLITERAL]:
+            elif token in [285, 305, 306, 307, 308, 309, 310, 311, 312, 313, 315]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2680
                 localctx.Unsigned = self.unsignedLiteralExpression()
@@ -23055,6 +24552,7 @@ class KqlParser ( Parser ):
 
 
     class UnsignedLiteralExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -23126,6 +24624,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitUnsignedLiteralExpression" ):
                 listener.exitUnsignedLiteralExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUnsignedLiteralExpression" ):
+                return visitor.visitUnsignedLiteralExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -23137,57 +24641,57 @@ class KqlParser ( Parser ):
             self.state = 2694
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.LONGLITERAL]:
+            if token in [305]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2683
                 localctx.Long = self.longLiteralExpression()
                 pass
-            elif token in [KqlParser.INTLITERAL]:
+            elif token in [306]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2684
                 localctx.Int = self.intLiteralExpression()
                 pass
-            elif token in [KqlParser.REALLITERAL]:
+            elif token in [307]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 2685
                 localctx.Real = self.realLiteralExpression()
                 pass
-            elif token in [KqlParser.DECIMALLITERAL]:
+            elif token in [308]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 2686
                 localctx.Decimal = self.decimalLiteralExpression()
                 pass
-            elif token in [KqlParser.DATETIMELITERAL]:
+            elif token in [311]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 2687
                 localctx.DateTime = self.dateTimeLiteralExpression()
                 pass
-            elif token in [KqlParser.TIMESPANLITERAL]:
+            elif token in [312]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 2688
                 localctx.TimeSpan = self.timeSpanLiteralExpression()
                 pass
-            elif token in [KqlParser.BOOLEANLITERAL]:
+            elif token in [310]:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 2689
                 localctx.Boolean = self.booleanLiteralExpression()
                 pass
-            elif token in [KqlParser.GUIDLITERAL]:
+            elif token in [315]:
                 self.enterOuterAlt(localctx, 8)
                 self.state = 2690
                 localctx.Guid = self.guidLiteralExpression()
                 pass
-            elif token in [KqlParser.TYPELITERAL]:
+            elif token in [313]:
                 self.enterOuterAlt(localctx, 9)
                 self.state = 2691
                 localctx.Type = self.typeLiteralExpression()
                 pass
-            elif token in [KqlParser.STRINGLITERAL]:
+            elif token in [309]:
                 self.enterOuterAlt(localctx, 10)
                 self.state = 2692
                 localctx.String = self.stringLiteralExpression()
                 pass
-            elif token in [KqlParser.DYNAMIC]:
+            elif token in [285]:
                 self.enterOuterAlt(localctx, 11)
                 self.state = 2693
                 localctx.Dynamic = self.dynamicLiteralExpression()
@@ -23205,6 +24709,7 @@ class KqlParser ( Parser ):
 
 
     class NumberLikeLiteralExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -23256,6 +24761,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitNumberLikeLiteralExpression" ):
                 listener.exitNumberLikeLiteralExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNumberLikeLiteralExpression" ):
+                return visitor.visitNumberLikeLiteralExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -23267,37 +24778,37 @@ class KqlParser ( Parser ):
             self.state = 2703
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.LONGLITERAL]:
+            if token in [305]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2696
                 localctx.Long = self.longLiteralExpression()
                 pass
-            elif token in [KqlParser.INTLITERAL]:
+            elif token in [306]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2697
                 localctx.Int = self.intLiteralExpression()
                 pass
-            elif token in [KqlParser.REALLITERAL]:
+            elif token in [307]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 2698
                 localctx.Real = self.realLiteralExpression()
                 pass
-            elif token in [KqlParser.DECIMALLITERAL]:
+            elif token in [308]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 2699
                 localctx.Decimal = self.decimalLiteralExpression()
                 pass
-            elif token in [KqlParser.DASH, KqlParser.PLUS]:
+            elif token in [11, 33]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 2700
                 localctx.Signed = self.signedLiteralExpression()
                 pass
-            elif token in [KqlParser.DATETIMELITERAL]:
+            elif token in [311]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 2701
                 localctx.DateTime = self.dateTimeLiteralExpression()
                 pass
-            elif token in [KqlParser.TIMESPANLITERAL]:
+            elif token in [312]:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 2702
                 localctx.TimeSpan = self.timeSpanLiteralExpression()
@@ -23315,6 +24826,7 @@ class KqlParser ( Parser ):
 
 
     class NumericLiteralExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -23356,6 +24868,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitNumericLiteralExpression" ):
                 listener.exitNumericLiteralExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNumericLiteralExpression" ):
+                return visitor.visitNumericLiteralExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -23367,27 +24885,27 @@ class KqlParser ( Parser ):
             self.state = 2710
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [KqlParser.LONGLITERAL]:
+            if token in [305]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2705
                 localctx.Long = self.longLiteralExpression()
                 pass
-            elif token in [KqlParser.INTLITERAL]:
+            elif token in [306]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2706
                 localctx.Int = self.intLiteralExpression()
                 pass
-            elif token in [KqlParser.REALLITERAL]:
+            elif token in [307]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 2707
                 localctx.Real = self.realLiteralExpression()
                 pass
-            elif token in [KqlParser.DECIMALLITERAL]:
+            elif token in [308]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 2708
                 localctx.Decimal = self.decimalLiteralExpression()
                 pass
-            elif token in [KqlParser.DASH, KqlParser.PLUS]:
+            elif token in [11, 33]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 2709
                 localctx.Signed = self.signedLiteralExpression()
@@ -23405,6 +24923,7 @@ class KqlParser ( Parser ):
 
 
     class SignedLiteralExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -23430,6 +24949,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSignedLiteralExpression" ):
                 listener.exitSignedLiteralExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSignedLiteralExpression" ):
+                return visitor.visitSignedLiteralExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -23465,6 +24990,7 @@ class KqlParser ( Parser ):
 
 
     class LongLiteralExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -23484,6 +25010,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLongLiteralExpression" ):
                 listener.exitLongLiteralExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLongLiteralExpression" ):
+                return visitor.visitLongLiteralExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -23506,6 +25038,7 @@ class KqlParser ( Parser ):
 
 
     class IntLiteralExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -23525,6 +25058,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIntLiteralExpression" ):
                 listener.exitIntLiteralExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIntLiteralExpression" ):
+                return visitor.visitIntLiteralExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -23547,6 +25086,7 @@ class KqlParser ( Parser ):
 
 
     class RealLiteralExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -23566,6 +25106,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRealLiteralExpression" ):
                 listener.exitRealLiteralExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRealLiteralExpression" ):
+                return visitor.visitRealLiteralExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -23588,6 +25134,7 @@ class KqlParser ( Parser ):
 
 
     class DecimalLiteralExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -23607,6 +25154,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDecimalLiteralExpression" ):
                 listener.exitDecimalLiteralExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDecimalLiteralExpression" ):
+                return visitor.visitDecimalLiteralExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -23629,6 +25182,7 @@ class KqlParser ( Parser ):
 
 
     class DateTimeLiteralExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -23648,6 +25202,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDateTimeLiteralExpression" ):
                 listener.exitDateTimeLiteralExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDateTimeLiteralExpression" ):
+                return visitor.visitDateTimeLiteralExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -23670,6 +25230,7 @@ class KqlParser ( Parser ):
 
 
     class TimeSpanLiteralExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -23689,6 +25250,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTimeSpanLiteralExpression" ):
                 listener.exitTimeSpanLiteralExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTimeSpanLiteralExpression" ):
+                return visitor.visitTimeSpanLiteralExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -23711,6 +25278,7 @@ class KqlParser ( Parser ):
 
 
     class BooleanLiteralExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -23730,6 +25298,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBooleanLiteralExpression" ):
                 listener.exitBooleanLiteralExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBooleanLiteralExpression" ):
+                return visitor.visitBooleanLiteralExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -23752,6 +25326,7 @@ class KqlParser ( Parser ):
 
 
     class GuidLiteralExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -23771,6 +25346,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGuidLiteralExpression" ):
                 listener.exitGuidLiteralExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGuidLiteralExpression" ):
+                return visitor.visitGuidLiteralExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -23793,6 +25374,7 @@ class KqlParser ( Parser ):
 
 
     class TypeLiteralExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -23812,6 +25394,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTypeLiteralExpression" ):
                 listener.exitTypeLiteralExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeLiteralExpression" ):
+                return visitor.visitTypeLiteralExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -23834,6 +25422,7 @@ class KqlParser ( Parser ):
 
 
     class SignedLongLiteralExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -23861,6 +25450,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitSignedLongLiteralExpression" ):
                 listener.exitSignedLongLiteralExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSignedLongLiteralExpression" ):
+                return visitor.visitSignedLongLiteralExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -23874,7 +25469,7 @@ class KqlParser ( Parser ):
             self.state = 2734
             localctx.SignToken = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(_la==KqlParser.DASH or _la==KqlParser.PLUS):
+            if not(_la==11 or _la==33):
                 localctx.SignToken = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -23891,6 +25486,7 @@ class KqlParser ( Parser ):
 
 
     class SignedRealLiteralExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -23918,6 +25514,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitSignedRealLiteralExpression" ):
                 listener.exitSignedRealLiteralExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSignedRealLiteralExpression" ):
+                return visitor.visitSignedRealLiteralExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -23931,7 +25533,7 @@ class KqlParser ( Parser ):
             self.state = 2737
             localctx.SignToken = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(_la==KqlParser.DASH or _la==KqlParser.PLUS):
+            if not(_la==11 or _la==33):
                 localctx.SignToken = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -23948,6 +25550,7 @@ class KqlParser ( Parser ):
 
 
     class StringLiteralExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -23971,6 +25574,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStringLiteralExpression" ):
                 listener.exitStringLiteralExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStringLiteralExpression" ):
+                return visitor.visitStringLiteralExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -24006,6 +25615,7 @@ class KqlParser ( Parser ):
 
 
     class DynamicLiteralExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -24036,6 +25646,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitDynamicLiteralExpression" ):
                 listener.exitDynamicLiteralExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDynamicLiteralExpression" ):
+                return visitor.visitDynamicLiteralExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -24063,6 +25679,7 @@ class KqlParser ( Parser ):
 
 
     class JsonValueContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -24133,6 +25750,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitJsonValue" ):
                 listener.exitJsonValue(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJsonValue" ):
+                return visitor.visitJsonValue(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -24222,6 +25845,7 @@ class KqlParser ( Parser ):
 
 
     class JsonObjectContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -24259,6 +25883,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitJsonObject" ):
                 listener.exitJsonObject(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJsonObject" ):
+                return visitor.visitJsonObject(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -24274,14 +25904,14 @@ class KqlParser ( Parser ):
             self.state = 2774
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.STRINGLITERAL:
+            if _la==309:
                 self.state = 2766
                 localctx._jsonPair = self.jsonPair()
                 localctx.Pairs.append(localctx._jsonPair)
                 self.state = 2771
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==KqlParser.COMMA:
+                while _la==9:
                     self.state = 2767
                     self.match(KqlParser.COMMA)
                     self.state = 2768
@@ -24305,6 +25935,7 @@ class KqlParser ( Parser ):
 
 
     class JsonPairContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -24333,6 +25964,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitJsonPair" ):
                 listener.exitJsonPair(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJsonPair" ):
+                return visitor.visitJsonPair(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -24358,6 +25995,7 @@ class KqlParser ( Parser ):
 
 
     class JsonArrayContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -24395,6 +26033,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitJsonArray" ):
                 listener.exitJsonArray(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJsonArray" ):
+                return visitor.visitJsonArray(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -24410,14 +26054,14 @@ class KqlParser ( Parser ):
             self.state = 2791
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << KqlParser.DASH) | (1 << KqlParser.OPENBRACE) | (1 << KqlParser.OPENBRACKET))) != 0) or _la==KqlParser.NULL or ((((_la - 285)) & ~0x3f) == 0 and ((1 << (_la - 285)) & ((1 << (KqlParser.DYNAMIC - 285)) | (1 << (KqlParser.LONGLITERAL - 285)) | (1 << (KqlParser.REALLITERAL - 285)) | (1 << (KqlParser.STRINGLITERAL - 285)) | (1 << (KqlParser.BOOLEANLITERAL - 285)) | (1 << (KqlParser.DATETIMELITERAL - 285)) | (1 << (KqlParser.TIMESPANLITERAL - 285)) | (1 << (KqlParser.GUIDLITERAL - 285)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 1610614784) != 0) or _la==183 or ((((_la - 285)) & ~0x3f) == 0 and ((1 << (_la - 285)) & 1330642945) != 0):
                 self.state = 2783
                 localctx._jsonValue = self.jsonValue()
                 localctx.Values.append(localctx._jsonValue)
                 self.state = 2788
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==KqlParser.COMMA:
+                while _la==9:
                     self.state = 2784
                     self.match(KqlParser.COMMA)
                     self.state = 2785
@@ -24441,6 +26085,7 @@ class KqlParser ( Parser ):
 
 
     class JsonBooleanContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -24460,6 +26105,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitJsonBoolean" ):
                 listener.exitJsonBoolean(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJsonBoolean" ):
+                return visitor.visitJsonBoolean(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -24482,6 +26133,7 @@ class KqlParser ( Parser ):
 
 
     class JsonDateTimeContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -24501,6 +26153,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitJsonDateTime" ):
                 listener.exitJsonDateTime(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJsonDateTime" ):
+                return visitor.visitJsonDateTime(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -24523,6 +26181,7 @@ class KqlParser ( Parser ):
 
 
     class JsonGuidContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -24542,6 +26201,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitJsonGuid" ):
                 listener.exitJsonGuid(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJsonGuid" ):
+                return visitor.visitJsonGuid(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -24564,6 +26229,7 @@ class KqlParser ( Parser ):
 
 
     class JsonNullContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -24583,6 +26249,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitJsonNull" ):
                 listener.exitJsonNull(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJsonNull" ):
+                return visitor.visitJsonNull(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -24605,6 +26277,7 @@ class KqlParser ( Parser ):
 
 
     class JsonStringContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -24629,6 +26302,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitJsonString" ):
                 listener.exitJsonString(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJsonString" ):
+                return visitor.visitJsonString(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -24645,7 +26324,7 @@ class KqlParser ( Parser ):
             self.state = 2807
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==KqlParser.STRINGLITERAL:
+            while _la==309:
                 self.state = 2804
                 localctx._STRINGLITERAL = self.match(KqlParser.STRINGLITERAL)
                 localctx.Tokens.append(localctx._STRINGLITERAL)
@@ -24663,6 +26342,7 @@ class KqlParser ( Parser ):
 
 
     class JsonTimeSpanContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -24682,6 +26362,12 @@ class KqlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitJsonTimeSpan" ):
                 listener.exitJsonTimeSpan(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJsonTimeSpan" ):
+                return visitor.visitJsonTimeSpan(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -24704,6 +26390,7 @@ class KqlParser ( Parser ):
 
 
     class JsonLongContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -24728,6 +26415,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitJsonLong" ):
                 listener.exitJsonLong(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJsonLong" ):
+                return visitor.visitJsonLong(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -24741,7 +26434,7 @@ class KqlParser ( Parser ):
             self.state = 2813
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.DASH:
+            if _la==11:
                 self.state = 2812
                 localctx.SignToken = self.match(KqlParser.DASH)
 
@@ -24758,6 +26451,7 @@ class KqlParser ( Parser ):
 
 
     class JsonRealContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -24782,6 +26476,12 @@ class KqlParser ( Parser ):
             if hasattr( listener, "exitJsonReal" ):
                 listener.exitJsonReal(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJsonReal" ):
+                return visitor.visitJsonReal(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -24795,7 +26495,7 @@ class KqlParser ( Parser ):
             self.state = 2818
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==KqlParser.DASH:
+            if _la==11:
                 self.state = 2817
                 localctx.SignToken = self.match(KqlParser.DASH)
 
