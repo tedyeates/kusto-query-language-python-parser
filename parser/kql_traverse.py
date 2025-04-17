@@ -1,8 +1,8 @@
 from antlr4 import CommonTokenStream, ParseTreeWalker
 from antlr4.tree.Tree import TerminalNodeImpl
-from parse_tools.KqlLexer import KqlLexer
-from parse_tools.KqlParser import KqlParser
-from parser.listener import Listener, Mode
+from ..parse_tools.KqlLexer import KqlLexer
+from ..parse_tools.KqlParser import KqlParser
+from .listener import Listener, Mode
 import json
 class KqlTraverse:
     

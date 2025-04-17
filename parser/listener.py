@@ -1,7 +1,7 @@
 import sys
 from antlr4 import *
-from parse_tools.KqlParser import KqlParser
-from parse_tools.KqlListener import KqlListener
+from ..parse_tools.KqlParser import KqlParser
+from ..parse_tools.KqlListener import KqlListener
 from enum import Enum
 
 class Mode(Enum):
