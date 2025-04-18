@@ -1,5 +1,5 @@
 from antlr4 import FileStream
-from parser.kql_traverse import KqlTraverse
+from kusto__query_language_parser.parser.kql_traverse import KqlTraverse
 
 if __name__ == '__main__':
     input_stream = FileStream('input.txt')
