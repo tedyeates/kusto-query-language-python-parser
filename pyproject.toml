@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling >= 1.26", "antlr4-python3-runtime==4.8.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kusto_query_language_parser"
+version = "0.0.1"
+authors = [
+  { name="Ted Yeates", email="t3d.y34t3s@gmail.com" },
+]
+description = "A package to parse Kusto Query Language (KQL) code"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/tedyeates/kusto-query-language-python-parser"
+Issues = "https://github.com/tedyeates/kusto-query-language-python-parser/issues"
