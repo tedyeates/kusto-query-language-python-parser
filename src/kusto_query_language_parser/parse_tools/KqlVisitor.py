@@ -1,4 +1,4 @@
-# Generated from ../grammar/Kql.g4 by ANTLR 4.13.2
+# Generated from Kql.g4 by ANTLR 4.13.2
 from antlr4 import *
 if "." in __name__:
     from .KqlParser import KqlParser
@@ -451,11 +451,6 @@ class KqlVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by KqlParser#graphMatchProjectClause.
     def visitGraphMatchProjectClause(self, ctx:KqlParser.GraphMatchProjectClauseContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by KqlParser#graphMergeOperator.
-    def visitGraphMergeOperator(self, ctx:KqlParser.GraphMergeOperatorContext):
         return self.visitChildren(ctx)
 
 
@@ -1084,8 +1079,8 @@ class KqlVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by KqlParser#functionalCallOrPathPathOperation.
-    def visitFunctionalCallOrPathPathOperation(self, ctx:KqlParser.FunctionalCallOrPathPathOperationContext):
+    # Visit a parse tree produced by KqlParser#functionCallOrPathPathOperation.
+    def visitFunctionCallOrPathPathOperation(self, ctx:KqlParser.FunctionCallOrPathPathOperationContext):
         return self.visitChildren(ctx)
 
 

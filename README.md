@@ -7,18 +7,27 @@ Feel free to request features or make suggestions for improvements
 `pip install kusto-query-language-parser`
 
 ### Use from Source
-Clone repo into your project then run `pip install antlr4-python3-runtime==4.8.0`
+Clone repo into your project then run `pip install antlr4-python3-runtime==4.13.2`
+
+## Testing
+
+```bash
+python -m venv .venv
+.venv/bin/pip install -r requirements.txt pytest mypy
+.venv/bin/pytest
+.venv/bin/mypy .
+```
 
 ## Usage
 Check the examples section for example code and an example KQL query for testing
 
 ### Parse Code
-You will need to `pip install antlr4-python3-runtime==4.8.0` for creating a file stream or input stream
+You will need to `pip install antlr4-python3-runtime==4.13.2` for creating a file stream or input stream
 This will give you an antlr parse tree; the parser also add some further helper functions
 
 ```python
 from antlr4 import FileStream, InputStream
-from kusto__query_language_parser.parser.kql_traverse import KqlTraverse
+from kusto_query_language_parser.parser.kql_traverse import KqlTraverse
 
 # parse from file
 input_stream = FileStream('input.txt')

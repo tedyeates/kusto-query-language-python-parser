@@ -49,8 +49,8 @@ letEntityGroupDeclaration:
 
 
 letFunctionParameterList:
-    TabularParameters+=tabularParameter (',' TabularParameters+=tabularParameter) (',' ScalarParameters+=scalarParameter)
-    | ScalarParameters+= scalarParameter (',' ScalarParameters+=scalarParameter)
+    TabularParameters+=tabularParameter (',' TabularParameters+=tabularParameter)* (',' ScalarParameters+=scalarParameter)*
+    | ScalarParameters+= scalarParameter (',' ScalarParameters+=scalarParameter)*
     ;
 
 scalarParameter:
@@ -172,7 +172,6 @@ afterPipeOperator:
     | getSchemaOperator
     | graphMarkComponentsOperator
     | graphMatchOperator
-    | graphMergeOperator
     | graphShortestPathsOperator
     | graphToTableOperator
     | invokeOperator
@@ -269,7 +268,7 @@ distinctOperatorStarTarget:
     '*';
 
 distinctOperatorColumnListTarget:
-    Expressions+=unnamedExpression (',' Expressions+=unnamedExpression)*;
+    Expressions+=namedExpression (',' Expressions+=namedExpression)*;
 
 
 evaluateOperator:
@@ -373,7 +372,7 @@ graphMarkComponentsOperator:
 graphMatchOperator:
     GRAPHMATCH
     (Parameters+=relaxedQueryOperatorParameter)*
-    Patterns+=graphMatchPattern (',' Patterns+=graphMatchPattern)
+    Patterns+=graphMatchPattern (',' Patterns+=graphMatchPattern)*
     (WhereClause=graphMatchWhereClause)?
     (ProjectClause=graphMatchProjectClause)?
     ;
@@ -405,11 +404,8 @@ graphMatchWhereClause:
 graphMatchProjectClause:
     PROJECT Expressions+=namedExpression (',' Expressions+=namedExpression)*;
 
-graphMergeOperator:
-    GRAPHMERGE Graph=invocationExpression (OnClause=joinOperatorOnClause)?;
-
 graphToTableOperator:
-    GRAPHTOTABLE Outputs+=graphToTableOutput (',' Outputs+=graphToTableOutput);
+    GRAPHTOTABLE Outputs+=graphToTableOutput (',' Outputs+=graphToTableOutput)*;
 
 graphToTableOutput:
     Keyword=(NODES | EDGES) (AsClause=graphToTableAsClause)? (Parameters+=relaxedQueryOperatorParameter)*;
@@ -420,7 +416,7 @@ graphToTableAsClause:
 graphShortestPathsOperator:
     GRAPHSHORTESTPATHS
     (Parameters+=relaxedQueryOperatorParameter)*
-    Patterns+=graphMatchPattern (',' Patterns+=graphMatchPattern)
+    Patterns+=graphMatchPattern (',' Patterns+=graphMatchPattern)*
     (WhereClause=graphMatchWhereClause)?
     (ProjectClause=graphMatchProjectClause)?
     ;
@@ -689,7 +685,7 @@ scanOperator:
     ;
 
 scanOperatorOrderByClause:
-    ORDER BY Expressions+=orderedExpression (',' Expressions+=orderedExpression);
+    ORDER BY Expressions+=orderedExpression (',' Expressions+=orderedExpression)*;
 
 scanOperatorPartitionByClause:
     PARTITION BY Expressions+=unnamedExpression (',' Expressions+=unnamedExpression)*;
@@ -742,7 +738,7 @@ summarizeOperator:
     SUMMARIZE (Parameters+=strictQueryOperatorParameter)* (Expressions+=namedExpression (',' Expressions+=namedExpression)*)? (ByClause=summarizeOperatorByClause)?;
 
 summarizeOperatorByClause:
-    BY Expressions+=namedExpression (',' Expressions+=namedExpression) (BinClause=summarizeOperatorLegacyBinClause)?;
+    BY Expressions+=namedExpression (',' Expressions+=namedExpression)* (BinClause=summarizeOperatorLegacyBinClause)?;
 
 summarizeOperatorLegacyBinClause:
     BIN '=' Expression=numberLikeLiteralExpression;
@@ -940,7 +936,7 @@ stringOperatorExpression:
     ;
 
 stringBinaryOperatorExpression:
-    Left=invocationExpression (Operations+=stringBinaryOperation)*;
+    Left=invocationExpression (Operation=stringBinaryOperation)?;
 
 stringBinaryOperation:
     (Operator=stringBinaryOperator | HasOperator=':') Right=invocationExpression;
@@ -1006,12 +1002,12 @@ functionCallOrPathPathExpression:
     Expression=functionCallOrPathRoot (Operations+=functionCallOrPathOperation)+;
 
 functionCallOrPathOperation:
-    functionalCallOrPathPathOperation 
+    functionCallOrPathPathOperation 
     | functionCallOrPathElementOperation 
     | legacyFunctionCallOrPathElementOperation
     ;
 
-functionalCallOrPathPathOperation:
+functionCallOrPathPathOperation:
     '.' Name=identifierOrKeywordOrEscapedName;
 
 functionCallOrPathElementOperation:
@@ -1551,3 +1547,4 @@ jsonLong:
 
 jsonReal:
     (SignToken='-')? LiteralToken=REALLITERAL;
+

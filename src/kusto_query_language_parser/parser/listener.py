@@ -1,5 +1,6 @@
 import sys
 from antlr4 import *
+from antlr4 import ParserRuleContext
 from ..parse_tools.KqlParser import KqlParser
 from ..parse_tools.KqlListener import KqlListener
 from enum import Enum
@@ -9,13 +10,13 @@ class Mode(Enum):
     SEARCH = 1
 class Listener(KqlListener):
     def __init__(self, mode: Mode, **kwargs):
-        self.result = {}
-        self.json_tree = {}
+        self.result: dict = {}
+        self.json_tree: dict = {}
         self.mode = mode
         
         if self.mode == Mode.SEARCH:
             self.search_type = kwargs.pop('search_type', None)
-            self.search_results = []
+            self.search_results: list = []
             
             
     def package_node(self, ctx):

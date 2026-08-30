@@ -1,10 +1,10 @@
 [build-system]
-requires = ["hatchling >= 1.26", "antlr4-python3-runtime==4.8.0"]
+requires = ["hatchling >= 1.26", "antlr4-python3-runtime==4.13.2"]
 build-backend = "hatchling.build"
 
 [project]
 name = "kusto_query_language_parser"
-version = "0.0.1"
+version = "0.1.0"
 authors = [
   { name="Ted Yeates", email="t3d.y34t3s@gmail.com" },
 ]
@@ -21,3 +21,10 @@ license-files = ["LICEN[CS]E*"]
 [project.urls]
 Homepage = "https://github.com/tedyeates/kusto-query-language-python-parser"
 Issues = "https://github.com/tedyeates/kusto-query-language-python-parser/issues"
+
+[tool.mypy]
+ignore_missing_imports = true
+exclude = [
+  "src/kusto_query_language_parser/parse_tools/",
+  "examples/",
+]
