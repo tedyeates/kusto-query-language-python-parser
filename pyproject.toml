@@ -10,6 +10,9 @@ authors = [
 ]
 description = "A package to parse Kusto Query Language (KQL) code"
 readme = "README.md"
+dependencies = [
+  "antlr4-python3-runtime==4.13.2",
+]
 requires-python = ">=3.6"
 classifiers = [
     "Programming Language :: Python :: 3",
