@@ -1,8 +1,9 @@
 from antlr4 import FileStream
-from kusto__query_language_parser.parser.kql_traverse import KqlTraverse
+import os
+from kusto_query_language_parser.parser.kql_traverse import KqlTraverse
 
 if __name__ == '__main__':
-    input_stream = FileStream('input.txt')
+    input_stream = FileStream(os.path.join(os.path.dirname(__file__), 'input.txt'))
     parser = KqlTraverse()
     tree = parser.parse(input_stream)
     parser.print_tree(tree)

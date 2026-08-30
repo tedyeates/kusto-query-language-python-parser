@@ -1,6 +1,6 @@
-# Generated from ../grammar/Kql.g4 by ANTLR 4.8
+# Generated from Kql.g4 by ANTLR 4.13.2
 from antlr4 import *
-if __name__ is not None and "." in __name__:
+if "." in __name__:
     from .KqlParser import KqlParser
 else:
     from KqlParser import KqlParser
@@ -806,15 +806,6 @@ class KqlListener(ParseTreeListener):
 
     # Exit a parse tree produced by KqlParser#graphMatchProjectClause.
     def exitGraphMatchProjectClause(self, ctx:KqlParser.GraphMatchProjectClauseContext):
-        pass
-
-
-    # Enter a parse tree produced by KqlParser#graphMergeOperator.
-    def enterGraphMergeOperator(self, ctx:KqlParser.GraphMergeOperatorContext):
-        pass
-
-    # Exit a parse tree produced by KqlParser#graphMergeOperator.
-    def exitGraphMergeOperator(self, ctx:KqlParser.GraphMergeOperatorContext):
         pass
 
 
@@ -1943,12 +1934,12 @@ class KqlListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by KqlParser#functionalCallOrPathPathOperation.
-    def enterFunctionalCallOrPathPathOperation(self, ctx:KqlParser.FunctionalCallOrPathPathOperationContext):
+    # Enter a parse tree produced by KqlParser#functionCallOrPathPathOperation.
+    def enterFunctionCallOrPathPathOperation(self, ctx:KqlParser.FunctionCallOrPathPathOperationContext):
         pass
 
-    # Exit a parse tree produced by KqlParser#functionalCallOrPathPathOperation.
-    def exitFunctionalCallOrPathPathOperation(self, ctx:KqlParser.FunctionalCallOrPathPathOperationContext):
+    # Exit a parse tree produced by KqlParser#functionCallOrPathPathOperation.
+    def exitFunctionCallOrPathPathOperation(self, ctx:KqlParser.FunctionCallOrPathPathOperationContext):
         pass
 
 
